@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Larry's Landlord Result</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="v2-candidates/dramaturgical-router/harness/result-page.css">
+</head>
+<body>
+  <main class="result-shell">
+    <header class="result-hero" aria-live="polite">
+      <div class="result-hero__copy">
+        <p id="result-stamp" class="stamp">RESULT FILE</p>
+        <p id="result-meta" class="result-meta">Loading</p>
+        <h1 id="result-status">Loading result</h1>
+        <p id="result-subtitle" class="result-subtitle">Reading the record.</p>
+      </div>
+      <aside class="share-panel" aria-label="Share result">
+        <div class="share-row">
+          <button id="copy-share" type="button" disabled>SHARE YOUR RESULT</button>
+        </div>
+      </aside>
+    </header>
+
+    <section id="result-errors" class="errors" aria-live="polite"></section>
+    <article id="result-content" class="result" hidden></article>
+    <nav id="demo-links" class="demo-links" aria-label="Fixture links"></nav>
+  </main>
+
+  <script src="v2-candidates/dramaturgical-router/data/leader-comparison-data.js"></script>
+  <script src="v2-candidates/dramaturgical-router/harness/result-codec.js"></script>
+  <script src="v2-candidates/dramaturgical-router/harness/result-model.js"></script>
+  <script src="v2-candidates/dramaturgical-router/harness/result-page.js"></script>
+</body>
+</html>

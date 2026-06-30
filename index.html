@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Larry's Landlord — BETTER! The First 1,000 Days</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="app dot-grid--paper">
+
+<div id="canvas" class="canvas dot-grid" data-screen="start" data-start-step="0">
+
+  <!-- ===== DECIDE SCREEN — base layer, always underneath ===== -->
+  <div id="screen-decide">
+
+    <!-- Top bar: progress bar + meters side by side on desktop; stacked
+         (progress bar on top) on mobile. -->
+    <div class="decide-topbar">
+
+      <!-- Week/day progress bar — filled by renderWeekProgress() -->
+      <div id="week-progress" class="week-progress"></div>
+
+      <!-- Compact meter spread — always visible from turn 1, filled by renderDecide() -->
+      <div id="decide-meters" class="decide-meters">
+        <div id="decide-meter-cells" class="decide-meter-cells"></div>
+      </div>
+
+    </div>
+
+    <!-- Header — filled by renderDecide() -->
+    <div class="decide-header">
+      <div id="decide-week" class="decide-week" aria-hidden="true"></div>
+      <div id="decide-title" class="decide-title"></div>
+      <div id="decide-sub" class="decide-sub"></div>
+    </div>
+
+    <!-- Cards grid — built by renderDecide() -->
+    <div id="cards-grid" class="cards-grid"></div>
+
+  </div>
+
+  <!-- ===== PRESS ATTACK OVERLAY ===== -->
+  <div id="ov-press" class="press-overlay" hidden>
+    <div id="flash" class="press-flash"></div>
+    <div id="newspaper" class="newspaper">
+      <div class="newspaper__meta">
+        <span id="np-dateline">WEEK 1 · 60p</span><span>★ FREE PRESS ★</span><span>EST. 1896</span>
+      </div>
+      <div id="np-masthead" class="newspaper__masthead"></div>
+      <div id="np-headline" class="newspaper__headline"></div>
+      <div id="np-standfirst" class="newspaper__standfirst"></div>
+      <div class="newspaper__body">
+        <div class="newspaper__photo-frame">
+          <div id="np-photo-placeholder" class="newspaper__photo-placeholder">
+            <span class="newspaper__photo-label">PRESS PHOTO</span>
+          </div>
+          <img id="np-photo" class="newspaper__photo" alt="" hidden>
+        </div>
+        <div class="newspaper__skeleton">
+          <span class="newspaper__bar newspaper__bar--1"></span>
+          <span class="newspaper__bar newspaper__bar--2"></span>
+          <span class="newspaper__bar newspaper__bar--3"></span>
+          <span class="newspaper__bar newspaper__bar--4"></span>
+          <span class="newspaper__bar newspaper__bar--5"></span>
+          <span class="newspaper__bar newspaper__bar--6"></span>
+        </div>
+      </div>
+    </div>
+    <!-- Social posts that fly in alongside the spinning newspaper (Mewsky left, Hex right).
+         On desktop the stacks fly in at the sides; on mobile they sit in a row below the paper. -->
+    <div id="press-social" class="press-social">
+      <div id="press-left" class="press-stack press-stack--left" aria-hidden="true" hidden></div>
+      <div id="press-right" class="press-stack press-stack--right" aria-hidden="true" hidden></div>
+    </div>
+    <button class="btn btn--alert press-overlay__fallout" onclick="seeTheFallout()">SEE THE FALLOUT →</button>
+  </div>
+
+  <!-- ===== REACTION OVERLAY ===== -->
+  <div id="ov-reaction" class="reaction-overlay dot-grid" hidden>
+
+    <div id="reaction-week" class="reaction-week"></div>
+    <div id="reaction-title" class="reaction-title">The Reaction</div>
+    <div id="reaction-subline" class="reaction-subline" hidden></div>
+
+    <!-- meter cards -->
+    <div class="reaction-meters">
+      <div class="meter-card meter-card--reaction">
+        <div class="meter-donut" data-m="living">
+          <div class="meter-donut__ring">
+            <svg class="meter-donut__svg" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="meter-donut__track" cx="50" cy="50" r="42"></circle>
+              <circle class="m-fill meter-donut__bar" data-m="living" cx="50" cy="50" r="42" transform="rotate(-90 50 50)" style="stroke-dasharray:263.89;stroke-dashoffset:263.89;"></circle>
+            </svg>
+            <span class="meter-donut__icon"><img src="icons/meter-living-standards.svg" alt="" aria-label="Living Standards" title="Living Standards"></span>
+          </div>
+          <span class="m-val meter-donut__value" data-m="living">0</span>
+          <div class="m-delta reaction-meter__delta" data-m="living"></div>
+        </div>
+      </div>
+      <div class="meter-card meter-card--reaction">
+        <div class="meter-donut" data-m="press">
+          <div class="meter-donut__ring">
+            <svg class="meter-donut__svg" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="meter-donut__track" cx="50" cy="50" r="42"></circle>
+              <circle class="m-fill meter-donut__bar" data-m="press" cx="50" cy="50" r="42" transform="rotate(-90 50 50)" style="stroke-dasharray:263.89;stroke-dashoffset:263.89;"></circle>
+            </svg>
+            <span class="meter-donut__icon"><img src="icons/meter-media-climate.svg" alt="" aria-label="Media Climate" title="Media Climate"></span>
+          </div>
+          <span class="m-val meter-donut__value" data-m="press">0</span>
+          <div class="m-delta reaction-meter__delta" data-m="press"></div>
+        </div>
+      </div>
+      <div class="meter-card meter-card--reaction">
+        <div class="meter-donut" data-m="politics">
+          <div class="meter-donut__ring">
+            <svg class="meter-donut__svg" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="meter-donut__track" cx="50" cy="50" r="42"></circle>
+              <circle class="m-fill meter-donut__bar" data-m="politics" cx="50" cy="50" r="42" transform="rotate(-90 50 50)" style="stroke-dasharray:263.89;stroke-dashoffset:263.89;"></circle>
+            </svg>
+            <span class="meter-donut__icon"><img src="icons/meter-public-trust.svg" alt="" aria-label="Public Trust" title="Public Trust"></span>
+          </div>
+          <span class="m-val meter-donut__value" data-m="politics">0</span>
+          <div class="m-delta reaction-meter__delta" data-m="politics"></div>
+        </div>
+      </div>
+      <div class="meter-card meter-card--reaction">
+        <div class="meter-donut" data-m="capital">
+          <div class="meter-donut__ring">
+            <svg class="meter-donut__svg" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="meter-donut__track" cx="50" cy="50" r="42"></circle>
+              <circle class="m-fill meter-donut__bar" data-m="capital" cx="50" cy="50" r="42" transform="rotate(-90 50 50)" style="stroke-dasharray:263.89;stroke-dashoffset:263.89;"></circle>
+            </svg>
+            <span class="meter-donut__icon"><img src="icons/meter-political-power.svg" alt="" aria-label="Political Power" title="Political Power"></span>
+          </div>
+          <span class="m-val meter-donut__value" data-m="capital">0</span>
+          <div class="m-delta reaction-meter__delta" data-m="capital"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- larry event (delta row removed — deltas now live inside each card) -->
+    <div id="reaction-deltas" hidden></div>
+    <div id="larry-event" class="reaction-larry-event" hidden></div>
+
+    <!-- three social feeds -->
+    <div class="reaction-feeds">
+
+      <div>
+        <div class="reaction-feed-label reaction-feed-label--press">FRONT PAGES</div>
+        <div id="feed-frontpages"></div>
+        <!-- Larry sits below the front-page splash -->
+        <div class="reaction-larry">
+          <div id="larry-speech" class="larry-speech" hidden></div>
+          <img class="reaction-larry__img" src="images/larry-reaction.png" alt="Larry the cat, sitting on a stack of newspapers">
+        </div>
+      </div>
+
+      <div>
+        <div class="reaction-feed-label reaction-feed-label--bluesky">MEWSKY</div>
+        <div id="feed-bluesky"></div>
+        <button type="button" class="feed-more" data-feed="feed-bluesky" onclick="toggleFeed(this)">View more ▾</button>
+      </div>
+
+      <div>
+        <div class="reaction-feed-label reaction-feed-label--x">HEX · FORMERLY WITTIER</div>
+        <div id="feed-xtwitter"></div>
+        <button type="button" class="feed-more" data-feed="feed-xtwitter" onclick="toggleFeed(this)">View more ▾</button>
+      </div>
+
+    </div>
+
+    <div class="reaction-actions">
+      <button id="btn-next-week" class="btn btn--go" onclick="nextTurn()"></button>
+      <button class="btn btn--ghost reaction-actions__wrap-up" onclick="go('end')">WRAP IT UP</button>
+    </div>
+
+  </div>
+
+  <!-- ===== END SCREEN OVERLAY ===== -->
+  <div id="ov-end" class="end-overlay dot-grid" hidden>
+
+    <div id="stamp" class="stamp">TERM ENDED</div>
+
+    <div id="end-pm" class="end-pm"></div>
+    <div id="end-title" class="end-title"></div>
+    <div id="end-verdict" class="end-verdict"></div>
+    <div id="end-grade" class="end-grade"></div>
+
+    <div class="end-meters">
+      <div class="meter-card meter-card--end">
+        <div class="meter-donut" data-m="living">
+          <div class="meter-donut__ring">
+            <svg class="meter-donut__svg" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="meter-donut__track" cx="50" cy="50" r="42"></circle>
+              <circle class="m-fill meter-donut__bar" data-m="living" cx="50" cy="50" r="42" transform="rotate(-90 50 50)" style="stroke-dasharray:263.89;stroke-dashoffset:263.89;"></circle>
+            </svg>
+            <span class="meter-donut__icon"><img src="icons/meter-living-standards.svg" alt="" aria-label="Living Standards" title="Living Standards"></span>
+          </div>
+          <span class="m-val meter-donut__value" data-m="living">0</span>
+        </div>
+      </div>
+      <div class="meter-card meter-card--end">
+        <div class="meter-donut" data-m="press">
+          <div class="meter-donut__ring">
+            <svg class="meter-donut__svg" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="meter-donut__track" cx="50" cy="50" r="42"></circle>
+              <circle class="m-fill meter-donut__bar" data-m="press" cx="50" cy="50" r="42" transform="rotate(-90 50 50)" style="stroke-dasharray:263.89;stroke-dashoffset:263.89;"></circle>
+            </svg>
+            <span class="meter-donut__icon"><img src="icons/meter-media-climate.svg" alt="" aria-label="Media Climate" title="Media Climate"></span>
+          </div>
+          <span class="m-val meter-donut__value" data-m="press">0</span>
+        </div>
+      </div>
+      <div class="meter-card meter-card--end">
+        <div class="meter-donut" data-m="politics">
+          <div class="meter-donut__ring">
+            <svg class="meter-donut__svg" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="meter-donut__track" cx="50" cy="50" r="42"></circle>
+              <circle class="m-fill meter-donut__bar" data-m="politics" cx="50" cy="50" r="42" transform="rotate(-90 50 50)" style="stroke-dasharray:263.89;stroke-dashoffset:263.89;"></circle>
+            </svg>
+            <span class="meter-donut__icon"><img src="icons/meter-public-trust.svg" alt="" aria-label="Public Trust" title="Public Trust"></span>
+          </div>
+          <span class="m-val meter-donut__value" data-m="politics">0</span>
+        </div>
+      </div>
+      <div class="meter-card meter-card--end">
+        <div class="meter-donut" data-m="capital">
+          <div class="meter-donut__ring">
+            <svg class="meter-donut__svg" viewBox="0 0 100 100" aria-hidden="true">
+              <circle class="meter-donut__track" cx="50" cy="50" r="42"></circle>
+              <circle class="m-fill meter-donut__bar" data-m="capital" cx="50" cy="50" r="42" transform="rotate(-90 50 50)" style="stroke-dasharray:263.89;stroke-dashoffset:263.89;"></circle>
+            </svg>
+            <span class="meter-donut__icon"><img src="icons/meter-political-power.svg" alt="" aria-label="Political Power" title="Political Power"></span>
+          </div>
+          <span class="m-val meter-donut__value" data-m="capital">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="end-actions">
+      <button class="btn btn--alert btn--end" onclick="shareResult()">SHARE MY RUN</button>
+      <button class="btn btn--ghost btn--end" onclick="resetGame()">PLAY AGAIN</button>
+    </div>
+
+    <div id="share-confirm" class="share-confirm" hidden>Copied to clipboard — paste it anywhere.</div>
+
+  </div>
+
+  <!-- ===== START / CABINET OVERLAY ===== -->
+  <div id="ov-start" class="start-overlay dot-grid" hidden>
+
+    <!-- Appointment toast — shown briefly after picking a minister -->
+    <div id="appoint-toast" class="appoint-toast" hidden>
+      <div id="appoint-toast-name" class="appoint-toast__name"></div>
+      <div id="appoint-toast-quote" class="appoint-toast__quote"></div>
+    </div>
+
+    <!-- Step 0: Intro -->
+    <div class="step start-intro" data-step="0">
+
+      <!-- Left column: text + cat + button -->
+      <div class="start-intro__copy">
+        <div class="badge badge--flag start-intro__badge">No.10 DOWNING ST · DAY ONE</div>
+        <div class="start-intro__title">Congratulations,<br>Prime Minister.</div>
+        <div class="start-intro__lede">You've had the security brief. You've met Larry the cat. The red boxes are already stacking up. Time to <b class="start-intro__em">pick your battles</b> — starting with the file on top of the pile.</div>
+        <div class="start-intro__larry-row">
+          <span class="larry start-intro__larry"></span>
+          <div class="start-intro__larry-line">Larry — Chief Mouser to the<br>Prime Minister. Already judging you.</div>
+        </div>
+        <div class="start-name">
+          <label for="pm-name" class="start-name__label">SIGN THE REGISTER, PRIME MINISTER:</label>
+          <input id="pm-name" class="start-name__input" type="text" maxlength="28" autocomplete="off" placeholder="Your name" onkeydown="if(event.key==='Enter')begin();">
+        </div>
+        <button onclick="begin()" class="btn btn--go btn--lg">RIGHT THEN →</button>
+      </div>
+
+      <!-- Right column: No.10 door photo -->
+      <div class="start-intro__photo-frame">
+        <img src="no10-door.png" alt="10 Downing Street" class="start-intro__photo">
+      </div>
+
+    </div>
+
+    <!-- Step 5: Rules intro — shown right after step 0's RIGHT THEN, before the first pick (issue #21).
+         The CTA is DECOUPLED from the meters: the meters + stake stay vertically centered
+         (upper-middle, their original spot), while the GET TO WORK button is pinned bottom-left
+         so it lands in the same place as step 0's RIGHT THEN (no button-hunting between screens). -->
+    <div class="step start-rules" data-step="5" hidden>
+      <!-- meters + stake: margin:auto 0 vertically centres this group; the bottom auto-margin
+           pushes the CTA to the floor without dragging the meters down with it. -->
+      <div class="start-rules__body">
+        <div id="rules-meters" class="start-rules__meters"></div>
+        <p class="start-rules__stake">These four meters are the country. If any hit zero, <b>you're out.</b></p>
+      </div>
+      <!-- align-self:flex-start keeps the button its natural width (not stretched) and left-aligned at x≈140. -->
+      <button onclick="toFirstPick()" class="btn btn--go btn--lg start-rules__cta">GET TO WORK →</button>
+    </div>
+
+    <!-- Step 1: Pair 1 — NHS vs Tax Loopholes -->
+    <div class="step start-pick" data-step="1" hidden>
+      <div class="start-pick__kicker-wrap"><span class="start-pick__kicker">ON THE DESK · 1 OF 3</span></div>
+      <div class="start-pick__title">What's your first move?</div>
+      <div class="start-pick__sub">Two cabinet members are pitching for your attention. Pick the fight you want to take on.</div>
+      <div id="pick-meters-1" class="start-pick__meters"></div>
+      <div id="pick-row-1" class="start-pick__row"></div>
+    </div>
+
+    <!-- Step 2: Pair 2 — Housing vs Carbon -->
+    <div class="step start-pick" data-step="2" hidden>
+      <div class="start-pick__kicker-wrap"><span class="start-pick__kicker">ON THE DESK · 2 OF 3</span></div>
+      <div class="start-pick__title">What's next?</div>
+      <div class="start-pick__sub">Two more bids for your time. Choose the one you want to make your name on.</div>
+      <div id="pick-meters-2" class="start-pick__meters"></div>
+      <div id="pick-row-2" class="start-pick__row"></div>
+    </div>
+
+    <!-- Step 3: Pair 3 — Cost of Living vs Water -->
+    <div class="step start-pick" data-step="3" hidden>
+      <div class="start-pick__kicker-wrap"><span class="start-pick__kicker">ON THE DESK · 3 OF 3</span></div>
+      <div class="start-pick__title">Last one.</div>
+      <div class="start-pick__sub">One more priority, then the real work starts.</div>
+      <div id="pick-meters-3" class="start-pick__meters"></div>
+      <div id="pick-row-3" class="start-pick__row"></div>
+    </div>
+
+    <!-- Step 4: Larry -->
+    <div class="step start-larry" data-step="4" hidden>
+      <span class="larry start-larry__figure"></span>
+      <div class="start-larry__title">One more thing.</div>
+      <div class="start-larry__sub">Larry winds around your ankles and looks up.</div>
+      <div class="start-larry__actions">
+        <button onclick="chooseLarry(true)" class="btn btn--go start-larry__button">PET LARRY</button>
+        <button onclick="chooseLarry(false)" class="btn btn--ghost start-larry__button">SHOO LARRY</button>
+      </div>
+      <div id="larry-toast" class="larry-toast" hidden>Larry will remember this.</div>
+    </div>
+
+  </div>
+  <!-- end ov-start -->
+
+  <!-- Decorative envelope — shown only on the Letter of Last Resort surface (desktop) -->
+  <img class="letter-envelope" src="images/letter-envelope.png" alt="">
+
+</div>
+<!-- end canvas -->
+
+<!-- demo nav bar -->
+<div id="demo-bar" class="demo-bar">
+  <span class="demo-bar__label">DEMO CONTROLS</span>
+  <span id="demo-status" class="demo-bar__status">—</span>
+  <button onclick="demoBack()" class="btn btn--demo btn--demo-ghost">← BACK</button>
+  <button onclick="demoForward()" class="btn btn--demo btn--demo-ghost">FORWARD →</button>
+  <button onclick="demoToEnd()" class="btn btn--demo btn--demo-ghost">» TO END</button>
+  <button onclick="resetGame()" class="btn btn--demo btn--demo-alert">↺ RESTART</button>
+</div>
+
+<script src="v2-candidates/dramaturgical-router/data/router-balance-data.js"></script>
+<script src="v2-candidates/dramaturgical-router/harness/router-engine.js"></script>
+<script src="v2-candidates/dramaturgical-router/harness/production-view-adapter.js"></script>
+<script src="v2-candidates/dramaturgical-router/harness/router-state-adapter.js"></script>
+<script src="v2-candidates/dramaturgical-router/harness/result-codec.js"></script>
+<script src="game.js"></script>
+
+</body>
+</html>
