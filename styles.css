@@ -523,13 +523,13 @@
   }
   .pick-two__line {
     margin: 0 0 8px;
-    font-family: var(--font-display);
-    font-size: 19px;
-    line-height: 1.25;
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.4;
     color: var(--text);
   }
   .pick-two__line--turn {
-    color: var(--text-mute);
+    color: var(--text);
   }
   .pick-two__larry {
     display: flex;
@@ -792,9 +792,29 @@
     padding: 3px 7px;
   }
   .decision-card__lock {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
     font-family: var(--font-mono);
     font-size: 11px;
     color: var(--alert);
+  }
+  .decision-card__lock-meter {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .decision-card__lock-copy {
+    overflow-wrap: anywhere;
+  }
+  .decision-card__lock-word {
+    border: 2px solid #4a4844;
+    border-radius: 4px;
+    padding: 3px 7px;
+    background: #262420;
+    color: #bdbab2;
+    font-weight: 800;
   }
   .decision-card--crisis {
     flex-direction: column;
@@ -1049,6 +1069,51 @@
     border-width: 6px;
     border-top-color: #fff;
   }
+  /* Desktop-only: narrow the bubble so the reaction line wraps to 3 lines
+     instead of 2. Mobile/tablet keep the base 230px max-width untouched. */
+  @media (min-width: 901px) {
+    .larry-speech {
+      max-width: 190px;
+    }
+    /* Desktop mockup: bubble sits to the left of a smaller Larry, both
+       shifted toward the right side of the FRONT PAGES column. Mobile/tablet
+       keep the base column layout (bubble above cat) untouched. */
+    .reaction-larry {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+    .reaction-larry__img {
+      width: 105px;
+    }
+    /* shift the speech-bubble tail from centered to the right, so it still
+       points down but toward the cat now sitting on the right */
+    .larry-speech::before,
+    .larry-speech::after {
+      left: auto;
+      right: 22px;
+      transform: none;
+    }
+    /* Pin the three feed columns to their cells explicitly. Without this, the
+       button below (explicitly placed in cell 1,1) makes the auto-placed
+       columns reflow — Front Pages slides to column 2, Hex wraps to a 2nd row.
+       Explicit placement lets the button legitimately share cell 1,1. */
+    .reaction-feeds > div:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .reaction-feeds > div:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .reaction-feeds > div:nth-child(3) { grid-column: 3; grid-row: 1; }
+    /* Desktop mockup: the "Next week" button moves into the FRONT PAGES
+       column (grid cell 1,1), pinned to the bottom of the row so its
+       bottom edge lines up with the bottom of the Mewsky feed column. */
+    .reaction-actions {
+      grid-column: 1;
+      grid-row: 1;
+      align-self: end;
+      justify-self: start;
+      margin: 0;
+      padding: 0;
+    }
+  }
   .reaction-week {
     font-family: var(--font-mono);
     font-size: 11px;
@@ -1076,6 +1141,12 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 14px;
     margin-bottom: 20px;
+  }
+  /* Desktop: tighten the gap under the meter row so the reaction page fits
+     without scrolling. Placed after the base rule so it wins on source order.
+     Mobile keeps the base 20px. */
+  @media (min-width: 901px) {
+    .reaction-meters { margin-bottom: 6px; }
   }
   .reaction-meter__head {
     display: flex;
@@ -1144,29 +1215,6 @@
     gap: 20px;
     align-items: start;
     margin-bottom: 24px;
-  }
-  .reaction-feed-label {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .8px;
-    border: 2px solid var(--ink);
-    border-radius: 5px;
-    padding: 4px 9px;
-    margin-bottom: 14px;
-  }
-  .reaction-feed-label--press {
-    color: var(--ink);
-    background: var(--alert);
-  }
-  .reaction-feed-label--bluesky {
-    color: var(--text);
-    background: var(--bluesky);
-  }
-  .reaction-feed-label--x {
-    color: var(--ink);
-    background: #9a9a9a;
   }
   /* reaction page shows only the lead front page (all screen sizes) */
   #feed-frontpages .frontpage:nth-of-type(n+2) {
@@ -1258,6 +1306,7 @@
   }
   .press-post .post__text { color: var(--bg); margin-top: 6px; }
   .press-post--bluesky { border-color: var(--bluesky); }
+  .press-post--x { border-color: #9a9a9a; }
   .post__header {
     display: flex;
     align-items: center;
@@ -1284,6 +1333,33 @@
     white-space: nowrap;
     flex: none;
   }
+  /* Reaction feeds: drop the per-post plain "HEX" text and the old column
+     labels; instead show a single network pill on the TOP post of each
+     column (Mewsky blue, Hex grey), matching the previous label look. */
+  #feed-xtwitter .post__network { display: none; }
+  #feed-bluesky .post:first-child .post__header::after,
+  #feed-xtwitter .post:first-child .post__header::after {
+    margin-left: auto;
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 1;
+    border: 2px solid var(--ink);
+    border-radius: 5px;
+    padding: 4px 8px;
+  }
+  #feed-bluesky .post:first-child .post__header::after {
+    content: "MEWSKY";
+    background: var(--bluesky);
+    color: var(--text);
+  }
+  #feed-xtwitter .post:first-child .post__header::after {
+    content: "HEX";
+    background: #9a9a9a;
+    color: var(--ink);
+  }
   .post__text {
     font-size: 13px;
     line-height: 1.35;
@@ -1300,9 +1376,6 @@
     gap: 14px;
     margin-top: 24px;
     padding: 16px 0 4px;
-  }
-  .reaction-actions__wrap-up {
-    display: none;
   }
 
   .end-overlay {
@@ -1375,6 +1448,52 @@
     padding: 12px 16px;
     box-shadow: 4px 4px 0 var(--ink);
     font-weight: 700;
+  }
+  .end-larry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .end-larry__img {
+    width: 128px;
+    height: auto;
+    flex: 0 0 auto;
+  }
+  .end-larry__bubble {
+    position: relative;
+    max-width: 220px;
+    color: var(--ink);
+    background: #fff;
+    border: 2px solid var(--ink);
+    border-radius: 14px;
+    padding: 12px 16px;
+    box-shadow: 4px 4px 0 var(--ink);
+    font-weight: 700;
+    font-size: 15px;
+  }
+  /* speech-bubble tail: points right, toward Larry (ink outline + white fill) */
+  .end-larry__bubble::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -12px;
+    transform: translateY(-50%);
+    border-width: 8px 0 8px 12px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--ink);
+  }
+  .end-larry__bubble::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    transform: translateY(-50%);
+    border-width: 6px 0 6px 9px;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    z-index: 1;
   }
   .end-grade {
     display: inline-flex;
@@ -1577,25 +1696,22 @@
     margin-bottom: 28px;
   }
   .start-intro__em { color: var(--text); }
+  /* Caption now sits below the door image (inside .start-intro__photo-frame). */
   .start-intro__larry-row {
-    display: flex;
-    align-items: flex-end;
-    gap: 20px;
-    margin-bottom: 28px;
+    margin-top: 16px;
   }
-  .start-intro__larry { width: 150px; }
+  .start-intro__larry { display: block; width: 150px; height: auto; }
   .start-intro__larry-line {
     font-family: var(--font-mono);
     font-size: 12px;
     line-height: 1.5;
     color: var(--text-dim);
-    padding-bottom: 22px;
   }
   .start-name { margin-bottom: 24px; }
   .start-name__label {
     display: block;
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: .5px;
     color: var(--alert);
@@ -1616,15 +1732,19 @@
   }
   .start-intro__photo-frame {
     flex: 0 0 340px;
-    border: 4px solid var(--ink);
-    border-radius: var(--r-sm);
-    overflow: hidden;
-    box-shadow: 10px 10px 0 var(--ink);
   }
   .start-intro__photo {
     display: block;
     width: 100%;
     height: auto;
+    -webkit-mask-image:
+      linear-gradient(to right, transparent, #000 18%, #000 82%, transparent),
+      linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image:
+      linear-gradient(to right, transparent, #000 18%, #000 82%, transparent),
+      linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+    mask-composite: intersect;
   }
 
   .start-rules {
@@ -1708,8 +1828,16 @@
   .cabinet-pick-card--figure {
     position: relative;
     overflow: visible;
-    padding-right: 36%;
+    display: block;
     min-height: 235px;
+  }
+  .cabinet-pick-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cabinet-pick-card--figure .cabinet-pick-card__body {
+    padding-right: 36%;
   }
   .cabinet-pick-card__badge {
     border: 0;
@@ -1777,7 +1905,14 @@
     text-align: center;
     gap: 18px;
   }
-  .start-larry__figure { width: 150px; }
+  .start-larry__figure {
+    display: block;
+    width: 150px;
+    height: auto;
+    /* Cream card behind the cut-out cat, matching the policy proposal cards. */
+    background: var(--paper);
+    border-radius: var(--r-md);
+  }
   .start-larry__title {
     font-family: var(--font-display);
     font-size: 54px;
@@ -2140,6 +2275,21 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    /* #btn-next-week's wrapper now lives inside .reaction-feeds (so desktop
+       can grid-place it into column 1). On mobile/tablet it must still span
+       the full width and sit in its own row below the feed columns, exactly
+       like the old standalone .reaction-actions block did. */
+    .reaction-actions {
+      grid-column: 1 / -1;
+    }
+
+    /* the button's own row-gap spacing replaces the old collapsed
+       margin-bottom that used to sit between .reaction-feeds and the
+       standalone .reaction-actions block below it */
+    .reaction-feeds {
+      margin-bottom: 0;
+    }
+
     .reaction-meters,
     .end-meters {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2275,6 +2425,7 @@
     .decision-card__body,
     .private-choice-card,
     .cabinet-pick-card,
+    .cabinet-pick-card__body,
     .cabinet-pick-card__minister > div,
     .meter-cell,
     .meter-cell__label,
@@ -2408,12 +2559,22 @@
       order: 1;
       align-self: flex-end;
       margin: 0 0 10px;
+      /* Mobile: bubble sits to the LEFT of Larry (like desktop), not above him. */
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 12px;
     }
     #feed-frontpages { order: 2; }
 
     .reaction-larry__img {
       width: 104px;
     }
+
+    /* Mobile: narrow the bubble so the reaction line wraps to 3 lines, and
+       shift its tail right to point toward Larry now sitting on the right. */
+    .larry-speech { max-width: 185px; }
+    .larry-speech::before,
+    .larry-speech::after { left: auto; right: 22px; transform: none; }
 
     .reaction-title {
       margin-bottom: 18px;
@@ -2546,6 +2707,11 @@
       line-height: 1.45;
     }
 
+    .pick-two__line {
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
     .v2-consequence {
       flex-direction: column;
       gap: 5px;
@@ -2573,6 +2739,12 @@
       gap: 18px;
       overflow-x: visible;
       padding-bottom: 8px;
+    }
+
+    /* Pick-two cards stack in one column on mobile, like the 4-policy pages
+       (their grid is separate from .cards-grid, so it needs its own rule). */
+    .pick-two__cards {
+      grid-template-columns: minmax(0, 1fr);
     }
 
     .decision-card {
@@ -2606,6 +2778,11 @@
     /* keep the card text clear of the standing figure on narrow screens */
     .decision-card--figure .decision-card__body {
       padding-right: 44%;
+    }
+
+    /* same fix, mirrored for the manifesto pick cards' standing figure */
+    .cabinet-pick-card--figure .cabinet-pick-card__body {
+      padding-right: 46%;
     }
 
     .decision-card__enacts {
@@ -2879,16 +3056,19 @@
       margin: 0;
       min-height: 100%;
       flex-direction: column;
-      align-items: stretch;
+      align-items: flex-start;
       justify-content: flex-start;
       gap: 26px;
     }
 
-    .start-intro__copy {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
+    /* Promote the copy's children to direct flex items of .start-intro so the
+       door image (photo-frame) can slot in between the lede and the name field. */
+    .start-intro__copy { display: contents; }
+    .start-intro__badge { order: 1; }
+    .start-intro__title { order: 2; }
+    .start-intro__lede  { order: 3; }
+    .start-name { order: 5; }
+    .start-intro .btn { order: 6; }
 
     .start-intro__badge {
       font-size: 10px;
@@ -2911,9 +3091,7 @@
     }
 
     .start-intro__larry-row {
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 24px;
+      margin: 12px 0 0;
     }
 
     .start-intro__larry {
@@ -2933,7 +3111,7 @@
     }
 
     .start-name__label {
-      font-size: 11px;
+      font-size: 13px;
       line-height: 1.35;
     }
 
@@ -2952,8 +3130,7 @@
       flex: none;
       width: min(100%, 260px);
       align-self: center;
-      order: -1;
-      box-shadow: 7px 7px 0 var(--ink);
+      order: 4;
     }
 
     .start-rules {

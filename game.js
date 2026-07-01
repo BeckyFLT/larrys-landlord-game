@@ -41,6 +41,17 @@ var LARRY_SVG =
     '<circle cx="90" cy="65" r="2.6" fill="#F5CE3E"/><circle cx="120" cy="65" r="2.6" fill="#F5CE3E"/>' +
   '</svg>';
 
+var DEFAULT_PLAYER_NAME = '';
+var defaultPlayerNameCleared = false;
+
+/** Clear the suggested player name once, without erasing later edits. */
+function clearDefaultPlayerNameOnce() {
+  if (defaultPlayerNameCleared) return;
+  defaultPlayerNameCleared = true;
+  var nameInput = /** @type {HTMLInputElement|null} */ (document.getElementById('pm-name'));
+  if (nameInput && nameInput.value === DEFAULT_PLAYER_NAME) nameInput.value = '';
+}
+
 /* ---------- engine-internal types (game state) ----------
    These describe the live engine. Production data now comes from the v2
    dramaturgical router; the old v1 content helpers remain inert until the
@@ -254,60 +265,16 @@ function meterImpactHtml(meter, value) {
   '</span>';
 }
 
-/* ---------- instant-loss detection ----------
-   Any decide-meter hitting 0 ends the game immediately in a loss. The first dead
-   meter in METERS order (living, press, politics, capital) is *latched* into
-   state.deadMeter the moment it's detected, so a same-update tie resolves
-   deterministically AND a later same-turn effect that would raise the meter back
-   above 0 (e.g. Larry's +3 payoff in showReaction) can't un-lose the run.
-   Detection is monotonic: once a meter has touched 0, anyMeterDead() keeps
-   reporting it. Shared by the end-trigger (reaction button + nextTurn) and
-   computeScore, so the loss grade always names the meter that actually bottomed
-   out. seeTheFallout() calls this right after clamping deltas, to latch a
-   card-delta kill *before* the Larry payoff runs. */
-/** @returns {string|null} latched/first dead meter key, or null while all meters > 0 */
+/* ---------- instant-loss detection (RETIRED) ----------
+   Meters no longer end the run. A meter hitting 0 just means it's floored — it still
+   gates which policies you can unlock, but the term always plays out to the election.
+   This function is kept (several callers reference it) but now always reports "no death";
+   the collapse endings and the early end-trigger have been removed. */
+/** @returns {string|null} always null — a dead meter no longer ends the run */
 function anyMeterDead() {
-  if (state.deadMeter) return state.deadMeter;
-  for (var i = 0; i < METERS.length; i++) {
-    if (state.meters[METERS[i].key] <= 0) {
-      state.deadMeter = METERS[i].key;
-      return state.deadMeter;
-    }
-  }
   return null;
 }
 
-/* ---------- scoring ----------
-   Point-values + grade bands. Per scenario, the gate's unlock turn scores
-   (T - t + 1) where T = that scenario's turnCopy.length (turn 1 = full T; an
-   already-unlocked start, t=0, also scores T; never = 0). Grade is the % of
-   achievable points; bands are fractions of that, compared by integer
-   cross-multiplication so the 3x3 baseline reproduces the original
-   A 8-9 / B 5-7 / C 2-4 of 9 thresholds exactly. */
-/**
- * Points for a scenario whose gate unlocked on turn `t` (0 = pre-unlocked,
- * null = never), out of `turns` turns.
- * @param {number|null} t
- * @param {number} turns
- * @returns {number}
- */
-function scenarioPoints(t, turns) {
-  if (t === 0) return turns;
-  if (t >= 1 && t <= turns) return turns - t + 1;
-  return 0;
-}
-/**
- * @typedef {Object} GradeBand
- * @property {string} grade
- * @property {number} num
- * @property {number} den
- */
-/** @type {GradeBand[]} grade if earned/achievable >= num/den (checked in order) */
-var GRADE_BANDS = [
-  { grade: 'A', num: 8, den: 9 },
-  { grade: 'B', num: 5, den: 9 },
-  { grade: 'C', num: 2, den: 9 }
-];
 
 /* ---------- full game state ---------- */
 /** @type {GameState} */
@@ -714,6 +681,24 @@ function v2ReactionFalloutHtml() {
   return '<div class="reaction-fallout__stack">' + v2Bridge.lastConsequenceNotices.map(v2NoticeHtml).join('') + '</div>';
 }
 
+/* Shuffle the display order of policy cards so the same category isn't always
+   in the same slot (previously the reform card was always 1st, the Larry/cat
+   card always 4th). Only policy in-tray surfaces are shuffled — manifesto and
+   cabinet "pick two" screens keep their authored pairing/order. Card position
+   only affects the visual tilt, and availability is keyed by choice id, so
+   reordering is purely cosmetic. Runs once per surface (in
+   v2PrepareNextPlayableSurface, not renderDecide) so cards don't reshuffle on
+   every redraw. */
+/** @param {RouterProductionSurfaceView|null} surfaceView @returns {void} */
+function v2ShufflePolicyCards(surfaceView) {
+  if (!surfaceView || surfaceView.kind !== 'policy' || !Array.isArray(surfaceView.choices)) return;
+  var c = surfaceView.choices;
+  for (var i = c.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = c[i]; c[i] = c[j]; c[j] = tmp;
+  }
+}
+
 /** @returns {'surface'|'passive'|'end'} */
 function v2PrepareNextPlayableSurface() {
   v2ResolveGlobals();
@@ -721,13 +706,14 @@ function v2PrepareNextPlayableSurface() {
   var router = /** @type {RouterApi} */ (v2Bridge.router);
   var adapter = /** @type {RouterProductionViewAdapterApi} */ (v2Bridge.adapter);
   var routerState = /** @type {RouterState} */ (v2Bridge.routerState);
-  if (!routerState || routerState.deadMeter || routerState.tags.endgameChoiceMade) return 'end';
+  if (!routerState || routerState.tags.endgameChoiceMade) return 'end';
 
   for (var guard = 0; guard < 20; guard++) {
     var candidate = router.selectNextSurface(config, routerState);
     if (candidate) {
       v2Bridge.activeSurface = candidate.surface;
       v2Bridge.activeSurfaceView = adapter.adaptSurface(config, candidate.surface);
+      v2ShufflePolicyCards(v2Bridge.activeSurfaceView);
       v2Bridge.activeSurfaceNotice = v2SurfaceConsequenceNotice(routerState, candidate.surface);
       v2Bridge.choiceAvailability = {};
       router.listChoices(config, routerState, candidate.surface.id).forEach(function(availability) {
@@ -770,7 +756,7 @@ function v2PrepareNextPlayableSurface() {
     v2Bridge.lastConsequenceNotices = v2PassiveConsequenceNotices(passive, timedEffects);
     state.lastDeltas = v2ImpactsToDeltas(passive.timedVisible);
     v2SyncMeters();
-    if (v2HasVisibleDeltas(state.lastDeltas) || routerState.deadMeter) return 'passive';
+    if (v2HasVisibleDeltas(state.lastDeltas)) return 'passive';
   }
 
   v2Bridge.activeSurface = null;
@@ -820,14 +806,14 @@ function v2SkipsFullReaction(surfaceView) {
 
 /* The round-ending decisions — the "final decision of the week". After one of
    these commits, the full weekly reaction (with the manifesto verdict) shows.
-   Week 1 ends on the One Visit set-piece, Week 3 on PMQs; Week 2's set-piece was
-   retired, so its "two more policies" beat now closes the week. */
+   Week 1 ends on the One Visit set-piece; Weeks 2 and 3 close on their "pick two
+   policies" beats (the retired PMQs and Week-2 set-pieces are gone). */
 /** @type {Record<string, boolean>} */
 var V2_ROUND_SETPIECES = {
   'flat-one-visit-one-camera': true,
   'flat-the-rival-across-the-table': true,
-  'flat-prime-ministers-questions': true,
-  'week2-policy-pick': true
+  'week2-policy-pick': true,
+  'week3-legacy-pick': true
 };
 /** @param {any} sv @returns {boolean} */
 function v2IsRoundEndingSetpiece(sv) { return !!sv && !!V2_ROUND_SETPIECES[sv.id]; }
@@ -1048,7 +1034,7 @@ function v2CommitPendingChoice() {
 /** @returns {void} */
 function nextV2Beat() {
   v2Bridge.weekReaction = null;  // leaving any weekly reaction
-  if (!v2Bridge.routerState || v2Bridge.routerState.deadMeter || v2Bridge.routerState.tags.endgameChoiceMade) {
+  if (!v2Bridge.routerState || v2Bridge.routerState.tags.endgameChoiceMade) {
     go('end');
     return;
   }
@@ -1148,6 +1134,14 @@ function renderV2Decide() {
       ? 'THE FINAL DECISION OF THE WEEK'
       : 'IN-TRAY ' + (routerState.beat + 1) + ' · ' + v2SurfaceLabel(surface);
   document.getElementById('decide-title').textContent = surface.title;
+
+  // Larry's two-policy lever: petting upgrades the week from one policy to two
+  // (heading starts at "One More Policy"); shooing keeps it at "Two More
+  // Policies" but he later docks you to one. See v2PickTwoIntroHtml.
+  if (surface.id === 'week2-policy-pick') {
+    document.getElementById('decide-title').textContent =
+      state.larryNice === true ? 'One More Policy' : 'Two More Policies';
+  }
   var subEl = document.getElementById('decide-sub');
   subEl.innerHTML = htmlEsc(surface.scene) + v2DecideContextHtml();
   // Player-facing subcopy is hidden by default; show it only on the framing
@@ -1188,11 +1182,26 @@ var PICK_TWO_FIGURES = {
   'online-media-reform': 'images/cabinet/reg_broadsheet.png',
   'improve-public-transport': 'images/cabinet/mason_carrick.png',
   'fix-potholes': 'images/cabinet/chunk_slumberton.png',
-  'larry-roadside-rescue': 'images/cabinet/sir_pur_reginald.png',
   'enact-electoral-reform': 'images/cabinet/vera_suffrage.png',
-  'free-school-meals': 'images/cabinet/dr_ina_tentcare.png',
-  'scrap-hospital-parking': 'images/cabinet/isla_mann.png',
-  'larry-national-statue': 'images/cabinet/watson_tabby.png'
+  'free-school-meals': 'images/cabinet/isla_mann.png',
+  'scrap-hospital-parking': 'images/cabinet/dr_ina_tentcare.png',
+  'larry-national-statue': 'images/cabinet/watson_tabby.png',
+  'larry-cat-civil-servants': 'images/cabinet/sir_pur_reginald.png'
+};
+
+/* Job title shown under each pick-two card, matching the advisor cast in
+   PICK_TWO_FIGURES. Titles are each character's canonical cabinet role (Becky to
+   tune alongside the casting above). */
+/** @type {Record<string, string>} */
+var PICK_TWO_ROLES = {
+  'online-media-reform': 'CULTURE SECRETARY',
+  'improve-public-transport': 'HOUSING SECRETARY',
+  'fix-potholes': 'CRAFT & COMMUNITIES CHAMPION',
+  'enact-electoral-reform': 'CONSTITUTION MINISTER',
+  'free-school-meals': 'CHANCELLOR',
+  'scrap-hospital-parking': 'HEALTH SECRETARY',
+  'larry-national-statue': 'LOCAL GOVERNMENT STANDARDS MINISTER',
+  'larry-cat-civil-servants': "CHIEF MOUSER'S ADVISER"
 };
 
 /* How many policy slots a pick-two beat actually grants. Week 2 ("Two More
@@ -1220,21 +1229,22 @@ function v2PickTwoIntroHtml(surface) {
   function wrap(html) { return '<div class="pick-two__intro">' + html + '</div>'; }
   /** @param {string} meow @returns {string} */
   function larryLine(meow) {
-    return '<div class="pick-two__larry"><span class="larry pick-two__larry-cat">' + LARRY_SVG + '</span>' +
-      '<span class="pick-two__larry-bubble">' + htmlEsc(meow) + '</span></div>';
+    return '<p class="pick-two__line pick-two__larry-line">Larry: ' + htmlEsc(meow) + '</p>';
   }
   if (surface && surface.id === 'week2-policy-pick') {
     if (state.larryNice === true) {
+      // Petted Larry: he wins you a bonus second policy (one -> two).
       return wrap(
-        '<p class="pick-two__line">We have time for one more policy this week, Prime Minister.</p>' +
+        '<p class="pick-two__line">We have time for one more policy this week</p>' +
         larryLine('Meow!') +
         '<p class="pick-two__line pick-two__line--turn">Ok, Prime Minister — you can choose two.</p>');
     }
     if (state.larryNice === false) {
+      // Shooed Larry: he docks you a policy (two -> one).
       return wrap(
-        '<p class="pick-two__line">We have time for two new policies this week, Prime Minister.</p>' +
-        larryLine('Meow.') +
-        '<p class="pick-two__line pick-two__line--turn">My mistake — just the one.</p>');
+        '<p class="pick-two__line">We have time for two more policies this week</p>' +
+        larryLine('Meow!') +
+        '<p class="pick-two__line pick-two__line--turn">Actually, only time for one.</p>');
     }
     return wrap('<p class="pick-two__line">We\'ve got time for two more policies this week, Prime Minister. Which will you choose?</p>');
   }
@@ -1281,8 +1291,16 @@ function renderV2PickTwoCard(surface, choice, idx, isSelected) {
   var availability = v2Bridge.choiceAvailability[choice.id];
   var locked = !!availability && !availability.available;
   var rot = idx % 2 === 0 ? 'card--tilt-l' : 'card--tilt-r';
+  var displayLabel = choice.label;
   var pitch = choice.note || '';
-  var roleBadge = choice.cardRole === 'larry' ? 'LARRY' : choice.cardRole === 'structural' ? 'REFORM' : 'POLICY';
+  var deltas = v2ChoiceDeltas(choice);
+  // Legacy pick: staying loyal to Larry (chose every Larry card so far)
+  // upgrades the cat card from "Hire 10 More Cat Civil Servants" to
+  // "Give Cats the Vote".
+  if (choice.id === 'larry-cat-civil-servants' && state.larryLoyal === true) {
+    displayLabel = 'Give Cats the Vote';
+    pitch = 'You backed Larry at every turn — now every cat gets the vote.';
+  }
   // Advisor art uses the same large standing-figure treatment as the policy-hand
   // cards (anchored bottom-right), not a cramped portrait circle.
   var fig = PICK_TWO_FIGURES[choice.id];
@@ -1290,6 +1308,12 @@ function renderV2PickTwoCard(surface, choice, idx, isSelected) {
     ? '<img class="decision-card__figure' + (CAT_FIGURES[fig] ? ' decision-card__figure--cat' : '') +
         (locked ? ' decision-card__figure--locked' : '') + '" src="' + attrEsc(fig) + '" alt="">'
     : '';
+  var role = PICK_TWO_ROLES[choice.id] || '';
+  var accent = v2AccentFor(surface, choice);
+  var ctaHtml = locked ? '' :
+    '<div><span class="decision-card__cta" style="background:' + attrEsc(accent) + ';">' +
+      (isSelected ? 'PICKED ✓' : 'PICK THIS →') +
+    '</span></div>';
   var cls = 'card decision-card decision-card--pickable ' + rot +
     (fig ? ' decision-card--figure' : '') +
     (isSelected ? ' decision-card--selected' : '') + (locked ? ' decision-card--locked' : '');
@@ -1297,9 +1321,11 @@ function renderV2PickTwoCard(surface, choice, idx, isSelected) {
     ' onclick="toggleV2Pick(' + attrEsc(JSON.stringify(choice.id)) + ')" class="' + cls + '">' +
     '<span class="pick-two__check" aria-hidden="true">✓</span>' +
     '<div class="decision-card__body">' +
-      '<div class="decision-card__role">' + roleBadge + '</div>' +
-      '<div class="decision-card__name">' + htmlEsc(choice.label) + '</div>' +
+      '<div class="decision-card__name">' + htmlEsc(displayLabel) + '</div>' +
+      (role ? '<div class="decision-card__role">' + htmlEsc(role) + '</div>' : '') +
       (pitch ? '<div class="decision-card__pitch">' + htmlEsc(pitch) + '</div>' : '') +
+      renderDeltaChips(deltas, locked) +
+      ctaHtml +
     '</div>' +
     figureHtml +
   '</button>';
@@ -1377,7 +1403,7 @@ function renderV2LarrySurface(surface) {
   grid.removeAttribute('data-larry-choice-made');
   grid.innerHTML =
     '<div class="start-larry v2-larry-surface__body">' +
-      '<span class="larry start-larry__figure">' + LARRY_SVG + '</span>' +
+      '<img class="start-larry__figure" src="images/larry-pet-shoo.png" alt="Larry the cat winding around your ankles">' +
       '<div class="start-larry__title">' + htmlEsc(surface.title) + '</div>' +
       '<div class="start-larry__sub">' + htmlEsc(surface.scene) + '</div>' +
       '<div class="start-larry__actions">' +
@@ -1506,14 +1532,6 @@ function v2UpdateWeekProgress(surface) {
   if (!state.weekDay) state.weekDay = 1;
 }
 
-/** @param {number} n @returns {string} 1->"1st", 2->"2nd", 3->"3rd" */
-function ordinal(n) {
-  var tens = n % 100;
-  if (tens >= 11 && tens <= 13) return n + 'th';
-  var ones = n % 10;
-  return n + (ones === 1 ? 'st' : ones === 2 ? 'nd' : ones === 3 ? 'rd' : 'th');
-}
-
 /* Draw the week progress bar (day pips) into #week-progress. */
 function renderWeekProgress() {
   var el = document.getElementById('week-progress');
@@ -1526,9 +1544,13 @@ function renderWeekProgress() {
     if (i > 1) pips += '<span class="week-progress__link"></span>';
     pips += '<span class="week-progress__pip' + (i <= day ? ' week-progress__pip--done' : '') + '"></span>';
   }
+  // Total weeks is hard-wired to 3 (the shipped v2 flow's three cabinet picks).
+  // Don't use SCENARIO_COUNT here: it's derived from the legacy v1 CABINET_TO_SCENARIO
+  // map, which is empty in the v2 build, so it would render "OF 0".
+  var weeksTotal = 3;
   el.innerHTML =
     '<div class="week-progress__head">' +
-      '<span class="week-progress__label">' + ordinal(week).toUpperCase() + ' WEEK PROGRESS</span>' +
+      '<span class="week-progress__label">WEEK ' + week + ' OF ' + weeksTotal + ' PROGRESS</span>' +
     '</div>' +
     '<div class="week-progress__track">' + pips + '</div>';
 }
@@ -1679,6 +1701,55 @@ function v2ChoiceActionText(choice) {
 }
 
 /**
+ * @param {RouterChoiceAvailability|undefined} availability
+ * @returns {boolean}
+ */
+function v2ChoiceAlreadyEnacted(availability) {
+  return !!availability && availability.reasons.indexOf('already enacted') !== -1;
+}
+
+/**
+ * @param {string|undefined} meterKey
+ * @param {string|undefined} lockText
+ * @returns {string}
+ */
+function meterRequirementHtml(meterKey, lockText) {
+  var meter = meterKey ? meterDefForKey(meterKey) : null;
+  var text = lockText || 'Score is not high enough to unlock.';
+  if (!meter) return '<span class="decision-card__lock-word">LOCKED</span> ' + htmlEsc(text);
+  var label = meter.share + ': ' + text;
+  return '<span class="decision-card__lock-meter" aria-label="' + attrEsc(label) + '" title="' + attrEsc(label) + '">' +
+    meterIconHtml(meter, 'decision-card__lock-icon') +
+    '<span class="decision-card__lock-copy">' + htmlEsc(text) + '</span>' +
+  '</span>';
+}
+
+/**
+ * @param {RouterProductionChoiceView} choice
+ * @param {RouterChoiceAvailability|undefined} availability
+ * @param {string} [extraClass]
+ * @returns {string}
+ */
+function v2UnavailableStatusHtml(choice, availability, extraClass) {
+  var className = extraClass ? ' ' + extraClass : '';
+  if (v2ChoiceAlreadyEnacted(availability)) {
+    return '<div class="decision-card__done' + className + '">' +
+      '<span class="decision-card__done-text">✓ ENACTED</span>' +
+    '</div>';
+  }
+  if (choice.lock && choice.lock.meter && choice.lock.threshold != null) {
+    var meterLockText = choice.lock.text || choice.lockText || (availability ? availability.reasons.join(' · ') : undefined);
+    return '<div class="decision-card__lock' + className + '">' +
+      meterRequirementHtml(choice.lock.meter, meterLockText) +
+    '</div>';
+  }
+  var lockText = (choice.lock && choice.lock.text) || choice.lockText || (availability ? availability.reasons.join(' · ') : 'Locked');
+  return '<div class="decision-card__lock' + className + '">' +
+    '<span class="decision-card__lock-word">LOCKED</span> ' + htmlEsc(lockText) +
+  '</div>';
+}
+
+/**
  * @param {RouterProductionSurfaceView} surface
  * @param {RouterProductionChoiceView} choice
  * @param {number} idx
@@ -1686,7 +1757,9 @@ function v2ChoiceActionText(choice) {
  */
 function renderV2AgendaPairCard(surface, choice, idx) {
   var availability = v2Bridge.choiceAvailability[choice.id];
-  var locked = !!availability && !availability.available;
+  var unavailable = !!availability && !availability.available;
+  var enacted = v2ChoiceAlreadyEnacted(availability);
+  var locked = unavailable && !enacted;
   var rotations = ['rot-l', 'rot-r'];
   var rot = rotations[idx % rotations.length];
   var cabinetPick = choice.cabinetPick || {};
@@ -1695,23 +1768,25 @@ function renderV2AgendaPairCard(surface, choice, idx) {
   var quote = cabinetPick.quote || choice.note || surface.scene;
   var accent = v2AccentFor(surface, choice);
   var deltas = v2ChoiceDeltas(choice);
-  var lockText = locked
-    ? ((choice.lock && choice.lock.text) || choice.lockText || (availability ? availability.reasons.join(' · ') : 'Locked'))
-    : '';
-  var body =
-    '<div class="badge badge--ink cabinet-pick-card__badge"><span class="cabinet-pick-card__dot" style="background:' + attrEsc(accent) + ';"></span><span>ON THE DESK · ' + htmlEsc(role) + '</span></div>' +
-    '<div class="cabinet-pick-card__minister">' +
-      '<div><div class="cabinet-pick-card__name">' + htmlEsc(name) + '</div></div>' +
-    '</div>' +
-    '<div class="cabinet-pick-card__quote">' + htmlEsc(quote) + '</div>' +
-    renderDeltaChips(deltas, locked) +
-    (locked
-      ? '<div class="decision-card__lock">' + htmlEsc(lockText) + '</div>'
-      : '<span class="cabinet-pick-card__cta" style="background:' + attrEsc(accent) + ';">TAKE IT ON →</span>') +
-    v2ChoiceFigure(choice, locked, name, role);
+  var cardBody =
+    '<div class="cabinet-pick-card__body">' +
+      '<div class="badge badge--ink cabinet-pick-card__badge"><span class="cabinet-pick-card__dot" style="background:' + attrEsc(accent) + ';"></span><span>ON THE DESK · ' + htmlEsc(role) + '</span></div>' +
+      '<div class="cabinet-pick-card__minister">' +
+        '<div><div class="cabinet-pick-card__name">' + htmlEsc(name) + '</div></div>' +
+      '</div>' +
+      '<div class="cabinet-pick-card__quote">' + htmlEsc(quote) + '</div>' +
+      renderDeltaChips(deltas, unavailable) +
+      (unavailable
+        ? v2UnavailableStatusHtml(choice, availability)
+        : '<span class="cabinet-pick-card__cta" style="background:' + attrEsc(accent) + ';">TAKE IT ON →</span>') +
+    '</div>';
+  // Figure is a sibling appended after the body (not inside it), so it can sit
+  // absolutely positioned over the card without disturbing the body's flex
+  // layout — same pattern as renderV2DecisionCard's decision-card__figure.
+  var body = cardBody + v2ChoiceFigure(choice, locked, name, role);
 
-  if (locked) {
-    return '<div class="card card--locked cabinet-pick-card cabinet-pick-card--figure cabinet-pick-card--locked">' + body + '</div>';
+  if (unavailable) {
+    return '<div class="card ' + (enacted ? 'card--done cabinet-pick-card--done' : 'card--locked cabinet-pick-card--locked') + ' cabinet-pick-card cabinet-pick-card--figure">' + body + '</div>';
   }
   return '<button onclick="pickV2Choice(' + attrEsc(JSON.stringify(choice.id)) + ')" class="card cabinet-pick-card cabinet-pick-card--figure ' + rot + '">' + body + '</button>';
 }
@@ -1724,25 +1799,24 @@ function renderV2AgendaPairCard(surface, choice, idx) {
  */
 function renderV2PrivateChoiceCard(surface, choice, idx) {
   var availability = v2Bridge.choiceAvailability[choice.id];
-  var locked = !!availability && !availability.available;
+  var unavailable = !!availability && !availability.available;
+  var enacted = v2ChoiceAlreadyEnacted(availability);
+  var locked = unavailable && !enacted;
   var rotations = ['rot-a', 'rot-b', 'rot-c', 'rot-d'];
   var rot = rotations[idx % rotations.length];
   var deltas = v2ChoiceDeltas(choice);
-  var lockText = locked
-    ? ((choice.lock && choice.lock.text) || choice.lockText || (availability ? availability.reasons.join(' · ') : 'Locked'))
-    : '';
   var note = choice.note || choice.endNote || '';
   var body =
     '<div class="private-choice-card__kicker">' + htmlEsc(v2SurfaceKindLabel(surface.kind)) + ' LINE</div>' +
     '<div class="private-choice-card__label">' + htmlEsc(choice.label) + '</div>' +
     (note ? '<div class="private-choice-card__note">' + htmlEsc(note) + '</div>' : '') +
-    renderDeltaChips(deltas, locked) +
-    (locked
-      ? '<div class="decision-card__lock private-choice-card__lock">' + htmlEsc(lockText) + '</div>'
+    renderDeltaChips(deltas, unavailable) +
+    (unavailable
+      ? v2UnavailableStatusHtml(choice, availability, 'private-choice-card__lock')
       : '<div><span class="private-choice-card__cta">CHOOSE →</span></div>');
 
-  if (locked) {
-    return '<div class="card card--locked private-choice-card private-choice-card--locked">' + body + '</div>';
+  if (unavailable) {
+    return '<div class="card ' + (enacted ? 'card--done private-choice-card--done' : 'card--locked private-choice-card--locked') + ' private-choice-card">' + body + '</div>';
   }
   return '<button onclick="pickV2Choice(' + attrEsc(JSON.stringify(choice.id)) + ')" class="card private-choice-card ' + rot + '">' + body + '</button>';
 }
@@ -1755,7 +1829,9 @@ function renderV2PrivateChoiceCard(surface, choice, idx) {
  */
 function renderV2DecisionCard(surface, choice, idx) {
   var availability = v2Bridge.choiceAvailability[choice.id];
-  var locked = !!availability && !availability.available;
+  var unavailable = !!availability && !availability.available;
+  var enacted = v2ChoiceAlreadyEnacted(availability);
+  var locked = unavailable && !enacted;
   var rotations = ['rot-a', 'rot-b', 'rot-c', 'rot-d'];
   var rot = rotations[idx % rotations.length];
   var name = surface.presentation === 'policy-hand'
@@ -1770,9 +1846,6 @@ function renderV2DecisionCard(surface, choice, idx) {
   var accent = v2AccentFor(surface, choice);
   var cta = surface.kind === 'policy' ? 'BACK THIS' : 'CHOOSE';
   var deltas = v2ChoiceDeltas(choice);
-  var lockText = locked
-    ? ((choice.lock && choice.lock.text) || choice.lockText || (availability ? availability.reasons.join(' · ') : 'Locked'))
-    : '';
   var modifier = surface.presentation === 'single-choice'
     ? ' decision-card--crisis decision-card--crisis-' + surface.kind
     : '';
@@ -1794,17 +1867,17 @@ function renderV2DecisionCard(surface, choice, idx) {
       '<div class="decision-card__pitch">' + htmlEsc(pitch) + '</div>' +
       (surface.presentation === 'policy-hand' ? '' :
         '<div class="badge badge--ink decision-card__enacts"><span class="decision-card__dot" style="background:' + attrEsc(accent) + ';"></span><span>' + htmlEsc(badgePrefix) + ' · ' + htmlEsc(badgeText) + '</span></div>') +
-      renderDeltaChips(deltas, locked) +
-      (locked
-        ? '<div class="decision-card__lock">' + htmlEsc(lockText) + '</div>'
+      renderDeltaChips(deltas, unavailable) +
+      (unavailable
+        ? v2UnavailableStatusHtml(choice, availability)
         : '<div><span class="decision-card__cta" style="background:' + attrEsc(accent) + ';">' + cta + ' →</span></div>') +
     '</div>';
   var body = hasFigure
     ? cardBody + v2ChoiceFigure(choice, locked, name, role)
     : v2ChoicePortrait(choice, locked) + cardBody;
 
-  if (locked) {
-    return '<div class="card card--locked decision-card decision-card--locked' + modifier + '">' + body + '</div>';
+  if (unavailable) {
+    return '<div class="card ' + (enacted ? 'card--done decision-card--done' : 'card--locked decision-card--locked') + ' decision-card' + modifier + '">' + body + '</div>';
   }
   return '<button onclick="pickV2Choice(' + attrEsc(JSON.stringify(choice.id)) + ')" class="card decision-card ' + rot + modifier + '">' + body + '</button>';
 }
@@ -2002,9 +2075,9 @@ function renderDeltaChips(deltas, locked) {
 function renderLockText(card) {
   var meter = card.requiresMeter ? meterDefForKey(card.requiresMeter) : null;
   if (meter) {
-    return '🔒 ' + meterIconHtml(meter, 'decision-card__lock-icon') + ' score isn\'t high enough to unlock!';
+    return meterRequirementHtml(card.requiresMeter, card.lockText);
   }
-  return '🔒 ' + htmlEsc(card.lockText || 'Locked');
+  return '<span class="decision-card__lock-word">LOCKED</span> ' + htmlEsc(card.lockText || 'Locked');
 }
 
 /**
@@ -2374,13 +2447,37 @@ function v2ToneStandfirst(level, area, pm) {
   return 'The government names ' + area + ' as a priority — to a notably calmer reception.';
 }
 
+/* Front-page photo pools for the auto-generated manifesto montage. The baked
+   card reactions in router-balance-data.js carry their own images; the montage
+   is built at runtime, so it picks from the same pools here. Same tone rule as
+   the newspaper tiers: levels 0–1 (hostile) draw the angry set, 2–3 the calm set. */
+var NEWS_HOSTILE_IMAGES = [
+  'images/news-hostile-1.png', 'images/news-hostile-2.png', 'images/news-hostile-3.png',
+  'images/news-hostile-4.png', 'images/news-hostile-5.png'
+];
+var NEWS_NEUTRAL_IMAGES = [
+  'images/news-neutral-1.png', 'images/news-neutral-2.png',
+  'images/news-neutral-3.png', 'images/news-neutral-4.png'
+];
+/* FNV-1a 32-bit: a stable string→number hash so an image is picked once per
+   (scenario, level) and stays put across replays — the "fixed shuffle". */
+/** @param {string} str @returns {number} */
+function v2StableHash(str) {
+  var h = 0x811c9dc5;
+  for (var i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
+}
+
 /* Auto-generated montage for a manifesto pick (the small "spinny paper"): a
    tabloid front page plus social posts, with the tone driven by the current
    media reform level (0 vicious .. 3 neutral). */
 /**
  * @param {RouterProductionChoiceView} choice
  * @param {number} level
- * @returns {{newspaper:{masthead:string,headline:string,standfirst:string}, mewsky:Array<Post>, hex:Array<Post>}}
+ * @returns {{newspaper:{masthead:string,headline:string,standfirst:string,image:string,altText:string}, mewsky:Array<Post>, hex:Array<Post>}}
  */
 function v2ManifestoMontage(choice, level) {
   var m = /^choose-(.+)$/.exec(choice.id || '');
@@ -2389,11 +2486,17 @@ function v2ManifestoMontage(choice, level) {
   var pm = state.playerName ? state.playerName.toUpperCase() : 'THE PM';
   var lv = level < 0 ? 0 : level > 3 ? 3 : level;
   var tone = MEDIA_TONE[lv];
+  var pool = lv <= 1 ? NEWS_HOSTILE_IMAGES : NEWS_NEUTRAL_IMAGES;
+  var img = pool[v2StableHash(sid + ':manifesto:' + lv) % pool.length];
   return {
     newspaper: {
       masthead: tone.masthead,
       headline: v2ToneHeadline(lv, sid, area),
-      standfirst: v2ToneStandfirst(lv, area, pm)
+      standfirst: v2ToneStandfirst(lv, area, pm),
+      image: img,
+      altText: lv <= 1
+        ? 'A hostile tabloid front page attacking the Prime Minister.'
+        : 'A measured newspaper front page reporting the story plainly.'
     },
     // press montage shows two posts (mobile hides the extra); ordered so the
     // first two read the level's mood.
@@ -2552,8 +2655,14 @@ function showV2MediaReaction() {
   larryEl.hidden = true; larryEl.innerHTML = '';
 
   var headlines = ['PRESS BARONS DECLARE WAR ON NO.10', 'REGULATOR BILL CLEARS ITS FIRST HURDLE', 'PRESS REFORM BITES: PROPRIETORS IN RETREAT', 'A FREE AND FAIR PRESS, AT LAST'];
+  var mediaPool = lv <= 1 ? NEWS_HOSTILE_IMAGES : NEWS_NEUTRAL_IMAGES;
+  var mediaImg = mediaPool[v2StableHash('media-reform:' + lv) % mediaPool.length];
+  var mediaAlt = lv <= 1
+    ? 'A hostile tabloid front page attacking the Prime Minister.'
+    : 'A measured newspaper front page reporting the story plainly.';
   document.getElementById('feed-frontpages').innerHTML =
     '<div class="frontpage"><div class="frontpage__masthead">' + htmlEsc(tone.masthead) + '</div>' +
+    '<img class="frontpage__image" src="' + attrEsc(mediaImg) + '" alt="' + attrEsc(mediaAlt) + '">' +
     '<div class="frontpage__headline">' + htmlEsc(headlines[lv]) + '</div></div>';
   document.getElementById('feed-bluesky').innerHTML = tone.msky.map(function(f) {
     return '<div class="post post--bluesky"><div class="post__header">' + avatarHTML(f, MSKY_AVATAR) +
@@ -2578,7 +2687,7 @@ function showV2MediaReaction() {
 function showV2WeekReaction() {
   var v = v2Bridge.weekReaction || v2WeekVerdict();
   document.getElementById('reaction-week').textContent = 'WEEK ' + (state.weekNum || 1) + ' · MANIFESTO RESULT';
-  var verb = v.tier === 'fulfilled' ? 'You delivered ' : v.tier === 'partly' ? 'You partly delivered ' : 'You failed to deliver ';
+  var verb = v.tier === 'fulfilled' ? 'You delivered on ' : v.tier === 'partly' ? 'You partly delivered on ' : 'You failed to deliver on ';
   var mark = v.tier === 'fulfilled' ? '✓ ' : v.tier === 'partly' ? '↗ ' : '✗ ';
   var titleEl = document.getElementById('reaction-title');
   if (titleEl) titleEl.textContent = mark + verb + v.promise;
@@ -2607,7 +2716,7 @@ function showV2WeekReaction() {
     var pressTier = v2MediaReformLevel();
     larrySpeechEl.textContent = pressTier <= 1
       ? 'The press are eating you alive! I don’t even do that to mice…'
-      : 'The papers have stopped hissing at you. About time. Even I approve.';
+      : 'The papers have stopped hissing at you. Good. Only cats should hiss.';
     larrySpeechEl.hidden = false;
   }
 
@@ -2762,9 +2871,16 @@ function showV2Reaction() {
   } else {
     var note = choice.endNote || choice.note || surface.scene;
     var fallback = v2FallbackReactionCopy(surface);
+    var fbLevel = v2MediaReformLevel();
+    var fbPool = fbLevel <= 1 ? NEWS_HOSTILE_IMAGES : NEWS_NEUTRAL_IMAGES;
+    var fbImg = fbPool[v2StableHash((choice.id || 'fallback') + ':fallback:' + fbLevel) % fbPool.length];
+    var fbAlt = fbLevel <= 1
+      ? 'A hostile tabloid front page attacking the Prime Minister.'
+      : 'A measured newspaper front page reporting the story plainly.';
     document.getElementById('feed-frontpages').innerHTML =
       '<div class="frontpage">' +
         '<div class="frontpage__masthead">' + htmlEsc(fallback.masthead) + '</div>' +
+        '<img class="frontpage__image" src="' + attrEsc(fbImg) + '" alt="' + attrEsc(fbAlt) + '">' +
         '<div class="frontpage__headline">' + htmlEsc(choice.label) + '</div>' +
       '</div>';
     document.getElementById('feed-bluesky').innerHTML =
@@ -2970,50 +3086,6 @@ function nextTurn() {
 }
 
 /* ---------- screen switching ---------- */
-/* ---------- scoring ---------- */
-/** @type {Record<string, Grade>} */
-var GRADES = {
-  A: {
-    title: 'Top Mouser',
-    verdict: 'You saw through the system on day one. Cleared the path before chasing popular wins, and rode it through all three scenarios. They\'ll write books about this term.',
-    label: '★ GRADE A'
-  },
-  B: {
-    title: 'Purrretty Good',
-    verdict: 'You got there. Not the cleanest run — one scenario you came round to it late, another you carried through nicely — but real, durable change. Bookable second term.',
-    label: '★ GRADE B'
-  },
-  C: {
-    title: 'Half Measures',
-    verdict: 'You picked your fights. Some stuck, some didn\'t. The broken bits are still broken. Your party is briefing against you already.',
-    label: '✦ GRADE C'
-  },
-  lose_capital: {
-    title: 'Larry Is Running the Country Now',
-    verdict: 'The press ate you alive and your political capital ran out. Larry will outlast yet another PM.',
-    label: '✗ GAME OVER'
-  },
-  lose_living: {
-    title: 'Lights Out, Cupboards Bare',
-    verdict: 'Living standards cratered to nothing on your watch — food banks rationing, heating off, the pound a punchline. Larry\'s the only one in Downing Street who got fed today.',
-    label: '✗ GAME OVER'
-  },
-  lose_press: {
-    title: 'Eaten by the Front Pages',
-    verdict: 'The media climate collapsed and took you down with it — every front page, phone-in and timeline pointing the same way. Larry\'s giving a press conference now; it\'s going better than yours ever did.',
-    label: '✗ GAME OVER'
-  },
-  lose_politics: {
-    title: 'Nobody Believes You Anymore',
-    verdict: 'Public trust evaporated to zero — the polls flatlined and your own backbenchers stopped returning calls. They trust the cat. They do not trust you.',
-    label: '✗ GAME OVER'
-  },
-  lose_time: {
-    title: 'The System Wins Again',
-    verdict: 'You spent the whole term reaching for the popular stuff that was never going to land. Nothing structural changed. The public are using your name and lettuce in the same sentence.',
-    label: '✗ GAME OVER'
-  }
-};
 
 /* ---------- gate-unlock tracking ---------- */
 /* Records when each scenario's gate meter first hit the unlock threshold.
@@ -3030,144 +3102,90 @@ function maybeRecordUnlock() {
   }
 }
 
-/* ---------- scoring ----------
- * Per scenario, score by when the gate meter first crossed the unlock threshold,
- * via scenarioPoints(t, T) where T = that scenario's turnCopy.length:
- *   T   pts — already there at scenario start (unlockTurn 0) or crossed on turn 1
- *   ...     — crossing on turn t scores (T - t + 1)
- *   0   pts — never crossed
- * Max achievable = sum of T over the played scenarios. Grade = % of achievable,
- * compared against GRADE_BANDS by integer cross-multiplication so the 3x3 baseline
- * reproduces the original A 8-9 / B 5-7 / C 2-4 of 9 thresholds exactly.
- * Any decide-meter at <= 0 overrides everything → lose_<meter>, picking the first
- * dead meter in METERS order (living, press, politics, capital) via anyMeterDead()
- * so the trigger and the grade always agree on which meter bottomed out.
- * @returns {string} a key into GRADES
- *   ('A'|'B'|'C'|'lose_living'|'lose_press'|'lose_politics'|'lose_capital'|'lose_time')
- */
-function computeScore() {
-  if (isV2Mode() && v2Bridge.routerState) {
-    var v2Dead = v2Bridge.routerState.deadMeter || anyMeterDead();
-    if (v2Dead) return 'lose_' + v2Dead;
-    var config = /** @type {RouterConfig|null} */ (v2Bridge.config);
-    var scenario = config && config.scenarios && config.scenarios[0];
-    var targetCompletions = scenario && scenario.targetPolicyCompletions || 3;
-    var partialCompletions = Math.max(1, targetCompletions - 1);
-    var completed = Object.keys(v2Bridge.routerState.tags).filter(function(tag) {
-      return /^scenario-.*-complete$/.test(tag);
-    }).length;
-    var total = 0;
-    METERS.forEach(function(meter) { total += state.meters[meter.key]; });
-    var average = total / METERS.length;
-    if (v2Bridge.routerState.tags.endgameChoiceMade && completed >= targetCompletions && average >= 45) return 'A';
-    if (completed >= partialCompletions && average >= 35) return 'B';
-    if (completed >= 1 || average >= 25) return 'C';
-    return 'lose_time';
-  }
-  var dead = anyMeterDead();
-  if (dead) return 'lose_' + dead;
-
-  var keys = activeScenarioKeys();
-  var earned = 0, achievable = 0;
-  for (var i = 0; i < SCENARIO_COUNT; i++) {
-    var turns = SCENARIOS[keys[i]].turnCopy.length;
-    achievable += turns;
-    earned += scenarioPoints(state.scenarioUnlockTurn[i], turns);
-  }
-
-  for (var b = 0; b < GRADE_BANDS.length; b++) {
-    var band = GRADE_BANDS[b];
-    // earned/achievable >= band.num/band.den, kept integer-exact:
-    if (achievable > 0 && earned * band.den >= band.num * achievable) return band.grade;
-  }
-  return 'lose_time';
-}
-
 /* ---------- v2 re-election endgame ----------
-   The term ends in a general election. Two things decide it: did you change the
-   voting system (electoral reform), and how many of your three weekly manifesto
-   promises you delivered in full. A dead meter still ends the run in collapse,
-   before any of that is reached. (All copy below is first-pass — Becky to tune.) */
+   The term ends in a general election, decided by just two things: how many of your
+   manifesto policies you implemented (0–6, up to two per week), and whether you passed
+   voter (electoral) reform. Policy bands: 6 = full, 3–5 = some, 1–2 = mixed, 0 = none.
+   Reform only matters at "some" or above. Meters no longer end the run — they only gate
+   which policies you can unlock. (All copy below is first-pass — Becky to tune.) */
 
-var LARRY_BONUS_LINE = 'You have been thrown out of Number Ten by the British public — but have been welcomed as King of All Cats by the British Shorthairs.';
+var LARRY_BONUS_LINE = 'You were removed as PM by the British public but appointed king of the cats by the British shorthairs.';
 
 /** @type {Record<string, {title:string, verdict:string, label:string, color:string, stamp:string, won:boolean}>} */
 var V2_ENDINGS = {
-  fptp: {
-    title: 'Shut Out by the System',
-    verdict: 'Your vote share went up — but under First Past the Post, the right voted tactically to keep you out. You changed minds, not the maths. Without electoral reform, the system did what it always does.',
-    label: '✗ VOTED OUT', color: '#FF335E', stamp: 'VOTED OUT', won: false
+  landslide: {
+    title: 'A Landslide',
+    verdict: 'Achieving your manifesto promises and improving lives meant you increased your popularity and increased your total votes — you win another term by a landslide.',
+    label: '★ LANDSLIDE', color: '#FFC93C', stamp: 'LANDSLIDE', won: true
   },
-  reformShort: {
-    title: 'The Right Idea, Too Late',
-    verdict: 'You rewired the voting system so every vote finally counts — a genuinely historic reform. But you didn\'t keep enough of your promises to ride it, and the country wasn\'t ready to hand you a second term.',
+  fullNoReform: {
+    title: 'Beaten by Tactical Voting',
+    verdict: 'Achieving your manifesto promises and improving lives meant you increased your popularity and increased your total votes — but the right voted tactically, and your party lost the next election.',
     label: '✗ VOTED OUT', color: '#FF335E', stamp: 'VOTED OUT', won: false
   },
   reelected: {
     title: 'Re-Elected',
-    verdict: 'Proportional representation changed the maths — and you kept enough of your word to win on the new terms. A second term, fairly won, under a fairer system. They said it couldn\'t be done.',
+    verdict: 'You did a good job — not the best ever, but you delivered a fair chunk of your manifesto and improved lives. With the voting system finally reformed, your party is re-elected.',
     label: '★ SECOND TERM', color: '#25C998', stamp: 'RE-ELECTED', won: true
   },
-  landslide: {
-    title: 'A New Settlement',
-    verdict: 'You changed the system and delivered on every promise that mattered. Under proportional representation, the country handed you a landslide. This is what winning looks like when the rules are finally fair.',
-    label: '★ LANDSLIDE', color: '#FFC93C', stamp: 'LANDSLIDE', won: true
+  someNoReform: {
+    title: 'So Near, Yet Voted Out',
+    verdict: 'You managed to achieve most of your manifesto policies and generally improved things, but not as much as you could have. You did similarly well to the last election — but the right voted tactically, and this time your party lost.',
+    label: '✗ VOTED OUT', color: '#FF335E', stamp: 'VOTED OUT', won: false
+  },
+  mixed: {
+    title: 'Not Enough',
+    verdict: 'You achieved some of your manifesto promises but not enough. Your party loses the next election.',
+    label: '✗ VOTED OUT', color: '#FF335E', stamp: 'VOTED OUT', won: false
+  },
+  none: {
+    title: 'Voted Out',
+    verdict: 'You didn\'t achieve your manifesto promises and were voted out. People have started using the word "lettuce" when referring to you.',
+    label: '✗ VOTED OUT', color: '#FF335E', stamp: 'VOTED OUT', won: false
   }
 };
 
-/** @returns {number} weeks whose manifesto promise was delivered in full */
-function v2FulfilledWeeks() {
-  return (state.weekVerdicts || []).filter(function(v) { return v && v.tier === 'fulfilled'; }).length;
+/** @returns {number} manifesto policies implemented (0–6): up to two per week */
+function v2PolicyCount() {
+  return (state.weekVerdicts || []).reduce(function(n, v) {
+    return n + Math.min(2, (v && v.count) || 0);
+  }, 0);
 }
 
-/** @returns {boolean} player petted Larry and took every Larry option offered */
+/** @returns {boolean} player took every Larry policy offered (gates the king-of-cats line) */
 function v2LarryBonusEarned() {
-  return state.larryLoyal === true && state.larryNice === true;
+  return state.larryLoyal === true;
 }
 
 /** @returns {{title:string, verdict:string, label:string, color:string, stamp:string, won:boolean}} */
 function v2ReelectionOutcome() {
-  if (!v2EnactedElectoralReform()) return V2_ENDINGS.fptp;
-  var delivered = v2FulfilledWeeks();
-  if (delivered <= 1) return V2_ENDINGS.reformShort;
-  if (delivered === 2) return V2_ENDINGS.reelected;
-  return V2_ENDINGS.landslide;
+  var policies = v2PolicyCount();
+  var reform = v2EnactedElectoralReform();
+  if (policies >= 6) return reform ? V2_ENDINGS.landslide : V2_ENDINGS.fullNoReform;
+  if (policies >= 3) return reform ? V2_ENDINGS.reelected : V2_ENDINGS.someNoReform;
+  if (policies >= 1) return V2_ENDINGS.mixed;
+  return V2_ENDINGS.none;
 }
 
-/* Fields the end screen renders for a v2 run: a collapsed meter ends the term
-   outright (reusing the GRADES copy); otherwise the election outcome decides it,
-   with the Larry bonus line appended when every Larry box was ticked. */
+/* Fields the end screen renders for a v2 run: the election outcome (policy count +
+   voter reform) decides everything — meters no longer collapse the term. Taking every
+   Larry policy earns the king-of-cats line on any losing ending: it replaces the lettuce
+   text on the 0-policy ending, and is appended on the other losing endings. */
 /** @returns {{stamp:string, title:string, verdictHtml:string, label:string, color:string}} */
 function v2EndInfo() {
-  var dead = (v2Bridge.routerState && v2Bridge.routerState.deadMeter) || anyMeterDead();
-  /** @type {{title:string, verdict:string, label:string, color:string, stamp:string, won:boolean}} */
-  var ending;
-  if (dead) {
-    var g = GRADES['lose_' + dead];
-    ending = { title: g.title, verdict: g.verdict, label: g.label, color: '#FF335E', stamp: 'TERM ENDED', won: false };
-  } else {
-    ending = v2ReelectionOutcome();
-  }
-  var verdictHtml = '<p>' + htmlEsc(ending.verdict) + '</p>';
-  // The Larry "King of All Cats" line is a consolation easter egg — it only fits
-  // a run that ended out of office, so it's gated to non-win endings.
-  if (!ending.won && v2LarryBonusEarned()) {
+  var ending = v2ReelectionOutcome();
+  var larry = !ending.won && v2LarryBonusEarned();
+  var verdict = (larry && ending === V2_ENDINGS.none) ? LARRY_BONUS_LINE : ending.verdict;
+  var verdictHtml = '<p>' + htmlEsc(verdict) + '</p>';
+  if (larry && ending !== V2_ENDINGS.none) {
     verdictHtml += '<p class="end-larry-bonus">' + htmlEsc(LARRY_BONUS_LINE) + '</p>';
   }
   return { stamp: ending.stamp, title: ending.title, verdictHtml: verdictHtml, label: ending.label, color: ending.color };
 }
 
-/** @returns {{stamp:string, title:string, verdictHtml:string, label:string, color:string}} */
-function legacyEndInfo() {
-  var grade = computeScore();
-  var g = GRADES[grade];
-  var color = grade === 'A' ? '#25C998' : grade === 'B' ? '#FFC93C' : grade === 'C' ? '#4D7CFF' : '#FF335E';
-  return { stamp: 'TERM ENDED', title: g.title, verdictHtml: g.verdict, label: g.label, color: color };
-}
-
 /* ---------- end screen ---------- */
 function showEnd() {
-  var info = (isV2Mode() && v2Bridge.routerState) ? v2EndInfo() : legacyEndInfo();
+  var info = v2EndInfo();
 
   document.getElementById('stamp').textContent       = info.stamp;
   document.getElementById('end-pm').textContent      = pmTitle();
@@ -3192,6 +3210,16 @@ function showEnd() {
     });
   });
 
+  // Larry's pet/shoo reaction: his image plus a separate speech-bubble caption.
+  var endLarry = document.getElementById('end-larry');
+  if (state.larryNice === null) {
+    endLarry.hidden = true;
+  } else {
+    document.getElementById('end-larry-bubble').textContent =
+      state.larryNice ? 'I voted for you!' : 'I didn\'t vote for you!';
+    endLarry.hidden = false;
+  }
+
   document.getElementById('share-confirm').hidden = true;
   replayStamp();
 }
@@ -3202,7 +3230,7 @@ function replayStamp() {
 
 /* ---------- share ---------- */
 function shareResult() {
-  var shareLabel = (isV2Mode() && v2Bridge.routerState) ? v2EndInfo().label : GRADES[computeScore()].label;
+  var shareLabel = v2EndInfo().label;
   // Pad the label column to the longest share label + 2 (preserves the original
   // fixed-width alignment: 'Living Standards' is 16 chars, so the column is 18).
   var labelWidth = METERS.reduce(function(w, d) { return Math.max(w, d.share.length); }, 0) + 2;
@@ -3351,8 +3379,9 @@ function resetGame() {
   demoHistory = [];  // fresh run starts with an empty BACK stack
   state.startStep        = 0;
   state.playerName       = '';
+  defaultPlayerNameCleared = false;
   var nameInput = /** @type {HTMLInputElement|null} */ (document.getElementById('pm-name'));
-  if (nameInput) nameInput.value = '';
+  if (nameInput) nameInput.value = DEFAULT_PLAYER_NAME;
   state.cabinet          = {};
   state.larryNice        = null;
   state.larryLoyal       = true;
@@ -3635,5 +3664,7 @@ document.addEventListener('click', function(e) {
 
 /* ---------- boot ---------- */
 document.querySelectorAll('.larry').forEach(function(el) { el.innerHTML = LARRY_SVG; });
+var playerNameInput = /** @type {HTMLInputElement|null} */ (document.getElementById('pm-name'));
+if (playerNameInput) playerNameInput.addEventListener('focus', clearDefaultPlayerNameOnce);
 renderPicks();
 go('start');

@@ -192,6 +192,7 @@
           </div>
           <span class="m-val meter-donut__value" data-m="living">0</span>
           <div class="m-delta reaction-meter__delta" data-m="living"></div>
+          <span class="meter-donut__tip" role="tooltip">Living Standards</span>
         </div>
       </div>
       <div class="meter-card meter-card--reaction">
@@ -205,6 +206,7 @@
           </div>
           <span class="m-val meter-donut__value" data-m="press">0</span>
           <div class="m-delta reaction-meter__delta" data-m="press"></div>
+          <span class="meter-donut__tip" role="tooltip">Media Climate</span>
         </div>
       </div>
       <div class="meter-card meter-card--reaction">
@@ -218,6 +220,7 @@
           </div>
           <span class="m-val meter-donut__value" data-m="politics">0</span>
           <div class="m-delta reaction-meter__delta" data-m="politics"></div>
+          <span class="meter-donut__tip" role="tooltip">Public Trust</span>
         </div>
       </div>
       <div class="meter-card meter-card--reaction">
@@ -231,6 +234,7 @@
           </div>
           <span class="m-val meter-donut__value" data-m="capital">0</span>
           <div class="m-delta reaction-meter__delta" data-m="capital"></div>
+          <span class="meter-donut__tip" role="tooltip">Political Power</span>
         </div>
       </div>
     </div>
@@ -243,7 +247,6 @@
     <div class="reaction-feeds">
 
       <div>
-        <div class="reaction-feed-label reaction-feed-label--press">FRONT PAGES</div>
         <div id="feed-frontpages"></div>
         <!-- Larry sits below the front-page splash -->
         <div class="reaction-larry">
@@ -253,22 +256,19 @@
       </div>
 
       <div>
-        <div class="reaction-feed-label reaction-feed-label--bluesky">MEWSKY</div>
         <div id="feed-bluesky"></div>
         <button type="button" class="feed-more" data-feed="feed-bluesky" onclick="toggleFeed(this)">View more ▾</button>
       </div>
 
       <div>
-        <div class="reaction-feed-label reaction-feed-label--x">HEX · FORMERLY WITTIER</div>
         <div id="feed-xtwitter"></div>
         <button type="button" class="feed-more" data-feed="feed-xtwitter" onclick="toggleFeed(this)">View more ▾</button>
       </div>
 
-    </div>
+      <div class="reaction-actions">
+        <button id="btn-next-week" class="btn btn--go" onclick="nextTurn()"></button>
+      </div>
 
-    <div class="reaction-actions">
-      <button id="btn-next-week" class="btn btn--go" onclick="nextTurn()"></button>
-      <button class="btn btn--ghost reaction-actions__wrap-up" onclick="go('end')">WRAP IT UP</button>
     </div>
 
   </div>
@@ -294,6 +294,7 @@
             <span class="meter-donut__icon"><img src="icons/meter-living-standards.svg" alt="" aria-label="Living Standards" title="Living Standards"></span>
           </div>
           <span class="m-val meter-donut__value" data-m="living">0</span>
+          <span class="meter-donut__tip" role="tooltip">Living Standards</span>
         </div>
       </div>
       <div class="meter-card meter-card--end">
@@ -306,6 +307,7 @@
             <span class="meter-donut__icon"><img src="icons/meter-media-climate.svg" alt="" aria-label="Media Climate" title="Media Climate"></span>
           </div>
           <span class="m-val meter-donut__value" data-m="press">0</span>
+          <span class="meter-donut__tip" role="tooltip">Media Climate</span>
         </div>
       </div>
       <div class="meter-card meter-card--end">
@@ -318,6 +320,7 @@
             <span class="meter-donut__icon"><img src="icons/meter-public-trust.svg" alt="" aria-label="Public Trust" title="Public Trust"></span>
           </div>
           <span class="m-val meter-donut__value" data-m="politics">0</span>
+          <span class="meter-donut__tip" role="tooltip">Public Trust</span>
         </div>
       </div>
       <div class="meter-card meter-card--end">
@@ -330,8 +333,14 @@
             <span class="meter-donut__icon"><img src="icons/meter-political-power.svg" alt="" aria-label="Political Power" title="Political Power"></span>
           </div>
           <span class="m-val meter-donut__value" data-m="capital">0</span>
+          <span class="meter-donut__tip" role="tooltip">Political Power</span>
         </div>
       </div>
+    </div>
+
+    <div id="end-larry" class="end-larry" hidden>
+      <div id="end-larry-bubble" class="end-larry__bubble"></div>
+      <img id="end-larry-img" class="end-larry__img" src="images/larry-pet-shoo.png" alt="Larry the cat">
     </div>
 
     <div class="end-actions">
@@ -357,23 +366,22 @@
 
       <!-- Left column: text + cat + button -->
       <div class="start-intro__copy">
-        <div class="badge badge--flag start-intro__badge">No.10 DOWNING ST · DAY ONE</div>
+        <div class="badge badge--flag start-intro__badge">Larry's Landlord</div>
         <div class="start-intro__title">Congratulations,<br>Prime Minister.</div>
-        <div class="start-intro__lede">You've had the security brief. You've met Larry the cat. The red boxes are already stacking up. Time to <b class="start-intro__em">pick your battles</b> — starting with the file on top of the pile.</div>
-        <div class="start-intro__larry-row">
-          <span class="larry start-intro__larry"></span>
-          <div class="start-intro__larry-line">Larry — Chief Mouser to the<br>Prime Minister. Already judging you.</div>
-        </div>
+        <div class="start-intro__lede">You've had the security brief. You've met Larry the cat. The red boxes are already stacking up. Time to <b class="start-intro__em">pick your battles</b> and see how well you can run the country.</div>
         <div class="start-name">
           <label for="pm-name" class="start-name__label">SIGN THE REGISTER, PRIME MINISTER:</label>
-          <input id="pm-name" class="start-name__input" type="text" maxlength="28" autocomplete="off" placeholder="Your name" onkeydown="if(event.key==='Enter')begin();">
+          <input id="pm-name" class="start-name__input" type="text" maxlength="28" autocomplete="off" placeholder="Enter your name" onkeydown="if(event.key==='Enter')begin();">
         </div>
         <button onclick="begin()" class="btn btn--go btn--lg">RIGHT THEN →</button>
       </div>
 
-      <!-- Right column: No.10 door photo -->
+      <!-- Right column: No.10 door photo, with the Larry caption below it (desktop) -->
       <div class="start-intro__photo-frame">
-        <img src="no10-door.png" alt="10 Downing Street" class="start-intro__photo">
+        <img src="no10-door.png" alt="Larry the cat sitting in front of the No.10 Downing Street door" class="start-intro__photo">
+        <div class="start-intro__larry-row">
+          <div class="start-intro__larry-line">Larry — Chief Mouser to the<br>Prime Minister. Already judging you.</div>
+        </div>
       </div>
 
     </div>
@@ -421,8 +429,9 @@
     </div>
 
     <!-- Step 4: Larry -->
+    <!-- NOTE: This onboarding pet/shoo screen is NOT reached in the current v2 router flow. The live pet/shoo beat players actually see is renderV2LarrySurface() in game.js. Kept in sync (larry-pet-shoo.png) in case this path is ever re-enabled. -->
     <div class="step start-larry" data-step="4" hidden>
-      <span class="larry start-larry__figure"></span>
+      <img class="start-larry__figure" src="images/larry-pet-shoo.png" alt="Larry the cat winding around your ankles">
       <div class="start-larry__title">One more thing.</div>
       <div class="start-larry__sub">Larry winds around your ankles and looks up.</div>
       <div class="start-larry__actions">

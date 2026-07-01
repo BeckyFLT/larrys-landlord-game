@@ -137,7 +137,8 @@
    */
   function listCandidates(config, state) {
     var scenario = getScenario(config, state.scenarioId);
-    if (!scenario || state.deadMeter) return [];
+    // Meters no longer end the run — a dead meter just floors; keep offering surfaces.
+    if (!scenario) return [];
     var surfaceIds = setFrom(scenario.surfaceIds);
     /** @type {RouterCandidate[]} */
     var candidates = [];
