@@ -6,4 +6,4 @@ Street cat. Plays entirely in the browser — no install.
 
 **Play it:** https://beckyflt.github.io/larrys-landlord-game/
 
-Built by Field Level Tech as part of the BETTER! campaign game.
+Built by Field Level Tech.
