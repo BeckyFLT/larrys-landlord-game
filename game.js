@@ -327,6 +327,7 @@ var V2_MODE = isV2QueryMode();
  * @property {Array<{surface:RouterProductionSurfaceView, choice:RouterProductionChoiceView}>} weekDecisions
  * @property {{tier:string, count:number, promise:string}|null} weekReaction
  * @property {string[]} pickTwoSelected
+ * @property {string[]} pickTwoCommitted
  */
 /** @type {V2BridgeState} */
 var v2Bridge = {
@@ -346,7 +347,8 @@ var v2Bridge = {
   lastConsequenceNotices: [],
   weekDecisions: [],   // the current round's policy decisions (for the weekly verdict + feed)
   weekReaction: null,  // set when the once-a-week full reaction is showing; cleared on advance
-  pickTwoSelected: []  // ids chosen on a 'pick-two' beat, pending confirm
+  pickTwoSelected: [],  // ids chosen on a 'pick-two' beat, pending confirm
+  pickTwoCommitted: []  // the beat's committed ids, for the light press reaction
 };
 
 /** @returns {boolean} */
@@ -430,6 +432,7 @@ function v2StartRun() {
   v2Bridge.lastSurfaceView = null;
   v2Bridge.pendingChoiceId = null;
   v2Bridge.pendingChoiceView = null;
+  v2Bridge.pickTwoCommitted = [];
   v2Bridge.activeSurfaceNotice = null;
   v2Bridge.lastConsequenceNotices = [];
   state.turn = 1;
@@ -721,6 +724,7 @@ function v2PrepareNextPlayableSurface() {
       });
       v2Bridge.pendingChoiceId = null;
       v2Bridge.pendingChoiceView = null;
+      v2Bridge.pickTwoCommitted = [];
       v2SyncMeters();
       return 'surface';
     }
@@ -799,24 +803,26 @@ function v2ChoiceHasPress(choiceView) {
  * @returns {boolean}
  */
 function v2SkipsFullReaction(surfaceView) {
-  // Policy decisions now get only the small (spinny-paper) reaction; the full
-  // reaction is saved for the once-a-week verdict after the round's set-piece.
-  return !!surfaceView && (surfaceView.kind === 'private' || surfaceView.kind === 'policy' || v2IsManifestoSurface(surfaceView));
+  // These get only the small (spinny-paper) reaction: non-final policy
+  // decisions, private beats (the One Visit set-piece), the pick-two bonus
+  // beats, and manifesto picks. The full weekly reaction fires from the round
+  // ender (the week's second policy decision) — see v2IsRoundEndingSetpiece.
+  return !!surfaceView && (
+    surfaceView.kind === 'private' ||
+    surfaceView.kind === 'policy' ||
+    surfaceView.presentation === 'pick-two' ||
+    v2IsManifestoSurface(surfaceView)
+  );
 }
 
-/* The round-ending decisions — the "final decision of the week". After one of
-   these commits, the full weekly reaction (with the manifesto verdict) shows.
-   Week 1 ends on the One Visit set-piece; Weeks 2 and 3 close on their "pick two
-   policies" beats (the retired PMQs and Week-2 set-pieces are gone). */
-/** @type {Record<string, boolean>} */
-var V2_ROUND_SETPIECES = {
-  'flat-one-visit-one-camera': true,
-  'flat-the-rival-across-the-table': true,
-  'week2-policy-pick': true,
-  'week3-legacy-pick': true
-};
+/* The round-ending decision — the "final decision of the week" — is the week's
+   SECOND policy decision. After it commits, the full weekly reaction (with the
+   manifesto verdict) shows, BEFORE the week's closing beat (One Visit / the
+   pick-two beats), which then only gets the light spinny-paper reaction. */
 /** @param {any} sv @returns {boolean} */
-function v2IsRoundEndingSetpiece(sv) { return !!sv && !!V2_ROUND_SETPIECES[sv.id]; }
+function v2IsRoundEndingSetpiece(sv) {
+  return !!sv && sv.kind === 'policy' && /-turn-2$/.test(sv.id || '');
+}
 
 /** @type {Record<string,string>} */
 var V2_PROMISE_TITLES = {
@@ -833,18 +839,21 @@ function v2WeekPromiseTitle() {
   return 'your manifesto promise';
 }
 
-/* Weekly verdict: how many of the two on-topic cards (direct + upgraded) the
-   player enacted this round. Both = fulfilled, one = partly, none = failed. */
+/* Weekly verdict for the two-decision week: enacting the big locked fix
+   (role 'upgraded' — only reachable by taking the reform first) fulfils the
+   promise, the quick fix alone (role 'direct') is a partial delivery, and a
+   week of neither (cats, or a reform with no follow-through) fails it. */
 /** @returns {{tier:string, count:number, promise:string}} */
 function v2WeekVerdict() {
-  var onTopic = 0;
+  var tookBig = false, tookQuick = false;
   v2Bridge.weekDecisions.forEach(function(d) {
     var role = d.choice && d.choice.cardRole;
-    if (role === 'direct' || role === 'upgraded') onTopic++;
+    if (role === 'upgraded') tookBig = true;
+    if (role === 'direct') tookQuick = true;
   });
   var promise = v2WeekPromiseTitle();
-  var tier = onTopic >= 2 ? 'fulfilled' : onTopic === 1 ? 'partly' : 'failed';
-  return { tier: tier, count: onTopic, promise: promise };
+  var tier = tookBig ? 'fulfilled' : tookQuick ? 'partly' : 'failed';
+  return { tier: tier, count: (tookBig ? 1 : 0) + (tookQuick ? 1 : 0), promise: promise };
 }
 
 /* Compute this week's verdict AND record it on state.weekVerdicts (in play order)
@@ -1375,20 +1384,16 @@ function confirmV2PickTwo() {
   var endingSurface = v2Bridge.activeSurfaceView;
   v2NoteLarryLoyalty(endingSurface, sel);
   v2Bridge.lastSurfaceView = endingSurface;
-  v2Bridge.lastChoiceView = v2FindChoiceView(endingSurface, sel[sel.length - 1]);
+  v2Bridge.lastChoiceView = v2FindChoiceView(endingSurface, sel[0]);
+  v2Bridge.pickTwoCommitted = sel;
   state.lastPolicy = sel[sel.length - 1];
   state.lastDeltas = combined;
   v2Bridge.lastConsequenceNotices = [];
   v2Bridge.pickTwoSelected = [];
   v2SyncMeters();
-  // A round-ending beat (Week 2, now that its set-piece is retired) opens the
-  // weekly verdict; otherwise just advance to the forced follow-up.
-  if (v2IsRoundEndingSetpiece(endingSurface)) {
-    v2Bridge.weekReaction = v2RecordWeekVerdict();
-    go('reaction');
-    return;
-  }
-  nextV2Beat();
+  // Show the light press reaction to the picks; its button then advances to the
+  // next beat (or, after the Week 3 legacy pick, straight to the election).
+  go('press');
 }
 
 /**
@@ -1474,25 +1479,33 @@ function v2SurfaceLabel(surface) {
 }
 
 /** @type {number} */
-var PUBLIC_POLICY_COUNT = 3;
+var PUBLIC_POLICY_COUNT = 2;
 
 /* ---------- week / day progress ----------
-   The timeline is framed as weeks (one per scenario/reform stream). A week runs
-   Day 1 (the manifesto pick) then one day per policy turn — so DAYS_PER_WEEK
-   days in all. Crises and private beats keep the last known day so the bar
-   stays steady. */
+   The timeline is framed as weeks (one per scenario/reform stream): a manifesto
+   pick, one day per policy decision, plus each week's framing beats. So the
+   weeks stay a similar length, One Visit One Camera counts as WEEK 2's opening
+   beat (it still plays right after week 1's verdict):
+     Week 1: Letter, Larry, manifesto, two decisions            (5 dots)
+     Week 2: One Visit, manifesto, two decisions, the pick-two  (5 dots)
+     Week 3: manifesto, two decisions, the legacy pick          (4 dots)
+   Other beats keep the last known day so the bar stays steady. */
 /** @type {number} */
-var DAYS_PER_WEEK = PUBLIC_POLICY_COUNT + 1;
+var DAYS_PER_WEEK = PUBLIC_POLICY_COUNT + 2;
 
 /* Week 1 opens with two extra beats — the Letter of Last Resort, then Larry —
-   before the manifesto pick, so its progress bar has two more dots than the
-   later weeks. */
+   before the manifesto pick. */
 /** @type {number} */
 var WEEK1_OPENING_BEATS = 2;
 
 /** @param {number} week @returns {number} total dots (days) shown for that week */
 function daysInWeek(week) {
-  return week === 1 ? DAYS_PER_WEEK + WEEK1_OPENING_BEATS : DAYS_PER_WEEK;
+  return week === 3 ? DAYS_PER_WEEK : DAYS_PER_WEEK + 1;
+}
+
+/** @param {number} week @returns {number} the dot of week's manifesto pick (decisions follow it) */
+function manifestoDay(week) {
+  return week === 1 ? WEEK1_OPENING_BEATS + 1 : week === 2 ? 2 : 1;
 }
 
 /** @returns {number} manifesto (cabinet-pair) picks made so far */
@@ -1512,21 +1525,25 @@ function v2UpdateWeekProgress(surface) {
   // Week 1's two opening beats, before any manifesto pick.
   if (id === 'flat-the-letter-of-last-resort') { state.weekNum = 1; state.weekDay = 1; return; }
   if (id === V2_LARRY_SURFACE_ID)               { state.weekNum = 1; state.weekDay = 2; return; }
+  // One Visit plays between week 1's verdict and week 2's manifesto pick, and
+  // counts as week 2's opening beat so the weeks stay a similar length.
+  if (id === 'flat-one-visit-one-camera') { state.weekNum = 2; state.weekDay = 1; return; }
   var pairMatch = /^cabinet-pair-pair(\d)$/.exec(id);
-  if (pairMatch) {            // a manifesto pick opens a new week
+  if (pairMatch) {            // a manifesto pick
     var w = Number(pairMatch[1]);
     state.weekNum = w;
-    // In week 1 the manifesto comes after the Letter + Larry; later weeks start at it.
-    state.weekDay = (w === 1) ? WEEK1_OPENING_BEATS + 1 : 1;
+    state.weekDay = manifestoDay(w);
     return;
   }
   var policyIdx = v2PolicyIndexFromSurface(surface);
   if (policyIdx) {            // policy turn K -> the K-th dot after the manifesto
     if (!state.weekNum) state.weekNum = Math.max(1, v2CountChosenPairs());
-    var offset = (state.weekNum === 1) ? WEEK1_OPENING_BEATS + 1 : 1;
-    state.weekDay = Math.min(daysInWeek(state.weekNum), policyIdx + offset);
+    state.weekDay = Math.min(daysInWeek(state.weekNum), policyIdx + manifestoDay(state.weekNum));
     return;
   }
+  // The pick-two beats close their weeks with the final dot.
+  if (id === 'week2-policy-pick') { state.weekNum = 2; state.weekDay = daysInWeek(2); return; }
+  if (id === 'week3-legacy-pick') { state.weekNum = 3; state.weekDay = daysInWeek(3); return; }
   // crisis / endgame / other: keep the current week & day, just ensure set
   if (!state.weekNum) state.weekNum = Math.max(1, v2CountChosenPairs());
   if (!state.weekDay) state.weekDay = 1;
@@ -2289,19 +2306,34 @@ function showV2Press() {
   // Social posts fly in alongside the spinning newspaper. Both manifesto picks
   // and reaction turns show 2 Mewsky + 2 Hex on desktop. Mobile CSS hides every
   // post after the first, so the extra post is desktop-only (don't change mobile).
-  var mewsky = manifesto ? manifesto.mewsky
-    : (reaction && reaction.bluesky ? reaction.bluesky.slice(0, 2) : []);
-  var hex = manifesto ? manifesto.hex
-    : v2PickHex(reaction, choice).slice(0, 2);
+  // On a pick-two beat both committed picks get a say: one post per pick, per network.
+  var pickViews = (v2Bridge.pickTwoCommitted || [])
+    .map(function(cid) { return v2FindChoiceView(surface, cid); })
+    .filter(function(cv) { return !!(cv && cv.reaction); });
+  var mewsky, hex;
+  if (surface.presentation === 'pick-two' && pickViews.length) {
+    mewsky = pickViews.map(function(cv) { return (cv.reaction.bluesky || [])[0]; }).filter(Boolean).slice(0, 2);
+    hex = pickViews.map(function(cv) { return v2PickHex(cv.reaction, cv)[0]; }).filter(Boolean).slice(0, 2);
+  } else {
+    mewsky = manifesto ? manifesto.mewsky
+      : (reaction && reaction.bluesky ? reaction.bluesky.slice(0, 2) : []);
+    hex = manifesto ? manifesto.hex
+      : v2PickHex(reaction, choice).slice(0, 2);
+  }
   setPressStack('press-left', mewsky, '');
   setPressStack('press-right', hex, 'HEX');
-  // Button label. When a full reaction screen follows, keep "SEE THE FALLOUT".
-  // When it doesn't (manifesto picks / private surfaces advance straight to the
-  // next decision), the very first such newspaper invites the first policy
-  // decision; every one after that just advances to the next decision.
+  // Button label. The week's final policy decision leads into the full weekly
+  // reaction ("SEE THE FALLOUT"); the Week 3 legacy pick leads straight into
+  // the election. Everything else (manifesto picks / private beats / pick-two
+  // beats) advances to the next decision — the very first such newspaper
+  // invites the first policy decision.
   var falloutBtn = document.querySelector('.press-overlay__fallout');
   if (falloutBtn) {
-    if (v2SkipsFullReaction(surface)) {
+    if (v2IsRoundEndingSetpiece(surface)) {
+      falloutBtn.textContent = 'SEE THE FALLOUT →';
+    } else if (surface.id === 'week3-legacy-pick') {
+      falloutBtn.textContent = 'GENERAL ELECTION →';
+    } else if (v2SkipsFullReaction(surface)) {
       falloutBtn.textContent = state.firstReactionlessPressSeen
         ? 'MAKE YOUR NEXT DECISION →'
         : 'MAKE YOUR FIRST POLICY DECISION →';
@@ -2422,6 +2454,82 @@ var MEDIA_TONE = [
   }
 ];
 
+/* Hex posts for a manifesto pick: unlike Mewsky (which reads the press mood,
+   from MEDIA_TONE above), Hex reacts to the POLICY AREA the player just chose —
+   never to how the papers are covering it. Two tone bands: hostile while the
+   press is unreformed (level 0–1), grudging once it has thawed (2–3).
+   FIRST-PASS COPY — Becky to tune. */
+/** @type {Record<string, {hostile: Post[], softened: Post[]}>} */
+var HEX_PROMISE_TAKES = {
+  nhs: {
+    hostile: [
+      { name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: 'Billions more into the NHS black hole. Where is it coming from? Your pocket.', stats: '4.1K quotes' },
+      { name: 'Nigel Pinstripe', handle: '@nigelp', text: 'Every PM promises to fix the waiting lists. The waiting lists remain unfixed. Good luck.', stats: '3.2K quotes' }
+    ],
+    softened: [
+      { name: 'Westminster Whisper', handle: '@wmwhisper', text: 'Health first out of the gate. Ambitious — the waiting-list numbers will make or break this.', stats: '1.9K quotes' },
+      { name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: 'If the waiting lists actually move, fair play. Watching the numbers, not the speeches.', stats: '1.6K quotes' }
+    ]
+  },
+  taxLoopholes: {
+    hostile: [
+      { name: 'Sir Reginald Purse', handle: '@regpurse', text: 'Hounding wealth creators out of Britain by teatime. The yachts are already warming up.', stats: '3.8K quotes' },
+      { name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: '“Closing loopholes” always starts with billionaires and ends with YOUR pension.', stats: '3.4K quotes' }
+    ],
+    softened: [
+      { name: 'Westminster Whisper', handle: '@wmwhisper', text: 'Treasury reckons the loophole push is worth billions a year. The lawyers are sharpening pencils.', stats: '1.8K quotes' },
+      { name: 'Sir Reginald Purse', handle: '@regpurse', text: 'One concedes some of these loopholes were… generous. One will be consulting one’s accountant.', stats: '2.1K quotes' }
+    ]
+  },
+  housing: {
+    hostile: [
+      { name: 'Nigel Pinstripe', handle: '@nigelp', text: 'They’ll concrete over the green belt and STILL nobody you know will get a house.', stats: '3.6K quotes' },
+      { name: 'Sir Reginald Purse', handle: '@regpurse', text: 'A war on landlords, dressed up as compassion. Property is the last safe investment in this country.', stats: '2.9K quotes' }
+    ],
+    softened: [
+      { name: 'Westminster Whisper', handle: '@wmwhisper', text: 'Housing as the week’s priority. Every government says it; the completions data will say whether it’s real.', stats: '1.7K quotes' },
+      { name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: 'Build the houses, watch rents fall, save the housing-benefit bill. The maths isn’t hard.', stats: '1.5K quotes' }
+    ]
+  },
+  carbon: {
+    hostile: [
+      { name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: 'Net zero, gross cost. Guess who pays for the windmills? You do.', stats: '3.9K quotes' },
+      { name: 'Nigel Pinstripe', handle: '@nigelp', text: 'Britain: 1% of global emissions, 100% of the lectures. Priorities, PM.', stats: '3.3K quotes' }
+    ],
+    softened: [
+      { name: 'Westminster Whisper', handle: '@wmwhisper', text: 'The climate push is on. Industry wants certainty more than it fears the targets — worth remembering.', stats: '1.8K quotes' },
+      { name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: 'Green investment either cuts bills in ten years or it doesn’t. Hold them to the number.', stats: '1.4K quotes' }
+    ]
+  },
+  costOfLiving: {
+    hostile: [
+      { name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: 'You can’t subsidise your way out of a cost-of-living crisis. Somebody always pays. It’s you.', stats: '4.0K quotes' },
+      { name: 'Nigel Pinstripe', handle: '@nigelp', text: 'The PM discovers bills are high. Groundbreaking. Wait till they see who’s been in charge.', stats: '3.1K quotes' }
+    ],
+    softened: [
+      { name: 'Westminster Whisper', handle: '@wmwhisper', text: 'Cost of living tops the grid. Politically unavoidable — the question is whether the help reaches February’s bills.', stats: '1.9K quotes' },
+      { name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: 'Targeted help beats blanket giveaways. If they keep it tight, this is defensible.', stats: '1.5K quotes' }
+    ]
+  },
+  water: {
+    hostile: [
+      { name: 'Sir Reginald Purse', handle: '@regpurse', text: 'Nationalisation talk before lunch. The pension funds holding water stock will remember this.', stats: '3.5K quotes' },
+      { name: 'Nigel Pinstripe', handle: '@nigelp', text: 'The state can’t run a bath, and now it wants to run the water companies.', stats: '3.0K quotes' }
+    ],
+    softened: [
+      { name: 'Westminster Whisper', handle: '@wmwhisper', text: 'Water on the agenda at last. The sewage numbers made this unavoidable for any government.', stats: '1.7K quotes' },
+      { name: 'Sir Reginald Purse', handle: '@regpurse', text: 'Even one’s shareholder friends concede the rivers are… suboptimal. Reform was coming.', stats: '1.6K quotes' }
+    ]
+  }
+};
+
+/** @param {string} sid @param {number} level @returns {Post[]} */
+function v2ManifestoHexPosts(sid, level) {
+  var takes = HEX_PROMISE_TAKES[sid];
+  if (!takes) return MEDIA_TONE[level].hex.slice(0, 2);
+  return (level <= 1 ? takes.hostile : takes.softened).slice(0, 2);
+}
+
 /** @param {number} level @param {string} sid @param {string} area @returns {string} */
 function v2ToneHeadline(level, sid, area) {
   /** @type {Record<string,string>} */
@@ -2498,10 +2606,10 @@ function v2ManifestoMontage(choice, level) {
         ? 'A hostile tabloid front page attacking the Prime Minister.'
         : 'A measured newspaper front page reporting the story plainly.'
     },
-    // press montage shows two posts (mobile hides the extra); ordered so the
-    // first two read the level's mood.
+    // press montage shows two posts (mobile hides the extra). Mewsky reads the
+    // press mood; Hex reacts to the policy area itself (never the coverage).
     mewsky: tone.msky.slice(0, 2),
-    hex: tone.hex.slice(0, 2)
+    hex: v2ManifestoHexPosts(sid, lv)
   };
 }
 
@@ -2683,7 +2791,7 @@ function showV2MediaReaction() {
 
 /* The once-a-week full reaction after the final decision of the week: the
    manifesto verdict, the week's meter change, and a combined feed drawn from
-   the round's three policy decisions. */
+   the round's two policy decisions. */
 function showV2WeekReaction() {
   var v = v2Bridge.weekReaction || v2WeekVerdict();
   document.getElementById('reaction-week').textContent = 'WEEK ' + (state.weekNum || 1) + ' · MANIFESTO RESULT';
@@ -2721,10 +2829,10 @@ function showV2WeekReaction() {
   }
 
   var explain = v.tier === 'fulfilled'
-    ? 'Both key reforms got through. The promise is delivered.'
+    ? 'You reformed the system and the big fix sailed through. The promise is delivered.'
     : v.tier === 'partly'
-      ? 'One of the two key reforms got through — the rest slipped away.'
-      : 'Neither key reform got through. The promise failed.';
+      ? 'The quick fix got through — but the deeper fix stayed locked away.'
+      : 'Nothing got fixed this week. The promise failed.';
   var larryEl = document.getElementById('larry-event');
   larryEl.className = 'reaction-larry-event reaction-fallout';
   larryEl.style.background = '';
@@ -2768,8 +2876,11 @@ function showV2WeekReaction() {
 
   initFeedMore();
 
+  // The weekly verdict now shows straight after the week's second policy
+  // decision, so the week's closing beat (One Visit / the pick-two beats) is
+  // still to come — don't promise "next week" yet.
   var nb = document.getElementById('btn-next-week');
-  if (nb) nb.textContent = 'Next week →';
+  if (nb) nb.textContent = (state.weekNum || 1) >= 3 ? 'One last decision →' : 'What’s next? →';
 }
 
 function showV2Reaction() {
@@ -3103,11 +3214,13 @@ function maybeRecordUnlock() {
 }
 
 /* ---------- v2 re-election endgame ----------
-   The term ends in a general election, decided by just two things: how many of your
-   manifesto policies you implemented (0–6, up to two per week), and whether you passed
-   voter (electoral) reform. Policy bands: 6 = full, 3–5 = some, 1–2 = mixed, 0 = none.
-   Reform only matters at "some" or above. Meters no longer end the run — they only gate
-   which policies you can unlock. (All copy below is first-pass — Becky to tune.) */
+   The term ends in a general election, decided by just two things: the final Living
+   Standards meter (the delivery scoreboard — only policy fixes move it) and whether
+   you passed voter (electoral) reform. Living Standards starts at 36; each week is
+   two decisions, so a reform-then-big-fix week banks +8, a quick-fix week +3, and a
+   cat week nothing. Bands: 58+ = every week reformed-then-delivered, 48–57 = one or
+   two good weeks, 40–47 = shallow fixes only, under 40 = the cats won. Electoral
+   reform only matters at 48 or above. (All copy below is first-pass — Becky to tune.) */
 
 var LARRY_BONUS_LINE = 'You were removed as PM by the British public but appointed king of the cats by the British shorthairs.';
 
@@ -3145,12 +3258,10 @@ var V2_ENDINGS = {
   }
 };
 
-/** @returns {number} manifesto policies implemented (0–6): up to two per week */
-function v2PolicyCount() {
-  return (state.weekVerdicts || []).reduce(function(n, v) {
-    return n + Math.min(2, (v && v.count) || 0);
-  }, 0);
-}
+/* Ending band thresholds on the final Living Standards meter. */
+var V2_ENDING_LIVING_FULL = 58;   // all three weeks reformed-then-delivered
+var V2_ENDING_LIVING_SOME = 48;   // at least one reform-then-big-fix week
+var V2_ENDING_LIVING_MIXED = 40;  // quick fixes only
 
 /** @returns {boolean} player took every Larry policy offered (gates the king-of-cats line) */
 function v2LarryBonusEarned() {
@@ -3159,16 +3270,16 @@ function v2LarryBonusEarned() {
 
 /** @returns {{title:string, verdict:string, label:string, color:string, stamp:string, won:boolean}} */
 function v2ReelectionOutcome() {
-  var policies = v2PolicyCount();
+  var living = state.meters.living;
   var reform = v2EnactedElectoralReform();
-  if (policies >= 6) return reform ? V2_ENDINGS.landslide : V2_ENDINGS.fullNoReform;
-  if (policies >= 3) return reform ? V2_ENDINGS.reelected : V2_ENDINGS.someNoReform;
-  if (policies >= 1) return V2_ENDINGS.mixed;
+  if (living >= V2_ENDING_LIVING_FULL) return reform ? V2_ENDINGS.landslide : V2_ENDINGS.fullNoReform;
+  if (living >= V2_ENDING_LIVING_SOME) return reform ? V2_ENDINGS.reelected : V2_ENDINGS.someNoReform;
+  if (living >= V2_ENDING_LIVING_MIXED) return V2_ENDINGS.mixed;
   return V2_ENDINGS.none;
 }
 
-/* Fields the end screen renders for a v2 run: the election outcome (policy count +
-   voter reform) decides everything — meters no longer collapse the term. Taking every
+/* Fields the end screen renders for a v2 run: the election outcome (final Living
+   Standards + voter reform) decides everything — no meter collapses the term. Taking every
    Larry policy earns the king-of-cats line on any losing ending: it replaces the lettuce
    text on the 0-policy ending, and is appended on the other losing endings. */
 /** @returns {{stamp:string, title:string, verdictHtml:string, label:string, color:string}} */
@@ -3183,6 +3294,201 @@ function v2EndInfo() {
   return { stamp: ending.stamp, title: ending.title, verdictHtml: verdictHtml, label: ending.label, color: ending.color };
 }
 
+/* ---------- election-night hemicycle ----------
+   Geometry lifted from Becky's scratch/ending-screen-modular-scaffold.html:
+   650 dots in 14 concentric rows inside a 100x56 viewBox, with the gold dashed
+   line between seats 326 and 327. Painted once per showEnd, then filled. */
+var END_TOTAL_SEATS = 650;
+var END_MAJORITY_SEATS = 326;
+var END_CHAMBER_ROWS = 14, END_CHAMBER_INNER_FRAC = 0.42;
+var END_CHAMBER_CX = 50, END_CHAMBER_CY = 52, END_CHAMBER_OUTER_R = 47;
+var END_CHAMBER_DOT_R = 0.86, END_CHAMBER_EDGE_PAD = 0.04;
+var SVG_NS = 'http://www.w3.org/2000/svg';
+
+/** @returns {Array<{ang:number, x:number, y:number}>} seat positions, left → right */
+function buildEndSeats() {
+  /** @type {number[]} */ var weights = [];
+  for (var j = 0; j < END_CHAMBER_ROWS; j++) {
+    weights.push(END_CHAMBER_INNER_FRAC + (1 - END_CHAMBER_INNER_FRAC) * (j / (END_CHAMBER_ROWS - 1)));
+  }
+  var sumW = weights.reduce(function(a, b) { return a + b; }, 0);
+  var raw = weights.map(function(w) { return (END_TOTAL_SEATS * w) / sumW; });
+  var seatsPerRow = raw.map(Math.floor);
+  var placed = seatsPerRow.reduce(function(a, b) { return a + b; }, 0);
+  var byFrac = raw
+    .map(function(v, idx) { return { j: idx, frac: v - Math.floor(v) }; })
+    .sort(function(a, b) { return b.frac - a.frac || b.j - a.j; });
+  var extra = 0;
+  while (placed < END_TOTAL_SEATS) { seatsPerRow[byFrac[extra % END_CHAMBER_ROWS].j]++; placed++; extra++; }
+  /** @type {Array<{ang:number, x:number, y:number}>} */ var seats = [];
+  for (var row = 0; row < END_CHAMBER_ROWS; row++) {
+    var r = END_CHAMBER_OUTER_R * weights[row];
+    var n = seatsPerRow[row];
+    for (var k = 0; k < n; k++) {
+      var t = n === 1 ? 0.5 : k / (n - 1);
+      var ang = Math.PI * (1 - END_CHAMBER_EDGE_PAD) - Math.PI * (1 - 2 * END_CHAMBER_EDGE_PAD) * t;
+      seats.push({ ang: ang, x: END_CHAMBER_CX + r * Math.cos(ang), y: END_CHAMBER_CY - r * Math.sin(ang) });
+    }
+  }
+  seats.sort(function(a, b) { return b.ang - a.ang; });
+  return seats;
+}
+var END_CHAMBER_SEATS = buildEndSeats();
+
+/* Draw the gold dashed majority line + one dot per seat, filling the first
+   playerSeats dots pink (left → right) and the rest grey. */
+/** @param {number} playerSeats @returns {void} */
+function paintEndChamber(playerSeats) {
+  var svg = document.getElementById('end-chamber-svg');
+  if (!svg) return;
+  svg.innerHTML = '';
+  var majAng = (END_CHAMBER_SEATS[END_MAJORITY_SEATS - 1].ang + END_CHAMBER_SEATS[END_MAJORITY_SEATS].ang) / 2;
+  var rIn = END_CHAMBER_OUTER_R * END_CHAMBER_INNER_FRAC - 1.6;
+  var rOut = END_CHAMBER_OUTER_R + 1.6;
+  var line = document.createElementNS(SVG_NS, 'line');
+  line.setAttribute('x1', String(END_CHAMBER_CX + rIn * Math.cos(majAng)));
+  line.setAttribute('y1', String(END_CHAMBER_CY - rIn * Math.sin(majAng)));
+  line.setAttribute('x2', String(END_CHAMBER_CX + rOut * Math.cos(majAng)));
+  line.setAttribute('y2', String(END_CHAMBER_CY - rOut * Math.sin(majAng)));
+  line.setAttribute('stroke', '#FFC93C');
+  line.setAttribute('stroke-width', '0.9');
+  line.setAttribute('stroke-dasharray', '1.6 1.4');
+  line.setAttribute('stroke-linecap', 'round');
+  svg.appendChild(line);
+  END_CHAMBER_SEATS.forEach(function(s, i) {
+    var c = document.createElementNS(SVG_NS, 'circle');
+    c.setAttribute('cx', s.x.toFixed(2));
+    c.setAttribute('cy', s.y.toFixed(2));
+    c.setAttribute('r', String(END_CHAMBER_DOT_R));
+    c.setAttribute('stroke', 'rgba(0,0,0,.35)');
+    c.setAttribute('stroke-width', '0.18');
+    c.setAttribute('fill', i < playerSeats ? '#FF335E' : '#6f6d68');
+    svg.appendChild(c);
+  });
+}
+
+/* PLACEHOLDER election numbers per ending — NOT wired to anything yet. Becky
+   still has to decide where "% chose you" really comes from; these just make
+   each ending's chart look plausible until then. */
+/** @returns {{pct: number, seats: number}} */
+function v2EndVoteNumbers() {
+  var ending = v2ReelectionOutcome();
+  if (ending === V2_ENDINGS.landslide)    return { pct: 45, seats: 470 };
+  if (ending === V2_ENDINGS.fullNoReform) return { pct: 38, seats: 301 };
+  if (ending === V2_ENDINGS.reelected)    return { pct: 39, seats: 344 };
+  if (ending === V2_ENDINGS.someNoReform) return { pct: 34, seats: 289 };
+  if (ending === V2_ENDINGS.mixed)        return { pct: 27, seats: 175 };
+  return { pct: 14, seats: 45 };
+}
+
+/* ---------- the morning-after front page + posts ----------
+   One headline + social pack per ending; taking every Larry option overrides
+   the pack on any losing ending with the CAT KING edition. NAME is replaced
+   with the player's name (fallback: THE PM). */
+/** @typedef {{masthead:string, headline:string, posts:Array<{net:'msky'|'hex', name:string, handle:string, text:string, stats:string}>}} EndPress */
+/** @type {Record<string, EndPress>} */
+var V2_END_PRESS = {
+  landslide: {
+    masthead: 'THE DAILY CHRONICLE',
+    headline: 'NAME SECURES VICTORY!',
+    posts: [
+      { net: 'msky', name: 'rosa', handle: '@rosa.msky.social', text: 'five more years of actually fixing things. didn’t know we were allowed that', stats: '↻ 8.2K   ♥ 51K' },
+      { net: 'hex', name: 'Nigel Pinstripe', handle: '@nigelp', text: 'The country has voted, and the country is wrong. See you in five years.', stats: '↻ 2.4K   ♥ 9.1K' }
+    ]
+  },
+  fullNoReform: {
+    masthead: 'THE DAILY RAGE',
+    headline: 'POPULAR PM NAME IN NARROW LOSS SHOCKER',
+    posts: [
+      { net: 'msky', name: 'rosa', handle: '@rosa.msky.social', text: 'most popular PM in decades and we STILL lost on the seat maths. fix the voting system. please.', stats: '↻ 9.4K   ♥ 62K' },
+      { net: 'hex', name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: 'Won the argument, lost the election. The spreadsheet never lies.', stats: '↻ 3.1K   ♥ 12K' }
+    ]
+  },
+  reelected: {
+    masthead: 'THE DAILY CHRONICLE',
+    headline: 'NAME WINS IN NAIL BITING RACE',
+    posts: [
+      { net: 'msky', name: 'Polly Ticks', handle: '@pollyticks.msky.social', text: 'the reformed voting system did its job: votes in, seats out, no spreadsheet sorcery. what a night.', stats: '↻ 4.6K   ♥ 28K' },
+      { net: 'hex', name: 'Westminster Whisper', handle: '@wmwhisper', text: 'A close-run thing. Under the old rules this vote share loses; under the new ones it governs.', stats: '↻ 2.2K   ♥ 8.7K' }
+    ]
+  },
+  someNoReform: {
+    masthead: 'THE DAILY RAGE',
+    headline: 'NAME LOSES IN NAIL BITING RACE',
+    posts: [
+      { net: 'msky', name: 'rosa', handle: '@rosa.msky.social', text: 'did the tactical voting maths until 2am and it still wasn’t enough. gutted.', stats: '↻ 5.8K   ♥ 34K' },
+      { net: 'hex', name: 'Nigel Pinstripe', handle: '@nigelp', text: 'A nail-biter! And the nail says: OUT.', stats: '↻ 2.9K   ♥ 11K' }
+    ]
+  },
+  mixed: {
+    masthead: 'THE DAILY RAGE',
+    headline: 'NAME FAILS TO DELIVER - LOSES RACE',
+    posts: [
+      { net: 'msky', name: 'Doomscroll Dan', handle: '@dan.msky.social', text: 'turns out “we’ll get to it” isn’t a manifesto. who knew', stats: '↻ 3.2K   ♥ 19K' },
+      { net: 'hex', name: 'TaxpayerWatch', handle: '@taxpayerwatch', text: 'Promised much, delivered little, billed us anyway. Voted accordingly.', stats: '↻ 2.7K   ♥ 10K' }
+    ]
+  },
+  none: {
+    masthead: 'THE DAILY RAGE',
+    headline: 'NAME GETS FEWER VOTES THAN LETTUCE',
+    posts: [
+      { net: 'msky', name: 'rosa', handle: '@rosa.msky.social', text: 'the lettuce has declared victory. the lettuce is giving a speech.', stats: '↻ 12K   ♥ 89K' },
+      { net: 'hex', name: 'Nigel Pinstripe', handle: '@nigelp', text: 'Outpolled by salad. Britain remains capable of greatness.', stats: '↻ 4.4K   ♥ 17K' }
+    ]
+  },
+  catKing: {
+    masthead: 'THE GLOBE',
+    headline: 'NAME CROWNED CAT KING',
+    posts: [
+      { net: 'msky', name: 'Larry (parody)', handle: '@Number10Cat', text: 'the humans voted them out. the cats crowned them king. correct on both counts.', stats: '↻ 31K   ♥ 210K' },
+      { net: 'hex', name: 'Westminster Whisper', handle: '@wmwhisper', text: 'The first leader in history to gain a crown by losing an election. The mousers are purring.', stats: '↻ 3.8K   ♥ 15K' }
+    ]
+  }
+};
+
+/** @returns {EndPress} the morning-after pack for the run's outcome */
+function v2EndPressPack() {
+  var ending = v2ReelectionOutcome();
+  if (!ending.won && v2LarryBonusEarned()) return V2_END_PRESS.catKing;
+  if (ending === V2_ENDINGS.landslide) return V2_END_PRESS.landslide;
+  if (ending === V2_ENDINGS.fullNoReform) return V2_END_PRESS.fullNoReform;
+  if (ending === V2_ENDINGS.reelected) return V2_END_PRESS.reelected;
+  if (ending === V2_ENDINGS.someNoReform) return V2_END_PRESS.someNoReform;
+  if (ending === V2_ENDINGS.mixed) return V2_END_PRESS.mixed;
+  return V2_END_PRESS.none;
+}
+
+/** Render the seat chart with the (placeholder) election numbers. */
+function renderEndChamber() {
+  var numbers = v2EndVoteNumbers();
+  paintEndChamber(numbers.seats);
+  var pctEl = document.getElementById('end-chamber-pct');
+  var seatsEl = document.getElementById('end-chamber-seats');
+  if (pctEl) pctEl.textContent = numbers.pct + '%';
+  if (seatsEl) seatsEl.textContent = String(numbers.seats);
+}
+
+/** Render the morning-after front page + social posts. */
+function renderEndPress() {
+  var pack = v2EndPressPack();
+  var name = (state.playerName || 'The PM').toUpperCase();
+  var mastheadEl = document.getElementById('end-np-masthead');
+  var headlineEl = document.getElementById('end-np-headline');
+  if (mastheadEl) mastheadEl.textContent = pack.masthead;
+  if (headlineEl) headlineEl.textContent = pack.headline.replace(/NAME/g, name);
+  var postsEl = document.getElementById('end-press-posts');
+  if (postsEl) {
+    postsEl.innerHTML = pack.posts.map(function(f) {
+      var isHex = f.net === 'hex';
+      return '<div class="post ' + (isHex ? 'post--x' : 'post--bluesky') + '"><div class="post__header">' +
+        avatarHTML(f, isHex ? HEX_AVATAR : MSKY_AVATAR) +
+        '<div class="post__byline' + (isHex ? ' post__byline--x' : '') + '"><div class="post__name">' + htmlEsc(f.name) + '</div><div class="post__handle' + (isHex ? '' : ' post__handle--bluesky') + '">' + htmlEsc(f.handle) + '</div></div>' +
+        (isHex ? '<span class="post__network">HEX</span>' : '') + '</div>' +
+        '<div class="post__text">' + htmlEsc(f.text) + '</div><div class="post__stats">' + htmlEsc(f.stats) + '</div></div>';
+    }).join('');
+  }
+}
+
 /* ---------- end screen ---------- */
 function showEnd() {
   var info = v2EndInfo();
@@ -3193,6 +3499,9 @@ function showEnd() {
   document.getElementById('end-verdict').innerHTML   = info.verdictHtml;
   document.getElementById('end-grade').textContent   = info.label;
   document.getElementById('end-grade').style.color   = info.color;
+
+  renderEndChamber();
+  renderEndPress();
 
   // Final meter values + bars
   // el typed `any`: textContent assigned a number (JS coercion), unchanged.

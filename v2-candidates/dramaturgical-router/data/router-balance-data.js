@@ -103,22 +103,16 @@
           "week3-legacy-pick",
           "policy-nhs-turn-1",
           "policy-nhs-turn-2",
-          "policy-nhs-turn-3",
           "policy-taxLoopholes-turn-1",
           "policy-taxLoopholes-turn-2",
-          "policy-taxLoopholes-turn-3",
           "policy-housing-turn-1",
           "policy-housing-turn-2",
-          "policy-housing-turn-3",
           "policy-carbon-turn-1",
           "policy-carbon-turn-2",
-          "policy-carbon-turn-3",
           "policy-costOfLiving-turn-1",
           "policy-costOfLiving-turn-2",
-          "policy-costOfLiving-turn-3",
           "policy-water-turn-1",
-          "policy-water-turn-2",
-          "policy-water-turn-3"
+          "policy-water-turn-2"
         ]
       }
     ],
@@ -368,7 +362,159 @@
               "flatQuestionId": "one-visit-one-camera",
               "optionIndex": 0
             },
-            "nextSurfaceId": "cabinet-pair-pair2"
+            "nextSurfaceId": "cabinet-pair-pair2",
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "STORYTIME! PM HIDES BEHIND FIVE-YEAR-OLDS",
+                    "standfirst": "In-tray overflowing, and PM spends the morning doing the voices in a picture book",
+                    "image": "images/news-hostile-1.png",
+                    "altText": "A hostile tabloid front page attacking the Prime Minister."
+                  },
+                  "neutral": {
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "PM OPENS SCHOOLS TOUR WITH RECEPTION CLASS VISIT",
+                    "standfirst": "No.10 says the Prime Minister wanted to hear from teachers before the next spending round",
+                    "image": "images/news-neutral-1.png",
+                    "altText": "A measured newspaper front page reporting the story plainly."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "STORYTIME! PM HIDES BEHIND FIVE-YEAR-OLDS",
+                      "standfirst": "In-tray overflowing, and PM spends the morning doing the voices in a picture book",
+                      "image": "images/news-hostile-1.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "STORYTIME! PM HIDES BEHIND FIVE-YEAR-OLDS",
+                      "standfirst": "In-tray overflowing, and PM spends the morning doing the voices in a picture book",
+                      "image": "images/news-hostile-1.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "PM OPENS SCHOOLS TOUR WITH RECEPTION CLASS VISIT",
+                      "standfirst": "No.10 says the Prime Minister wanted to hear from teachers before the next spending round",
+                      "image": "images/news-neutral-1.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "PM OPENS SCHOOLS TOUR WITH RECEPTION CLASS VISIT",
+                      "standfirst": "No.10 says the Prime Minister wanted to hear from teachers before the next spending round",
+                      "image": "images/news-neutral-1.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "A picture book. That is the plan for Britain, apparently.",
+                      "stats": "↻ 1.2K   ♥ 4.9K"
+                    },
+                    {
+                      "name": "The Contrarian",
+                      "handle": "@contrarianhq",
+                      "text": "PM reads The Hungry Caterpillar; nation still waiting to hear what happens after the cocoon.",
+                      "stats": "↻ 860   ♥ 3.7K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "School visit, no gaffes, teachers got two minutes on camera. Fine.",
+                      "stats": "↻ 410   ♥ 1.8K"
+                    },
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "Hearing the reception class gave the PM a better grilling than the lobby has managed all week.",
+                      "stats": "↻ 950   ♥ 5.1K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "A picture book. That is the plan for Britain, apparently.",
+                        "stats": "↻ 1.2K   ♥ 4.9K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "PM reads The Hungry Caterpillar; nation still waiting to hear what happens after the cocoon.",
+                        "stats": "↻ 860   ♥ 3.7K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "A picture book. That is the plan for Britain, apparently.",
+                        "stats": "↻ 1.2K   ♥ 4.9K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "PM reads The Hungry Caterpillar; nation still waiting to hear what happens after the cocoon.",
+                        "stats": "↻ 860   ♥ 3.7K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "School visit, no gaffes, teachers got two minutes on camera. Fine.",
+                        "stats": "↻ 410   ♥ 1.8K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Hearing the reception class gave the PM a better grilling than the lobby has managed all week.",
+                        "stats": "↻ 950   ♥ 5.1K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "School visit, no gaffes, teachers got two minutes on camera. Fine.",
+                        "stats": "↻ 410   ♥ 1.8K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Hearing the reception class gave the PM a better grilling than the lobby has managed all week.",
+                        "stats": "↻ 950   ♥ 5.1K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "rosa",
+                    "handle": "@rosa.msky.social",
+                    "text": "the PM doing the gruffalo voices is objectively the best thing this government has produced so far",
+                    "stats": "↻ 2.1K   ♥ 12K"
+                  },
+                  {
+                    "name": "Polly Ticks",
+                    "handle": "@pollyticks.msky.social",
+                    "text": "smart stop, honestly. schools poll well and the pictures are lovely.",
+                    "stats": "↻ 640   ♥ 3.9K"
+                  }
+                ]
+              }
+            }
           },
           {
             "id": "the-struggling-hospital-walk-the-wards-no-script",
@@ -405,7 +551,159 @@
               "flatQuestionId": "one-visit-one-camera",
               "optionIndex": 1
             },
-            "nextSurfaceId": "cabinet-pair-pair2"
+            "nextSurfaceId": "cabinet-pair-pair2",
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "WARD WALKABOUT BACKFIRES: STAFF LET RIP AT PM",
+                    "standfirst": "Unscripted hospital visit turns into a corridor confrontation as nurses list everything that's broken",
+                    "image": "images/news-hostile-2.png",
+                    "altText": "A hostile tabloid front page attacking the Prime Minister."
+                  },
+                  "neutral": {
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "PM WALKS THE WARDS, NO SCRIPT, NO MINDERS",
+                    "standfirst": "Staff say the Prime Minister stayed past the cameras and took notes",
+                    "image": "images/news-neutral-2.png",
+                    "altText": "A measured newspaper front page reporting the story plainly."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "WARD WALKABOUT BACKFIRES: STAFF LET RIP AT PM",
+                      "standfirst": "Unscripted hospital visit turns into a corridor confrontation as nurses list everything that's broken",
+                      "image": "images/news-hostile-2.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "WARD WALKABOUT BACKFIRES: STAFF LET RIP AT PM",
+                      "standfirst": "Unscripted hospital visit turns into a corridor confrontation as nurses list everything that's broken",
+                      "image": "images/news-hostile-2.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "PM WALKS THE WARDS, NO SCRIPT, NO MINDERS",
+                      "standfirst": "Staff say the Prime Minister stayed past the cameras and took notes",
+                      "image": "images/news-neutral-2.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "PM WALKS THE WARDS, NO SCRIPT, NO MINDERS",
+                      "standfirst": "Staff say the Prime Minister stayed past the cameras and took notes",
+                      "image": "images/news-neutral-2.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "The PM went looking for a photo-op and found a queue. On brand.",
+                      "stats": "↻ 1.5K   ♥ 6.2K"
+                    },
+                    {
+                      "name": "The Contrarian",
+                      "handle": "@contrarianhq",
+                      "text": "Walking the wards doesn't staff them. Stunt politics.",
+                      "stats": "↻ 990   ♥ 4.4K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "NHSworker1",
+                      "handle": "@nhsworker.msky.social",
+                      "text": "Say what you like — they stayed 40 minutes after the cameras left and wrote things down.",
+                      "stats": "↻ 3.2K   ♥ 18K"
+                    },
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Unscripted hospital visit. Risky, but nobody can call it hiding.",
+                      "stats": "↻ 520   ♥ 2.3K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "The PM went looking for a photo-op and found a queue. On brand.",
+                        "stats": "↻ 1.5K   ♥ 6.2K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Walking the wards doesn't staff them. Stunt politics.",
+                        "stats": "↻ 990   ♥ 4.4K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "The PM went looking for a photo-op and found a queue. On brand.",
+                        "stats": "↻ 1.5K   ♥ 6.2K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Walking the wards doesn't staff them. Stunt politics.",
+                        "stats": "↻ 990   ♥ 4.4K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "NHSworker1",
+                        "handle": "@nhsworker.msky.social",
+                        "text": "Say what you like — they stayed 40 minutes after the cameras left and wrote things down.",
+                        "stats": "↻ 3.2K   ♥ 18K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Unscripted hospital visit. Risky, but nobody can call it hiding.",
+                        "stats": "↻ 520   ♥ 2.3K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "NHSworker1",
+                        "handle": "@nhsworker.msky.social",
+                        "text": "Say what you like — they stayed 40 minutes after the cameras left and wrote things down.",
+                        "stats": "↻ 3.2K   ♥ 18K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Unscripted hospital visit. Risky, but nobody can call it hiding.",
+                        "stats": "↻ 520   ♥ 2.3K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "NHSworker1",
+                    "handle": "@nhsworker.msky.social",
+                    "text": "a politician who let us finish our sentences. writing the date down.",
+                    "stats": "↻ 4.1K   ♥ 22K"
+                  },
+                  {
+                    "name": "rosa",
+                    "handle": "@rosa.msky.social",
+                    "text": "no script no minders in an NHS corridor is either very brave or very foolish and i respect both",
+                    "stats": "↻ 1.3K   ♥ 7.8K"
+                  }
+                ]
+              }
+            }
           },
           {
             "id": "the-barracks-meet-the-troops-salute-the-flag",
@@ -442,7 +740,159 @@
               "flatQuestionId": "one-visit-one-camera",
               "optionIndex": 2
             },
-            "nextSurfaceId": "cabinet-pair-pair2"
+            "nextSurfaceId": "cabinet-pair-pair2",
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "KHAKI COSPLAY! PM DRAPES SELF IN THE FLAG",
+                    "standfirst": "Critics ask what a barracks walkabout does for waiting lists, bills or buses",
+                    "image": "images/news-hostile-3.png",
+                    "altText": "A hostile tabloid front page attacking the Prime Minister."
+                  },
+                  "neutral": {
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "PM VISITS TROOPS ON FIRST-WEEK TOUR",
+                    "standfirst": "A salute, a mess-hall lunch and a promise to review forces housing",
+                    "image": "images/news-neutral-3.png",
+                    "altText": "A measured newspaper front page reporting the story plainly."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "KHAKI COSPLAY! PM DRAPES SELF IN THE FLAG",
+                      "standfirst": "Critics ask what a barracks walkabout does for waiting lists, bills or buses",
+                      "image": "images/news-hostile-3.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "KHAKI COSPLAY! PM DRAPES SELF IN THE FLAG",
+                      "standfirst": "Critics ask what a barracks walkabout does for waiting lists, bills or buses",
+                      "image": "images/news-hostile-3.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "PM VISITS TROOPS ON FIRST-WEEK TOUR",
+                      "standfirst": "A salute, a mess-hall lunch and a promise to review forces housing",
+                      "image": "images/news-neutral-3.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "PM VISITS TROOPS ON FIRST-WEEK TOUR",
+                      "standfirst": "A salute, a mess-hall lunch and a promise to review forces housing",
+                      "image": "images/news-neutral-3.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "The Contrarian",
+                      "handle": "@contrarianhq",
+                      "text": "Nothing says 'no domestic agenda' like a week-one flag hug.",
+                      "stats": "↻ 1.1K   ♥ 4.6K"
+                    },
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "I'll say this for the PM: excellent salute. Now do the economy.",
+                      "stats": "↻ 870   ♥ 3.5K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Barracks visit played safe and warm. Forces housing review is the line to watch.",
+                      "stats": "↻ 460   ♥ 2.0K"
+                    },
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "Squaddies liked it, apparently. The mess-hall photos won't hurt.",
+                      "stats": "↻ 700   ♥ 3.1K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Nothing says 'no domestic agenda' like a week-one flag hug.",
+                        "stats": "↻ 1.1K   ♥ 4.6K"
+                      },
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "I'll say this for the PM: excellent salute. Now do the economy.",
+                        "stats": "↻ 870   ♥ 3.5K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Nothing says 'no domestic agenda' like a week-one flag hug.",
+                        "stats": "↻ 1.1K   ♥ 4.6K"
+                      },
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "I'll say this for the PM: excellent salute. Now do the economy.",
+                        "stats": "↻ 870   ♥ 3.5K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Barracks visit played safe and warm. Forces housing review is the line to watch.",
+                        "stats": "↻ 460   ♥ 2.0K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Squaddies liked it, apparently. The mess-hall photos won't hurt.",
+                        "stats": "↻ 700   ♥ 3.1K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Barracks visit played safe and warm. Forces housing review is the line to watch.",
+                        "stats": "↻ 460   ♥ 2.0K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Squaddies liked it, apparently. The mess-hall photos won't hurt.",
+                        "stats": "↻ 700   ♥ 3.1K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "Doomscroll Dan",
+                    "handle": "@dan.msky.social",
+                    "text": "week one and we're already doing flag content. long five years ahead folks",
+                    "stats": "↻ 900   ♥ 4.2K"
+                  },
+                  {
+                    "name": "Polly Ticks",
+                    "handle": "@pollyticks.msky.social",
+                    "text": "the forces housing line is the real story here if they follow through",
+                    "stats": "↻ 530   ♥ 2.8K"
+                  }
+                ]
+              }
+            }
           }
         ]
       },
@@ -1061,7 +1511,7 @@
               "visible": [
                 {
                   "meter": "politics",
-                  "delta": 5
+                  "delta": 3
                 }
               ],
               "hidden": []
@@ -1072,7 +1522,159 @@
               "press-reform",
               "recentPublicPolicy"
             ],
-            "nextSurfaceId": "cabinet-pair-pair3"
+            "nextSurfaceId": "cabinet-pair-pair3",
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "WHO DECIDES WHAT'S TRUE? PM'S ONLINE CRACKDOWN",
+                    "standfirst": "New rules for online outlets branded 'a censor's charter' by furious publishers",
+                    "image": "images/news-hostile-1.png",
+                    "altText": "A hostile tabloid front page attacking the Prime Minister."
+                  },
+                  "neutral": {
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "ONLINE MEDIA RULES SIGNED INTO LAW",
+                    "standfirst": "Disinformation networks face the same standards as print; small outlets exempt",
+                    "image": "images/news-neutral-1.png",
+                    "altText": "A measured newspaper front page reporting the story plainly."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "WHO DECIDES WHAT'S TRUE? PM'S ONLINE CRACKDOWN",
+                      "standfirst": "New rules for online outlets branded 'a censor's charter' by furious publishers",
+                      "image": "images/news-hostile-1.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "WHO DECIDES WHAT'S TRUE? PM'S ONLINE CRACKDOWN",
+                      "standfirst": "New rules for online outlets branded 'a censor's charter' by furious publishers",
+                      "image": "images/news-hostile-1.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "ONLINE MEDIA RULES SIGNED INTO LAW",
+                      "standfirst": "Disinformation networks face the same standards as print; small outlets exempt",
+                      "image": "images/news-neutral-1.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "ONLINE MEDIA RULES SIGNED INTO LAW",
+                      "standfirst": "Disinformation networks face the same standards as print; small outlets exempt",
+                      "image": "images/news-neutral-1.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "First the papers, now the internet. The PM won't rest until nobody can call them useless.",
+                      "stats": "↻ 1.7K   ♥ 6.9K"
+                    },
+                    {
+                      "name": "The Contrarian",
+                      "handle": "@contrarianhq",
+                      "text": "'Online standards' is a lovely phrase for deciding who gets to speak.",
+                      "stats": "↻ 1.2K   ♥ 5.3K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Online media rules through. Publishers grumble; the bot farms grumble more.",
+                      "stats": "↻ 610   ♥ 2.7K"
+                    },
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "Quietly the more consequential reform this week. The rage-farm economics just changed.",
+                      "stats": "↻ 1.0K   ♥ 5.6K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "First the papers, now the internet. The PM won't rest until nobody can call them useless.",
+                        "stats": "↻ 1.7K   ♥ 6.9K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "'Online standards' is a lovely phrase for deciding who gets to speak.",
+                        "stats": "↻ 1.2K   ♥ 5.3K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "First the papers, now the internet. The PM won't rest until nobody can call them useless.",
+                        "stats": "↻ 1.7K   ♥ 6.9K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "'Online standards' is a lovely phrase for deciding who gets to speak.",
+                        "stats": "↻ 1.2K   ♥ 5.3K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Online media rules through. Publishers grumble; the bot farms grumble more.",
+                        "stats": "↻ 610   ♥ 2.7K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Quietly the more consequential reform this week. The rage-farm economics just changed.",
+                        "stats": "↻ 1.0K   ♥ 5.6K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Online media rules through. Publishers grumble; the bot farms grumble more.",
+                        "stats": "↻ 610   ♥ 2.7K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Quietly the more consequential reform this week. The rage-farm economics just changed.",
+                        "stats": "↻ 1.0K   ♥ 5.6K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "Politics Bites",
+                    "handle": "@polbites.msky.social",
+                    "text": "the quote-tweet grifters are FURIOUS about the online media rules which tells you it's working",
+                    "stats": "↻ 2.4K   ♥ 13K"
+                  },
+                  {
+                    "name": "rosa",
+                    "handle": "@rosa.msky.social",
+                    "text": "my timeline is 40% less 'PM EATS BABIES' today. progress.",
+                    "stats": "↻ 1.1K   ♥ 6.4K"
+                  }
+                ]
+              }
+            }
           },
           {
             "id": "improve-public-transport",
@@ -1083,7 +1685,7 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
+                  "meter": "capital",
                   "delta": 5
                 }
               ],
@@ -1094,7 +1696,159 @@
               "week2-policy-pick-complete",
               "recentPublicPolicy"
             ],
-            "nextSurfaceId": "cabinet-pair-pair3"
+            "nextSurfaceId": "cabinet-pair-pair3",
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "BUS FARE FANTASY: PM'S TRANSPORT SPLURGE",
+                    "standfirst": "Billions for buses and branch lines while the deficit idles at the stop",
+                    "image": "images/news-hostile-2.png",
+                    "altText": "A hostile tabloid front page attacking the Prime Minister."
+                  },
+                  "neutral": {
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "TRANSPORT FUNDING BOOST: MORE ROUTES, LONGER HOURS",
+                    "standfirst": "First new money for regional buses in a decade; operators told to deliver by spring",
+                    "image": "images/news-neutral-2.png",
+                    "altText": "A measured newspaper front page reporting the story plainly."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "BUS FARE FANTASY: PM'S TRANSPORT SPLURGE",
+                      "standfirst": "Billions for buses and branch lines while the deficit idles at the stop",
+                      "image": "images/news-hostile-2.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "BUS FARE FANTASY: PM'S TRANSPORT SPLURGE",
+                      "standfirst": "Billions for buses and branch lines while the deficit idles at the stop",
+                      "image": "images/news-hostile-2.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "TRANSPORT FUNDING BOOST: MORE ROUTES, LONGER HOURS",
+                      "standfirst": "First new money for regional buses in a decade; operators told to deliver by spring",
+                      "image": "images/news-neutral-2.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "TRANSPORT FUNDING BOOST: MORE ROUTES, LONGER HOURS",
+                      "standfirst": "First new money for regional buses in a decade; operators told to deliver by spring",
+                      "image": "images/news-neutral-2.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "Buses. The great national renewal begins with buses.",
+                      "stats": "↻ 780   ♥ 3.2K"
+                    },
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Another transport 'boost'. See you at the same announcement next year.",
+                      "stats": "↻ 690   ♥ 2.9K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Bus funding is actually decent value per passenger. Sensible, unflashy.",
+                      "stats": "↻ 480   ♥ 2.1K"
+                    },
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "Marginal-seat MPs are delighted about the bus money. Make of that what you will.",
+                      "stats": "↻ 820   ♥ 4.0K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Buses. The great national renewal begins with buses.",
+                        "stats": "↻ 780   ♥ 3.2K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Another transport 'boost'. See you at the same announcement next year.",
+                        "stats": "↻ 690   ♥ 2.9K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Buses. The great national renewal begins with buses.",
+                        "stats": "↻ 780   ♥ 3.2K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Another transport 'boost'. See you at the same announcement next year.",
+                        "stats": "↻ 690   ♥ 2.9K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Bus funding is actually decent value per passenger. Sensible, unflashy.",
+                        "stats": "↻ 480   ♥ 2.1K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Marginal-seat MPs are delighted about the bus money. Make of that what you will.",
+                        "stats": "↻ 820   ♥ 4.0K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Bus funding is actually decent value per passenger. Sensible, unflashy.",
+                        "stats": "↻ 480   ♥ 2.1K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Marginal-seat MPs are delighted about the bus money. Make of that what you will.",
+                        "stats": "↻ 820   ♥ 4.0K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "Doomscroll Dan",
+                    "handle": "@dan.msky.social",
+                    "text": "a bus that comes more than once an hour?? in THIS economy???",
+                    "stats": "↻ 1.6K   ♥ 9.1K"
+                  },
+                  {
+                    "name": "Polly Ticks",
+                    "handle": "@pollyticks.msky.social",
+                    "text": "transport investment is the most quietly popular thing a government can do. good pick.",
+                    "stats": "↻ 560   ♥ 3.0K"
+                  }
+                ]
+              }
+            }
           },
           {
             "id": "fix-potholes",
@@ -1105,8 +1859,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 5
+                  "meter": "politics",
+                  "delta": 3
                 }
               ],
               "hidden": []
@@ -1116,7 +1870,159 @@
               "week2-policy-pick-complete",
               "recentPublicPolicy"
             ],
-            "nextSurfaceId": "cabinet-pair-pair3"
+            "nextSurfaceId": "cabinet-pair-pair3",
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "POTHOLE PANTO: PM POSES IN HI-VIS",
+                    "standfirst": "A national pothole fund, a shiny shovel, and a road still closed by Tuesday",
+                    "image": "images/news-hostile-3.png",
+                    "altText": "A hostile tabloid front page attacking the Prime Minister."
+                  },
+                  "neutral": {
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "POTHOLE FUND ROLLS OUT NATIONWIDE",
+                    "standfirst": "Councils get direct repair money with a publish-your-progress condition attached",
+                    "image": "images/news-neutral-3.png",
+                    "altText": "A measured newspaper front page reporting the story plainly."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "POTHOLE PANTO: PM POSES IN HI-VIS",
+                      "standfirst": "A national pothole fund, a shiny shovel, and a road still closed by Tuesday",
+                      "image": "images/news-hostile-3.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "POTHOLE PANTO: PM POSES IN HI-VIS",
+                      "standfirst": "A national pothole fund, a shiny shovel, and a road still closed by Tuesday",
+                      "image": "images/news-hostile-3.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "POTHOLE FUND ROLLS OUT NATIONWIDE",
+                      "standfirst": "Councils get direct repair money with a publish-your-progress condition attached",
+                      "image": "images/news-neutral-3.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "POTHOLE FUND ROLLS OUT NATIONWIDE",
+                      "standfirst": "Councils get direct repair money with a publish-your-progress condition attached",
+                      "image": "images/news-neutral-3.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "The Contrarian",
+                      "handle": "@contrarianhq",
+                      "text": "Fixing potholes: the policy for when you've given up on fixing anything else.",
+                      "stats": "↻ 940   ♥ 4.1K"
+                    },
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "The PM in hi-vis pointing at a hole. Satire is dead; the road remains closed.",
+                      "stats": "↻ 1.3K   ♥ 5.5K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Mock all you like — pothole money with published progress is how you build trust back.",
+                      "stats": "↻ 530   ♥ 2.4K"
+                    },
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "Every focus group in the country just purred. Do not underestimate the pothole.",
+                      "stats": "↻ 890   ♥ 4.7K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Fixing potholes: the policy for when you've given up on fixing anything else.",
+                        "stats": "↻ 940   ♥ 4.1K"
+                      },
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "The PM in hi-vis pointing at a hole. Satire is dead; the road remains closed.",
+                        "stats": "↻ 1.3K   ♥ 5.5K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Fixing potholes: the policy for when you've given up on fixing anything else.",
+                        "stats": "↻ 940   ♥ 4.1K"
+                      },
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "The PM in hi-vis pointing at a hole. Satire is dead; the road remains closed.",
+                        "stats": "↻ 1.3K   ♥ 5.5K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Mock all you like — pothole money with published progress is how you build trust back.",
+                        "stats": "↻ 530   ♥ 2.4K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Every focus group in the country just purred. Do not underestimate the pothole.",
+                        "stats": "↻ 890   ♥ 4.7K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Mock all you like — pothole money with published progress is how you build trust back.",
+                        "stats": "↻ 530   ♥ 2.4K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Every focus group in the country just purred. Do not underestimate the pothole.",
+                        "stats": "↻ 890   ♥ 4.7K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "rosa",
+                    "handle": "@rosa.msky.social",
+                    "text": "the pothole outside mine has a NAME and a FACEBOOK GROUP. godspeed, pothole fund.",
+                    "stats": "↻ 2.0K   ♥ 11K"
+                  },
+                  {
+                    "name": "Politics Bites",
+                    "handle": "@polbites.msky.social",
+                    "text": "unsexy, visible, finished by summer. this is what competence looks like btw",
+                    "stats": "↻ 750   ♥ 4.3K"
+                  }
+                ]
+              }
+            }
           },
           {
             "id": "larry-national-statue",
@@ -1132,7 +2038,159 @@
               "week2-policy-pick-complete",
               "recentPersonal"
             ],
-            "nextSurfaceId": "cabinet-pair-pair3"
+            "nextSurfaceId": "cabinet-pair-pair3",
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "A STATUE? FOR THE CAT?",
+                    "standfirst": "Bronze Larry approved for Parliament Square while the in-tray gathers dust",
+                    "image": "images/news-cat-1.png",
+                    "altText": "A spoof newspaper front page dominated by a cat."
+                  },
+                  "neutral": {
+                    "masthead": "THE GLOBE",
+                    "headline": "LARRY STATUE APPROVED FOR PARLIAMENT SQUARE",
+                    "standfirst": "The Chief Mouser joins the pantheon; pigeons said to be consulting lawyers",
+                    "image": "images/news-cat-1.png",
+                    "altText": "A spoof newspaper front page dominated by a cat."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "A STATUE? FOR THE CAT?",
+                      "standfirst": "Bronze Larry approved for Parliament Square while the in-tray gathers dust",
+                      "image": "images/news-cat-1.png",
+                      "altText": "A spoof newspaper front page dominated by a cat."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "A STATUE? FOR THE CAT?",
+                      "standfirst": "Bronze Larry approved for Parliament Square while the in-tray gathers dust",
+                      "image": "images/news-cat-1.png",
+                      "altText": "A spoof newspaper front page dominated by a cat."
+                    },
+                    {
+                      "masthead": "THE GLOBE",
+                      "headline": "LARRY STATUE APPROVED FOR PARLIAMENT SQUARE",
+                      "standfirst": "The Chief Mouser joins the pantheon; pigeons said to be consulting lawyers",
+                      "image": "images/news-cat-1.png",
+                      "altText": "A spoof newspaper front page dominated by a cat."
+                    },
+                    {
+                      "masthead": "THE GLOBE",
+                      "headline": "LARRY STATUE APPROVED FOR PARLIAMENT SQUARE",
+                      "standfirst": "The Chief Mouser joins the pantheon; pigeons said to be consulting lawyers",
+                      "image": "images/news-cat-1.png",
+                      "altText": "A spoof newspaper front page dominated by a cat."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "A statue of a cat. Churchill wept. The cat, I'm told, is delighted.",
+                      "stats": "↻ 1.4K   ♥ 6.0K"
+                    },
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Your taxes: one (1) bronze cat. The waiting list: unchanged.",
+                      "stats": "↻ 1.1K   ♥ 4.8K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "The Larry statue is the only unifying policy of the term so far, which is its own commentary.",
+                      "stats": "↻ 980   ♥ 5.2K"
+                    },
+                    {
+                      "name": "The Contrarian",
+                      "handle": "@contrarianhq",
+                      "text": "Fine. The statue is good. I said what I said.",
+                      "stats": "↻ 720   ♥ 3.9K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "A statue of a cat. Churchill wept. The cat, I'm told, is delighted.",
+                        "stats": "↻ 1.4K   ♥ 6.0K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Your taxes: one (1) bronze cat. The waiting list: unchanged.",
+                        "stats": "↻ 1.1K   ♥ 4.8K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "A statue of a cat. Churchill wept. The cat, I'm told, is delighted.",
+                        "stats": "↻ 1.4K   ♥ 6.0K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Your taxes: one (1) bronze cat. The waiting list: unchanged.",
+                        "stats": "↻ 1.1K   ♥ 4.8K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "The Larry statue is the only unifying policy of the term so far, which is its own commentary.",
+                        "stats": "↻ 980   ♥ 5.2K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Fine. The statue is good. I said what I said.",
+                        "stats": "↻ 720   ♥ 3.9K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "The Larry statue is the only unifying policy of the term so far, which is its own commentary.",
+                        "stats": "↻ 980   ♥ 5.2K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Fine. The statue is good. I said what I said.",
+                        "stats": "↻ 720   ♥ 3.9K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "Larry (parody)",
+                    "handle": "@Number10Cat",
+                    "text": "immortalised in bronze while the dogs get nothing. as it should be.",
+                    "stats": "↻ 21K   ♥ 160K"
+                  },
+                  {
+                    "name": "rosa",
+                    "handle": "@rosa.msky.social",
+                    "text": "they're putting the little jellicle lad in parliament square. crying real tears.",
+                    "stats": "↻ 3.5K   ♥ 19K"
+                  }
+                ]
+              }
+            }
           }
         ]
       },
@@ -1183,7 +2241,159 @@
               "week3-legacy-pick-complete",
               "electoral-reform",
               "recentPublicPolicy"
-            ]
+            ],
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "STITCH-UP! PM RIGS THE RULES",
+                    "standfirst": "Voting overhaul rammed through as critics cry 'a fix to keep the left in forever'",
+                    "image": "images/news-hostile-1.png",
+                    "altText": "A hostile tabloid front page attacking the Prime Minister."
+                  },
+                  "neutral": {
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "VOTING REFORM PASSES: EVERY VOTE TO COUNT",
+                    "standfirst": "Proportional system signed into law; next election to be fought under the new rules",
+                    "image": "images/news-neutral-1.png",
+                    "altText": "A measured newspaper front page reporting the story plainly."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "STITCH-UP! PM RIGS THE RULES",
+                      "standfirst": "Voting overhaul rammed through as critics cry 'a fix to keep the left in forever'",
+                      "image": "images/news-hostile-1.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "STITCH-UP! PM RIGS THE RULES",
+                      "standfirst": "Voting overhaul rammed through as critics cry 'a fix to keep the left in forever'",
+                      "image": "images/news-hostile-1.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "VOTING REFORM PASSES: EVERY VOTE TO COUNT",
+                      "standfirst": "Proportional system signed into law; next election to be fought under the new rules",
+                      "image": "images/news-neutral-1.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "VOTING REFORM PASSES: EVERY VOTE TO COUNT",
+                      "standfirst": "Proportional system signed into law; next election to be fought under the new rules",
+                      "image": "images/news-neutral-1.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "Change the voters' minds? No — change the counting. Disgraceful.",
+                      "stats": "↻ 2.2K   ♥ 8.7K"
+                    },
+                    {
+                      "name": "The Contrarian",
+                      "handle": "@contrarianhq",
+                      "text": "Every government that changes the voting system swears it's about fairness. Every single one.",
+                      "stats": "↻ 1.5K   ♥ 6.1K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "Whatever you think of the PM, this one outlives them. Systems beat speeches.",
+                      "stats": "↻ 1.9K   ♥ 9.8K"
+                    },
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Voting reform passed. Tactical-voting spreadsheets across the nation quietly deleted.",
+                      "stats": "↻ 1.1K   ♥ 5.4K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Change the voters' minds? No — change the counting. Disgraceful.",
+                        "stats": "↻ 2.2K   ♥ 8.7K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Every government that changes the voting system swears it's about fairness. Every single one.",
+                        "stats": "↻ 1.5K   ♥ 6.1K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Change the voters' minds? No — change the counting. Disgraceful.",
+                        "stats": "↻ 2.2K   ♥ 8.7K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Every government that changes the voting system swears it's about fairness. Every single one.",
+                        "stats": "↻ 1.5K   ♥ 6.1K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Whatever you think of the PM, this one outlives them. Systems beat speeches.",
+                        "stats": "↻ 1.9K   ♥ 9.8K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Voting reform passed. Tactical-voting spreadsheets across the nation quietly deleted.",
+                        "stats": "↻ 1.1K   ♥ 5.4K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Whatever you think of the PM, this one outlives them. Systems beat speeches.",
+                        "stats": "↻ 1.9K   ♥ 9.8K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Voting reform passed. Tactical-voting spreadsheets across the nation quietly deleted.",
+                        "stats": "↻ 1.1K   ♥ 5.4K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "VoterFirst",
+                    "handle": "@voterfirst.msky.social",
+                    "text": "decades of campaigning. every vote finally counts. we're allowed one (1) celebratory post.",
+                    "stats": "↻ 6.8K   ♥ 41K"
+                  },
+                  {
+                    "name": "Polly Ticks",
+                    "handle": "@pollyticks.msky.social",
+                    "text": "governments spend power or bank it. spending it on the system itself is the rarest move in politics.",
+                    "stats": "↻ 2.3K   ♥ 12K"
+                  }
+                ]
+              }
+            }
           },
           {
             "id": "free-school-meals",
@@ -1193,12 +2403,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 6
-                },
-                {
                   "meter": "politics",
-                  "delta": 3
+                  "delta": 6
                 }
               ],
               "hidden": []
@@ -1207,7 +2413,159 @@
             "addTags": [
               "week3-legacy-pick-complete",
               "recentPublicPolicy"
-            ]
+            ],
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "NANNY STATE LUNCHES: WHO PAYS FOR PM'S FEAST?",
+                    "standfirst": "Universal free school meals branded 'gesture economics' by business groups",
+                    "image": "images/news-hostile-2.png",
+                    "altText": "A hostile tabloid front page attacking the Prime Minister."
+                  },
+                  "neutral": {
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "FREE SCHOOL MEALS FOR EVERY PRIMARY PUPIL",
+                    "standfirst": "Heads say attendance and attention will lift; rollout starts with the new term",
+                    "image": "images/news-neutral-2.png",
+                    "altText": "A measured newspaper front page reporting the story plainly."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "NANNY STATE LUNCHES: WHO PAYS FOR PM'S FEAST?",
+                      "standfirst": "Universal free school meals branded 'gesture economics' by business groups",
+                      "image": "images/news-hostile-2.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "NANNY STATE LUNCHES: WHO PAYS FOR PM'S FEAST?",
+                      "standfirst": "Universal free school meals branded 'gesture economics' by business groups",
+                      "image": "images/news-hostile-2.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "FREE SCHOOL MEALS FOR EVERY PRIMARY PUPIL",
+                      "standfirst": "Heads say attendance and attention will lift; rollout starts with the new term",
+                      "image": "images/news-neutral-2.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "FREE SCHOOL MEALS FOR EVERY PRIMARY PUPIL",
+                      "standfirst": "Heads say attendance and attention will lift; rollout starts with the new term",
+                      "image": "images/news-neutral-2.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "Free lunches. Literally the thing economists warn about.",
+                      "stats": "↻ 1.3K   ♥ 5.1K"
+                    },
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Universal school meals: generous, popular, and someone still has to pay for the pudding.",
+                      "stats": "↻ 900   ♥ 3.8K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Per-pound, feeding kids is one of the better returns in the budget. There, I said it.",
+                      "stats": "↻ 1.2K   ♥ 6.3K"
+                    },
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "Teachers have wanted this for years. The staff-room verdict is in and it's warm.",
+                      "stats": "↻ 840   ♥ 4.5K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Free lunches. Literally the thing economists warn about.",
+                        "stats": "↻ 1.3K   ♥ 5.1K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Universal school meals: generous, popular, and someone still has to pay for the pudding.",
+                        "stats": "↻ 900   ♥ 3.8K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Free lunches. Literally the thing economists warn about.",
+                        "stats": "↻ 1.3K   ♥ 5.1K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Universal school meals: generous, popular, and someone still has to pay for the pudding.",
+                        "stats": "↻ 900   ♥ 3.8K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Per-pound, feeding kids is one of the better returns in the budget. There, I said it.",
+                        "stats": "↻ 1.2K   ♥ 6.3K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Teachers have wanted this for years. The staff-room verdict is in and it's warm.",
+                        "stats": "↻ 840   ♥ 4.5K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Per-pound, feeding kids is one of the better returns in the budget. There, I said it.",
+                        "stats": "↻ 1.2K   ♥ 6.3K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Teachers have wanted this for years. The staff-room verdict is in and it's warm.",
+                        "stats": "↻ 840   ♥ 4.5K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "rosa",
+                    "handle": "@rosa.msky.social",
+                    "text": "no kid doing long division hungry. that's it. that's the politics i want.",
+                    "stats": "↻ 5.2K   ♥ 33K"
+                  },
+                  {
+                    "name": "Politics Bites",
+                    "handle": "@polbites.msky.social",
+                    "text": "free school meals polls at like 70%+ across every group. the rare no-catch policy.",
+                    "stats": "↻ 1.8K   ♥ 9.6K"
+                  }
+                ]
+              }
+            }
           },
           {
             "id": "scrap-hospital-parking",
@@ -1219,10 +2577,6 @@
                 {
                   "meter": "politics",
                   "delta": 5
-                },
-                {
-                  "meter": "living",
-                  "delta": 2
                 }
               ],
               "hidden": []
@@ -1231,7 +2585,159 @@
             "addTags": [
               "week3-legacy-pick-complete",
               "recentPublicPolicy"
-            ]
+            ],
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "CAR PARK GIVEAWAY: NHS TO LOSE MILLIONS",
+                    "standfirst": "Hospital parking made free as trusts warn the repair budget just drove off",
+                    "image": "images/news-hostile-3.png",
+                    "altText": "A hostile tabloid front page attacking the Prime Minister."
+                  },
+                  "neutral": {
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "HOSPITAL PARKING CHARGES SCRAPPED",
+                    "standfirst": "No more paying by the hour to visit your mum; trusts compensated centrally",
+                    "image": "images/news-neutral-3.png",
+                    "altText": "A measured newspaper front page reporting the story plainly."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "CAR PARK GIVEAWAY: NHS TO LOSE MILLIONS",
+                      "standfirst": "Hospital parking made free as trusts warn the repair budget just drove off",
+                      "image": "images/news-hostile-3.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "CAR PARK GIVEAWAY: NHS TO LOSE MILLIONS",
+                      "standfirst": "Hospital parking made free as trusts warn the repair budget just drove off",
+                      "image": "images/news-hostile-3.png",
+                      "altText": "A hostile tabloid front page attacking the Prime Minister."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "HOSPITAL PARKING CHARGES SCRAPPED",
+                      "standfirst": "No more paying by the hour to visit your mum; trusts compensated centrally",
+                      "image": "images/news-neutral-3.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    },
+                    {
+                      "masthead": "THE DAILY CHRONICLE",
+                      "headline": "HOSPITAL PARKING CHARGES SCRAPPED",
+                      "standfirst": "No more paying by the hour to visit your mum; trusts compensated centrally",
+                      "image": "images/news-neutral-3.png",
+                      "altText": "A measured newspaper front page reporting the story plainly."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "The Contrarian",
+                      "handle": "@contrarianhq",
+                      "text": "Free parking! The NHS's problems were, famously, about the car park.",
+                      "stats": "↻ 820   ♥ 3.4K"
+                    },
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "Scrapping parking fees costs the NHS millions and the PM calls it 'compassion'. Cheap. Ish.",
+                      "stats": "↻ 760   ♥ 3.1K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "Small money, big resentment removed. Sometimes politics is just that.",
+                      "stats": "↻ 690   ♥ 3.6K"
+                    },
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "Nobody ever lost votes making hospital visits cheaper. Nobody.",
+                      "stats": "↻ 610   ♥ 3.2K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Free parking! The NHS's problems were, famously, about the car park.",
+                        "stats": "↻ 820   ♥ 3.4K"
+                      },
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Scrapping parking fees costs the NHS millions and the PM calls it 'compassion'. Cheap. Ish.",
+                        "stats": "↻ 760   ♥ 3.1K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Free parking! The NHS's problems were, famously, about the car park.",
+                        "stats": "↻ 820   ♥ 3.4K"
+                      },
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Scrapping parking fees costs the NHS millions and the PM calls it 'compassion'. Cheap. Ish.",
+                        "stats": "↻ 760   ♥ 3.1K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Small money, big resentment removed. Sometimes politics is just that.",
+                        "stats": "↻ 690   ♥ 3.6K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Nobody ever lost votes making hospital visits cheaper. Nobody.",
+                        "stats": "↻ 610   ♥ 3.2K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "Small money, big resentment removed. Sometimes politics is just that.",
+                        "stats": "↻ 690   ♥ 3.6K"
+                      },
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "Nobody ever lost votes making hospital visits cheaper. Nobody.",
+                        "stats": "↻ 610   ♥ 3.2K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "NHSworker1",
+                    "handle": "@nhsworker.msky.social",
+                    "text": "night shift staff not paying £9 to park at their own job anymore. took long enough.",
+                    "stats": "↻ 3.9K   ♥ 24K"
+                  },
+                  {
+                    "name": "Doomscroll Dan",
+                    "handle": "@dan.msky.social",
+                    "text": "visited my nan without taking out a small loan for the car park. living in the future",
+                    "stats": "↻ 1.4K   ♥ 8.2K"
+                  }
+                ]
+              }
+            }
           },
           {
             "id": "larry-cat-civil-servants",
@@ -1246,7 +2752,159 @@
             "addTags": [
               "week3-legacy-pick-complete",
               "recentPersonal"
-            ]
+            ],
+            "legacyPresentation": {
+              "reaction": {
+                "newspaper": {
+                  "negative": {
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "MOUSERS ON THE PAYROLL: PM'S FINAL INSULT",
+                    "standfirst": "Cats to be enrolled as civil servants with pensions 'in line with service', No.10 confirms",
+                    "image": "images/news-cat-2.png",
+                    "altText": "A spoof newspaper front page dominated by a cat."
+                  },
+                  "neutral": {
+                    "masthead": "THE GLOBE",
+                    "headline": "WHITEHALL ENROLS ITS CATS AS CIVIL SERVANTS",
+                    "standfirst": "Every department mouser gets a lanyard, a job title and, controversially, performance reviews",
+                    "image": "images/news-cat-2.png",
+                    "altText": "A spoof newspaper front page dominated by a cat."
+                  },
+                  "tiers": [
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "MOUSERS ON THE PAYROLL: PM'S FINAL INSULT",
+                      "standfirst": "Cats to be enrolled as civil servants with pensions 'in line with service', No.10 confirms",
+                      "image": "images/news-cat-2.png",
+                      "altText": "A spoof newspaper front page dominated by a cat."
+                    },
+                    {
+                      "masthead": "THE DAILY RAGE",
+                      "headline": "MOUSERS ON THE PAYROLL: PM'S FINAL INSULT",
+                      "standfirst": "Cats to be enrolled as civil servants with pensions 'in line with service', No.10 confirms",
+                      "image": "images/news-cat-2.png",
+                      "altText": "A spoof newspaper front page dominated by a cat."
+                    },
+                    {
+                      "masthead": "THE GLOBE",
+                      "headline": "WHITEHALL ENROLS ITS CATS AS CIVIL SERVANTS",
+                      "standfirst": "Every department mouser gets a lanyard, a job title and, controversially, performance reviews",
+                      "image": "images/news-cat-2.png",
+                      "altText": "A spoof newspaper front page dominated by a cat."
+                    },
+                    {
+                      "masthead": "THE GLOBE",
+                      "headline": "WHITEHALL ENROLS ITS CATS AS CIVIL SERVANTS",
+                      "standfirst": "Every department mouser gets a lanyard, a job title and, controversially, performance reviews",
+                      "image": "images/news-cat-2.png",
+                      "altText": "A spoof newspaper front page dominated by a cat."
+                    }
+                  ]
+                },
+                "xtwitter": {
+                  "negative": [
+                    {
+                      "name": "Nigel Pinstripe",
+                      "handle": "@nigelp",
+                      "text": "Cats with pensions. CATS. WITH. PENSIONS. And they call ME unserious.",
+                      "stats": "↻ 1.9K   ♥ 7.4K"
+                    },
+                    {
+                      "name": "TaxpayerWatch",
+                      "handle": "@taxpayerwatch",
+                      "text": "The mouser payroll is a rounding error but it's the PRINCIPLE of the thing.",
+                      "stats": "↻ 1.0K   ♥ 4.5K"
+                    }
+                  ],
+                  "neutral": [
+                    {
+                      "name": "Westminster Whisper",
+                      "handle": "@wmwhisper",
+                      "text": "The cats have passed their probation reviews. Several ministers have not.",
+                      "stats": "↻ 1.3K   ♥ 7.0K"
+                    },
+                    {
+                      "name": "The Contrarian",
+                      "handle": "@contrarianhq",
+                      "text": "Honestly the mousers deliver more measurable outcomes than most quangos.",
+                      "stats": "↻ 880   ♥ 4.6K"
+                    }
+                  ],
+                  "tiers": [
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Cats with pensions. CATS. WITH. PENSIONS. And they call ME unserious.",
+                        "stats": "↻ 1.9K   ♥ 7.4K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "The mouser payroll is a rounding error but it's the PRINCIPLE of the thing.",
+                        "stats": "↻ 1.0K   ♥ 4.5K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Nigel Pinstripe",
+                        "handle": "@nigelp",
+                        "text": "Cats with pensions. CATS. WITH. PENSIONS. And they call ME unserious.",
+                        "stats": "↻ 1.9K   ♥ 7.4K"
+                      },
+                      {
+                        "name": "TaxpayerWatch",
+                        "handle": "@taxpayerwatch",
+                        "text": "The mouser payroll is a rounding error but it's the PRINCIPLE of the thing.",
+                        "stats": "↻ 1.0K   ♥ 4.5K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "The cats have passed their probation reviews. Several ministers have not.",
+                        "stats": "↻ 1.3K   ♥ 7.0K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Honestly the mousers deliver more measurable outcomes than most quangos.",
+                        "stats": "↻ 880   ♥ 4.6K"
+                      }
+                    ],
+                    [
+                      {
+                        "name": "Westminster Whisper",
+                        "handle": "@wmwhisper",
+                        "text": "The cats have passed their probation reviews. Several ministers have not.",
+                        "stats": "↻ 1.3K   ♥ 7.0K"
+                      },
+                      {
+                        "name": "The Contrarian",
+                        "handle": "@contrarianhq",
+                        "text": "Honestly the mousers deliver more measurable outcomes than most quangos.",
+                        "stats": "↻ 880   ♥ 4.6K"
+                      }
+                    ]
+                  ]
+                },
+                "bluesky": [
+                  {
+                    "name": "Larry (parody)",
+                    "handle": "@Number10Cat",
+                    "text": "pension secured. union formed. first demand: the good tuna.",
+                    "stats": "↻ 28K   ♥ 190K"
+                  },
+                  {
+                    "name": "rosa",
+                    "handle": "@rosa.msky.social",
+                    "text": "the foreign office cat has a LANYARD with a little PHOTO. i'm not okay.",
+                    "stats": "↻ 4.7K   ♥ 26K"
+                  }
+                ]
+              }
+            }
           }
         ]
       },
@@ -1255,7 +2913,7 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": 1,
-        "title": "NHS Waiting Times - Decision 1",
+        "title": "NHS Waiting Times - Decision 1/2",
         "scene": "The Health Secretary is at your door. 7.5 million on the waiting list. She wants the tools — and a decision today.",
         "scenarioIds": [
           "full-drama-run"
@@ -1575,7 +3233,7 @@
           {
             "id": "fund-more-doctors",
             "label": "Fund More Doctors",
-            "cardRole": "direct",
+            "cardRole": "upgraded",
             "sponsor": "HEALTH SECRETARY",
             "sourceRef": {
               "library": "content.js",
@@ -1835,11 +3493,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
-                },
-                {
-                  "meter": "capital",
-                  "delta": 0
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -1855,16 +3509,21 @@
             },
             "addTags": [
               "recentPublicPolicy",
-              "policyRole-direct",
+              "policyRole-upgraded",
               "policy-nhs-turn-1-complete",
               "policy-nhs-turn-2-ready"
             ],
-            "nextSurfaceId": "policy-nhs-turn-2"
+            "nextSurfaceId": "policy-nhs-turn-2",
+            "lock": {
+              "meter": "press",
+              "threshold": 45,
+              "text": "Media climate score isn't high enough to unlock!"
+            }
           },
           {
             "id": "nhs-tech-upgrade",
             "label": "NHS Tech Upgrade",
-            "cardRole": "upgraded",
+            "cardRole": "direct",
             "sponsor": "HEALTH SECRETARY",
             "sourceRef": {
               "library": "content.js",
@@ -2126,11 +3785,11 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 4
+                  "delta": 3
                 },
                 {
-                  "meter": "capital",
-                  "delta": 0
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -2146,15 +3805,10 @@
             },
             "addTags": [
               "recentPublicPolicy",
-              "policyRole-upgraded",
+              "policyRole-direct",
               "policy-nhs-turn-1-complete",
               "policy-nhs-turn-2-ready"
             ],
-            "lock": {
-              "meter": "press",
-              "threshold": 45,
-              "text": "Media climate score isn't high enough to unlock!"
-            },
             "nextSurfaceId": "policy-nhs-turn-2"
           },
           {
@@ -2422,8 +4076,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 3
+                  "meter": "press",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -2452,8 +4106,8 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": "follow",
-        "title": "NHS Waiting Times - Decision 2",
-        "scene": "Another week. Same wards. A&E is over capacity again. The papers have noticed who isn't in cabinet meetings.",
+        "title": "NHS Waiting Times - Decision 2/2",
+        "scene": "Last shot at the NHS. Whatever you do now defines the chapter. Make it count.",
         "scenarioIds": [
           "full-drama-run"
         ],
@@ -2774,16 +4428,17 @@
               "recentPublicPolicy",
               "policyRole-structural",
               "policy-nhs-turn-2-complete",
-              "policy-nhs-turn-3-ready",
-              "press-reform"
+              "press-reform",
+              "pair-pair1-complete",
+              "scenario-nhs-complete"
             ],
             "overTime": [],
-            "nextSurfaceId": "policy-nhs-turn-3"
+            "nextSurfaceId": "flat-one-visit-one-camera"
           },
           {
             "id": "fund-more-doctors",
             "label": "Fund More Doctors",
-            "cardRole": "direct",
+            "cardRole": "upgraded",
             "sponsor": "HEALTH SECRETARY",
             "sourceRef": {
               "library": "content.js",
@@ -3043,11 +4698,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
-                },
-                {
-                  "meter": "capital",
-                  "delta": 0
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -3063,16 +4714,22 @@
             },
             "addTags": [
               "recentPublicPolicy",
-              "policyRole-direct",
+              "policyRole-upgraded",
               "policy-nhs-turn-2-complete",
-              "policy-nhs-turn-3-ready"
+              "pair-pair1-complete",
+              "scenario-nhs-complete"
             ],
-            "nextSurfaceId": "policy-nhs-turn-3"
+            "nextSurfaceId": "flat-one-visit-one-camera",
+            "lock": {
+              "meter": "press",
+              "threshold": 45,
+              "text": "Media climate score isn't high enough to unlock!"
+            }
           },
           {
             "id": "nhs-tech-upgrade",
             "label": "NHS Tech Upgrade",
-            "cardRole": "upgraded",
+            "cardRole": "direct",
             "sponsor": "HEALTH SECRETARY",
             "sourceRef": {
               "library": "content.js",
@@ -3334,11 +4991,11 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 4
+                  "delta": 3
                 },
                 {
-                  "meter": "capital",
-                  "delta": 0
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -3354,16 +5011,12 @@
             },
             "addTags": [
               "recentPublicPolicy",
-              "policyRole-upgraded",
+              "policyRole-direct",
               "policy-nhs-turn-2-complete",
-              "policy-nhs-turn-3-ready"
+              "pair-pair1-complete",
+              "scenario-nhs-complete"
             ],
-            "lock": {
-              "meter": "press",
-              "threshold": 45,
-              "text": "Media climate score isn't high enough to unlock!"
-            },
-            "nextSurfaceId": "policy-nhs-turn-3"
+            "nextSurfaceId": "flat-one-visit-one-camera"
           },
           {
             "id": "working-cats-fish-subsidy",
@@ -3630,8 +5283,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 2
+                  "meter": "press",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -3649,1217 +5302,6 @@
               "recentPublicPolicy",
               "policyRole-larry",
               "policy-nhs-turn-2-complete",
-              "policy-nhs-turn-3-ready"
-            ],
-            "nextSurfaceId": "policy-nhs-turn-3"
-          }
-        ]
-      },
-      {
-        "id": "policy-nhs-turn-3",
-        "kind": "policy",
-        "presentation": "policy-hand",
-        "weight": "follow",
-        "title": "NHS Waiting Times - Decision 3",
-        "scene": "Last shot at the NHS. Whatever you do now defines the chapter. Make it count.",
-        "scenarioIds": [
-          "full-drama-run"
-        ],
-        "placement": {
-          "afterKinds": [
-            "media",
-            "party",
-            "private",
-            "scandal",
-            "cabinet",
-            "liability",
-            "endgame",
-            "aftermath",
-            "policy"
-          ],
-          "requiresTags": [
-            "agenda-nhs",
-            "policy-nhs-turn-2-complete"
-          ],
-          "forbidsTags": [
-            "policy-nhs-turn-3-complete"
-          ],
-          "prefers": [
-            "policy-nhs-turn-3-ready"
-          ]
-        },
-        "pressure": {
-          "meters": [
-            "living",
-            "press",
-            "capital"
-          ],
-          "hiddenAxes": [
-            "smooth",
-            "populist",
-            "ruthless"
-          ]
-        },
-        "choices": [
-          {
-            "id": "independent-press-regulator",
-            "label": "Independent Press Regulator",
-            "cardRole": "structural",
-            "sponsor": "CULTURE SECRETARY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "nhs",
-              "pairId": "pair1",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 0,
-              "role": "structural"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Reg Broadsheet",
-              "sourceMinisterRole": "CULTURE SECRETARY",
-              "card": {
-                "image": "images/minister-reg-broadsheet.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a media-savvy culture secretary in a stylish open-collar suit, knowing camera-ready smile, plain studio background.",
-                "dot": "#FF335E",
-                "rotation": "-.8deg"
-              },
-              "originalDeltas": {
-                "living": 0,
-                "press": 20,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
-                    "standfirst": "New super-regulator to 'police' Britain's press, ministers confirm",
-                    "image": "images/news-hostile-3.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
-                    "standfirst": "New super-regulator to 'police' Britain's press, ministers confirm",
-                    "image": "images/news-neutral-3.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
-                      "standfirst": "Tyrant in No.10 moves to muzzle the free press, fume editors, as 'democracy dies in darkness'.",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PRESS MUZZLE: PM'S 'WATCHDOG' TO POLICE WHAT YOU READ",
-                      "standfirst": "Ministers swear the new regulator is independent. Fleet Street isn't buying it.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "NEW PRESS WATCHDOG: STANDARDS GUARDIAN OR STATE OVERREACH?",
-                      "standfirst": "The new press regulator clears the Commons, with an independent complaints watchdog set to open within the year.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "INDEPENDENT PRESS REGULATOR BECOMES LAW",
-                      "standfirst": "A watchdog with cross-party backing takes shape after months of wrangling.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PRESS MUZZLE: NEW WATCHDOG TO SILENCE DISSENT",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "STATE REGULATOR WILL SILENCE DISSENT, EDITORS WARN",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "MEDIA STOCKS DIP ON REGULATOR REFORM NEWS",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PRESS MUZZLE: NEW WATCHDOG TO SILENCE DISSENT",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "STATE REGULATOR WILL SILENCE DISSENT, EDITORS WARN",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "MEDIA STOCKS DIP ON REGULATOR REFORM NEWS",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "This is a DIRECT attack on press freedom. State control of media. Full stop.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Three editors privately furious. Two threatening legal challenge. Watch this space.",
-                      "stats": "↻ 1.8K   ♥ 7.2K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    },
-                    {
-                      "name": "Larry (parody)",
-                      "handle": "@Number10Cat",
-                      "text": "I have been unregulated for 14 years. I support this policy.",
-                      "stats": "↻ 11K   ♥ 94K",
-                      "image": "images/avatar-larry-cat.png",
-                      "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "This is a DIRECT attack on press freedom. State control of media. Full stop.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Three editors privately furious. Two threatening legal challenge. Watch this space.",
-                      "stats": "↻ 1.8K   ♥ 7.2K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    },
-                    {
-                      "name": "Larry (parody)",
-                      "handle": "@Number10Cat",
-                      "text": "I have been unregulated for 14 years. I support this policy.",
-                      "stats": "↻ 11K   ♥ 94K",
-                      "image": "images/avatar-larry-cat.png",
-                      "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "This is a DIRECT attack on press freedom. State control of media. Full stop.",
-                        "stats": "↻ 4.4K   ♥ 19K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Three editors privately furious. Two threatening legal challenge. Watch this space.",
-                        "stats": "↻ 1.8K   ♥ 7.2K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "An 'independent' regulator hand-picked by the government. Pull the other one.",
-                        "stats": "↻ 3.1K   ♥ 12K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Lobby still hostile — but a couple of editors quietly admit the old system was broken.",
-                        "stats": "↻ 1.4K   ♥ 5.9K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Scope still worries me. But the worst fears haven't materialised. Yet.",
-                        "stats": "↻ 1.6K   ♥ 6.1K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Tone shifting. Fewer threats of legal action this week than last.",
-                        "stats": "↻ 980   ♥ 4.2K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Credit where it's due — the safeguards are tighter than I expected. A fair framework.",
-                        "stats": "↻ 1.2K   ♥ 5.4K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Even the hold-outs concede it: the regulator is independent, and it's working.",
-                        "stats": "↻ 870   ♥ 3.8K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "a media regulator that actually regulates?? genuinely cannot believe this is happening",
-                    "stats": "↻ 1.1K   ♥ 6.8K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Politics Bites",
-                    "handle": "@polbites.msky.social",
-                    "text": "the papers calling this \"censorship\" are the same ones that printed phone hacking stories as news",
-                    "stats": "↻ 3.2K   ♥ 14K",
-                    "image": "images/avatar-bsky-polbites.png",
-                    "altText": "Friendly podcaster in headphones at a laptop, soft news-ticker glow behind them."
-                  },
-                  {
-                    "name": "Doomscroll Dan",
-                    "handle": "@dan.msky.social",
-                    "text": "love that they screamed \"free press\" louder the moment someone tried to make them accountable",
-                    "stats": "↻ 2.1K   ♥ 9.3K",
-                    "image": "images/avatar-bsky-dan.png",
-                    "altText": "Tired young man lit by the glow of his phone in a dark room, wry half-smile."
-                  }
-                ]
-              }
-            },
-            "note": "\"Set up an independent press regulator. Real teeth. Answers to the public, not the proprietors.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "press",
-                  "delta": 10
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "machiavellian",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-structural",
-              "policy-nhs-turn-3-complete",
-              "pair-pair1-complete",
-              "scenario-nhs-complete",
-              "press-reform"
-            ],
-            "overTime": [],
-            "nextSurfaceId": "flat-one-visit-one-camera"
-          },
-          {
-            "id": "fund-more-doctors",
-            "label": "Fund More Doctors",
-            "cardRole": "direct",
-            "sponsor": "HEALTH SECRETARY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "nhs",
-              "pairId": "pair1",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 1,
-              "role": "direct"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Dr. Ina Tentcare",
-              "sourceMinisterRole": "HEALTH SECRETARY",
-              "card": {
-                "image": "images/minister-dr-ina-tentcare.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a composed health secretary in a navy suit with a small stethoscope lapel pin, calm reassuring expression, plain studio background.",
-                "dot": "#25C998",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 10,
-                "press": 0,
-                "politics": 0,
-                "capital": -5
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "NHS SLUSH FUND! YOUR CASH, THEIR VOTES",
-                    "standfirst": "PM's multi-billion giveaway slammed as 'cynical vote-buying'",
-                    "image": "images/news-hostile-3.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "NHS SLUSH FUND! YOUR CASH, THEIR VOTES",
-                    "standfirst": "PM's multi-billion giveaway slammed as 'cynical vote-buying'",
-                    "image": "images/news-neutral-3.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "NHS SLUSH FUND! YOUR CASH, THEIR VOTES",
-                      "standfirst": "PM's multi-billion giveaway slammed as 'cynical vote-buying' on day one.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "NHS CASH SPLASH: AND GUESS WHO'S PAYING?",
-                      "standfirst": "Critics demand to know where the billions for new doctors will come from.",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "NHS GETS THOUSANDS OF NEW DOCTORS — CAN IT DELIVER?",
-                      "standfirst": "The funding pledge passes, with thousands more doctors promised for the NHS frontline.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "RECORD NHS RECRUITMENT DRIVE BEGINS",
-                      "standfirst": "Thousands of new doctors and nurses to be funded as waiting lists start to ease.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "NHS CASH SPLASH: AND GUESS WHO'S PAYING FOR IT?",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MORE NURSES, FEWER RESULTS — EXPERTS WARN",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "MARKETS UNEASY OVER NHS SPENDING PLANS",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "NHS CASH SPLASH: AND GUESS WHO'S PAYING FOR IT?",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MORE NURSES, FEWER RESULTS — EXPERTS WARN",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "MARKETS UNEASY OVER NHS SPENDING PLANS",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "BILLIONS more into the NHS black hole. When will this government learn?",
-                      "stats": "↻ 5.6K   ♥ 22K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "More money, same problems. The NHS needs reform, not a bailout.",
-                      "stats": "↻ 3.3K   ♥ 13K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Questions in HoC: is the PM buying votes? PM says no. Nobody believes them.",
-                      "stats": "↻ 2.1K   ♥ 8.1K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "BILLIONS more into the NHS black hole. When will this government learn?",
-                      "stats": "↻ 5.6K   ♥ 22K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "More money, same problems. The NHS needs reform, not a bailout.",
-                      "stats": "↻ 3.3K   ♥ 13K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Questions in HoC: is the PM buying votes? PM says no. Nobody believes them.",
-                      "stats": "↻ 2.1K   ♥ 8.1K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "BILLIONS more into the NHS black hole. When will this government learn?",
-                        "stats": "↻ 5.6K   ♥ 22K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "More money, same problems. The NHS needs reform, not a bailout.",
-                        "stats": "↻ 3.3K   ♥ 13K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "And who's footing the bill for all these new doctors? You are.",
-                        "stats": "↻ 4.1K   ♥ 16K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Throwing staff at the problem. Where's the productivity plan?",
-                        "stats": "↻ 2.6K   ♥ 9.7K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Fine — IF the money actually reaches the wards. Big if.",
-                        "stats": "↻ 1.9K   ♥ 7.1K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Funding's the easy bit. Let's see if the staff actually materialise.",
-                        "stats": "↻ 1.5K   ♥ 6.0K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Hate to say it, but the numbers add up this time. Properly costed.",
-                        "stats": "↻ 1.3K   ♥ 5.5K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A real workforce plan, properly funded. Overdue — but welcome.",
-                        "stats": "↻ 1.1K   ♥ 4.9K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "NHSworker1",
-                    "handle": "@nhsworker.msky.social",
-                    "text": "I have been waiting 4 years for this. FOUR YEARS. Thank you.",
-                    "stats": "↻ 4.2K   ♥ 31K",
-                    "image": "images/avatar-bsky-frontline.png",
-                    "altText": "Warm, tired public-service key worker in a lanyard, kind smile, a workplace corridor behind."
-                  },
-                  {
-                    "name": "Doomscroll Dan",
-                    "handle": "@dan.msky.social",
-                    "text": "can you imagine thinking funding healthcare is controversial",
-                    "stats": "↻ 3.1K   ♥ 14K",
-                    "image": "images/avatar-bsky-dan.png",
-                    "altText": "Tired young man lit by the glow of his phone in a dark room, wry half-smile."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "more doctors on the wards means shorter waits and fewer trolley queues. just sense.",
-                    "stats": "↻ 1.9K   ♥ 9.4K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  }
-                ]
-              }
-            },
-            "note": "\"Fund more doctors. The waiting lists won't fix themselves.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 3
-                },
-                {
-                  "meter": "capital",
-                  "delta": 0
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "populist",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-direct",
-              "policy-nhs-turn-3-complete",
-              "pair-pair1-complete",
-              "scenario-nhs-complete"
-            ],
-            "nextSurfaceId": "flat-one-visit-one-camera"
-          },
-          {
-            "id": "nhs-tech-upgrade",
-            "label": "NHS Tech Upgrade",
-            "cardRole": "upgraded",
-            "sponsor": "HEALTH SECRETARY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "nhs",
-              "pairId": "pair1",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 2,
-              "role": "upgraded"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Dr. Ina Tentcare",
-              "sourceMinisterRole": "HEALTH SECRETARY",
-              "card": {
-                "image": "images/minister-dr-ina-tentcare.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a composed health secretary in a navy suit with a small stethoscope lapel pin, calm reassuring expression, plain studio background.",
-                "dot": "#25C998",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 15,
-                "press": 0,
-                "politics": 0,
-                "capital": -5
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "DATA SNATCH! YOUR NHS SECRETS — SOLD TO BIG TECH?",
-                    "standfirst": "PM's £multi-billion health data sell-off raises privacy fears, say critics",
-                    "image": "images/news-hostile-3.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "DATA SNATCH! YOUR NHS SECRETS — SOLD TO BIG TECH?",
-                    "standfirst": "PM's £multi-billion health data sell-off raises privacy fears, say critics",
-                    "image": "images/news-neutral-4.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "DATA SNATCH! YOUR NHS SECRETS — SOLD TO BIG TECH?",
-                      "standfirst": "Fury as PM 'hands your medical records to Silicon Valley', critics claim.",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "DATA GRAB: YOUR NHS RECORDS, BIG TECH'S GOLDMINE",
-                      "standfirst": "Privacy campaigners warn the digitisation drive opens the door to data-mining.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "NHS GOES DIGITAL: OVERDUE FIX OR COSTLY GAMBLE?",
-                      "standfirst": "The upgrade wins cautious backing, though memories of past IT failures linger.",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "NHS DRAGGED INTO THE 21st CENTURY",
-                      "standfirst": "Faxes out, secure digital records in — clinicians broadly welcome the overhaul.",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "DATA GRAB: YOUR NHS SECRETS — BIG TECH WANTS IN",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "NHS TECH SPEND: BILLIONS FOR CONSULTANTS?",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "TECH FIRMS IN LINE FOR NHS DIGITISATION WINDFALL",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "DATA GRAB: YOUR NHS SECRETS — BIG TECH WANTS IN",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "NHS TECH SPEND: BILLIONS FOR CONSULTANTS?",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "TECH FIRMS IN LINE FOR NHS DIGITISATION WINDFALL",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Another NHS IT project. Remember NPfIT? £10 BILLION wasted. Here we go again.",
-                      "stats": "↻ 5.2K   ♥ 21K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Who owns the data? Who profits? These are the questions the PM isn't answering.",
-                      "stats": "↻ 3.1K   ♥ 13K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Sources say two major US tech firms already in talks with DHSC. \"Digital sovereignty\" concerns raised.",
-                      "stats": "↻ 2.4K   ♥ 9.8K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Another NHS IT project. Remember NPfIT? £10 BILLION wasted. Here we go again.",
-                      "stats": "↻ 5.2K   ♥ 21K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Who owns the data? Who profits? These are the questions the PM isn't answering.",
-                      "stats": "↻ 3.1K   ♥ 13K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Sources say two major US tech firms already in talks with DHSC. \"Digital sovereignty\" concerns raised.",
-                      "stats": "↻ 2.4K   ♥ 9.8K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Another NHS IT project. Remember NPfIT? £10 BILLION wasted. Here we go again.",
-                        "stats": "↻ 5.2K   ♥ 21K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Who owns the data? Who profits? The questions the PM won't answer.",
-                        "stats": "↻ 3.1K   ♥ 13K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Your private health data, one procurement contract away from Big Tech.",
-                        "stats": "↻ 3.8K   ♥ 15K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "'Digital transformation'. Where have we heard that before? £10bn, that's where.",
-                        "stats": "↻ 2.5K   ♥ 9.4K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "If they get the procurement right this time... that's a big if. Watching.",
-                        "stats": "↻ 1.8K   ♥ 6.8K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Cautiously optimistic. The safeguards look better than last time.",
-                        "stats": "↻ 1.4K   ♥ 5.7K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Sensible, secure, and about twenty years late. But it’s the right call.",
-                        "stats": "↻ 1.2K   ♥ 5.1K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Have to hand it to them — modern records, properly protected. Good.",
-                        "stats": "↻ 1.0K   ♥ 4.6K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "NHSworker1",
-                    "handle": "@nhsworker.msky.social",
-                    "text": "I have literally faxed a patient referral today. Yes please digitise us.",
-                    "stats": "↻ 6.1K   ♥ 41K",
-                    "image": "images/avatar-bsky-frontline.png",
-                    "altText": "Warm, tired public-service key worker in a lanyard, kind smile, a workplace corridor behind."
-                  },
-                  {
-                    "name": "Doomscroll Dan",
-                    "handle": "@dan.msky.social",
-                    "text": "the NHS IT systems are so old some of them predate the internet. this is not a controversial upgrade",
-                    "stats": "↻ 2.8K   ♥ 12K",
-                    "image": "images/avatar-bsky-dan.png",
-                    "altText": "Tired young man lit by the glow of his phone in a dark room, wry half-smile."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "they're worried about \"data\" but happy with doctors losing patient notes between departments. ok.",
-                    "stats": "↻ 1.9K   ♥ 8.1K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  }
-                ]
-              },
-              "requiresMeter": "press",
-              "lockText": "Media climate score isn't high enough to unlock!"
-            },
-            "note": "\"Upgrade the NHS's tech. Fewer fax machines, faster diagnoses, records that actually talk to each other.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 4
-                },
-                {
-                  "meter": "capital",
-                  "delta": 0
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-upgraded",
-              "policy-nhs-turn-3-complete",
-              "pair-pair1-complete",
-              "scenario-nhs-complete"
-            ],
-            "lock": {
-              "meter": "press",
-              "threshold": 45,
-              "text": "Media climate score isn't high enough to unlock!"
-            },
-            "nextSurfaceId": "flat-one-visit-one-camera"
-          },
-          {
-            "id": "cabinet-petting-allowance",
-            "label": "Cabinet Petting Allowance",
-            "cardRole": "larry",
-            "sponsor": "CABINET OFFICE WELFARE LEAD",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "nhs",
-              "pairId": "pair1",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 5,
-              "role": "larry"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Mews Tracker",
-              "sourceMinisterRole": "CABINET OFFICE WELFARE LEAD",
-              "card": {
-                "image": "images/minister-cat-calico.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a poised calico cat serving as a Whitehall cabinet adviser, wearing a neat little blouse collar and an official lanyard, regarding the camera with composed authority against a plain studio background.",
-                "dot": "#7e7c76",
-                "rotation": ".5deg"
-              },
-              "originalDeltas": {
-                "living": 4,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "turns": [
-                3
-              ],
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "CABINET PETTING ALLOWANCE: 'PRODUCTIVITY PERK' UNVEILED",
-                    "standfirst": "Welfare Lead defends £15K-per-minister pet stipend as research links pet ownership to cabinet morale",
-                    "image": "images/news-cat-2.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "CABINET PETTING ALLOWANCE: 'PRODUCTIVITY PERK' UNVEILED",
-                    "standfirst": "Welfare Lead defends £15K-per-minister pet stipend as research links pet ownership to cabinet morale",
-                    "image": "images/news-cat-2.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PET PERK FOR POLITICIANS: AND YOU FOOT THE BILL",
-                      "standfirst": "Productivity-perk fury as ministers claim a taxpayer allowance to pet office cats.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CABINET PETTING ALLOWANCE: 'PERK GONE MAD'",
-                      "standfirst": "Critics blast the 'wellbeing' scheme as a frivolous use of public money.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MINISTERS’ PETTING PERK: GIMMICK OR GOOD SENSE?",
-                      "standfirst": "The wellbeing allowance raises eyebrows, though officials cite stress data.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "CABINET WELLBEING SCHEME PASSES QUIETLY",
-                      "standfirst": "The modest petting allowance takes effect; Whitehall reports calmer corridors.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE MORNING POST",
-                      "headline": "PETTING ALLOWANCE: WHICH MINISTERS APPLY",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PET PERK FOR POLITICIANS: YOU PAY",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "CABINET PETS REGISTER: THE FULL LIST",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE MORNING POST",
-                      "headline": "PETTING ALLOWANCE: WHICH MINISTERS APPLY",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PET PERK FOR POLITICIANS: YOU PAY",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "CABINET PETS REGISTER: THE FULL LIST",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Pet money for the political class. While families queue at foodbanks.",
-                      "stats": "↻ 2.4K   ♥ 9.6K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "£15,000 PER MINISTER for a pet. Read that again. Then again.",
-                      "stats": "↻ 1.8K   ♥ 7.2K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "They will spend this on private vets and Belgian dachshunds. Bookmark it.",
-                      "stats": "↻ 1.1K   ♥ 4.4K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Pet money for the political class. While families queue at foodbanks.",
-                      "stats": "↻ 2.4K   ♥ 9.6K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "£15,000 PER MINISTER for a pet. Read that again. Then again.",
-                      "stats": "↻ 1.8K   ♥ 7.2K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "They will spend this on private vets and Belgian dachshunds. Bookmark it.",
-                      "stats": "↻ 1.1K   ♥ 4.4K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "A taxpayer allowance to stroke a cat. We have reached peak Whitehall.",
-                        "stats": "↻ 2.6K   ♥ 9.8K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "'Wellbeing'. The most expensive word in government. Pure perk.",
-                        "stats": "↻ 1.9K   ♥ 7.5K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Ministers paid to pet cats. I genuinely do not know what to add.",
-                        "stats": "↻ 1.8K   ♥ 6.9K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Small sum, daft principle. Where does the perk list end?",
-                        "stats": "↻ 1.3K   ♥ 5.1K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "If the stress numbers are real, maybe. Still feels like a gimmick.",
-                        "stats": "↻ 1.0K   ♥ 4.1K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A calmer cabinet costs less than a burnt-out one, I grant. Marginally.",
-                        "stats": "↻ 900   ♥ 3.6K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Pennies, and the corridors are calmer. Fine, it is rather wholesome.",
-                        "stats": "↻ 940   ♥ 3.8K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Harmless and humane. I shall stop harrumphing about the cat.",
-                        "stats": "↻ 840   ♥ 3.3K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "genuinely the funniest line item in the budget this decade.",
-                    "stats": "↻ 1.6K   ♥ 9.2K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Larry (parody)",
-                    "handle": "@Number10Cat",
-                    "text": "i suggested this in a memo. they listened. unprecedented.",
-                    "stats": "↻ 16K   ♥ 124K",
-                    "image": "images/avatar-larry-cat.png",
-                    "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "imagine being so out of touch you sign this AND defend it.",
-                    "stats": "↻ 920   ♥ 5.4K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  }
-                ]
-              }
-            },
-            "note": "\"A cabinet petting allowance. Each minister gets a stipend to maintain at least one stress-relieving pet. Productivity follows.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 2
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                },
-                {
-                  "axis": "populist",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-larry",
-              "policy-nhs-turn-3-complete",
               "pair-pair1-complete",
               "scenario-nhs-complete"
             ],
@@ -4872,7 +5314,7 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": 1,
-        "title": "Closing Tax Loopholes - Decision 1",
+        "title": "Closing Tax Loopholes - Decision 1/2",
         "scene": "The Chancellor walks in with a brief. £70bn a year lost to avoidance. Isla Mann has the receipts — she wants a green light.",
         "scenarioIds": [
           "full-drama-run"
@@ -5192,7 +5634,7 @@
           {
             "id": "close-offshore-loopholes",
             "label": "Close Offshore Loopholes",
-            "cardRole": "direct",
+            "cardRole": "upgraded",
             "sponsor": "CHANCELLOR",
             "sourceRef": {
               "library": "content.js",
@@ -5452,11 +5894,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
-                },
-                {
-                  "meter": "press",
-                  "delta": 0
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -5472,16 +5910,21 @@
             },
             "addTags": [
               "recentPublicPolicy",
-              "policyRole-direct",
+              "policyRole-upgraded",
               "policy-taxLoopholes-turn-1-complete",
               "policy-taxLoopholes-turn-2-ready"
             ],
-            "nextSurfaceId": "policy-taxLoopholes-turn-2"
+            "nextSurfaceId": "policy-taxLoopholes-turn-2",
+            "lock": {
+              "meter": "press",
+              "threshold": 45,
+              "text": "Media climate score isn't high enough to unlock!"
+            }
           },
           {
             "id": "digital-hmrc-enforcement",
             "label": "Digital HMRC Enforcement",
-            "cardRole": "upgraded",
+            "cardRole": "direct",
             "sponsor": "CHANCELLOR",
             "sourceRef": {
               "library": "content.js",
@@ -5743,11 +6186,11 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 4
+                  "delta": 3
                 },
                 {
                   "meter": "press",
-                  "delta": 0
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -5763,15 +6206,10 @@
             },
             "addTags": [
               "recentPublicPolicy",
-              "policyRole-upgraded",
+              "policyRole-direct",
               "policy-taxLoopholes-turn-1-complete",
               "policy-taxLoopholes-turn-2-ready"
             ],
-            "lock": {
-              "meter": "press",
-              "threshold": 45,
-              "text": "Media climate score isn't high enough to unlock!"
-            },
             "nextSurfaceId": "policy-taxLoopholes-turn-2"
           },
           {
@@ -6039,8 +6477,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 3
+                  "meter": "press",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -6069,8 +6507,8 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": "follow",
-        "title": "Closing Tax Loopholes - Decision 2",
-        "scene": "Mayfair has noticed. City firms are lawyered up. Editors are on the phone to their proprietors.",
+        "title": "Closing Tax Loopholes - Decision 2/2",
+        "scene": "Last shot at tax. Whatever you do now decides whether this is a footnote or a turning point.",
         "scenarioIds": [
           "full-drama-run"
         ],
@@ -6391,16 +6829,17 @@
               "recentPublicPolicy",
               "policyRole-structural",
               "policy-taxLoopholes-turn-2-complete",
-              "policy-taxLoopholes-turn-3-ready",
-              "press-reform"
+              "press-reform",
+              "pair-pair1-complete",
+              "scenario-taxLoopholes-complete"
             ],
             "overTime": [],
-            "nextSurfaceId": "policy-taxLoopholes-turn-3"
+            "nextSurfaceId": "flat-one-visit-one-camera"
           },
           {
             "id": "close-offshore-loopholes",
             "label": "Close Offshore Loopholes",
-            "cardRole": "direct",
+            "cardRole": "upgraded",
             "sponsor": "CHANCELLOR",
             "sourceRef": {
               "library": "content.js",
@@ -6660,11 +7099,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
-                },
-                {
-                  "meter": "press",
-                  "delta": 0
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -6680,16 +7115,22 @@
             },
             "addTags": [
               "recentPublicPolicy",
-              "policyRole-direct",
+              "policyRole-upgraded",
               "policy-taxLoopholes-turn-2-complete",
-              "policy-taxLoopholes-turn-3-ready"
+              "pair-pair1-complete",
+              "scenario-taxLoopholes-complete"
             ],
-            "nextSurfaceId": "policy-taxLoopholes-turn-3"
+            "nextSurfaceId": "flat-one-visit-one-camera",
+            "lock": {
+              "meter": "press",
+              "threshold": 45,
+              "text": "Media climate score isn't high enough to unlock!"
+            }
           },
           {
             "id": "digital-hmrc-enforcement",
             "label": "Digital HMRC Enforcement",
-            "cardRole": "upgraded",
+            "cardRole": "direct",
             "sponsor": "CHANCELLOR",
             "sourceRef": {
               "library": "content.js",
@@ -6951,11 +7392,11 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 4
+                  "delta": 3
                 },
                 {
                   "meter": "press",
-                  "delta": 0
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -6971,16 +7412,12 @@
             },
             "addTags": [
               "recentPublicPolicy",
-              "policyRole-upgraded",
+              "policyRole-direct",
               "policy-taxLoopholes-turn-2-complete",
-              "policy-taxLoopholes-turn-3-ready"
+              "pair-pair1-complete",
+              "scenario-taxLoopholes-complete"
             ],
-            "lock": {
-              "meter": "press",
-              "threshold": 45,
-              "text": "Media climate score isn't high enough to unlock!"
-            },
-            "nextSurfaceId": "policy-taxLoopholes-turn-3"
+            "nextSurfaceId": "flat-one-visit-one-camera"
           },
           {
             "id": "working-cats-fish-subsidy",
@@ -7247,8 +7684,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 2
+                  "meter": "press",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -7266,1217 +7703,6 @@
               "recentPublicPolicy",
               "policyRole-larry",
               "policy-taxLoopholes-turn-2-complete",
-              "policy-taxLoopholes-turn-3-ready"
-            ],
-            "nextSurfaceId": "policy-taxLoopholes-turn-3"
-          }
-        ]
-      },
-      {
-        "id": "policy-taxLoopholes-turn-3",
-        "kind": "policy",
-        "presentation": "policy-hand",
-        "weight": "follow",
-        "title": "Closing Tax Loopholes - Decision 3",
-        "scene": "Last shot at tax. Whatever you do now decides whether this is a footnote or a turning point.",
-        "scenarioIds": [
-          "full-drama-run"
-        ],
-        "placement": {
-          "afterKinds": [
-            "media",
-            "party",
-            "private",
-            "scandal",
-            "cabinet",
-            "liability",
-            "endgame",
-            "aftermath",
-            "policy"
-          ],
-          "requiresTags": [
-            "agenda-taxLoopholes",
-            "policy-taxLoopholes-turn-2-complete"
-          ],
-          "forbidsTags": [
-            "policy-taxLoopholes-turn-3-complete"
-          ],
-          "prefers": [
-            "policy-taxLoopholes-turn-3-ready"
-          ]
-        },
-        "pressure": {
-          "meters": [
-            "living",
-            "press",
-            "capital"
-          ],
-          "hiddenAxes": [
-            "smooth",
-            "populist",
-            "ruthless"
-          ]
-        },
-        "choices": [
-          {
-            "id": "independent-press-regulator",
-            "label": "Independent Press Regulator",
-            "cardRole": "structural",
-            "sponsor": "CULTURE SECRETARY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "taxLoopholes",
-              "pairId": "pair1",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 0,
-              "role": "structural"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Reg Broadsheet",
-              "sourceMinisterRole": "CULTURE SECRETARY",
-              "card": {
-                "image": "images/minister-reg-broadsheet.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a media-savvy culture secretary in a stylish open-collar suit, knowing camera-ready smile, plain studio background.",
-                "dot": "#FF335E",
-                "rotation": "-.8deg"
-              },
-              "originalDeltas": {
-                "living": 0,
-                "press": 22,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
-                    "standfirst": "New super-regulator to 'police' Britain's press, ministers confirm",
-                    "image": "images/news-hostile-3.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
-                    "standfirst": "New super-regulator to 'police' Britain's press, ministers confirm",
-                    "image": "images/news-neutral-3.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
-                      "standfirst": "Tyrant in No.10 moves to muzzle the free press, fume editors, as 'democracy dies in darkness'.",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PRESS MUZZLE: PM'S 'WATCHDOG' TO POLICE WHAT YOU READ",
-                      "standfirst": "Ministers swear the new regulator is independent. Fleet Street isn't buying it.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "NEW PRESS WATCHDOG: STANDARDS GUARDIAN OR STATE OVERREACH?",
-                      "standfirst": "The new press regulator clears the Commons, with an independent complaints watchdog set to open within the year.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "INDEPENDENT PRESS REGULATOR BECOMES LAW",
-                      "standfirst": "A watchdog with cross-party backing takes shape after months of wrangling.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PRESS MUZZLE: NEW WATCHDOG TO SILENCE DISSENT",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "STATE REGULATOR WILL SILENCE DISSENT, EDITORS WARN",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "MEDIA STOCKS DIP ON REGULATOR REFORM NEWS",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PRESS MUZZLE: NEW WATCHDOG TO SILENCE DISSENT",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "STATE REGULATOR WILL SILENCE DISSENT, EDITORS WARN",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "MEDIA STOCKS DIP ON REGULATOR REFORM NEWS",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "This is a DIRECT attack on press freedom. State control of media. Full stop.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Three editors privately furious. Two threatening legal challenge. Watch this space.",
-                      "stats": "↻ 1.8K   ♥ 7.2K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    },
-                    {
-                      "name": "Larry (parody)",
-                      "handle": "@Number10Cat",
-                      "text": "I have been unregulated for 14 years. I support this policy.",
-                      "stats": "↻ 11K   ♥ 94K",
-                      "image": "images/avatar-larry-cat.png",
-                      "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "This is a DIRECT attack on press freedom. State control of media. Full stop.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Three editors privately furious. Two threatening legal challenge. Watch this space.",
-                      "stats": "↻ 1.8K   ♥ 7.2K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    },
-                    {
-                      "name": "Larry (parody)",
-                      "handle": "@Number10Cat",
-                      "text": "I have been unregulated for 14 years. I support this policy.",
-                      "stats": "↻ 11K   ♥ 94K",
-                      "image": "images/avatar-larry-cat.png",
-                      "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "This is a DIRECT attack on press freedom. State control of media. Full stop.",
-                        "stats": "↻ 4.4K   ♥ 19K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Three editors privately furious. Two threatening legal challenge. Watch this space.",
-                        "stats": "↻ 1.8K   ♥ 7.2K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "An 'independent' regulator hand-picked by the government. Pull the other one.",
-                        "stats": "↻ 3.1K   ♥ 12K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Lobby still hostile — but a couple of editors quietly admit the old system was broken.",
-                        "stats": "↻ 1.4K   ♥ 5.9K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Scope still worries me. But the worst fears haven't materialised. Yet.",
-                        "stats": "↻ 1.6K   ♥ 6.1K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Tone shifting. Fewer threats of legal action this week than last.",
-                        "stats": "↻ 980   ♥ 4.2K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Credit where it's due — the safeguards are tighter than I expected. A fair framework.",
-                        "stats": "↻ 1.2K   ♥ 5.4K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Even the hold-outs concede it: the regulator is independent, and it's working.",
-                        "stats": "↻ 870   ♥ 3.8K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "a media regulator that actually regulates?? genuinely cannot believe this is happening",
-                    "stats": "↻ 1.1K   ♥ 6.8K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Politics Bites",
-                    "handle": "@polbites.msky.social",
-                    "text": "the papers calling this \"censorship\" are the same ones that printed phone hacking stories as news",
-                    "stats": "↻ 3.2K   ♥ 14K",
-                    "image": "images/avatar-bsky-polbites.png",
-                    "altText": "Friendly podcaster in headphones at a laptop, soft news-ticker glow behind them."
-                  },
-                  {
-                    "name": "Doomscroll Dan",
-                    "handle": "@dan.msky.social",
-                    "text": "love that they screamed \"free press\" louder the moment someone tried to make them accountable",
-                    "stats": "↻ 2.1K   ♥ 9.3K",
-                    "image": "images/avatar-bsky-dan.png",
-                    "altText": "Tired young man lit by the glow of his phone in a dark room, wry half-smile."
-                  }
-                ]
-              }
-            },
-            "note": "\"Set up an independent press regulator. Real teeth. Answers to the public, not the proprietors.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "press",
-                  "delta": 10
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "machiavellian",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-structural",
-              "policy-taxLoopholes-turn-3-complete",
-              "pair-pair1-complete",
-              "scenario-taxLoopholes-complete",
-              "press-reform"
-            ],
-            "overTime": [],
-            "nextSurfaceId": "flat-one-visit-one-camera"
-          },
-          {
-            "id": "close-offshore-loopholes",
-            "label": "Close Offshore Loopholes",
-            "cardRole": "direct",
-            "sponsor": "CHANCELLOR",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "taxLoopholes",
-              "pairId": "pair1",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 1,
-              "role": "direct"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Isla Mann",
-              "sourceMinisterRole": "CHANCELLOR",
-              "card": {
-                "image": "images/minister-isla-mann.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a sharp, confident chancellor in a power suit holding a red budget box, steely smile, plain studio background.",
-                "dot": "#FFC93C",
-                "rotation": ".5deg"
-              },
-              "originalDeltas": {
-                "living": 10,
-                "press": -10,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "Tax Crackdown: Attack on Aspiration?",
-                    "standfirst": "PM targets offshore wealth as Treasury promises 'no hiding place'",
-                    "image": "images/news-hostile-4.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "Tax Crackdown: Attack on Aspiration?",
-                    "standfirst": "PM targets offshore wealth as Treasury promises 'no hiding place'",
-                    "image": "images/news-neutral-2.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "LOOPHOLE RAID: PM COMES FOR YOUR SAVINGS NEXT",
-                      "standfirst": "Aspiration under attack as No.10 sics the taxman on anyone with a rainy-day fund.",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "TAX CRACKDOWN: 'ATTACK ON ASPIRATION', SAY CRITICS",
-                      "standfirst": "Closing offshore loopholes will scare off wealth creators, business groups warn.",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "OFFSHORE LOOPHOLES: OVERDUE FIX OR RAID ON THE RICH?",
-                      "standfirst": "The crackdown passes, with billions in dodged tax set to be brought back onshore.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "OFFSHORE TAX LOOPHOLES CLOSED AT LAST",
-                      "standfirst": "Long-trailed reform passes, bringing billions in dodged tax back onshore.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "LOOPHOLE CRACKDOWN: NOW THEY'RE COMING FOR YOUR SAVINGS",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "OFFSHORE ASSETS: 'LEGAL' PLANNING NOW AT RISK",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "HMRC POWERS EXPANDED IN LOOPHOLE CRACKDOWN",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "LOOPHOLE CRACKDOWN: NOW THEY'RE COMING FOR YOUR SAVINGS",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "OFFSHORE ASSETS: 'LEGAL' PLANNING NOW AT RISK",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "HMRC POWERS EXPANDED IN LOOPHOLE CRACKDOWN",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Legitimate tax PLANNING, not avoidance. These are LEGAL structures. Government overreach.",
-                      "stats": "↻ 5.5K   ♥ 26K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Everyone hides money offshore until suddenly they don't. The capital flight will be spectacular.",
-                      "stats": "↻ 4.1K   ♥ 18K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "City lawyers working overtime tonight. Several FTSE firms reportedly reviewing their structures.",
-                      "stats": "↻ 2.9K   ♥ 11K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Legitimate tax PLANNING, not avoidance. These are LEGAL structures. Government overreach.",
-                      "stats": "↻ 5.5K   ♥ 26K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Everyone hides money offshore until suddenly they don't. The capital flight will be spectacular.",
-                      "stats": "↻ 4.1K   ♥ 18K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "City lawyers working overtime tonight. Several FTSE firms reportedly reviewing their structures.",
-                      "stats": "↻ 2.9K   ♥ 11K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "First the dodgers, then YOU. They never stop at the rich. Mark my words.",
-                        "stats": "↻ 4.0K   ♥ 16K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Punishing success. This is the politics of envy, plain and simple.",
-                        "stats": "↻ 2.8K   ♥ 11K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "And who decides what counts as a \"loophole\"? The same people who want your money.",
-                        "stats": "↻ 3.1K   ♥ 12K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Capital is mobile. Squeeze it and it leaves. Basic economics.",
-                        "stats": "↻ 2.2K   ♥ 8.4K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Fine — IF it actually targets the dodgers and not ordinary savers. Watching.",
-                        "stats": "↻ 1.7K   ♥ 6.3K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Closing genuine abuse, I can live with. The detail matters.",
-                        "stats": "↻ 1.3K   ♥ 5.1K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Credit where due — the dodgers are finally paying. Hard to argue with that.",
-                        "stats": "↻ 1.2K   ♥ 4.8K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A fairer system where everyone pays their share. Overdue, frankly.",
-                        "stats": "↻ 1.0K   ♥ 4.2K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "TaxJusticeUK",
-                    "handle": "@taxjustice.msky.social",
-                    "text": "The UK loses an estimated £70bn a year to tax avoidance. This is not a niche issue.",
-                    "stats": "↻ 4.9K   ♥ 23K",
-                    "image": "images/avatar-bsky-social-org.png",
-                    "altText": "Friendly solidarity campaign-group logo with a raised-hands motif on warm coral."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "\"going after savings\" they say. your savings are not in a Cayman shell company, mate.",
-                    "stats": "↻ 6.1K   ♥ 31K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  },
-                  {
-                    "name": "VoterFirst",
-                    "handle": "@voterfirst.msky.social",
-                    "text": "paying your taxes is not optional for the rest of us. shouldn't be optional for them either.",
-                    "stats": "↻ 3.3K   ♥ 15K",
-                    "image": "images/avatar-bsky-citizen.png",
-                    "altText": "Ordinary cheerful member of the public in a casual coat taking a selfie on a high street."
-                  }
-                ]
-              }
-            },
-            "note": "\"Close the offshore loopholes. The ultra-wealthy have had long enough. Every trick in the book — I wrote the report on them.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 3
-                },
-                {
-                  "meter": "press",
-                  "delta": 0
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "populist",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-direct",
-              "policy-taxLoopholes-turn-3-complete",
-              "pair-pair1-complete",
-              "scenario-taxLoopholes-complete"
-            ],
-            "nextSurfaceId": "flat-one-visit-one-camera"
-          },
-          {
-            "id": "digital-hmrc-enforcement",
-            "label": "Digital HMRC Enforcement",
-            "cardRole": "upgraded",
-            "sponsor": "CHANCELLOR",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "taxLoopholes",
-              "pairId": "pair1",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 2,
-              "role": "upgraded"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Isla Mann",
-              "sourceMinisterRole": "CHANCELLOR",
-              "card": {
-                "image": "images/minister-isla-mann.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a sharp, confident chancellor in a power suit holding a red budget box, steely smile, plain studio background.",
-                "dot": "#FFC93C",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 15,
-                "press": -5,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "STATE SURVEILLANCE? PM'S HMRC POWER GRAB",
-                    "standfirst": "Real-time bank-data access for tax inspectors raises civil liberties alarm, critics say",
-                    "image": "images/news-hostile-2.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "STATE SURVEILLANCE? PM'S HMRC POWER GRAB",
-                    "standfirst": "Real-time bank-data access for tax inspectors raises civil liberties alarm, critics say",
-                    "image": "images/news-neutral-3.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "DATA SNATCH! YOUR BANK ACCOUNT, THEIR DATABASE",
-                      "standfirst": "Big Brother fury as PM hands the taxman real-time access to your every transaction.",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "BIG BROTHER HMRC: PM'S TAX-SNOOPING MACHINE",
-                      "standfirst": "Civil liberties groups warn the new AI enforcement system is ripe for abuse.",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "HMRC GOES DIGITAL: SMART ENFORCEMENT OR OVERREACH?",
-                      "standfirst": "Real-time tax tools pass, giving HMRC live sight of the books to chase down evasion.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "DIGITAL TAX ENFORCEMENT GOES LIVE",
-                      "standfirst": "Modern systems to catch evasion faster, with new safeguards on data, ministers say.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "BIG BROTHER HMRC: YOUR BANK ACCOUNT — THEIR DATABASE",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "TAX OFFICE'S NEW AI: ACCURATE OR ARBITRARY?",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "CITY FIRMS BRACE FOR REAL-TIME TAX SCRUTINY",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "BIG BROTHER HMRC: YOUR BANK ACCOUNT — THEIR DATABASE",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "TAX OFFICE'S NEW AI: ACCURATE OR ARBITRARY?",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "CITY FIRMS BRACE FOR REAL-TIME TAX SCRUTINY",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Civil liberties? Out the window. This is the death of financial privacy.",
-                      "stats": "↻ 6.1K   ♥ 24K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "AI deciding who to investigate. What could possibly go wrong?",
-                      "stats": "↻ 4.2K   ♥ 17K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "First they came for the offshore millionaires. Then they came for everyone else.",
-                      "stats": "↻ 3.3K   ♥ 14K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Civil liberties? Out the window. This is the death of financial privacy.",
-                      "stats": "↻ 6.1K   ♥ 24K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "AI deciding who to investigate. What could possibly go wrong?",
-                      "stats": "↻ 4.2K   ♥ 17K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "First they came for the offshore millionaires. Then they came for everyone else.",
-                      "stats": "↻ 3.3K   ♥ 14K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "The surveillance state, brought to you by your friendly tax office. Chilling.",
-                        "stats": "↻ 3.6K   ♥ 14K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "They want to watch every pound you spend. For your own good, naturally.",
-                        "stats": "↻ 3.0K   ♥ 12K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "'AI enforcement'. What could possibly go wrong with a machine deciding you owe money?",
-                        "stats": "↻ 2.4K   ♥ 9.1K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Real-time access to your accounts. No warrant. No appeal. Lovely.",
-                        "stats": "↻ 2.0K   ♥ 7.7K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "If the safeguards hold, fair enough. Big if. The detail worries me.",
-                        "stats": "↻ 1.5K   ♥ 5.9K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Catching real cheats is fine. Just keep your hands off the honest majority.",
-                        "stats": "↻ 1.3K   ♥ 5.0K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Properly safeguarded and aimed at genuine fraud — I'll concede it's sensible.",
-                        "stats": "↻ 1.1K   ♥ 4.4K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Catches the cheats, leaves the rest of us alone. That is how it should work.",
-                        "stats": "↻ 950   ♥ 3.9K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "TaxJusticeUK",
-                    "handle": "@taxjustice.msky.social",
-                    "text": "HMRC has been outgunned for 30 years. This is what catching up looks like. Long overdue.",
-                    "stats": "↻ 5.4K   ♥ 28K",
-                    "image": "images/avatar-bsky-social-org.png",
-                    "altText": "Friendly solidarity campaign-group logo with a raised-hands motif on warm coral."
-                  },
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "when the rich say \"surveillance\" they mean \"we might actually get caught this time\"",
-                    "stats": "↻ 3.9K   ♥ 19K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "your boss has access to your hours. your landlord has access to your address. the tax office should know your tax position. it's fine.",
-                    "stats": "↻ 2.1K   ♥ 11K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  }
-                ]
-              },
-              "requiresMeter": "press",
-              "lockText": "Media climate score isn't high enough to unlock!"
-            },
-            "note": "\"Digital HMRC enforcement. AI case selection, real-time bank data, no more paper trail to bury. Catch them in days, not decades.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 4
-                },
-                {
-                  "meter": "press",
-                  "delta": 0
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-upgraded",
-              "policy-taxLoopholes-turn-3-complete",
-              "pair-pair1-complete",
-              "scenario-taxLoopholes-complete"
-            ],
-            "lock": {
-              "meter": "press",
-              "threshold": 45,
-              "text": "Media climate score isn't high enough to unlock!"
-            },
-            "nextSurfaceId": "flat-one-visit-one-camera"
-          },
-          {
-            "id": "cabinet-petting-allowance",
-            "label": "Cabinet Petting Allowance",
-            "cardRole": "larry",
-            "sponsor": "CABINET OFFICE WELFARE LEAD",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "taxLoopholes",
-              "pairId": "pair1",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 5,
-              "role": "larry"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Mews Tracker",
-              "sourceMinisterRole": "CABINET OFFICE WELFARE LEAD",
-              "card": {
-                "image": "images/minister-cat-calico.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a poised calico cat serving as a Whitehall cabinet adviser, wearing a neat little blouse collar and an official lanyard, regarding the camera with composed authority against a plain studio background.",
-                "dot": "#7e7c76",
-                "rotation": ".5deg"
-              },
-              "originalDeltas": {
-                "living": 4,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "turns": [
-                3
-              ],
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "CABINET PETTING ALLOWANCE: 'PRODUCTIVITY PERK' UNVEILED",
-                    "standfirst": "Welfare Lead defends £15K-per-minister pet stipend as research links pet ownership to cabinet morale",
-                    "image": "images/news-cat-2.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "CABINET PETTING ALLOWANCE: 'PRODUCTIVITY PERK' UNVEILED",
-                    "standfirst": "Welfare Lead defends £15K-per-minister pet stipend as research links pet ownership to cabinet morale",
-                    "image": "images/news-cat-2.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PET PERK FOR POLITICIANS: AND YOU FOOT THE BILL",
-                      "standfirst": "Productivity-perk fury as ministers claim a taxpayer allowance to pet office cats.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CABINET PETTING ALLOWANCE: 'PERK GONE MAD'",
-                      "standfirst": "Critics blast the 'wellbeing' scheme as a frivolous use of public money.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MINISTERS’ PETTING PERK: GIMMICK OR GOOD SENSE?",
-                      "standfirst": "The wellbeing allowance raises eyebrows, though officials cite stress data.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "CABINET WELLBEING SCHEME PASSES QUIETLY",
-                      "standfirst": "The modest petting allowance takes effect; Whitehall reports calmer corridors.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE MORNING POST",
-                      "headline": "PETTING ALLOWANCE: WHICH MINISTERS APPLY",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PET PERK FOR POLITICIANS: YOU PAY",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "CABINET PETS REGISTER: THE FULL LIST",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE MORNING POST",
-                      "headline": "PETTING ALLOWANCE: WHICH MINISTERS APPLY",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PET PERK FOR POLITICIANS: YOU PAY",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "CABINET PETS REGISTER: THE FULL LIST",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Pet money for the political class. While families queue at foodbanks.",
-                      "stats": "↻ 2.4K   ♥ 9.6K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "£15,000 PER MINISTER for a pet. Read that again. Then again.",
-                      "stats": "↻ 1.8K   ♥ 7.2K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "They will spend this on private vets and Belgian dachshunds. Bookmark it.",
-                      "stats": "↻ 1.1K   ♥ 4.4K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Pet money for the political class. While families queue at foodbanks.",
-                      "stats": "↻ 2.4K   ♥ 9.6K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "£15,000 PER MINISTER for a pet. Read that again. Then again.",
-                      "stats": "↻ 1.8K   ♥ 7.2K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "They will spend this on private vets and Belgian dachshunds. Bookmark it.",
-                      "stats": "↻ 1.1K   ♥ 4.4K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "A taxpayer allowance to stroke a cat. We have reached peak Whitehall.",
-                        "stats": "↻ 2.6K   ♥ 9.8K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "'Wellbeing'. The most expensive word in government. Pure perk.",
-                        "stats": "↻ 1.9K   ♥ 7.5K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Ministers paid to pet cats. I genuinely do not know what to add.",
-                        "stats": "↻ 1.8K   ♥ 6.9K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Small sum, daft principle. Where does the perk list end?",
-                        "stats": "↻ 1.3K   ♥ 5.1K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "If the stress numbers are real, maybe. Still feels like a gimmick.",
-                        "stats": "↻ 1.0K   ♥ 4.1K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A calmer cabinet costs less than a burnt-out one, I grant. Marginally.",
-                        "stats": "↻ 900   ♥ 3.6K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Pennies, and the corridors are calmer. Fine, it is rather wholesome.",
-                        "stats": "↻ 940   ♥ 3.8K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Harmless and humane. I shall stop harrumphing about the cat.",
-                        "stats": "↻ 840   ♥ 3.3K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "genuinely the funniest line item in the budget this decade.",
-                    "stats": "↻ 1.6K   ♥ 9.2K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Larry (parody)",
-                    "handle": "@Number10Cat",
-                    "text": "i suggested this in a memo. they listened. unprecedented.",
-                    "stats": "↻ 16K   ♥ 124K",
-                    "image": "images/avatar-larry-cat.png",
-                    "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "imagine being so out of touch you sign this AND defend it.",
-                    "stats": "↻ 920   ♥ 5.4K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  }
-                ]
-              }
-            },
-            "note": "\"A cabinet petting allowance. Each minister gets a stipend to maintain at least one stress-relieving pet. Productivity follows.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 2
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                },
-                {
-                  "axis": "populist",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-larry",
-              "policy-taxLoopholes-turn-3-complete",
               "pair-pair1-complete",
               "scenario-taxLoopholes-complete"
             ],
@@ -8489,7 +7715,7 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": 1,
-        "title": "Housing Shortage - Decision 1",
+        "title": "Housing Shortage - Decision 1/2",
         "scene": "The Housing Secretary needs a word. 1.5 million homes short. Mason Carrick has a plan — but it'll need cover.",
         "scenarioIds": [
           "full-drama-run"
@@ -9069,6 +8295,10 @@
                 {
                   "meter": "living",
                   "delta": 3
+                },
+                {
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -9356,7 +8586,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -9649,8 +8879,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 3
+                  "meter": "capital",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -9679,8 +8909,8 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": "follow",
-        "title": "Housing Shortage - Decision 2",
-        "scene": "The build is on. The fight is louder. NIMBY councils are organising. Donor groups are calling in favours.",
+        "title": "Housing Shortage - Decision 2/2",
+        "scene": "Last shot at housing. You can finish strong or watch this slip away. Decide.",
         "scenarioIds": [
           "full-drama-run"
         ],
@@ -10001,10 +9231,11 @@
               "recentPublicPolicy",
               "policyRole-structural",
               "policy-housing-turn-2-complete",
-              "policy-housing-turn-3-ready"
+              "pair-pair2-complete",
+              "scenario-housing-complete"
             ],
             "overTime": [],
-            "nextSurfaceId": "policy-housing-turn-3"
+            "nextSurfaceId": "week2-policy-pick"
           },
           {
             "id": "fund-social-housing-build",
@@ -10270,6 +9501,10 @@
                 {
                   "meter": "living",
                   "delta": 3
+                },
+                {
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -10287,10 +9522,11 @@
               "recentPublicPolicy",
               "policyRole-direct",
               "policy-housing-turn-2-complete",
-              "policy-housing-turn-3-ready"
+              "pair-pair2-complete",
+              "scenario-housing-complete"
             ],
             "overTime": [],
-            "nextSurfaceId": "policy-housing-turn-3"
+            "nextSurfaceId": "week2-policy-pick"
           },
           {
             "id": "renters-rights-bill",
@@ -10557,7 +9793,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -10575,7 +9811,8 @@
               "recentPublicPolicy",
               "policyRole-upgraded",
               "policy-housing-turn-2-complete",
-              "policy-housing-turn-3-ready"
+              "pair-pair2-complete",
+              "scenario-housing-complete"
             ],
             "lock": {
               "meter": "capital",
@@ -10583,7 +9820,7 @@
               "text": "Political power score isn't high enough to unlock!"
             },
             "overTime": [],
-            "nextSurfaceId": "policy-housing-turn-3"
+            "nextSurfaceId": "week2-policy-pick"
           },
           {
             "id": "public-sunbeam-access-act",
@@ -10850,8 +10087,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 3
+                  "meter": "capital",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -10869,1210 +10106,6 @@
               "recentPublicPolicy",
               "policyRole-larry",
               "policy-housing-turn-2-complete",
-              "policy-housing-turn-3-ready"
-            ],
-            "nextSurfaceId": "policy-housing-turn-3"
-          }
-        ]
-      },
-      {
-        "id": "policy-housing-turn-3",
-        "kind": "policy",
-        "presentation": "policy-hand",
-        "weight": "follow",
-        "title": "Housing Shortage - Decision 3",
-        "scene": "Last shot at housing. You can finish strong or watch this slip away. Decide.",
-        "scenarioIds": [
-          "full-drama-run"
-        ],
-        "placement": {
-          "afterKinds": [
-            "media",
-            "party",
-            "private",
-            "scandal",
-            "cabinet",
-            "liability",
-            "endgame",
-            "aftermath",
-            "policy"
-          ],
-          "requiresTags": [
-            "agenda-housing",
-            "policy-housing-turn-2-complete"
-          ],
-          "forbidsTags": [
-            "policy-housing-turn-3-complete"
-          ],
-          "prefers": [
-            "policy-housing-turn-3-ready"
-          ]
-        },
-        "pressure": {
-          "meters": [
-            "living",
-            "capital",
-            "capital"
-          ],
-          "hiddenAxes": [
-            "smooth",
-            "populist",
-            "ruthless"
-          ]
-        },
-        "choices": [
-          {
-            "id": "cap-big-money-donations",
-            "label": "Cap Big-Money Donations",
-            "cardRole": "structural",
-            "sponsor": "ETHICS ADVISER",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "housing",
-              "pairId": "pair2",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 0,
-              "role": "structural"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Honesty Boxe",
-              "sourceMinisterRole": "ETHICS ADVISER",
-              "card": {
-                "image": "images/minister-honesty-boxe.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a scrupulously tidy ethics adviser in a plain dark suit, open honest expression and clasped hands, plain studio background.",
-                "dot": "#FFC93C",
-                "rotation": ".7deg"
-              },
-              "originalDeltas": {
-                "living": 0,
-                "press": 0,
-                "politics": 0,
-                "capital": 25
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "Cash Grab? PM Bans Donor Millions",
-                    "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-hostile-4.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "Cash Grab? PM Bans Donor Millions",
-                    "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-neutral-1.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CASH BAN BOMBSHELL: PM CHOKES OFF DEMOCRACY",
-                      "standfirst": "Power-grab fury as No.10 moves to ban the big donors who fund every party but his.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "DONOR CRACKDOWN: 'WITCH-HUNT', RAGE PM'S RIVALS",
-                      "standfirst": "Capping big-money donations is a cynical attack on political freedom, critics claim.",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "BIG-MONEY DONATIONS: CLEAN-UP OR STITCH-UP?",
-                      "standfirst": "The donations cap clears the Commons, with big-money cheques to political parties limited for the first time.",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "BIG-MONEY DONATION CAP BECOMES LAW",
-                      "standfirst": "Cross-party support for limits that take the biggest cheques out of politics.",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CASH BAN BOMBSHELL: PM CHOKES OFF PARTY FUNDING",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WITCH HUNT: PM TARGETS LEGITIMATE DONORS",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "DONOR BAN RATTLES WESTMINSTER FUNDRAISERS",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CASH BAN BOMBSHELL: PM CHOKES OFF PARTY FUNDING",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WITCH HUNT: PM TARGETS LEGITIMATE DONORS",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "DONOR BAN RATTLES WESTMINSTER FUNDRAISERS",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "This is an ATTACK on legitimate political participation. Shameful.",
-                      "stats": "↻ 2.2K   ♥ 8.9K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Three major donors already threatening to switch allegiance. Crisis looms.",
-                      "stats": "↻ 1.1K   ♥ 5.6K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Who pays for politics now? The taxpayer? The unions?? Dangerous ground.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "This is an ATTACK on legitimate political participation. Shameful.",
-                      "stats": "↻ 2.2K   ♥ 8.9K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Three major donors already threatening to switch allegiance. Crisis looms.",
-                      "stats": "↻ 1.1K   ♥ 5.6K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Who pays for politics now? The taxpayer? The unions?? Dangerous ground.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "An attack on legitimate political participation. Shameful, and deeply cynical.",
-                        "stats": "↻ 3.4K   ♥ 13K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Three major donors already threatening to switch allegiance. Crisis looms.",
-                        "stats": "↻ 1.6K   ♥ 6.4K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Funny how 'cleaning up politics' always means defunding your opponents.",
-                        "stats": "↻ 2.6K   ♥ 10K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Donors furious — but a few quietly admit the arms race had to stop somewhere.",
-                        "stats": "↻ 1.3K   ♥ 5.2K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Some merit to limiting the mega-cheques, I suppose. The cap level worries me.",
-                        "stats": "↻ 1.4K   ♥ 5.6K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Mood's shifting. Even rival fundraisers concede the old system looked grubby.",
-                        "stats": "↻ 1.0K   ♥ 4.1K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A level field where no one buys the result. Hard to call that anything but fair.",
-                        "stats": "↻ 1.1K   ♥ 4.5K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Money out of politics, and the sky did not fall. The reform is holding.",
-                        "stats": "↻ 920   ♥ 3.7K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "£1 in every £4 donated to UK parties from a single person. Of COURSE we need a cap.",
-                    "stats": "↻ 1.1K   ♥ 7.3K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "billionaires on both sides suddenly very worried about \"democracy\". funny that.",
-                    "stats": "↻ 2.3K   ♥ 11K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  },
-                  {
-                    "name": "VoterFirst",
-                    "handle": "@voterfirst.msky.social",
-                    "text": "finally a PM who remembers they work for us, not the chequebook brigade",
-                    "stats": "↻ 634   ♥ 4.1K",
-                    "image": "images/avatar-bsky-citizen.png",
-                    "altText": "Ordinary cheerful member of the public in a casual coat taking a selfie on a high street."
-                  }
-                ]
-              }
-            },
-            "note": "\"Cap the big-money donors. Stop the chequebook brigade writing the policy for you. The PM gets their power back.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "capital",
-                  "delta": 10
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "machiavellian",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-structural",
-              "policy-housing-turn-3-complete",
-              "pair-pair2-complete",
-              "scenario-housing-complete"
-            ],
-            "overTime": [],
-            "nextSurfaceId": "week2-policy-pick"
-          },
-          {
-            "id": "fund-social-housing-build",
-            "label": "Fund Social Housing Build",
-            "cardRole": "direct",
-            "sponsor": "HOUSING SECRETARY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "housing",
-              "pairId": "pair2",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 1,
-              "role": "direct"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Mason Carrick",
-              "sourceMinisterRole": "HOUSING SECRETARY",
-              "card": {
-                "image": "images/minister-mason-carrick.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a practical housing secretary in a shirt with a high-vis-trimmed jacket and a hard hat tucked under one arm, can-do grin, plain studio background.",
-                "dot": "#4D7CFF",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 18,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "COUNCIL-HOUSE BONANZA: PM BLOWS BILLIONS ON SUBSIDISED RENTS",
-                    "standfirst": "Critics warn taxpayer-funded build programme will 'crowd out' private developers",
-                    "image": "images/news-hostile-1.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "COUNCIL-HOUSE BONANZA: PM BLOWS BILLIONS ON SUBSIDISED RENTS",
-                    "standfirst": "Critics warn taxpayer-funded build programme will 'crowd out' private developers",
-                    "image": "images/news-neutral-3.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "COUNCIL-HOUSE BONANZA: PM BLOWS BILLIONS ON RENTS",
-                      "standfirst": "Back-to-the-70s fury as No.10 promises millions of subsidised homes on your tab.",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "BACK TO THE 70s: PM'S COUNCIL-HOUSE SPENDING SPREE",
-                      "standfirst": "Critics warn the mass build programme will crowd out private developers.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "COUNCIL HOMES: BOLD FIX OR BUDGET BLACK HOLE?",
-                      "standfirst": "The social-housing programme is funded, with the first new council homes due to break ground next year.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "BIGGEST COUNCIL-HOUSE BUILD IN A GENERATION",
-                      "standfirst": "Hundreds of thousands of social homes to be built as the waiting list starts to fall.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "BACK TO THE 70s: PM PROMISES MILLIONS OF COUNCIL HOMES",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "COUNCIL-HOUSE PUSH: WHO BUILDS THEM, WHO LIVES IN THEM?",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "PRIVATE HOUSEBUILDERS SLIDE ON SOCIAL-HOUSING NEWS",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "BACK TO THE 70s: PM PROMISES MILLIONS OF COUNCIL HOMES",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "COUNCIL-HOUSE PUSH: WHO BUILDS THEM, WHO LIVES IN THEM?",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "PRIVATE HOUSEBUILDERS SLIDE ON SOCIAL-HOUSING NEWS",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Soviet-style mass housing. The private sector builds homes. The state should stay out.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Council homes = housing-benefit traps. The PM should know better. Or maybe he doesn't.",
-                      "stats": "↻ 3.1K   ♥ 13K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Billions for state housing while my mortgage rate climbs. Where's the help for OWNERS?",
-                      "stats": "↻ 5.6K   ♥ 22K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Soviet-style mass housing. The private sector builds homes. The state should stay out.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Council homes = housing-benefit traps. The PM should know better. Or maybe he doesn't.",
-                      "stats": "↻ 3.1K   ♥ 13K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Billions for state housing while my mortgage rate climbs. Where's the help for OWNERS?",
-                      "stats": "↻ 5.6K   ♥ 22K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Soviet-style mass housing. The private sector builds homes. The state should stay out.",
-                        "stats": "↻ 3.2K   ♥ 12K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Council homes = housing-benefit traps. Billions of YOUR money up in smoke.",
-                        "stats": "↻ 2.7K   ♥ 11K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "'Build, build, build' — with whose money, exactly? Yours.",
-                        "stats": "↻ 2.3K   ♥ 8.9K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Crowds out the builders who actually know how to build. Watch supply fall.",
-                        "stats": "↻ 1.9K   ♥ 7.3K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "If it genuinely adds homes rather than just shuffling them, fine. Big if.",
-                        "stats": "↻ 1.5K   ♥ 5.7K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Supply's the only thing that fixes prices. If this delivers, I'll allow it.",
-                        "stats": "↻ 1.2K   ♥ 4.9K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Homes going up, list coming down. Hard to argue with bricks in the ground.",
-                        "stats": "↻ 1.1K   ♥ 4.3K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Actual homes for actual money. About time someone built something.",
-                        "stats": "↻ 940   ♥ 3.8K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "GenerationRent",
-                    "handle": "@generationrent.msky.social",
-                    "text": "paying £1,800/month for a flat with damp. yes please give me a council home.",
-                    "stats": "↻ 4.8K   ♥ 31K",
-                    "image": "images/avatar-bsky-social-org.png",
-                    "altText": "Friendly solidarity campaign-group logo with a raised-hands motif on warm coral."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "we built 200,000 council homes a year in the 60s. now we build 6,000. it's a choice, not an inevitability.",
-                    "stats": "↻ 3.2K   ♥ 14K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "every economic argument against council housing comes from people who already own three houses",
-                    "stats": "↻ 2.7K   ♥ 12K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  }
-                ]
-              }
-            },
-            "note": "\"Fund a social housing build programme. Council homes, at scale, for the first time in a generation. People can't wait any longer.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 3
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "populist",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-direct",
-              "policy-housing-turn-3-complete",
-              "pair-pair2-complete",
-              "scenario-housing-complete"
-            ],
-            "overTime": [],
-            "nextSurfaceId": "week2-policy-pick"
-          },
-          {
-            "id": "renters-rights-bill",
-            "label": "Renters' Rights Bill",
-            "cardRole": "upgraded",
-            "sponsor": "RENTERS' RIGHTS MINISTER",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "housing",
-              "pairId": "pair2",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 2,
-              "role": "upgraded"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Toby Tenant",
-              "sourceMinisterRole": "RENTERS' RIGHTS MINISTER",
-              "card": {
-                "image": "images/minister-toby-tenant.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of an earnest young renters-rights minister in a slightly rumpled jacket holding a set of keys, determined smile, plain studio background.",
-                "dot": "#4D7CFF",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 18,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "LANDLORD EXODUS: PM'S RENT RULES TO SHRINK SUPPLY",
-                    "standfirst": "Buy-to-let firms warn of mass sell-off as no-fault eviction ban and rent caps clear Commons",
-                    "image": "images/news-hostile-4.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "LANDLORD EXODUS: PM'S RENT RULES TO SHRINK SUPPLY",
-                    "standfirst": "Buy-to-let firms warn of mass sell-off as no-fault eviction ban and rent caps clear Commons",
-                    "image": "images/news-neutral-2.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "LANDLORD EXODUS: PM'S RENT RULES TO WRECK SUPPLY",
-                      "standfirst": "Property-rights fury as No.10 bans no-fault evictions and caps your rent overnight.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "RENT CRACKDOWN: 'LANDLORDS WILL FLEE', SECTOR WARNS",
-                      "standfirst": "Buy-to-let firms threaten a mass sell-off as the Renters' Rights Bill clears the Commons.",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "RENTERS' RIGHTS: FAIR DEAL OR MARKET MELTDOWN?",
-                      "standfirst": "The ban on no-fault evictions passes, giving England's renters real security for the first time.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "RENTERS' RIGHTS BILL PASSES: NO-FAULT EVICTIONS GONE",
-                      "standfirst": "Millions of renters gain new security as the long-promised reform becomes law.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "LANDLORDS' EXODUS: PM'S RENT RULES 'WILL SHRINK SUPPLY'",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "RENTERS' RIGHTS BILL: NO-FAULT EVICTIONS BANNED AT LAST",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "BUY-TO-LET SHARES SLIDE AS RENT BILL CLEARS COMMONS",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "LANDLORDS' EXODUS: PM'S RENT RULES 'WILL SHRINK SUPPLY'",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "RENTERS' RIGHTS BILL: NO-FAULT EVICTIONS BANNED AT LAST",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "BUY-TO-LET SHARES SLIDE AS RENT BILL CLEARS COMMONS",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Property rights ABOLISHED. Landlords will sell. Rents will RISE. Watch.",
-                      "stats": "↻ 5.4K   ♥ 22K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Anti-landlord policy is anti-tenant policy. Fewer rentals. Higher prices. Basic economics.",
-                      "stats": "↻ 3.8K   ♥ 16K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "NRLA already lobbying Lords amendments. Watering-down expected.",
-                      "stats": "↻ 1.4K   ♥ 5.8K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Property rights ABOLISHED. Landlords will sell. Rents will RISE. Watch.",
-                      "stats": "↻ 5.4K   ♥ 22K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Anti-landlord policy is anti-tenant policy. Fewer rentals. Higher prices. Basic economics.",
-                      "stats": "↻ 3.8K   ♥ 16K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "NRLA already lobbying Lords amendments. Watering-down expected.",
-                      "stats": "↻ 1.4K   ♥ 5.8K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Property rights ABOLISHED. Landlords will sell. Rents will RISE. Watch.",
-                        "stats": "↻ 3.5K   ♥ 14K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Buy-to-let lobby in open revolt tonight. Threats of a mass sell-off.",
-                        "stats": "↻ 1.7K   ♥ 6.7K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Anti-landlord policy is anti-tenant policy. Fewer rentals, higher prices. Basic.",
-                        "stats": "↻ 2.5K   ♥ 9.8K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Landlords furious — though tenants’ groups call it the biggest win in decades.",
-                        "stats": "↻ 1.3K   ♥ 5.3K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Security for renters isn't unreasonable. The eviction detail still worries me.",
-                        "stats": "↻ 1.4K   ♥ 5.5K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "The threatened exodus hasn’t come. Coverage is turning more even-handed.",
-                        "stats": "↻ 1.0K   ♥ 4.0K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A renter who can't be turfed out on a whim. Decent landlords lose nothing. Fair.",
-                        "stats": "↻ 1.1K   ♥ 4.4K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Sell-off never materialised. Renters more secure. The reform is bedding in.",
-                        "stats": "↻ 900   ♥ 3.6K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "GenerationRent",
-                    "handle": "@generationrent.msky.social",
-                    "text": "got served a section 21 for asking for the broken boiler to be fixed. this would have stopped that. game-changer.",
-                    "stats": "↻ 5.2K   ♥ 38K",
-                    "image": "images/avatar-bsky-social-org.png",
-                    "altText": "Friendly solidarity campaign-group logo with a raised-hands motif on warm coral."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "landlords threatening to \"leave the market\" have been threatening that since 1979. they never do.",
-                    "stats": "↻ 3.4K   ♥ 17K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Politics Bites",
-                    "handle": "@polbites.msky.social",
-                    "text": "a basic floor of dignity for the half of under-40s who rent. how is this controversial.",
-                    "stats": "↻ 2.1K   ♥ 9.6K",
-                    "image": "images/avatar-bsky-polbites.png",
-                    "altText": "Friendly podcaster in headphones at a laptop, soft news-ticker glow behind them."
-                  }
-                ]
-              },
-              "requiresMeter": "capital",
-              "lockText": "Political power score isn't high enough to unlock!"
-            },
-            "note": "\"A full Renters' Rights Bill. End no-fault evictions, cap mid-tenancy rent hikes, mandate decent-homes standards, ban benefits discrimination. Half the under-40s rent — give them the floor.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 3
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-upgraded",
-              "policy-housing-turn-3-complete",
-              "pair-pair2-complete",
-              "scenario-housing-complete"
-            ],
-            "lock": {
-              "meter": "capital",
-              "threshold": 45,
-              "text": "Political power score isn't high enough to unlock!"
-            },
-            "overTime": [],
-            "nextSurfaceId": "week2-policy-pick"
-          },
-          {
-            "id": "service-mousers-honours-act",
-            "label": "Service Mousers Honours Act",
-            "cardRole": "larry",
-            "sponsor": "HONOURS & AWARDS ADVISER",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "housing",
-              "pairId": "pair2",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 5,
-              "role": "larry"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Liz Felinetower",
-              "sourceMinisterRole": "HONOURS & AWARDS ADVISER",
-              "card": {
-                "image": "images/minister-cat-calico.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a poised calico cat serving as a Whitehall cabinet adviser, wearing a neat little blouse collar and an official lanyard, regarding the camera with composed authority against a plain studio background.",
-                "dot": "#7e7c76",
-                "rotation": ".5deg"
-              },
-              "originalDeltas": {
-                "living": 3,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "turns": [
-                3
-              ],
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE GLOBE",
-                    "headline": "SERVICE MOUSERS HONOURED: STATE FUNERAL RIGHTS GRANTED",
-                    "standfirst": "Honours Adviser confirms eligibility for Whitehall cats with five years' verified mouse-catching service",
-                    "image": "images/news-cat-1.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "neutral": {
-                    "masthead": "THE GLOBE",
-                    "headline": "SERVICE MOUSERS HONOURED: STATE FUNERAL RIGHTS GRANTED",
-                    "standfirst": "Honours Adviser confirms eligibility for Whitehall cats with five years' verified mouse-catching service",
-                    "image": "images/news-cat-1.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "STATE FUNERALS FOR CATS: A NEW LOW FOR THE PM",
-                      "standfirst": "Honours-for-mousers fury as No.10 grants service cats state recognition on your dime.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "MOUSERS' HONOURS: 'HAS THE PM LOST THE PLOT?'",
-                      "standfirst": "Critics savage the scheme to honour Whitehall cats as a frivolous distraction.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "SERVICE MOUSERS HONOURED: GIMMICK OR GRACE NOTE?",
-                      "standfirst": "The honours raise eyebrows, though many find the tribute oddly touching.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "WHITEHALL’S SERVICE CATS RECEIVE THEIR DUE",
-                      "standfirst": "The recognition scheme passes, and Whitehall's working cats receive their official honours at last.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MOUSERS' HONOURS: WHO QUALIFIES",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE MORNING POST",
-                      "headline": "FULL LIST: WHITEHALL CATS ELIGIBLE",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "STATE FUNERALS FOR CATS: A NEW LOW",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MOUSERS' HONOURS: WHO QUALIFIES",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE MORNING POST",
-                      "headline": "FULL LIST: WHITEHALL CATS ELIGIBLE",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "STATE FUNERALS FOR CATS: A NEW LOW",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "State funerals. For CATS. The civilisational rot is now official policy.",
-                      "stats": "↻ 2.6K   ♥ 11K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Public honours scheme expanded to FELINES. The veterans queue grows.",
-                      "stats": "↻ 2.1K   ♥ 8.4K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "The bureaucracy of cat awards. A growth sector. Bookmark.",
-                      "stats": "↻ 1.2K   ♥ 4.6K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "State funerals. For CATS. The civilisational rot is now official policy.",
-                      "stats": "↻ 2.6K   ♥ 11K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Public honours scheme expanded to FELINES. The veterans queue grows.",
-                      "stats": "↻ 2.1K   ♥ 8.4K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "The bureaucracy of cat awards. A growth sector. Bookmark.",
-                      "stats": "↻ 1.2K   ♥ 4.6K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "State honours. For cats. The dignity of the nation, ladies and gentlemen.",
-                        "stats": "↻ 2.6K   ♥ 9.7K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Whitehall split: solemn tribute or total farce? Larry, naturally, abstains.",
-                        "stats": "↻ 1.3K   ♥ 5.1K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A medal for a mouser while the country fixes its own problems. Priorities.",
-                        "stats": "↻ 1.8K   ♥ 6.8K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Mockery in the lobby — though a few admit the old mousers earned it.",
-                        "stats": "↻ 1.2K   ♥ 4.8K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Costs nothing, charms everyone. I'll stop pretending to be cross.",
-                        "stats": "↻ 1.0K   ♥ 3.9K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "The cynics are losing this one. The tribute is rather touching.",
-                        "stats": "↻ 860   ♥ 3.5K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A small, free, genuinely sweet gesture. The nation approves, and so do I.",
-                        "stats": "↻ 910   ♥ 3.6K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Turns out honouring the mousers was the easiest win of the week.",
-                        "stats": "↻ 800   ♥ 3.2K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "finally. the mice will know.",
-                    "stats": "↻ 1.4K   ♥ 9.1K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Larry (parody)",
-                    "handle": "@Number10Cat",
-                    "text": "a sombre, dignified moment for the profession.",
-                    "stats": "↻ 15K   ♥ 116K",
-                    "image": "images/avatar-larry-cat.png",
-                    "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "national flag at half mast for Geoffrey of the Treasury. as it should be.",
-                    "stats": "↻ 980   ♥ 6.4K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  }
-                ]
-              }
-            },
-            "note": "\"State funeral rights for service mousers. The mice they caught will not be forgotten. Long-overdue recognition.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 2
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                },
-                {
-                  "axis": "populist",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-larry",
-              "policy-housing-turn-3-complete",
               "pair-pair2-complete",
               "scenario-housing-complete"
             ],
@@ -12085,7 +10118,7 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": 1,
-        "title": "Carbon Emissions - Decision 1",
+        "title": "Carbon Emissions - Decision 1/2",
         "scene": "The Energy Secretary is in the room. Off-track on every target. Pippa Lyne wants to go big — and she wants you in the trench with her.",
         "scenarioIds": [
           "full-drama-run"
@@ -12665,6 +10698,10 @@
                 {
                   "meter": "living",
                   "delta": 3
+                },
+                {
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -12951,7 +10988,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 4
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -13243,8 +11280,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 3
+                  "meter": "capital",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -13273,8 +11310,8 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": "follow",
-        "title": "Carbon Emissions - Decision 2",
-        "scene": "The lobbyists are out in force. Oil money is calling everyone in your party. Editors are softening up the public.",
+        "title": "Carbon Emissions - Decision 2/2",
+        "scene": "Last shot at climate. There is no third term. Whatever you do now is the climate legacy you get.",
         "scenarioIds": [
           "full-drama-run"
         ],
@@ -13595,10 +11632,11 @@
               "recentPublicPolicy",
               "policyRole-structural",
               "policy-carbon-turn-2-complete",
-              "policy-carbon-turn-3-ready"
+              "pair-pair2-complete",
+              "scenario-carbon-complete"
             ],
             "overTime": [],
-            "nextSurfaceId": "policy-carbon-turn-3"
+            "nextSurfaceId": "week2-policy-pick"
           },
           {
             "id": "green-energy-subsidies",
@@ -13864,6 +11902,10 @@
                 {
                   "meter": "living",
                   "delta": 3
+                },
+                {
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -13881,9 +11923,10 @@
               "recentPublicPolicy",
               "policyRole-direct",
               "policy-carbon-turn-2-complete",
-              "policy-carbon-turn-3-ready"
+              "pair-pair2-complete",
+              "scenario-carbon-complete"
             ],
-            "nextSurfaceId": "policy-carbon-turn-3"
+            "nextSurfaceId": "week2-policy-pick"
           },
           {
             "id": "carbon-border-tax",
@@ -14150,7 +12193,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 4
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -14168,14 +12211,15 @@
               "recentPublicPolicy",
               "policyRole-upgraded",
               "policy-carbon-turn-2-complete",
-              "policy-carbon-turn-3-ready"
+              "pair-pair2-complete",
+              "scenario-carbon-complete"
             ],
             "lock": {
               "meter": "capital",
               "threshold": 45,
               "text": "Political power score isn't high enough to unlock!"
             },
-            "nextSurfaceId": "policy-carbon-turn-3"
+            "nextSurfaceId": "week2-policy-pick"
           },
           {
             "id": "public-sunbeam-access-act",
@@ -14442,8 +12486,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 3
+                  "meter": "capital",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -14461,1208 +12505,6 @@
               "recentPublicPolicy",
               "policyRole-larry",
               "policy-carbon-turn-2-complete",
-              "policy-carbon-turn-3-ready"
-            ],
-            "nextSurfaceId": "policy-carbon-turn-3"
-          }
-        ]
-      },
-      {
-        "id": "policy-carbon-turn-3",
-        "kind": "policy",
-        "presentation": "policy-hand",
-        "weight": "follow",
-        "title": "Carbon Emissions - Decision 3",
-        "scene": "Last shot at climate. There is no third term. Whatever you do now is the climate legacy you get.",
-        "scenarioIds": [
-          "full-drama-run"
-        ],
-        "placement": {
-          "afterKinds": [
-            "media",
-            "party",
-            "private",
-            "scandal",
-            "cabinet",
-            "liability",
-            "endgame",
-            "aftermath",
-            "policy"
-          ],
-          "requiresTags": [
-            "agenda-carbon",
-            "policy-carbon-turn-2-complete"
-          ],
-          "forbidsTags": [
-            "policy-carbon-turn-3-complete"
-          ],
-          "prefers": [
-            "policy-carbon-turn-3-ready"
-          ]
-        },
-        "pressure": {
-          "meters": [
-            "living",
-            "capital",
-            "capital"
-          ],
-          "hiddenAxes": [
-            "smooth",
-            "populist",
-            "ruthless"
-          ]
-        },
-        "choices": [
-          {
-            "id": "cap-big-money-donations",
-            "label": "Cap Big-Money Donations",
-            "cardRole": "structural",
-            "sponsor": "ETHICS ADVISER",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "carbon",
-              "pairId": "pair2",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 0,
-              "role": "structural"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Honesty Boxe",
-              "sourceMinisterRole": "ETHICS ADVISER",
-              "card": {
-                "image": "images/minister-honesty-boxe.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a scrupulously tidy ethics adviser in a plain dark suit, open honest expression and clasped hands, plain studio background.",
-                "dot": "#FFC93C",
-                "rotation": ".7deg"
-              },
-              "originalDeltas": {
-                "living": 0,
-                "press": 0,
-                "politics": 0,
-                "capital": 25
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "Cash Grab? PM Bans Donor Millions",
-                    "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-hostile-4.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "Cash Grab? PM Bans Donor Millions",
-                    "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-neutral-1.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CASH BAN BOMBSHELL: PM CHOKES OFF DEMOCRACY",
-                      "standfirst": "Power-grab fury as No.10 moves to ban the big donors who fund every party but his.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "DONOR CRACKDOWN: 'WITCH-HUNT', RAGE PM'S RIVALS",
-                      "standfirst": "Capping big-money donations is a cynical attack on political freedom, critics claim.",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "BIG-MONEY DONATIONS: CLEAN-UP OR STITCH-UP?",
-                      "standfirst": "The donations cap clears the Commons, with big-money cheques to political parties limited for the first time.",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "BIG-MONEY DONATION CAP BECOMES LAW",
-                      "standfirst": "Cross-party support for limits that take the biggest cheques out of politics.",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CASH BAN BOMBSHELL: PM CHOKES OFF PARTY FUNDING",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WITCH HUNT: PM TARGETS LEGITIMATE DONORS",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "DONOR BAN RATTLES WESTMINSTER FUNDRAISERS",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CASH BAN BOMBSHELL: PM CHOKES OFF PARTY FUNDING",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WITCH HUNT: PM TARGETS LEGITIMATE DONORS",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "DONOR BAN RATTLES WESTMINSTER FUNDRAISERS",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "This is an ATTACK on legitimate political participation. Shameful.",
-                      "stats": "↻ 2.2K   ♥ 8.9K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Three major donors already threatening to switch allegiance. Crisis looms.",
-                      "stats": "↻ 1.1K   ♥ 5.6K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Who pays for politics now? The taxpayer? The unions?? Dangerous ground.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "This is an ATTACK on legitimate political participation. Shameful.",
-                      "stats": "↻ 2.2K   ♥ 8.9K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Westminster Whisper",
-                      "handle": "@wmwhisper",
-                      "text": "Three major donors already threatening to switch allegiance. Crisis looms.",
-                      "stats": "↻ 1.1K   ♥ 5.6K",
-                      "image": "images/avatar-x-neutral-reporter.png",
-                      "altText": "Neutral headshot of a Westminster political reporter in a plain blazer, calm expression, plain studio background."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Who pays for politics now? The taxpayer? The unions?? Dangerous ground.",
-                      "stats": "↻ 4.4K   ♥ 19K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "An attack on legitimate political participation. Shameful, and deeply cynical.",
-                        "stats": "↻ 3.4K   ♥ 13K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Three major donors already threatening to switch allegiance. Crisis looms.",
-                        "stats": "↻ 1.6K   ♥ 6.4K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Funny how 'cleaning up politics' always means defunding your opponents.",
-                        "stats": "↻ 2.6K   ♥ 10K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Donors furious — but a few quietly admit the arms race had to stop somewhere.",
-                        "stats": "↻ 1.3K   ♥ 5.2K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Some merit to limiting the mega-cheques, I suppose. The cap level worries me.",
-                        "stats": "↻ 1.4K   ♥ 5.6K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Mood's shifting. Even rival fundraisers concede the old system looked grubby.",
-                        "stats": "↻ 1.0K   ♥ 4.1K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A level field where no one buys the result. Hard to call that anything but fair.",
-                        "stats": "↻ 1.1K   ♥ 4.5K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Money out of politics, and the sky did not fall. The reform is holding.",
-                        "stats": "↻ 920   ♥ 3.7K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "£1 in every £4 donated to UK parties from a single person. Of COURSE we need a cap.",
-                    "stats": "↻ 1.1K   ♥ 7.3K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "billionaires on both sides suddenly very worried about \"democracy\". funny that.",
-                    "stats": "↻ 2.3K   ♥ 11K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  },
-                  {
-                    "name": "VoterFirst",
-                    "handle": "@voterfirst.msky.social",
-                    "text": "finally a PM who remembers they work for us, not the chequebook brigade",
-                    "stats": "↻ 634   ♥ 4.1K",
-                    "image": "images/avatar-bsky-citizen.png",
-                    "altText": "Ordinary cheerful member of the public in a casual coat taking a selfie on a high street."
-                  }
-                ]
-              }
-            },
-            "note": "\"Cap the big-money donors. Stop the chequebook brigade writing the policy for you. The PM gets their power back.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "capital",
-                  "delta": 10
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "machiavellian",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-structural",
-              "policy-carbon-turn-3-complete",
-              "pair-pair2-complete",
-              "scenario-carbon-complete"
-            ],
-            "overTime": [],
-            "nextSurfaceId": "week2-policy-pick"
-          },
-          {
-            "id": "green-energy-subsidies",
-            "label": "Green Energy Subsidies",
-            "cardRole": "direct",
-            "sponsor": "ENERGY SECRETARY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "carbon",
-              "pairId": "pair2",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 1,
-              "role": "direct"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Pippa Lyne",
-              "sourceMinisterRole": "ENERGY SECRETARY",
-              "card": {
-                "image": "images/minister-pippa-lyne.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a forward-looking energy secretary in a sleek suit with a tiny wind-turbine lapel pin, optimistic smile, plain studio background.",
-                "dot": "#25C998",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 10,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "GREEN-CRAZED PM: BILLIONS WASTED ON WIND TURBINES",
-                    "standfirst": "Energy bills to subsidise net-zero virtue-signalling, taxpayer groups warn",
-                    "image": "images/news-hostile-2.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "GREEN-CRAZED PM: BILLIONS WASTED ON WIND TURBINES",
-                    "standfirst": "Energy bills to subsidise net-zero virtue-signalling, taxpayer groups warn",
-                    "image": "images/news-neutral-1.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "GREEN-CRAZED PM: BILLIONS BLOWN ON WIND TURBINES",
-                      "standfirst": "Eco-zealotry fury as No.10 ploughs your cash into the PM's pet windmills.",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "WIND-OBSESSED: PM PLOUGHS YOUR CASH INTO TURBINES",
-                      "standfirst": "Critics question whether the green subsidy splurge will ever pay for itself.",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "GREEN SUBSIDIES: SMART BET OR COSTLY GAMBLE?",
-                      "standfirst": "The renewables programme is funded, promising cheaper power and thousands of new green jobs.",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "BRITAIN POWERS UP: RENEWABLES INVESTMENT SOARS",
-                      "standfirst": "New wind and solar to cut bills and emissions, with industry broadly on board.",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "WIND-OBSESSED: PM PLOUGHS YOUR CASH INTO TURBINES",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "GREEN SUBSIDIES: WHO ACTUALLY GETS THE GRANTS?",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "RENEWABLES SECTOR RALLIES ON SUBSIDY ANNOUNCEMENT",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "WIND-OBSESSED: PM PLOUGHS YOUR CASH INTO TURBINES",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "GREEN SUBSIDIES: WHO ACTUALLY GETS THE GRANTS?",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "RENEWABLES SECTOR RALLIES ON SUBSIDY ANNOUNCEMENT",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "BILLIONS to wind farms while my electricity bill triples. This is INSANITY.",
-                      "stats": "↻ 6.4K   ♥ 26K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Net zero is a religion. The PM is the high priest. The country is the offering.",
-                      "stats": "↻ 5.3K   ♥ 22K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Subsidies distort markets. Always have. Always will. Bookmark this for the bailout.",
-                      "stats": "↻ 3.1K   ♥ 13K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "BILLIONS to wind farms while my electricity bill triples. This is INSANITY.",
-                      "stats": "↻ 6.4K   ♥ 26K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Net zero is a religion. The PM is the high priest. The country is the offering.",
-                      "stats": "↻ 5.3K   ♥ 22K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Subsidies distort markets. Always have. Always will. Bookmark this for the bailout.",
-                      "stats": "↻ 3.1K   ♥ 13K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Ideology over economics. The PM is gambling your money on the weather.",
-                        "stats": "↻ 3.3K   ♥ 13K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Subsidy after subsidy. Guess whose bill pays for it all? Yours.",
-                        "stats": "↻ 2.8K   ♥ 11K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "'Green jobs' that vanish the moment the subsidy does. We've seen this film.",
-                        "stats": "↻ 2.4K   ♥ 9.2K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Who actually pockets these grants? Not you, that’s for sure.",
-                        "stats": "↻ 2.0K   ♥ 7.6K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Energy security has value, I grant. Whether the sums add up is another matter.",
-                        "stats": "↻ 1.5K   ♥ 5.8K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "If it genuinely cuts bills long-term, I'll come round. Show me the numbers.",
-                        "stats": "↻ 1.2K   ♥ 4.9K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Cheaper power and less reliance on tyrants' gas. Sensible, in the end.",
-                        "stats": "↻ 1.1K   ♥ 4.3K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Bills down, lights on, money home-grown. Fair enough.",
-                        "stats": "↻ 930   ♥ 3.8K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "ClimateWatch",
-                    "handle": "@climatewatch.msky.social",
-                    "text": "every climate report says we need MORE of this. the screaming is from people who get paid by oil.",
-                    "stats": "↻ 5.1K   ♥ 26K",
-                    "image": "images/avatar-bsky-green-org.png",
-                    "altText": "Friendly green campaign-group logo with a leaf-and-river motif on fresh teal."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "cheaper bills and homegrown power instead of imported gas. this is how you bring energy costs down for good.",
-                    "stats": "↻ 3.4K   ♥ 18K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "GreenWatch",
-                    "handle": "@greenwatch.msky.social",
-                    "text": "finally an energy policy that doesn't involve handing more money to BP",
-                    "stats": "↻ 2.7K   ♥ 12K",
-                    "image": "images/avatar-bsky-green-org.png",
-                    "altText": "Friendly green campaign-group logo with a leaf-and-river motif on fresh teal."
-                  }
-                ]
-              }
-            },
-            "note": "\"Green energy subsidies. Solar, wind, tidal — direct grants to households and grid-scale projects. Cheaper bills, lower emissions, both.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 3
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "populist",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-direct",
-              "policy-carbon-turn-3-complete",
-              "pair-pair2-complete",
-              "scenario-carbon-complete"
-            ],
-            "nextSurfaceId": "week2-policy-pick"
-          },
-          {
-            "id": "carbon-border-tax",
-            "label": "Carbon Border Tax",
-            "cardRole": "upgraded",
-            "sponsor": "ENERGY SECRETARY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "carbon",
-              "pairId": "pair2",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 2,
-              "role": "upgraded"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Pippa Lyne",
-              "sourceMinisterRole": "ENERGY SECRETARY",
-              "card": {
-                "image": "images/minister-pippa-lyne.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a forward-looking energy secretary in a sleek suit with a tiny wind-turbine lapel pin, optimistic smile, plain studio background.",
-                "dot": "#25C998",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 14,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "CARBON BORDER TAX: BRITISH STEEL CHEERS, IMPORTERS WARN OF PRICE HIKES",
-                    "standfirst": "Cross-border carbon levy aims to level the field as PM doubles down on industrial decarbonisation",
-                    "image": "images/news-hostile-1.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "CARBON BORDER TAX: BRITISH STEEL CHEERS, IMPORTERS WARN OF PRICE HIKES",
-                    "standfirst": "Cross-border carbon levy aims to level the field as PM doubles down on industrial decarbonisation",
-                    "image": "images/news-neutral-3.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "NEW TAX ON EVERYTHING YOU IMPORT, COURTESY OF PM",
-                      "standfirst": "Price-hike fury as No.10's carbon levy threatens to make the weekly shop dearer.",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CARBON BORDER TAX: 'IMPORTS WILL COST YOU MORE'",
-                      "standfirst": "Importers warn of price rises as British steel cheers the new climate levy.",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "CARBON BORDER TAX: PRINCIPLED OR PROTECTIONIST?",
-                      "standfirst": "The carbon border levy passes, with high-polluting imports facing a charge at the border.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "CARBON BORDER TAX PASSES: A LEVEL FIELD FOR BRITISH INDUSTRY",
-                      "standfirst": "Heavy industry welcomes a levy that rewards clean production, ministers say.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "CARBON BORDER TAX: STEEL, CEMENT, CHEMICAL FIRMS WELCOME LEVY",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PM’S NEW TAX TO RAISE PRICE OF EVERYTHING YOU IMPORT",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "CLIMATE LEVY ON IMPORTS: PRINCIPLED OR PROTECTIONIST?",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "CARBON BORDER TAX: STEEL, CEMENT, CHEMICAL FIRMS WELCOME LEVY",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PM’S NEW TAX TO RAISE PRICE OF EVERYTHING YOU IMPORT",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "CLIMATE LEVY ON IMPORTS: PRINCIPLED OR PROTECTIONIST?",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "A new TAX. On EVERYTHING you buy. Dressed up in green virtue. Look at the price tags next month.",
-                      "stats": "↻ 4.6K   ♥ 19K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Tariffs by another name. The WTO will love this. Consumers will not.",
-                      "stats": "↻ 3.8K   ♥ 15K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Protectionism wrapped in a climate flag. The PM has no idea what he's started.",
-                      "stats": "↻ 2.4K   ♥ 9.8K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "A new TAX. On EVERYTHING you buy. Dressed up in green virtue. Look at the price tags next month.",
-                      "stats": "↻ 4.6K   ♥ 19K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Tariffs by another name. The WTO will love this. Consumers will not.",
-                      "stats": "↻ 3.8K   ♥ 15K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Protectionism wrapped in a climate flag. The PM has no idea what he's started.",
-                      "stats": "↻ 2.4K   ♥ 9.8K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A tax dressed up as climate policy. Every import you buy just got dearer.",
-                        "stats": "↻ 3.2K   ♥ 12K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "\"Border levy\". Translation: you pay more at the till. Always you.",
-                        "stats": "↻ 2.7K   ♥ 11K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Protectionism with a green ribbon on it. Consumers foot the bill, as ever.",
-                        "stats": "↻ 2.3K   ♥ 8.8K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "British steel cheers because it’s a subsidy by another name. You pay.",
-                        "stats": "↻ 1.9K   ♥ 7.2K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Stopping carbon leakage has a logic, I admit. The price impact worries me.",
-                        "stats": "↻ 1.4K   ♥ 5.5K"
-                      },
-                      {
-                        "name": "Lobby Watch",
-                        "handle": "@lobbywatch",
-                        "text": "Even free-traders concede dumping cheap dirty steel here was unsustainable.",
-                        "stats": "↻ 1.1K   ♥ 4.3K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Rewards clean producers, protects British jobs. A reasonable settlement.",
-                        "stats": "↻ 1.1K   ♥ 4.2K"
-                      },
-                      {
-                        "name": "Lobby Watch",
-                        "handle": "@lobbywatch",
-                        "text": "Industry on board, prices steadier than feared. The levy is working.",
-                        "stats": "↻ 900   ♥ 3.6K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "ClimateWatch",
-                    "handle": "@climatewatch.msky.social",
-                    "text": "a carbon border tax was the EU's big climate policy move. about time the UK caught up.",
-                    "stats": "↻ 3.4K   ♥ 16K",
-                    "image": "images/avatar-bsky-green-org.png",
-                    "altText": "Friendly green campaign-group logo with a leaf-and-river motif on fresh teal."
-                  },
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "asking importers to pay the same carbon price as our own steelworks. shocking, I know.",
-                    "stats": "↻ 2.3K   ♥ 11K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  },
-                  {
-                    "name": "Politics Bites",
-                    "handle": "@polbites.msky.social",
-                    "text": "this is what \"level playing field\" actually means. industry backs it. that's the tell.",
-                    "stats": "↻ 1.9K   ♥ 8.6K",
-                    "image": "images/avatar-bsky-polbites.png",
-                    "altText": "Friendly podcaster in headphones at a laptop, soft news-ticker glow behind them."
-                  }
-                ]
-              },
-              "requiresMeter": "capital",
-              "lockText": "Political power score isn't high enough to unlock!"
-            },
-            "note": "\"A carbon border tax. Imports from high-emitting countries pay what UK producers already pay. Stops the race to the bottom — and funds the transition.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 4
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-upgraded",
-              "policy-carbon-turn-3-complete",
-              "pair-pair2-complete",
-              "scenario-carbon-complete"
-            ],
-            "lock": {
-              "meter": "capital",
-              "threshold": 45,
-              "text": "Political power score isn't high enough to unlock!"
-            },
-            "nextSurfaceId": "week2-policy-pick"
-          },
-          {
-            "id": "service-mousers-honours-act",
-            "label": "Service Mousers Honours Act",
-            "cardRole": "larry",
-            "sponsor": "HONOURS & AWARDS ADVISER",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "carbon",
-              "pairId": "pair2",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 5,
-              "role": "larry"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Liz Felinetower",
-              "sourceMinisterRole": "HONOURS & AWARDS ADVISER",
-              "card": {
-                "image": "images/minister-cat-calico.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a poised calico cat serving as a Whitehall cabinet adviser, wearing a neat little blouse collar and an official lanyard, regarding the camera with composed authority against a plain studio background.",
-                "dot": "#7e7c76",
-                "rotation": ".5deg"
-              },
-              "originalDeltas": {
-                "living": 3,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "turns": [
-                3
-              ],
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE GLOBE",
-                    "headline": "SERVICE MOUSERS HONOURED: STATE FUNERAL RIGHTS GRANTED",
-                    "standfirst": "Honours Adviser confirms eligibility for Whitehall cats with five years' verified mouse-catching service",
-                    "image": "images/news-cat-1.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "neutral": {
-                    "masthead": "THE GLOBE",
-                    "headline": "SERVICE MOUSERS HONOURED: STATE FUNERAL RIGHTS GRANTED",
-                    "standfirst": "Honours Adviser confirms eligibility for Whitehall cats with five years' verified mouse-catching service",
-                    "image": "images/news-cat-1.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "STATE FUNERALS FOR CATS: A NEW LOW FOR THE PM",
-                      "standfirst": "Honours-for-mousers fury as No.10 grants service cats state recognition on your dime.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "MOUSERS' HONOURS: 'HAS THE PM LOST THE PLOT?'",
-                      "standfirst": "Critics savage the scheme to honour Whitehall cats as a frivolous distraction.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "SERVICE MOUSERS HONOURED: GIMMICK OR GRACE NOTE?",
-                      "standfirst": "The honours raise eyebrows, though many find the tribute oddly touching.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "WHITEHALL’S SERVICE CATS RECEIVE THEIR DUE",
-                      "standfirst": "The recognition scheme passes, and Whitehall's working cats receive their official honours at last.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MOUSERS' HONOURS: WHO QUALIFIES",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE MORNING POST",
-                      "headline": "FULL LIST: WHITEHALL CATS ELIGIBLE",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "STATE FUNERALS FOR CATS: A NEW LOW",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MOUSERS' HONOURS: WHO QUALIFIES",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE MORNING POST",
-                      "headline": "FULL LIST: WHITEHALL CATS ELIGIBLE",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "STATE FUNERALS FOR CATS: A NEW LOW",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "State funerals. For CATS. The civilisational rot is now official policy.",
-                      "stats": "↻ 2.6K   ♥ 11K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Public honours scheme expanded to FELINES. The veterans queue grows.",
-                      "stats": "↻ 2.1K   ♥ 8.4K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "The bureaucracy of cat awards. A growth sector. Bookmark.",
-                      "stats": "↻ 1.2K   ♥ 4.6K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "State funerals. For CATS. The civilisational rot is now official policy.",
-                      "stats": "↻ 2.6K   ♥ 11K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Public honours scheme expanded to FELINES. The veterans queue grows.",
-                      "stats": "↻ 2.1K   ♥ 8.4K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "The bureaucracy of cat awards. A growth sector. Bookmark.",
-                      "stats": "↻ 1.2K   ♥ 4.6K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "State honours. For cats. The dignity of the nation, ladies and gentlemen.",
-                        "stats": "↻ 2.6K   ♥ 9.7K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Whitehall split: solemn tribute or total farce? Larry, naturally, abstains.",
-                        "stats": "↻ 1.3K   ♥ 5.1K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A medal for a mouser while the country fixes its own problems. Priorities.",
-                        "stats": "↻ 1.8K   ♥ 6.8K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Mockery in the lobby — though a few admit the old mousers earned it.",
-                        "stats": "↻ 1.2K   ♥ 4.8K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Costs nothing, charms everyone. I'll stop pretending to be cross.",
-                        "stats": "↻ 1.0K   ♥ 3.9K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "The cynics are losing this one. The tribute is rather touching.",
-                        "stats": "↻ 860   ♥ 3.5K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A small, free, genuinely sweet gesture. The nation approves, and so do I.",
-                        "stats": "↻ 910   ♥ 3.6K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Turns out honouring the mousers was the easiest win of the week.",
-                        "stats": "↻ 800   ♥ 3.2K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "finally. the mice will know.",
-                    "stats": "↻ 1.4K   ♥ 9.1K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Larry (parody)",
-                    "handle": "@Number10Cat",
-                    "text": "a sombre, dignified moment for the profession.",
-                    "stats": "↻ 15K   ♥ 116K",
-                    "image": "images/avatar-larry-cat.png",
-                    "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "national flag at half mast for Geoffrey of the Treasury. as it should be.",
-                    "stats": "↻ 980   ♥ 6.4K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  }
-                ]
-              }
-            },
-            "note": "\"State funeral rights for service mousers. The mice they caught will not be forgotten. Long-overdue recognition.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 2
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                },
-                {
-                  "axis": "populist",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-larry",
-              "policy-carbon-turn-3-complete",
               "pair-pair2-complete",
               "scenario-carbon-complete"
             ],
@@ -15675,7 +12517,7 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": 1,
-        "title": "Cost of Living Crisis - Decision 1",
+        "title": "Cost of Living Crisis - Decision 1/2",
         "scene": "The Chief Secretary needs a decision. Bills climbing, foodbanks full. Penny Crunch wants to act — and she wants you to back her.",
         "scenarioIds": [
           "full-drama-run"
@@ -16260,6 +13102,10 @@
                 {
                   "meter": "living",
                   "delta": 3
+                },
+                {
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -16547,7 +13393,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -16840,8 +13686,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 2
+                  "meter": "politics",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -16870,8 +13716,8 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": "follow",
-        "title": "Cost of Living Crisis - Decision 2",
-        "scene": "Every front page is the same story. Heating-or-eating headlines for the third week running. The supermarkets are nervous.",
+        "title": "Cost of Living Crisis - Decision 2/2",
+        "scene": "Last shot at the crisis. You can land a real reform or hand out another sticking plaster. Pick.",
         "scenarioIds": [
           "full-drama-run"
         ],
@@ -17196,11 +14042,12 @@
               "recentPublicPolicy",
               "policyRole-structural",
               "policy-costOfLiving-turn-2-complete",
-              "policy-costOfLiving-turn-3-ready",
-              "press-reform"
+              "press-reform",
+              "pair-pair3-complete",
+              "scenario-costOfLiving-complete"
             ],
             "overTime": [],
-            "nextSurfaceId": "policy-costOfLiving-turn-3"
+            "nextSurfaceId": "week3-legacy-pick"
           },
           {
             "id": "energy-bill-support-scheme",
@@ -17466,6 +14313,10 @@
                 {
                   "meter": "living",
                   "delta": 3
+                },
+                {
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -17483,10 +14334,11 @@
               "recentPublicPolicy",
               "policyRole-direct",
               "policy-costOfLiving-turn-2-complete",
-              "policy-costOfLiving-turn-3-ready"
+              "pair-pair3-complete",
+              "scenario-costOfLiving-complete"
             ],
             "overTime": [],
-            "nextSurfaceId": "policy-costOfLiving-turn-3"
+            "nextSurfaceId": "week3-legacy-pick"
           },
           {
             "id": "price-controls-on-essentials",
@@ -17753,7 +14605,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -17771,7 +14623,8 @@
               "recentPublicPolicy",
               "policyRole-upgraded",
               "policy-costOfLiving-turn-2-complete",
-              "policy-costOfLiving-turn-3-ready"
+              "pair-pair3-complete",
+              "scenario-costOfLiving-complete"
             ],
             "lock": {
               "meter": "politics",
@@ -17779,7 +14632,7 @@
               "text": "Public trust score isn't high enough to unlock!"
             },
             "overTime": [],
-            "nextSurfaceId": "policy-costOfLiving-turn-3"
+            "nextSurfaceId": "week3-legacy-pick"
           },
           {
             "id": "knit-a-cardigan-programme",
@@ -18046,8 +14899,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 2
+                  "meter": "politics",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -18065,1215 +14918,6 @@
               "recentPublicPolicy",
               "policyRole-larry",
               "policy-costOfLiving-turn-2-complete",
-              "policy-costOfLiving-turn-3-ready"
-            ],
-            "nextSurfaceId": "policy-costOfLiving-turn-3"
-          }
-        ]
-      },
-      {
-        "id": "policy-costOfLiving-turn-3",
-        "kind": "policy",
-        "presentation": "policy-hand",
-        "weight": "follow",
-        "title": "Cost of Living Crisis - Decision 3",
-        "scene": "Last shot at the crisis. You can land a real reform or hand out another sticking plaster. Pick.",
-        "scenarioIds": [
-          "full-drama-run"
-        ],
-        "placement": {
-          "afterKinds": [
-            "media",
-            "party",
-            "private",
-            "scandal",
-            "cabinet",
-            "liability",
-            "endgame",
-            "aftermath",
-            "policy"
-          ],
-          "requiresTags": [
-            "agenda-costOfLiving",
-            "policy-costOfLiving-turn-2-complete"
-          ],
-          "forbidsTags": [
-            "policy-costOfLiving-turn-3-complete"
-          ],
-          "prefers": [
-            "policy-costOfLiving-turn-3-ready"
-          ]
-        },
-        "pressure": {
-          "meters": [
-            "living",
-            "politics",
-            "capital"
-          ],
-          "hiddenAxes": [
-            "smooth",
-            "populist",
-            "ruthless"
-          ]
-        },
-        "choices": [
-          {
-            "id": "media-ownership-reform",
-            "label": "Break Up the Media Barons",
-            "cardRole": "structural",
-            "sponsor": "CONSTITUTION MINISTER",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "costOfLiving",
-              "pairId": "pair3",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 0,
-              "role": "structural"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Vera Suffrage",
-              "sourceMinisterRole": "CONSTITUTION MINISTER",
-              "card": {
-                "image": "images/minister-vera-suffrage.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a principled constitution minister with a suffragette-purple sash detail, resolute proud look, plain studio background.",
-                "dot": "#4D7CFF",
-                "rotation": ".7deg"
-              },
-              "originalDeltas": {
-                "living": 0,
-                "press": 0,
-                "politics": 22,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-hostile-3.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-neutral-3.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
-                      "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "BARON-BASHING: PM'S WAR ON THE MEN WHO OWN THE NEWS",
-                      "standfirst": "Ministers say no single mogul should own the morning. Proprietors call it a vendetta.",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MEDIA OWNERSHIP CAPS: TRUST-BUSTING OR SOUR GRAPES?",
-                      "standfirst": "Ownership caps clear the Commons: no single proprietor may control more than a fifth of the market.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
-                      "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "ELECTORAL REFORM: WHAT IT MEANS FOR YOUR VOTE",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PR PLOY: PM'S BID TO LOCK IN POWER FOREVER",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "CONSTITUTIONAL OVERHAUL: ECONOMISTS DIVIDED",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "ELECTORAL REFORM: WHAT IT MEANS FOR YOUR VOTE",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PR PLOY: PM'S BID TO LOCK IN POWER FOREVER",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "CONSTITUTIONAL OVERHAUL: ECONOMISTS DIVIDED",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Coalition government for ever. Backroom deals. Government by horse-trade. Welcome to PR Britain.",
-                      "stats": "↻ 5.6K   ♥ 22K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "16-year-olds voting. The same 16-year-olds who can't buy a lottery ticket. Make it make sense.",
-                      "stats": "↻ 4.2K   ♥ 17K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Auto-registration sounds neutral. Watch which demographics it actually adds. Watch the carve-outs.",
-                      "stats": "↻ 2.1K   ♥ 8.6K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Coalition government for ever. Backroom deals. Government by horse-trade. Welcome to PR Britain.",
-                      "stats": "↻ 5.6K   ♥ 22K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "16-year-olds voting. The same 16-year-olds who can't buy a lottery ticket. Make it make sense.",
-                      "stats": "↻ 4.2K   ♥ 17K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Auto-registration sounds neutral. Watch which demographics it actually adds. Watch the carve-outs.",
-                      "stats": "↻ 2.1K   ♥ 8.6K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A naked attempt to silence the proprietors who hold power to account. Sinister.",
-                        "stats": "↻ 4.1K   ♥ 18K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Three media empires lawyering up tonight. This will be war.",
-                        "stats": "↻ 1.7K   ♥ 6.8K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "'Plurality', they call it. Funny how it only ever targets papers that criticise them.",
-                        "stats": "↻ 2.9K   ♥ 11K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Proprietors furious — but younger editors quietly cheering the barons' discomfort.",
-                        "stats": "↻ 1.4K   ♥ 5.6K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Some merit to breaking up monopolies, I'll grant. The detail still worries me.",
-                        "stats": "↻ 1.6K   ♥ 6.2K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "The mood's turned. Even rival barons can't pretend the old concentration was healthy.",
-                        "stats": "↻ 1.1K   ♥ 4.3K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Hard to argue a fairer market is bad for readers. A reasonable settlement.",
-                        "stats": "↻ 1.2K   ♥ 5.0K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Ownership genuinely broadened, range of voices up. The reform is holding.",
-                        "stats": "↻ 900   ♥ 3.9K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "VoterFirst",
-                    "handle": "@voterfirst.msky.social",
-                    "text": "FPTP gave us 14 years of unhinged government with 43% of the vote. fix the system. urgently.",
-                    "stats": "↻ 5.4K   ♥ 33K",
-                    "image": "images/avatar-bsky-citizen.png",
-                    "altText": "Ordinary cheerful member of the public in a casual coat taking a selfie on a high street."
-                  },
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "auto-registration alone could add 8 million voters. these are the people the current system is built to ignore.",
-                    "stats": "↻ 3.8K   ♥ 18K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "\"votes at 16\" is also the policy chosen by every government that's ever asked young people to actually fight in a war. you can't have it both ways.",
-                    "stats": "↻ 2.7K   ♥ 14K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  }
-                ]
-              }
-            },
-            "note": "\"No single mogul should own the morning. Cap media ownership and let a hundred voices bloom.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "politics",
-                  "delta": 12
-                },
-                {
-                  "meter": "press",
-                  "delta": 6
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "machiavellian",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-structural",
-              "policy-costOfLiving-turn-3-complete",
-              "pair-pair3-complete",
-              "scenario-costOfLiving-complete",
-              "press-reform"
-            ],
-            "overTime": [],
-            "nextSurfaceId": "week3-legacy-pick"
-          },
-          {
-            "id": "energy-bill-support-scheme",
-            "label": "Energy Bill Support Scheme",
-            "cardRole": "direct",
-            "sponsor": "CHIEF SEC. TO THE TREASURY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "costOfLiving",
-              "pairId": "pair3",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 1,
-              "role": "direct"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Penny Crunch",
-              "sourceMinisterRole": "CHIEF SEC. TO THE TREASURY",
-              "card": {
-                "image": "images/minister-penny-crunch.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a frugal chief secretary to the treasury in a thrifty grey suit, pursed cost-cutting expression, plain studio background.",
-                "dot": "#FFC93C",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 18,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "BILLS BAILOUT: PM'S £18BN HANDOUT BONANZA",
-                    "standfirst": "Energy support payments will 'soak the middle class', critics warn, as PM dodges price-cap reform",
-                    "image": "images/news-hostile-3.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE DAILY RAGE",
-                    "headline": "BILLS BAILOUT: PM'S £18BN HANDOUT BONANZA",
-                    "standfirst": "Energy support payments will 'soak the middle class', critics warn, as PM dodges price-cap reform",
-                    "image": "images/news-neutral-3.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "BILLS BAILOUT: PM'S £18BN HANDOUT FRENZY",
-                      "standfirst": "Your-tax-their-heating fury as No.10 sprays billions at energy bills with no plan to pay.",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "£18BN ENERGY HANDOUT: 'WHERE'S THE MONEY FROM?'",
-                      "standfirst": "Critics say the bill-support splurge soaks the middle class and dodges real reform.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "ENERGY SUPPORT: LIFELINE OR UNFUNDED GIVEAWAY?",
-                      "standfirst": "The £18bn support scheme passes, with payments reaching struggling households within weeks.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "ENERGY BILL SUPPORT REACHES MILLIONS THIS WINTER",
-                      "standfirst": "Targeted help with heating costs lands as ministers set out how it's funded.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "YOUR TAX, THEIR HEATING: PM PLOUGHS BILLIONS INTO BILLS",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "BILL SUPPORT SCHEME: WHO GETS WHAT, WHEN?",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "TREASURY BORROWING SET TO RISE ON BILL-SUPPORT PUSH",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "YOUR TAX, THEIR HEATING: PM PLOUGHS BILLIONS INTO BILLS",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "BILL SUPPORT SCHEME: WHO GETS WHAT, WHEN?",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "TREASURY BORROWING SET TO RISE ON BILL-SUPPORT PUSH",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "£18 BILLION in handouts. Where does this money come from? You.",
-                      "stats": "↻ 5.4K   ♥ 22K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Subsidies on top of subsidies. The price cap was supposed to solve this. The PM has memory issues.",
-                      "stats": "↻ 4.1K   ♥ 17K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Cash giveaways days before by-elections. Spot the strategy.",
-                      "stats": "↻ 2.7K   ♥ 11K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "£18 BILLION in handouts. Where does this money come from? You.",
-                      "stats": "↻ 5.4K   ♥ 22K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Subsidies on top of subsidies. The price cap was supposed to solve this. The PM has memory issues.",
-                      "stats": "↻ 4.1K   ♥ 17K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Cash giveaways days before by-elections. Spot the strategy.",
-                      "stats": "↻ 2.7K   ♥ 11K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "£18 BILLION in handouts. Where does this money come from? You. Always you.",
-                        "stats": "↻ 4.1K   ♥ 16K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Subsidies on subsidies. The price cap was meant to fix this. Memory of a goldfish.",
-                        "stats": "↻ 2.6K   ♥ 10K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Borrow now, bill your kids later. That’s the whole policy.",
-                        "stats": "↻ 3.0K   ♥ 12K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Throwing cash at a symptom while the cause goes untouched. Classic.",
-                        "stats": "↻ 2.1K   ♥ 8.1K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "If it actually targets those who need it, fine. If it sprays cash everywhere, no.",
-                        "stats": "↻ 1.6K   ♥ 6.0K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Help for the genuinely cold I can support. The funding question stands.",
-                        "stats": "↻ 1.2K   ♥ 4.8K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Properly targeted and properly costed — credit where it's due.",
-                        "stats": "↻ 1.1K   ♥ 4.5K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Keeps the vulnerable warm without wrecking the books. Reasonable.",
-                        "stats": "↻ 950   ♥ 3.9K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "CostOfLivingUK",
-                    "handle": "@costofliving.msky.social",
-                    "text": "£600 in november is the difference between heating on and heating off in my house. say what you want about politics. this matters.",
-                    "stats": "↻ 4.7K   ♥ 32K",
-                    "image": "images/avatar-bsky-social-org.png",
-                    "altText": "Friendly solidarity campaign-group logo with a raised-hands motif on warm coral."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "wait til you see them get angry about cash that goes to families instead of to the energy giants",
-                    "stats": "↻ 3.1K   ♥ 16K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Politics Bites",
-                    "handle": "@polbites.msky.social",
-                    "text": "a direct payment scheme — cheaper than the £40bn handed to suppliers last winter, and it actually reaches households.",
-                    "stats": "↻ 2.4K   ♥ 11K",
-                    "image": "images/avatar-bsky-polbites.png",
-                    "altText": "Friendly podcaster in headphones at a laptop, soft news-ticker glow behind them."
-                  }
-                ]
-              }
-            },
-            "note": "\"An energy bill support scheme. Direct payments to households this winter — targeted at the poorest, topped up for the squeezed middle.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 3
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "populist",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-direct",
-              "policy-costOfLiving-turn-3-complete",
-              "pair-pair3-complete",
-              "scenario-costOfLiving-complete"
-            ],
-            "overTime": [],
-            "nextSurfaceId": "week3-legacy-pick"
-          },
-          {
-            "id": "price-controls-on-essentials",
-            "label": "Price Controls on Essentials",
-            "cardRole": "upgraded",
-            "sponsor": "CHIEF SEC. TO THE TREASURY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "costOfLiving",
-              "pairId": "pair3",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 2,
-              "role": "upgraded"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Penny Crunch",
-              "sourceMinisterRole": "CHIEF SEC. TO THE TREASURY",
-              "card": {
-                "image": "images/minister-penny-crunch.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a frugal chief secretary to the treasury in a thrifty grey suit, pursed cost-cutting expression, plain studio background.",
-                "dot": "#FFC93C",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 18,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "PRICE CONTROLS: PM TAKES ON SUPERMARKETS, ENERGY GIANTS",
-                    "standfirst": "Margins to be capped on essentials as Chief Secretary takes the fight directly to FTSE 100 retailers",
-                    "image": "images/news-hostile-5.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "PRICE CONTROLS: PM TAKES ON SUPERMARKETS, ENERGY GIANTS",
-                    "standfirst": "Margins to be capped on essentials as Chief Secretary takes the fight directly to FTSE 100 retailers",
-                    "image": "images/news-neutral-1.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "SOVIET BRITAIN: PM SETS THE PRICE OF YOUR BREAD",
-                      "standfirst": "Empty-shelves fury as No.10 declares war on supermarkets and the laws of economics.",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PRICE CONTROLS: 'EMPTY SHELVES INCOMING', WARN FIRMS",
-                      "standfirst": "Retailers say capping margins on essentials will cause shortages and closures.",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "PRICE CONTROLS: BOLD RELIEF OR ECONOMIC GAMBLE?",
-                      "standfirst": "Price caps on everyday essentials pass, holding down the cost of the weekly shop.",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "PRICE CAPS ON ESSENTIALS: SHOPPERS SEE BILLS EASE",
-                      "standfirst": "Margins on staples capped as the predicted shortages fail to materialise.",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "SOVIET BRITAIN: PM SETS THE PRICE OF YOUR BREAD",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "SUPERMARKET SHARES TUMBLE ON PRICE-CONTROL SHOCK",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "PRICE CONTROLS: WORKING POLICY OR EMPTY SHELVES?",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "SOVIET BRITAIN: PM SETS THE PRICE OF YOUR BREAD",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "SUPERMARKET SHARES TUMBLE ON PRICE-CONTROL SHOCK",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "PRICE CONTROLS: WORKING POLICY OR EMPTY SHELVES?",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Price controls = empty shelves. Every. Single. Time. Read a book.",
-                      "stats": "↻ 8.1K   ♥ 34K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Supermarkets will pass the cost on. Or close stores. Or both. This is economic illiteracy.",
-                      "stats": "↻ 5.4K   ♥ 23K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "The PM thinks he can repeal supply and demand. Brave. Stupid. Probably both.",
-                      "stats": "↻ 3.7K   ♥ 16K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Price controls = empty shelves. Every. Single. Time. Read a book.",
-                      "stats": "↻ 8.1K   ♥ 34K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "Supermarkets will pass the cost on. Or close stores. Or both. This is economic illiteracy.",
-                      "stats": "↻ 5.4K   ♥ 23K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "The PM thinks he can repeal supply and demand. Brave. Stupid. Probably both.",
-                      "stats": "↻ 3.7K   ♥ 16K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Price controls = empty shelves. Every. Single. Time. Read a book.",
-                        "stats": "↻ 3.6K   ♥ 14K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Supermarkets will pass it on or shut stores. Or both. Economic illiteracy.",
-                        "stats": "↻ 2.9K   ♥ 12K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "You cannot repeal supply and demand by decree. Shortages are coming.",
-                        "stats": "↻ 2.5K   ♥ 9.7K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Cap the margin, lose the product. Watch the shelves empty.",
-                        "stats": "↻ 2.0K   ♥ 7.8K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Tesco’s £2.8bn profit is hard to defend, mind. The mechanism still worries me.",
-                        "stats": "↻ 1.5K   ♥ 5.8K"
-                      },
-                      {
-                        "name": "Lobby Watch",
-                        "handle": "@lobbywatch",
-                        "text": "Predicted shortages haven’t shown. Coverage is turning more even-handed.",
-                        "stats": "↻ 1.1K   ♥ 4.3K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Basics affordable, shelves still full — I did not expect to say it, but fair.",
-                        "stats": "↻ 1.1K   ♥ 4.4K"
-                      },
-                      {
-                        "name": "Lobby Watch",
-                        "handle": "@lobbywatch",
-                        "text": "Margins trimmed, no meltdown. The cap is holding better than anyone feared.",
-                        "stats": "↻ 920   ♥ 3.7K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "CostOfLivingUK",
-                    "handle": "@costofliving.msky.social",
-                    "text": "tesco made £2.8bn last year. £2.8 BILLION. while shoppers cut back on basics. cap their margins. now.",
-                    "stats": "↻ 6.2K   ♥ 38K",
-                    "image": "images/avatar-bsky-social-org.png",
-                    "altText": "Friendly solidarity campaign-group logo with a raised-hands motif on warm coral."
-                  },
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "every economist says \"price controls cause shortages\" while ignoring that britain currently has both high prices AND food bank queues",
-                    "stats": "↻ 4.1K   ♥ 22K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "the supermarket lobby is briefing every paper this morning. you can see it from space.",
-                    "stats": "↻ 2.6K   ♥ 13K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  }
-                ]
-              },
-              "requiresMeter": "politics",
-              "lockText": "Public trust score isn't high enough to unlock!"
-            },
-            "note": "\"Cap the wholesale margins on essentials — bread, milk, energy. Supermarkets and energy firms can take their windfall pay rises out of profits, not customers.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 3
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-upgraded",
-              "policy-costOfLiving-turn-3-complete",
-              "pair-pair3-complete",
-              "scenario-costOfLiving-complete"
-            ],
-            "lock": {
-              "meter": "politics",
-              "threshold": 50,
-              "text": "Public trust score isn't high enough to unlock!"
-            },
-            "overTime": [],
-            "nextSurfaceId": "week3-legacy-pick"
-          },
-          {
-            "id": "national-mouse-census",
-            "label": "National Mouse Census",
-            "cardRole": "larry",
-            "sponsor": "OFFICE OF NATIONAL STATISTICS",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "costOfLiving",
-              "pairId": "pair3",
-              "side": "a",
-              "turn": 3,
-              "cardIndex": 5,
-              "role": "larry"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Sir Hairball Tomsworth",
-              "sourceMinisterRole": "OFFICE OF NATIONAL STATISTICS",
-              "card": {
-                "image": "images/minister-cat-tabby.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a dignified grey tabby cat serving as a Whitehall cabinet adviser, wearing a tiny suit collar and an official lanyard, gazing solemnly at the camera against a plain studio background.",
-                "dot": "#7e7c76",
-                "rotation": ".5deg"
-              },
-              "originalDeltas": {
-                "living": 3,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "turns": [
-                3
-              ],
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE GLOBE",
-                    "headline": "NATIONAL MOUSE CENSUS: ONS LAUNCHES FIRST COUNT IN HALF A CENTURY",
-                    "standfirst": "Tomsworth confirms methodology will combine councils, conservation trusts, and citizen scientists",
-                    "image": "images/news-cat-1.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "neutral": {
-                    "masthead": "THE GLOBE",
-                    "headline": "NATIONAL MOUSE CENSUS: ONS LAUNCHES FIRST COUNT IN HALF A CENTURY",
-                    "standfirst": "Tomsworth confirms methodology will combine councils, conservation trusts, and citizen scientists",
-                    "image": "images/news-cat-1.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CENSUS BILL. FOR MICE. ONLY IN BRITAIN.",
-                      "standfirst": "Waste fury as No.10 orders the first national mouse count in half a century.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "MOUSE CENSUS: 'YOUR MONEY, COUNTING RODENTS'",
-                      "standfirst": "Critics blast the ONS mouse survey as bureaucracy at its most baffling.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "NATIONAL MOUSE CENSUS: FOLLY OR USEFUL DATA?",
-                      "standfirst": "The count raises eyebrows, though pest-control firms welcome the dataset.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "MOUSE CENSUS DELIVERS FIRST NATIONAL DATASET",
-                      "standfirst": "The modest survey wraps up, giving councils real numbers to plan pest control.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MOUSE CENSUS: HOW IT'LL BE CONDUCTED",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "PEST-CONTROL SECTOR WELCOMES NATIONAL DATASET",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CENSUS BILL. FOR MICE. ONLY IN BRITAIN.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MOUSE CENSUS: HOW IT'LL BE CONDUCTED",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "PEST-CONTROL SECTOR WELCOMES NATIONAL DATASET",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CENSUS BILL. FOR MICE. ONLY IN BRITAIN.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "An entire CENSUS. For MICE. Money no object.",
-                      "stats": "↻ 2.1K   ♥ 8.4K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "ONS resources diverted from inflation tracking to ROD-ENT counting. Unbelievable.",
-                      "stats": "↻ 1.7K   ♥ 6.8K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Watch the count come back conveniently in line with policy needs. Always does.",
-                      "stats": "↻ 1.1K   ♥ 4.2K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "An entire CENSUS. For MICE. Money no object.",
-                      "stats": "↻ 2.1K   ♥ 8.4K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "ONS resources diverted from inflation tracking to ROD-ENT counting. Unbelievable.",
-                      "stats": "↻ 1.7K   ♥ 6.8K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Watch the count come back conveniently in line with policy needs. Always does.",
-                      "stats": "↻ 1.1K   ♥ 4.2K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "A national census. Of mice. This is where your taxes go.",
-                        "stats": "↻ 2.5K   ♥ 9.2K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "The ONS, counting rodents. The machinery of state, hard at work.",
-                        "stats": "↻ 1.8K   ♥ 6.8K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Forms, clipboards, and rodents. Bureaucracy finds a way.",
-                        "stats": "↻ 1.6K   ♥ 6.0K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Counting mice while families count pennies. The optics, Prime Minister.",
-                        "stats": "↻ 1.2K   ♥ 4.6K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "If councils actually use the data to cut infestations, fine. We'll see.",
-                        "stats": "↻ 1.0K   ♥ 3.9K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Real numbers beat guesswork, I suppose. Even on mice.",
-                        "stats": "↻ 870   ♥ 3.5K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Cheap, useful, and the pest-control bill should fall. No complaints.",
-                        "stats": "↻ 920   ♥ 3.6K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Sensible data, modestly gathered. I retract the harrumph.",
-                        "stats": "↻ 810   ♥ 3.2K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "evidence-based policy on rodents. nothing surprises me anymore.",
-                    "stats": "↻ 1.4K   ♥ 8.7K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Larry (parody)",
-                    "handle": "@Number10Cat",
-                    "text": "this is the foundation of all my future work.",
-                    "stats": "↻ 19K   ♥ 148K",
-                    "image": "images/avatar-larry-cat.png",
-                    "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "the methodology paper is going to be a CLASSIC.",
-                    "stats": "↻ 760   ♥ 4.7K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  }
-                ]
-              }
-            },
-            "note": "\"A national mouse census — first in 50 years. You can't manage what you can't measure. Larry needs the data.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 2
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                },
-                {
-                  "axis": "populist",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-larry",
-              "policy-costOfLiving-turn-3-complete",
               "pair-pair3-complete",
               "scenario-costOfLiving-complete"
             ],
@@ -19286,7 +14930,7 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": 1,
-        "title": "Nationalising Water - Decision 1",
+        "title": "Nationalising Water - Decision 1/2",
         "scene": "The Environment Secretary walks in. Sewage in every river. £2.4bn in dividends. Brook Trent's patience ran out a long time ago.",
         "scenarioIds": [
           "full-drama-run"
@@ -19871,6 +15515,10 @@
                 {
                   "meter": "living",
                   "delta": 3
+                },
+                {
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -20158,7 +15806,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -20451,8 +16099,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 2
+                  "meter": "politics",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -20481,8 +16129,8 @@
         "kind": "policy",
         "presentation": "policy-hand",
         "weight": "follow",
-        "title": "Nationalising Water - Decision 2",
-        "scene": "The water lobby is on the phone. Pension funds threaten. Editors panic about \"investability\". The river isn't getting any cleaner.",
+        "title": "Nationalising Water - Decision 2/2",
+        "scene": "Last shot at water. Take them on, take them over, or take another headline kicking. Decide.",
         "scenarioIds": [
           "full-drama-run"
         ],
@@ -20807,11 +16455,12 @@
               "recentPublicPolicy",
               "policyRole-structural",
               "policy-water-turn-2-complete",
-              "policy-water-turn-3-ready",
-              "press-reform"
+              "press-reform",
+              "pair-pair3-complete",
+              "scenario-water-complete"
             ],
             "overTime": [],
-            "nextSurfaceId": "policy-water-turn-3"
+            "nextSurfaceId": "week3-legacy-pick"
           },
           {
             "id": "windfall-tax-on-water-companies",
@@ -21077,6 +16726,10 @@
                 {
                   "meter": "living",
                   "delta": 3
+                },
+                {
+                  "meter": "press",
+                  "delta": 2
                 }
               ],
               "hidden": [
@@ -21094,10 +16747,11 @@
               "recentPublicPolicy",
               "policyRole-direct",
               "policy-water-turn-2-complete",
-              "policy-water-turn-3-ready"
+              "pair-pair3-complete",
+              "scenario-water-complete"
             ],
             "overTime": [],
-            "nextSurfaceId": "policy-water-turn-3"
+            "nextSurfaceId": "week3-legacy-pick"
           },
           {
             "id": "full-water-nationalisation",
@@ -21364,7 +17018,7 @@
               "visible": [
                 {
                   "meter": "living",
-                  "delta": 3
+                  "delta": 8
                 }
               ],
               "hidden": [
@@ -21382,7 +17036,8 @@
               "recentPublicPolicy",
               "policyRole-upgraded",
               "policy-water-turn-2-complete",
-              "policy-water-turn-3-ready"
+              "pair-pair3-complete",
+              "scenario-water-complete"
             ],
             "lock": {
               "meter": "politics",
@@ -21390,7 +17045,7 @@
               "text": "Public trust score isn't high enough to unlock!"
             },
             "overTime": [],
-            "nextSurfaceId": "policy-water-turn-3"
+            "nextSurfaceId": "week3-legacy-pick"
           },
           {
             "id": "knit-a-cardigan-programme",
@@ -21657,8 +17312,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "living",
-                  "delta": 2
+                  "meter": "politics",
+                  "delta": 1
                 }
               ],
               "hidden": [
@@ -21676,1215 +17331,6 @@
               "recentPublicPolicy",
               "policyRole-larry",
               "policy-water-turn-2-complete",
-              "policy-water-turn-3-ready"
-            ],
-            "nextSurfaceId": "policy-water-turn-3"
-          }
-        ]
-      },
-      {
-        "id": "policy-water-turn-3",
-        "kind": "policy",
-        "presentation": "policy-hand",
-        "weight": "follow",
-        "title": "Nationalising Water - Decision 3",
-        "scene": "Last shot at water. Take them on, take them over, or take another headline kicking. Decide.",
-        "scenarioIds": [
-          "full-drama-run"
-        ],
-        "placement": {
-          "afterKinds": [
-            "media",
-            "party",
-            "private",
-            "scandal",
-            "cabinet",
-            "liability",
-            "endgame",
-            "aftermath",
-            "policy"
-          ],
-          "requiresTags": [
-            "agenda-water",
-            "policy-water-turn-2-complete"
-          ],
-          "forbidsTags": [
-            "policy-water-turn-3-complete"
-          ],
-          "prefers": [
-            "policy-water-turn-3-ready"
-          ]
-        },
-        "pressure": {
-          "meters": [
-            "living",
-            "politics",
-            "capital"
-          ],
-          "hiddenAxes": [
-            "smooth",
-            "populist",
-            "ruthless"
-          ]
-        },
-        "choices": [
-          {
-            "id": "media-ownership-reform",
-            "label": "Break Up the Media Barons",
-            "cardRole": "structural",
-            "sponsor": "CONSTITUTION MINISTER",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "water",
-              "pairId": "pair3",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 0,
-              "role": "structural"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Vera Suffrage",
-              "sourceMinisterRole": "CONSTITUTION MINISTER",
-              "card": {
-                "image": "images/minister-vera-suffrage.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a principled constitution minister with a suffragette-purple sash detail, resolute proud look, plain studio background.",
-                "dot": "#4D7CFF",
-                "rotation": ".7deg"
-              },
-              "originalDeltas": {
-                "living": 0,
-                "press": 0,
-                "politics": 22,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-hostile-3.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-neutral-3.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
-                      "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "BARON-BASHING: PM'S WAR ON THE MEN WHO OWN THE NEWS",
-                      "standfirst": "Ministers say no single mogul should own the morning. Proprietors call it a vendetta.",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MEDIA OWNERSHIP CAPS: TRUST-BUSTING OR SOUR GRAPES?",
-                      "standfirst": "Ownership caps clear the Commons: no single proprietor may control more than a fifth of the market.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
-                      "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "ELECTORAL REFORM: WHAT IT MEANS FOR YOUR VOTE",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PR PLOY: PM'S BID TO LOCK IN POWER FOREVER",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "CONSTITUTIONAL OVERHAUL: ECONOMISTS DIVIDED",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "ELECTORAL REFORM: WHAT IT MEANS FOR YOUR VOTE",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PR PLOY: PM'S BID TO LOCK IN POWER FOREVER",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "CONSTITUTIONAL OVERHAUL: ECONOMISTS DIVIDED",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Coalition government for ever. Backroom deals. Government by horse-trade. Welcome to PR Britain.",
-                      "stats": "↻ 5.6K   ♥ 22K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "16-year-olds voting. The same 16-year-olds who can't buy a lottery ticket. Make it make sense.",
-                      "stats": "↻ 4.2K   ♥ 17K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Auto-registration sounds neutral. Watch which demographics it actually adds. Watch the carve-outs.",
-                      "stats": "↻ 2.1K   ♥ 8.6K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Coalition government for ever. Backroom deals. Government by horse-trade. Welcome to PR Britain.",
-                      "stats": "↻ 5.6K   ♥ 22K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "16-year-olds voting. The same 16-year-olds who can't buy a lottery ticket. Make it make sense.",
-                      "stats": "↻ 4.2K   ♥ 17K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Auto-registration sounds neutral. Watch which demographics it actually adds. Watch the carve-outs.",
-                      "stats": "↻ 2.1K   ♥ 8.6K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A naked attempt to silence the proprietors who hold power to account. Sinister.",
-                        "stats": "↻ 4.1K   ♥ 18K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Three media empires lawyering up tonight. This will be war.",
-                        "stats": "↻ 1.7K   ♥ 6.8K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "'Plurality', they call it. Funny how it only ever targets papers that criticise them.",
-                        "stats": "↻ 2.9K   ♥ 11K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Proprietors furious — but younger editors quietly cheering the barons' discomfort.",
-                        "stats": "↻ 1.4K   ♥ 5.6K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Some merit to breaking up monopolies, I'll grant. The detail still worries me.",
-                        "stats": "↻ 1.6K   ♥ 6.2K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "The mood's turned. Even rival barons can't pretend the old concentration was healthy.",
-                        "stats": "↻ 1.1K   ♥ 4.3K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Hard to argue a fairer market is bad for readers. A reasonable settlement.",
-                        "stats": "↻ 1.2K   ♥ 5.0K"
-                      },
-                      {
-                        "name": "Westminster Whisper",
-                        "handle": "@wmwhisper",
-                        "text": "Ownership genuinely broadened, range of voices up. The reform is holding.",
-                        "stats": "↻ 900   ♥ 3.9K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "VoterFirst",
-                    "handle": "@voterfirst.msky.social",
-                    "text": "FPTP gave us 14 years of unhinged government with 43% of the vote. fix the system. urgently.",
-                    "stats": "↻ 5.4K   ♥ 33K",
-                    "image": "images/avatar-bsky-citizen.png",
-                    "altText": "Ordinary cheerful member of the public in a casual coat taking a selfie on a high street."
-                  },
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "auto-registration alone could add 8 million voters. these are the people the current system is built to ignore.",
-                    "stats": "↻ 3.8K   ♥ 18K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "\"votes at 16\" is also the policy chosen by every government that's ever asked young people to actually fight in a war. you can't have it both ways.",
-                    "stats": "↻ 2.7K   ♥ 14K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  }
-                ]
-              }
-            },
-            "note": "\"No single mogul should own the morning. Cap media ownership and let a hundred voices bloom.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "politics",
-                  "delta": 12
-                },
-                {
-                  "meter": "press",
-                  "delta": 6
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "machiavellian",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-structural",
-              "policy-water-turn-3-complete",
-              "pair-pair3-complete",
-              "scenario-water-complete",
-              "press-reform"
-            ],
-            "overTime": [],
-            "nextSurfaceId": "week3-legacy-pick"
-          },
-          {
-            "id": "windfall-tax-on-water-companies",
-            "label": "Windfall Tax on Water Companies",
-            "cardRole": "direct",
-            "sponsor": "ENVIRONMENT SECRETARY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "water",
-              "pairId": "pair3",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 1,
-              "role": "direct"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Brook Trent",
-              "sourceMinisterRole": "ENVIRONMENT SECRETARY",
-              "card": {
-                "image": "images/minister-brook-trent.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of an earnest middle-aged environment secretary in a green tie, windswept open-air complexion and a faint hopeful smile, plain studio background.",
-                "dot": "#4D7CFF",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 15,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "FINANCIAL HERALD",
-                    "headline": "WINDFALL TAX HITS WATER GIANTS: SHAREHOLDERS DUMP STOCK",
-                    "standfirst": "PM levies £4bn one-off charge as Environment Secretary moves on dividend-stripping operators",
-                    "image": "images/news-hostile-3.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "FINANCIAL HERALD",
-                    "headline": "WINDFALL TAX HITS WATER GIANTS: SHAREHOLDERS DUMP STOCK",
-                    "standfirst": "PM levies £4bn one-off charge as Environment Secretary moves on dividend-stripping operators",
-                    "image": "images/news-neutral-2.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "WATER TAX RAID: PM TORCHES YOUR PENSION FUND",
-                      "standfirst": "Market-panic fury as No.10's windfall raid on water firms hammers savers and shareholders.",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "WINDFALL TAX HITS WATER GIANTS: SHARES DUMPED",
-                      "standfirst": "Investors flee as the PM's levy on water profits rattles the bond markets.",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WATER WINDFALL TAX: JUSTICE OR INVESTOR FLIGHT?",
-                      "standfirst": "The windfall tax passes, clawing back billions from record water-company profits.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "WATER WINDFALL TAX PASSES: PROFITS REDIRECTED TO REPAIRS",
-                      "standfirst": "Billions from water profits to fund clean-ups, as the market steadies.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "WATER SECTOR ROUTED: WINDFALL TAX HITS DIVIDENDS",
-                      "image": "images/news-hostile-4.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PM'S WATER TAX: PRIVATE INVESTORS BURNED, BOND MARKETS NERVOUS",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WATER WINDFALL: TAXPAYER WINS, PENSION FUNDS RECOIL",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "WATER SECTOR ROUTED: WINDFALL TAX HITS DIVIDENDS",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "PM'S WATER TAX: PRIVATE INVESTORS BURNED, BOND MARKETS NERVOUS",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WATER WINDFALL: TAXPAYER WINS, PENSION FUNDS RECOIL",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Retroactive taxation. Investors warned. Pension funds — including YOURS — will be hit. This is anti-investment policy.",
-                      "stats": "↻ 5.8K   ♥ 23K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Once the state takes a windfall, every dividend is suspect. Capital will flee. Bookmark this.",
-                      "stats": "↻ 4.2K   ♥ 17K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "A one-off tax. Where have we heard THAT before? The \"one-off\" tax never goes away.",
-                      "stats": "↻ 3.1K   ♥ 13K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "Retroactive taxation. Investors warned. Pension funds — including YOURS — will be hit. This is anti-investment policy.",
-                      "stats": "↻ 5.8K   ♥ 23K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "Once the state takes a windfall, every dividend is suspect. Capital will flee. Bookmark this.",
-                      "stats": "↻ 4.2K   ♥ 17K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "A one-off tax. Where have we heard THAT before? The \"one-off\" tax never goes away.",
-                      "stats": "↻ 3.1K   ♥ 13K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Retrospective raids spook every investor in Britain. Reckless.",
-                        "stats": "↻ 3.1K   ♥ 12K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "It’s in your pension, you know. Torch the water firms, torch your retirement.",
-                        "stats": "↻ 2.6K   ♥ 10K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Tax success and capital flees. The bond markets are already nervous.",
-                        "stats": "↻ 2.2K   ♥ 8.5K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Investors dumping stock tonight. Guess who holds the bag? Savers.",
-                        "stats": "↻ 1.8K   ♥ 7.0K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Hard to defend the dividends-while-dumping-sewage record, I admit. Detail matters.",
-                        "stats": "↻ 1.4K   ♥ 5.4K"
-                      },
-                      {
-                        "name": "Lobby Watch",
-                        "handle": "@lobbywatch",
-                        "text": "Even the City concedes the water firms’ payouts looked indefensible.",
-                        "stats": "↻ 1.0K   ♥ 4.1K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Profits going to fix the pipes instead of dividends. Fair, in the end.",
-                        "stats": "↻ 1.1K   ♥ 4.2K"
-                      },
-                      {
-                        "name": "Lobby Watch",
-                        "handle": "@lobbywatch",
-                        "text": "Markets steadied, money headed for repairs. The levy is doing its job.",
-                        "stats": "↻ 900   ♥ 3.6K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "RiverWatch",
-                    "handle": "@riverwatch.msky.social",
-                    "text": "sewage in 90% of our rivers. £2.4bn dividends. it's not even a hard moral question.",
-                    "stats": "↻ 6.2K   ♥ 38K",
-                    "image": "images/avatar-bsky-green-org.png",
-                    "altText": "Friendly green campaign-group logo with a leaf-and-river motif on fresh teal."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "£60bn paid out to shareholders while sewage went into 90% of our rivers. that's the deal we're finally ending.",
-                    "stats": "↻ 3.4K   ♥ 17K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "water companies have paid out more in dividends than they've invested in upgrading the system. for 30 years. windfall tax is the floor, not the ceiling.",
-                    "stats": "↻ 4.1K   ♥ 21K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  }
-                ]
-              }
-            },
-            "note": "\"A windfall tax on the water companies. They paid £2.4bn in dividends while raw sewage poured into rivers. Take it back.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 3
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "populist",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-direct",
-              "policy-water-turn-3-complete",
-              "pair-pair3-complete",
-              "scenario-water-complete"
-            ],
-            "overTime": [],
-            "nextSurfaceId": "week3-legacy-pick"
-          },
-          {
-            "id": "full-water-nationalisation",
-            "label": "Full Water Nationalisation",
-            "cardRole": "upgraded",
-            "sponsor": "ENVIRONMENT SECRETARY",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "water",
-              "pairId": "pair3",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 2,
-              "role": "upgraded"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Brook Trent",
-              "sourceMinisterRole": "ENVIRONMENT SECRETARY",
-              "card": {
-                "image": "images/minister-brook-trent.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of an earnest middle-aged environment secretary in a green tie, windswept open-air complexion and a faint hopeful smile, plain studio background.",
-                "dot": "#4D7CFF",
-                "rotation": "-.5deg"
-              },
-              "originalDeltas": {
-                "living": 20,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "WATER NATIONALISED: PM TAKES THE TAPS BACK",
-                    "standfirst": "Full public ownership announced as Environment Secretary moves to end three decades of dividend-led decay",
-                    "image": "images/news-hostile-4.png",
-                    "altText": "A hostile tabloid front page attacking the Prime Minister."
-                  },
-                  "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "WATER NATIONALISED: PM TAKES THE TAPS BACK",
-                    "standfirst": "Full public ownership announced as Environment Secretary moves to end three decades of dividend-led decay",
-                    "image": "images/news-neutral-2.png",
-                    "altText": "A measured newspaper front page reporting the story plainly."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "STATE GRAB: PM SEIZES THE NATION'S WATER FIRMS",
-                      "standfirst": "Confiscation fury as No.10 moves to snatch the water companies — and the bill is yours.",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "WATER NATIONALISED: 'COMPENSATION FIGHT BEGINS'",
-                      "standfirst": "Critics warn the takeover will cost a fortune and saddle taxpayers with old debts.",
-                      "image": "images/news-hostile-1.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WATER NATIONALISATION: PUBLIC GOOD OR PUBLIC COST?",
-                      "standfirst": "Water returns to public hands, with bills capped and the pipes back under public control.",
-                      "image": "images/news-neutral-3.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "WATER RETURNS TO PUBLIC HANDS",
-                      "standfirst": "Taps brought back into public ownership, with regulators promising cleaner rivers.",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "STATE GRAB: PM SEIZES THE COUNTRY'S WATER FIRMS",
-                      "image": "images/news-hostile-2.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "WATER NATIONALISATION: COMPENSATION FIGHT BEGINS",
-                      "image": "images/news-hostile-3.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WATER GOES PUBLIC: HOW MUCH WILL IT COST?",
-                      "image": "images/news-hostile-5.png",
-                      "altText": "A hostile tabloid front page attacking the Prime Minister."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "STATE GRAB: PM SEIZES THE COUNTRY'S WATER FIRMS",
-                      "image": "images/news-neutral-4.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "FINANCIAL HERALD",
-                      "headline": "WATER NATIONALISATION: COMPENSATION FIGHT BEGINS",
-                      "image": "images/news-neutral-1.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "WATER GOES PUBLIC: HOW MUCH WILL IT COST?",
-                      "image": "images/news-neutral-2.png",
-                      "altText": "A measured newspaper front page reporting the story plainly."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "NATIONALISATION. Of a HUGE industry. The PM is genuinely re-running the 1970s playbook. Catastrophic.",
-                      "stats": "↻ 9.4K   ♥ 38K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "State-run water = state-run failure. The PM has forgotten WHY we privatised in the first place.",
-                      "stats": "↻ 6.2K   ♥ 25K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "The state will own the pipes, the leaks, AND the bills. Watch productivity collapse. Inevitable.",
-                      "stats": "↻ 4.1K   ♥ 17K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "Sir Reginald Purse",
-                      "handle": "@regpurse",
-                      "text": "NATIONALISATION. Of a HUGE industry. The PM is genuinely re-running the 1970s playbook. Catastrophic.",
-                      "stats": "↻ 9.4K   ♥ 38K",
-                      "image": "images/avatar-x-regpurse.png",
-                      "altText": "Portly aristocrat in pinstripe with a monocle and a brandy glass, oil-painting wall."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "State-run water = state-run failure. The PM has forgotten WHY we privatised in the first place.",
-                      "stats": "↻ 6.2K   ♥ 25K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "The state will own the pipes, the leaks, AND the bills. Watch productivity collapse. Inevitable.",
-                      "stats": "↻ 4.1K   ♥ 17K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Nationalisation. The 1970s called: they want their failed idea back.",
-                        "stats": "↻ 3.3K   ♥ 13K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Seize the firms, inherit the debt — and guess who pays it off. You.",
-                        "stats": "↻ 2.8K   ♥ 11K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "A compensation bill that’ll run for a decade. Lawyers are rubbing their hands.",
-                        "stats": "↻ 2.3K   ♥ 9.0K"
-                      },
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "State-run water. What could possibly go wrong? Everything, historically.",
-                        "stats": "↻ 1.9K   ♥ 7.4K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "After the sewage scandals, the case isn’t mad. The cost is what worries me.",
-                        "stats": "↻ 1.4K   ♥ 5.6K"
-                      },
-                      {
-                        "name": "Lobby Watch",
-                        "handle": "@lobbywatch",
-                        "text": "Public mood is firmly with this. Even sceptics concede privatisation failed here.",
-                        "stats": "↻ 1.1K   ♥ 4.2K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Cleaner rivers and no shareholder siphoning the bills — a fair settlement.",
-                        "stats": "↻ 1.1K   ♥ 4.3K"
-                      },
-                      {
-                        "name": "Lobby Watch",
-                        "handle": "@lobbywatch",
-                        "text": "Bills steady, rivers improving. The takeover is bedding in without drama.",
-                        "stats": "↻ 910   ♥ 3.7K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "RiverWatch",
-                    "handle": "@riverwatch.msky.social",
-                    "text": "every other country with national waterways either nationalised or never privatised. england's the outlier. fix it.",
-                    "stats": "↻ 7.2K   ♥ 45K",
-                    "image": "images/avatar-bsky-green-org.png",
-                    "altText": "Friendly green campaign-group logo with a leaf-and-river motif on fresh teal."
-                  },
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "\"how will we afford it\" they cry, ignoring that we've paid £60bn in dividends to private shareholders for water that's actually deteriorated.",
-                    "stats": "↻ 4.8K   ♥ 26K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Tariq_Reads",
-                    "handle": "@tariqreads.msky.social",
-                    "text": "this is not radical. this is what water looked like in this country from 1945 to 1989. we already know it works.",
-                    "stats": "↻ 3.7K   ♥ 19K",
-                    "image": "images/avatar-bsky-tariq.png",
-                    "altText": "Young man in a beanie holding a tote bag of books, reading in a cosy cafe."
-                  }
-                ]
-              },
-              "requiresMeter": "politics",
-              "lockText": "Public trust score isn't high enough to unlock!"
-            },
-            "note": "\"Full water nationalisation. Take them into public ownership. End the dividend-or-sewage choice once and for all.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 3
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "smooth",
-                  "delta": 1
-                },
-                {
-                  "axis": "impulsive",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-upgraded",
-              "policy-water-turn-3-complete",
-              "pair-pair3-complete",
-              "scenario-water-complete"
-            ],
-            "lock": {
-              "meter": "politics",
-              "threshold": 50,
-              "text": "Public trust score isn't high enough to unlock!"
-            },
-            "overTime": [],
-            "nextSurfaceId": "week3-legacy-pick"
-          },
-          {
-            "id": "national-mouse-census",
-            "label": "National Mouse Census",
-            "cardRole": "larry",
-            "sponsor": "OFFICE OF NATIONAL STATISTICS",
-            "sourceRef": {
-              "library": "content.js",
-              "scenarioId": "water",
-              "pairId": "pair3",
-              "side": "b",
-              "turn": 3,
-              "cardIndex": 5,
-              "role": "larry"
-            },
-            "legacyPresentation": {
-              "sourceCardName": "Sir Hairball Tomsworth",
-              "sourceMinisterRole": "OFFICE OF NATIONAL STATISTICS",
-              "card": {
-                "image": "images/minister-cat-tabby.png",
-                "altText": "Head-and-shoulders editorial caricature portrait of a dignified grey tabby cat serving as a Whitehall cabinet adviser, wearing a tiny suit collar and an official lanyard, gazing solemnly at the camera against a plain studio background.",
-                "dot": "#7e7c76",
-                "rotation": ".5deg"
-              },
-              "originalDeltas": {
-                "living": 3,
-                "press": 0,
-                "politics": 0,
-                "capital": 0
-              },
-              "turns": [
-                3
-              ],
-              "reaction": {
-                "newspaper": {
-                  "negative": {
-                    "masthead": "THE GLOBE",
-                    "headline": "NATIONAL MOUSE CENSUS: ONS LAUNCHES FIRST COUNT IN HALF A CENTURY",
-                    "standfirst": "Tomsworth confirms methodology will combine councils, conservation trusts, and citizen scientists",
-                    "image": "images/news-cat-1.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "neutral": {
-                    "masthead": "THE GLOBE",
-                    "headline": "NATIONAL MOUSE CENSUS: ONS LAUNCHES FIRST COUNT IN HALF A CENTURY",
-                    "standfirst": "Tomsworth confirms methodology will combine councils, conservation trusts, and citizen scientists",
-                    "image": "images/news-cat-1.png",
-                    "altText": "A spoof newspaper front page dominated by a cat."
-                  },
-                  "tiers": [
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CENSUS BILL. FOR MICE. ONLY IN BRITAIN.",
-                      "standfirst": "Waste fury as No.10 orders the first national mouse count in half a century.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "MOUSE CENSUS: 'YOUR MONEY, COUNTING RODENTS'",
-                      "standfirst": "Critics blast the ONS mouse survey as bureaucracy at its most baffling.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "NATIONAL MOUSE CENSUS: FOLLY OR USEFUL DATA?",
-                      "standfirst": "The count raises eyebrows, though pest-control firms welcome the dataset.",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY CHRONICLE",
-                      "headline": "MOUSE CENSUS DELIVERS FIRST NATIONAL DATASET",
-                      "standfirst": "The modest survey wraps up, giving councils real numbers to plan pest control.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "frontPages": {
-                  "negative": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MOUSE CENSUS: HOW IT'LL BE CONDUCTED",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "PEST-CONTROL SECTOR WELCOMES NATIONAL DATASET",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CENSUS BILL. FOR MICE. ONLY IN BRITAIN.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "masthead": "THE GLOBE",
-                      "headline": "MOUSE CENSUS: HOW IT'LL BE CONDUCTED",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "CITY HERALD",
-                      "headline": "PEST-CONTROL SECTOR WELCOMES NATIONAL DATASET",
-                      "image": "images/news-cat-2.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    },
-                    {
-                      "masthead": "THE DAILY RAGE",
-                      "headline": "CENSUS BILL. FOR MICE. ONLY IN BRITAIN.",
-                      "image": "images/news-cat-1.png",
-                      "altText": "A spoof newspaper front page dominated by a cat."
-                    }
-                  ]
-                },
-                "xtwitter": {
-                  "negative": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "An entire CENSUS. For MICE. Money no object.",
-                      "stats": "↻ 2.1K   ♥ 8.4K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "ONS resources diverted from inflation tracking to ROD-ENT counting. Unbelievable.",
-                      "stats": "↻ 1.7K   ♥ 6.8K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Watch the count come back conveniently in line with policy needs. Always does.",
-                      "stats": "↻ 1.1K   ♥ 4.2K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "neutral": [
-                    {
-                      "name": "TaxpayerWatch",
-                      "handle": "@taxpayerwatch",
-                      "text": "An entire CENSUS. For MICE. Money no object.",
-                      "stats": "↻ 2.1K   ♥ 8.4K",
-                      "image": "images/avatar-x-neutral-analyst.png",
-                      "altText": "Neutral headshot of an ordinary man in a plain shirt, neutral expression, plain grey studio background."
-                    },
-                    {
-                      "name": "Nigel Pinstripe",
-                      "handle": "@nigelp",
-                      "text": "ONS resources diverted from inflation tracking to ROD-ENT counting. Unbelievable.",
-                      "stats": "↻ 1.7K   ♥ 6.8K",
-                      "image": "images/avatar-nigel-pinstripe.png",
-                      "altText": "Smug man in a pinstripe suit with a Union Jack lapel pin, arms crossed, plain studio."
-                    },
-                    {
-                      "name": "The Contrarian",
-                      "handle": "@contrarianhq",
-                      "text": "Watch the count come back conveniently in line with policy needs. Always does.",
-                      "stats": "↻ 1.1K   ♥ 4.2K",
-                      "image": "images/avatar-x-contrarian.png",
-                      "altText": "Smirking man in a black polo with arms crossed against a moody dark studio backdrop."
-                    }
-                  ],
-                  "tiers": [
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "A national census. Of mice. This is where your taxes go.",
-                        "stats": "↻ 2.5K   ♥ 9.2K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "The ONS, counting rodents. The machinery of state, hard at work.",
-                        "stats": "↻ 1.8K   ♥ 6.8K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Forms, clipboards, and rodents. Bureaucracy finds a way.",
-                        "stats": "↻ 1.6K   ♥ 6.0K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Counting mice while families count pennies. The optics, Prime Minister.",
-                        "stats": "↻ 1.2K   ♥ 4.6K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "If councils actually use the data to cut infestations, fine. We'll see.",
-                        "stats": "↻ 1.0K   ♥ 3.9K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Real numbers beat guesswork, I suppose. Even on mice.",
-                        "stats": "↻ 870   ♥ 3.5K"
-                      }
-                    ],
-                    [
-                      {
-                        "name": "TaxpayerWatch",
-                        "handle": "@taxpayerwatch",
-                        "text": "Cheap, useful, and the pest-control bill should fall. No complaints.",
-                        "stats": "↻ 920   ♥ 3.6K"
-                      },
-                      {
-                        "name": "Nigel Pinstripe",
-                        "handle": "@nigelp",
-                        "text": "Sensible data, modestly gathered. I retract the harrumph.",
-                        "stats": "↻ 810   ♥ 3.2K"
-                      }
-                    ]
-                  ]
-                },
-                "bluesky": [
-                  {
-                    "name": "rosa",
-                    "handle": "@rosa.msky.social",
-                    "text": "evidence-based policy on rodents. nothing surprises me anymore.",
-                    "stats": "↻ 1.4K   ♥ 8.7K",
-                    "image": "images/avatar-bsky-rosa.png",
-                    "altText": "Cheerful young woman with pastel-pink hair and cat-ear headphones in a cosy fairy-lit room."
-                  },
-                  {
-                    "name": "Larry (parody)",
-                    "handle": "@Number10Cat",
-                    "text": "this is the foundation of all my future work.",
-                    "stats": "↻ 19K   ♥ 148K",
-                    "image": "images/avatar-larry-cat.png",
-                    "altText": "Smug ginger cat in a tiny Downing Street collar sitting on the No. 10 doorstep."
-                  },
-                  {
-                    "name": "Polly Ticks",
-                    "handle": "@pollyticks.msky.social",
-                    "text": "the methodology paper is going to be a CLASSIC.",
-                    "stats": "↻ 760   ♥ 4.7K",
-                    "image": "images/avatar-bsky-pollyticks.png",
-                    "altText": "Friendly woman in glasses with a politics-nerd tote bag, a tidy bookshelf behind her."
-                  }
-                ]
-              }
-            },
-            "note": "\"A national mouse census — first in 50 years. You can't manage what you can't measure. Larry needs the data.\"",
-            "impacts": {
-              "visible": [
-                {
-                  "meter": "living",
-                  "delta": 2
-                }
-              ],
-              "hidden": [
-                {
-                  "axis": "impulsive",
-                  "delta": 1
-                },
-                {
-                  "axis": "populist",
-                  "delta": -1
-                }
-              ]
-            },
-            "addTags": [
-              "recentPublicPolicy",
-              "policyRole-larry",
-              "policy-water-turn-3-complete",
               "pair-pair3-complete",
               "scenario-water-complete"
             ],

@@ -1,2 +1,17 @@
-.DS_Store
+# Private working notes — kept local, never uploaded to GitHub
+braindump.md
+
+# Dev tooling (type-checking only; the game ships without a build step)
 node_modules/
+
+# Editor verification artifacts (Playwright MCP output, screenshots)
+.playwright-mcp/
+editor-*.png
+
+# Local save-server backups (editor-server.js writes these on each save)
+content.backup-*.js
+v2-candidates/dramaturgical-router/data/router-balance-data.backup-*.js
+
+# Visual harness transient diff output (baselines in test/visual/ ARE committed)
+test/visual/diff/
+test/visual/mobile/diff/

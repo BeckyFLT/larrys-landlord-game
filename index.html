@@ -105,6 +105,7 @@
   })();
 </script>
 
+
 <div id="canvas" class="canvas dot-grid" data-screen="start" data-start-step="0">
 
   <!-- ===== DECIDE SCREEN — base layer, always underneath ===== -->
@@ -283,6 +284,28 @@
     <div id="end-verdict" class="end-verdict"></div>
     <div id="end-grade" class="end-grade"></div>
 
+    <!-- Election night: hemicycle seat chart. Filled by renderEndChamber();
+         the vote share is a PLACEHOLDER until the real wiring is decided. -->
+    <div class="end-chamber">
+      <div class="end-chamber__panel">
+        <svg id="end-chamber-svg" class="end-chamber__svg" viewBox="0 0 100 56" role="img" aria-label="Election result: your seats versus everyone else"></svg>
+        <p class="end-chamber__caption"><b id="end-chamber-pct">25%</b> chose you&emsp;<b id="end-chamber-seats">163</b> of 650 seats</p>
+      </div>
+      <div class="end-chamber__legend">
+        <span class="end-chamber__legend-item"><span class="end-chamber__dot end-chamber__dot--you"></span>YOU</span>
+        <span class="end-chamber__legend-item"><span class="end-chamber__dot end-chamber__dot--other"></span>EVERYONE ELSE</span>
+      </div>
+    </div>
+
+    <!-- The morning-after front page + social reaction. Filled by renderEndPress(). -->
+    <div class="end-press">
+      <div class="frontpage frontpage--end">
+        <div id="end-np-masthead" class="frontpage__masthead"></div>
+        <div id="end-np-headline" class="frontpage__headline"></div>
+      </div>
+      <div id="end-press-posts" class="end-press__posts"></div>
+    </div>
+
     <div class="end-meters">
       <div class="meter-card meter-card--end">
         <div class="meter-donut" data-m="living">
@@ -446,6 +469,9 @@
 
   <!-- Decorative envelope — shown only on the Letter of Last Resort surface (desktop) -->
   <img class="letter-envelope" src="images/letter-envelope.png" alt="">
+
+  <!-- Decorative press pack — shown only on the One Visit, One Camera surface -->
+  <img class="press-pack" src="images/press-cameras.png" alt="">
 
 </div>
 <!-- end canvas -->

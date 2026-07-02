@@ -651,6 +651,26 @@
     transform: rotate(-4deg);
     filter: drop-shadow(0 16px 28px rgba(0, 0, 0, .35));
   }
+  /* Decorative press pack — only on One Visit, One Camera. Very faint so the
+     cards stay readable; sits behind the content like the Letter's envelope. */
+  .press-pack {
+    display: none;
+  }
+  .canvas[data-v2-surface="flat-one-visit-one-camera"] #screen-decide {
+    position: relative;
+    z-index: 1;
+  }
+  .canvas[data-v2-surface="flat-one-visit-one-camera"] .press-pack {
+    display: block;
+    position: absolute;
+    right: -2%;
+    bottom: -3%;
+    width: min(420px, 34%);
+    height: auto;
+    pointer-events: none;
+    z-index: 0;
+    opacity: .09;
+  }
   .v2-larry-surface {
     display: flex;
     width: 100%;
@@ -1249,7 +1269,7 @@
   .frontpage__headline {
     font-family: var(--font-display);
     font-size: 21px;
-    line-height: .92;
+    line-height: 1.02;
     color: var(--bg);
     text-transform: uppercase;
   }
@@ -1509,6 +1529,90 @@
     padding: 8px 12px;
     margin-bottom: 24px;
   }
+  /* Election-night hemicycle: 650 seat dots (you vs everyone else) in an inset
+     panel, gold dashed majority line painted in the SVG by paintEndChamber(). */
+  .end-chamber {
+    width: min(100%, 640px);
+    margin-bottom: 22px;
+  }
+  .end-chamber__panel {
+    display: grid;
+    gap: 10px;
+    padding: 16px 16px 14px;
+    border: var(--bw) solid #3a3a38;
+    border-radius: var(--r-md);
+    background: #0d0d0c;
+  }
+  .end-chamber__svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .end-chamber__caption {
+    margin: 0;
+    text-align: center;
+    color: #a8a5a0;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .end-chamber__caption b {
+    color: #FF335E;
+  }
+  .end-chamber__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .end-chamber__legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #a8a5a0;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .3px;
+  }
+  .end-chamber__dot {
+    width: 11px;
+    height: 11px;
+    border: 1.5px solid var(--ink);
+    border-radius: 3px;
+  }
+  .end-chamber__dot--you { background: #FF335E; }
+  .end-chamber__dot--other { background: #6f6d68; }
+
+  /* The morning-after front page + social reaction */
+  .end-press {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+    width: min(100%, 860px);
+    margin-bottom: 24px;
+  }
+  .frontpage--end {
+    margin-bottom: 0;
+    padding: 16px;
+  }
+  .frontpage--end .frontpage__masthead {
+    font-size: 11px;
+  }
+  .frontpage--end .frontpage__headline {
+    font-size: clamp(26px, 3.4vw, 38px);
+  }
+  .end-press__posts .post {
+    margin-bottom: 10px;
+  }
+  .end-press__posts .post:last-child {
+    margin-bottom: 0;
+  }
+
   .end-meters {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -2880,6 +2984,11 @@
       margin-bottom: 18px;
     }
 
+    /* front page + posts stack on phones */
+    .end-press {
+      grid-template-columns: 1fr;
+    }
+
     .meter-card--end {
       padding: 11px 12px;
       box-shadow: 4px 4px 0 var(--ink);
@@ -3016,7 +3125,7 @@
 
     .frontpage__headline {
       font-size: clamp(24px, 8vw, 31px);
-      line-height: .95;
+      line-height: 1.02;
     }
 
     .post {
