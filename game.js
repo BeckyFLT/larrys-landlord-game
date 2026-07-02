@@ -1263,24 +1263,24 @@ function v2PickTwoLimit(surface) {
 function v2PickTwoIntroHtml(surface) {
   /** @param {string} html @returns {string} */
   function wrap(html) { return '<div class="pick-two__intro">' + html + '</div>'; }
-  /** @param {string} meow @returns {string} */
-  function larryLine(meow) {
-    return '<p class="pick-two__line pick-two__larry-line">Larry: ' + htmlEsc(meow) + '</p>';
+  /* The Larry exchange sits on ONE line (quoted, with Larry's meow in yellow)
+     so the intro doesn't push the four cards below the fold on desktop. */
+  /** @param {string} html @returns {string} */
+  function larryInline(html) {
+    return '<span class="pick-two__larry-inline">Larry: "Meow!"</span> ' + html;
   }
   if (surface && surface.id === 'week2-policy-pick') {
     if (state.larryNice === true) {
       // Petted Larry: he wins you a bonus second policy (one -> two).
       return wrap(
-        '<p class="pick-two__line">We have time for one more policy this week</p>' +
-        larryLine('Meow!') +
-        '<p class="pick-two__line pick-two__line--turn">Ok, Prime Minister — you can choose two.</p>');
+        '<p class="pick-two__line">"We have time for one more policy this week Prime Minister" ' +
+        larryInline('"Oh go on, you can choose two."') + '</p>');
     }
     if (state.larryNice === false) {
       // Shooed Larry: he docks you a policy (two -> one).
       return wrap(
-        '<p class="pick-two__line">We have time for two more policies this week</p>' +
-        larryLine('Meow!') +
-        '<p class="pick-two__line pick-two__line--turn">Actually, only time for one. (maybe you shouldn\'t have shooed him!)</p>');
+        '<p class="pick-two__line">"We have time for two more policies this week" ' +
+        larryInline('"Actually, only time for one. (maybe you shouldn\'t have shooed him!)"') + '</p>');
     }
     return wrap('<p class="pick-two__line">We\'ve got time for two more policies this week, Prime Minister. Which will you choose?</p>');
   }

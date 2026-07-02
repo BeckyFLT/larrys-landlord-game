@@ -155,6 +155,14 @@
     overflow: hidden;
     padding: var(--shell-padding-top) var(--shell-padding-x) var(--shell-padding-bottom);
   }
+  /* The press/reaction/end/start screens are overlays sized to the canvas, and
+     the canvas takes its height from the decide screen underneath. While an
+     overlay is showing, drop that hidden decide screen out of the layout so a
+     long decision page can't leave scrollable dead space under the overlay —
+     the canvas min-height (100svh on mobile) keeps the overlay full-size. */
+  .canvas:not([data-screen="decide"]) #screen-decide {
+    display: none;
+  }
   .btn {
     font-family: var(--font-mono);
     font-weight: 700;
@@ -530,6 +538,11 @@
   }
   .pick-two__line--turn {
     color: var(--text);
+  }
+  /* Larry's interjection inside the one-line week-2 intro exchange. */
+  .pick-two__larry-inline {
+    color: #FFC93C;
+    font-weight: 700;
   }
   .pick-two__larry {
     display: flex;
@@ -2674,6 +2687,11 @@
 
     /* envelope is a desktop-only flourish */
     .canvas[data-v2-surface="flat-the-letter-of-last-resort"] .letter-envelope {
+      display: none;
+    }
+
+    /* the One Visit, One Camera press pack too */
+    .canvas[data-v2-surface="flat-one-visit-one-camera"] .press-pack {
       display: none;
     }
 
