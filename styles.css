@@ -669,7 +669,7 @@
     height: auto;
     pointer-events: none;
     z-index: 0;
-    opacity: .09;
+    opacity: .3;
   }
   .v2-larry-surface {
     display: flex;
@@ -1405,54 +1405,90 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* top-aligned: the election-night layout is taller than the canvas, and
+       flex centering would clip the title above the scrollable area */
+    justify-content: flex-start;
     align-items: flex-start;
     padding: var(--end-padding-y) var(--end-padding-x);
   }
-  .stamp {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--alert);
-    border: 2.5px solid var(--alert);
-    border-radius: 5px;
-    padding: 6px 11px;
-    display: inline-block;
-    align-self: flex-start;
-    transform: rotate(-9deg);
-    margin-bottom: 22px;
+  /* Two columns: election result + meters + verdict on the left; the
+     morning-after press, Larry and the campaign-materials link on the right. */
+  .end-stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(260px, 1fr);
+    gap: 20px 24px;
+    align-items: stretch;
+    width: 100%;
   }
-  .end-pm {
+  .end-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+  }
+  .end-election {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .end-election__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  /* the three header chunks match Larry's speech-bubble text size */
+  .end-election__head .end-kicker {
+    font-size: 15px;
+  }
+  .end-kicker {
+    color: var(--flag);
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 700;
-    letter-spacing: .8px;
+    letter-spacing: .55px;
     text-transform: uppercase;
-    color: var(--text-dim);
-    border: 2px solid #3a3832;
-    border-radius: var(--r-sm);
-    padding: 6px 10px;
-    margin-bottom: 16px;
+  }
+  .end-kicker--dim {
+    color: var(--go);
   }
   .end-title {
     font-family: var(--font-display);
-    font-size: 68px;
+    font-size: clamp(43px, 7.6vw, 68px);
     line-height: .92;
     color: var(--flag);
     text-transform: uppercase;
     text-wrap: balance;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     max-width: 880px;
   }
-  .end-verdict {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.42;
-    color: var(--text-dim);
-    margin-bottom: 16px;
-    max-width: 720px;
+  /* A–F grade in the chart's header row, in the game's Public Trust blue */
+  .end-grade-tag {
+    color: #4D7CFF;
   }
+  .end-verdict-card {
+    /* wider than its column, per the mock: bleeds into the gutter toward
+       Larry, who is right-aligned in the side column to make room */
+    width: calc(100% + 90px);
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px 24px;
+    align-items: center;
+    padding: clamp(18px, 2.6vw, 28px);
+    border: var(--bw) solid var(--ink);
+    border-radius: var(--r-md);
+    background: var(--paper);
+    color: var(--ink);
+    box-shadow: var(--shadow-card);
+  }
+  .end-verdict {
+    font-size: clamp(18px, 1.9vw, 24px);
+    font-weight: 800;
+    line-height: 1.26;
+    color: var(--ink);
+  }
+
   .end-verdict p {
     margin: 0 0 12px;
   }
@@ -1471,13 +1507,22 @@
   }
   .end-larry {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 24px;
+    gap: 14px;
+    /* bottom of the side column, tucked to the right so the wide verdict
+       card fits to Larry's left */
+    margin-top: auto;
+    align-self: flex-end;
+  }
+  .end-materials {
+    align-self: flex-end;
   }
   .end-larry__img {
-    width: 128px;
+    /* small enough that the side column (posts + Larry + materials button)
+       stays shorter than the main column — the auto top margin then lands the
+       button's bottom flush with the verdict card's bottom */
+    width: 96px;
     height: auto;
     flex: 0 0 auto;
   }
@@ -1493,47 +1538,33 @@
     font-weight: 700;
     font-size: 15px;
   }
-  /* speech-bubble tail: points right, toward Larry (ink outline + white fill) */
+  /* speech-bubble tail: points down, toward Larry (ink outline + white fill) */
   .end-larry__bubble::after {
     content: '';
     position: absolute;
-    top: 50%;
-    right: -12px;
-    transform: translateY(-50%);
-    border-width: 8px 0 8px 12px;
+    left: 50%;
+    bottom: -12px;
+    transform: translateX(-50%);
+    border-width: 12px 8px 0 8px;
     border-style: solid;
-    border-color: transparent transparent transparent var(--ink);
+    border-color: var(--ink) transparent transparent transparent;
   }
   .end-larry__bubble::before {
     content: '';
     position: absolute;
-    top: 50%;
-    right: -8px;
-    transform: translateY(-50%);
-    border-width: 6px 0 6px 9px;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    border-width: 9px 6px 0 6px;
     border-style: solid;
-    border-color: transparent transparent transparent #fff;
+    border-color: #fff transparent transparent transparent;
     z-index: 1;
   }
-  .end-grade {
-    display: inline-flex;
-    align-items: center;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    min-height: 38px;
-    border: 2px solid #3a3832;
-    border-radius: var(--r-sm);
-    background: #070707;
-    padding: 8px 12px;
-    margin-bottom: 24px;
-  }
+
   /* Election-night hemicycle: 650 seat dots (you vs everyone else) in an inset
      panel, gold dashed majority line painted in the SVG by paintEndChamber(). */
   .end-chamber {
-    width: min(100%, 640px);
-    margin-bottom: 22px;
+    width: 100%;
   }
   .end-chamber__panel {
     display: grid;
@@ -1587,15 +1618,46 @@
   .end-chamber__dot--you { background: #FF335E; }
   .end-chamber__dot--other { background: #6f6d68; }
 
-  /* The morning-after front page + social reaction */
-  .end-press {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-    gap: 16px;
-    align-items: start;
-    width: min(100%, 860px);
-    margin-bottom: 24px;
+  /* End-screen posts carry the same MEWSKY/HEX pills as the reaction feed's
+     top cards (hide the inline HEX span; the pill replaces it). */
+  #end-press-posts .post__network { display: none; }
+  #end-press-posts .post--bluesky .post__header::after,
+  #end-press-posts .post--x .post__header::after {
+    margin-left: auto;
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .8px;
+    line-height: 1;
+    border: 2px solid var(--ink);
+    border-radius: 5px;
+    padding: 4px 8px;
   }
+  #end-press-posts .post--bluesky .post__header::after {
+    content: "MEWSKY";
+    background: var(--bluesky);
+    color: var(--text);
+  }
+  #end-press-posts .post--x .post__header::after {
+    content: "HEX";
+    background: #9a9a9a;
+    color: var(--ink);
+  }
+
+  /* The morning-after front page sits at the bottom of a fixed-height slot,
+     so longer headlines grow UP into the spare space (intentional headroom in
+     Becky's mock) and the posts below never move. */
+  .end-frontpage-slot {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* the paper RESTS high — top roughly level with THE RESULT kicker — and
+       the headroom above only absorbs extra headline lines (worst-case card
+       is ~220px, so nothing ever pushes the posts below) */
+    min-height: 260px;
+  }
+  /* The morning-after front page + posts (right column) */
   .frontpage--end {
     margin-bottom: 0;
     padding: 16px;
@@ -1605,6 +1667,7 @@
   }
   .frontpage--end .frontpage__headline {
     font-size: clamp(26px, 3.4vw, 38px);
+    overflow-wrap: anywhere;
   }
   .end-press__posts .post {
     margin-bottom: 10px;
@@ -1615,10 +1678,18 @@
 
   .end-meters {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 14px;
-    width: min(100%, 860px);
-    margin-bottom: 24px;
+    width: 100%;
+  }
+  /* the mock shows bare donuts — strip the card chrome on the end screen */
+  .end-meters .meter-card--end {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
   }
   .end-meter__label {
     font-weight: 900;
@@ -1653,10 +1724,28 @@
   }
   .end-actions {
     display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    width: min(100%, 860px);
+    flex-direction: column;
+    gap: 12px;
+    min-width: 190px;
   }
+  /* PLAY AGAIN on the cream card: solid ink so it reads (ghost is white-on-dark) */
+  .btn--dark {
+    background: var(--ink);
+    color: #fff;
+    border: var(--bw) solid var(--ink);
+  }
+  /* Campaign materials: the yellow flag button pinned to the column's bottom right */
+  .btn--materials {
+    background: var(--flag);
+    color: var(--ink);
+    border: var(--bw) solid var(--ink);
+    box-shadow: var(--shadow-btn);
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+
   .btn--end {
     min-height: 48px;
     padding: 14px 26px;
@@ -1664,25 +1753,38 @@
     align-items: center;
     justify-content: center;
   }
-  .share-confirm {
-    display: flex;
-    width: min(100%, 860px);
-    min-height: 44px;
-    align-items: center;
-    border: 2px solid var(--go);
+  /* "Copied!" pop: floats above the share button and fades out, so it never
+     shifts the verdict-card layout. Re-triggered per click via restartAnim. */
+  .end-actions {
+    position: relative;
+  }
+  .share-copied {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding: 7px 12px;
+    border: 2px solid var(--ink);
     border-radius: var(--r-sm);
-    background: #07110d;
-    padding: 11px 14px;
+    background: var(--go);
+    color: var(--ink);
     font-family: var(--font-mono);
     font-size: 12px;
-    line-height: 1.35;
     font-weight: 700;
-    color: var(--go);
-    margin-top: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+  @keyframes share-copied-pop {
+    0%   { opacity: 0; transform: translate(-50%, -100%) translateY(8px) scale(.85); }
+    12%  { opacity: 1; transform: translate(-50%, -100%) translateY(0) scale(1); }
+    70%  { opacity: 1; transform: translate(-50%, -100%) translateY(0); }
+    100% { opacity: 0; transform: translate(-50%, -100%) translateY(-10px); }
   }
 
   .demo-bar {
-    display: flex; /* testing build: always visible. demoMode(0) hides it. */
+    display: none; /* dev-only: type demoMode(1) in the console to show it. */
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
@@ -2054,6 +2156,23 @@
     border-radius: var(--r-sm);
     padding: 10px 18px;
     box-shadow: 4px 4px 0 var(--ink);
+  }
+  /* Larry's reaction to the choice: little emoji that drift up from the cat —
+     hearts for a pet, one grumpy face for a shoo. Spawned by larryChoiceFloats(). */
+  .larry-float {
+    position: absolute;
+    top: 100px;
+    font-size: 28px;
+    line-height: 1;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+    animation: larry-float-up 1.4s ease-out both;
+  }
+  @keyframes larry-float-up {
+    0%   { opacity: 0; transform: translateY(6px) scale(.55); }
+    18%  { opacity: 1; }
+    100% { opacity: 0; transform: translateY(-92px) scale(1.2); }
   }
 
   .portrait,
@@ -2941,52 +3060,67 @@
       right: 0;
     }
 
-    .end-overlay {
-      justify-content: flex-start;
-    }
-
-    .stamp {
-      font-size: 10px;
-      margin-bottom: 16px;
-      padding: 5px 9px;
-      border-width: 2px;
-    }
-
-    .end-pm {
-      max-width: 100%;
-      font-size: 10px;
-      line-height: 1.25;
-      margin-bottom: 12px;
-    }
-
     .end-title {
       font-size: 43px;
       line-height: .95;
       margin-bottom: 12px;
     }
 
-    .end-verdict {
-      font-size: 15px;
-      line-height: 1.38;
-      margin-bottom: 12px;
+    /* single column. The two column wrappers dissolve (display: contents) so
+       every block joins one grid and can be reordered: hemicycle, then the
+       press reaction, then meters, verdict, Larry, materials. */
+    .end-stage {
+      grid-template-columns: 1fr;
+      gap: 16px;
     }
 
-    .end-grade {
-      min-height: 36px;
-      font-size: 12px;
-      margin-bottom: 16px;
-      padding: 7px 10px;
+    .end-col { display: contents; }
+    .end-title       { order: 0; }
+    .end-election    { order: 1; }
+    .end-frontpage-slot { order: 2; min-height: 0; }
+    #end-press-posts { order: 3; }
+    .end-meters      { order: 4; }
+    .end-verdict-card { order: 5; }
+    .end-larry       { order: 6; }
+    .end-materials   { order: 7; }
+
+    .end-verdict-card {
+      width: 100%;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      padding: 16px;
+    }
+
+    .end-larry {
+      margin-top: 0;
+      align-self: flex-end;
+    }
+
+    .end-materials {
+      justify-self: end;
+    }
+
+    .end-verdict {
+      font-size: 16px;
+      line-height: 1.32;
     }
 
     .end-meters {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px;
-      margin-bottom: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
     }
 
-    /* front page + posts stack on phones */
-    .end-press {
-      grid-template-columns: 1fr;
+    /* four-across on a phone: smaller rings so the row fits without scrolling */
+    .end-meters .meter-donut__ring {
+      width: 58px;
+      height: 58px;
+    }
+    /* no hover on touch: the nowrap tooltips only add phantom sideways overflow */
+    .end-meters .meter-donut__tip {
+      display: none;
+    }
+    .end-meters .meter-donut__value {
+      font-size: 24px;
     }
 
     .meter-card--end {
@@ -3022,11 +3156,7 @@
       padding: 13px 16px;
     }
 
-    .share-confirm {
-      font-size: 11px;
-      margin-top: 10px;
-      padding: 10px 12px;
-    }
+
 
     .press-overlay {
       padding: 20px;

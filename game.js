@@ -74,7 +74,6 @@ function clearDefaultPlayerNameOnce() {
  * @property {Array<number|null>} scenarioUnlockTurn
  * @property {number|null} pressFixedTurn
  * @property {number|null} politicsFixedTurn
- * @property {boolean} larryEventFired
  * @property {string|null} deadMeter
  */
 /**
@@ -95,7 +94,6 @@ function clearDefaultPlayerNameOnce() {
  * @property {boolean} passedHelpPolicy
  * @property {number|null} pressFixedTurn
  * @property {number|null} politicsFixedTurn
- * @property {boolean} larryEventFired
  * @property {Meters} meters
  * @property {number} concentratedPower
  * @property {string|null} deadMeter
@@ -295,7 +293,6 @@ var state = {
   passedHelpPolicy: false,
   pressFixedTurn: null,    // turn number when Free Press first hit 45
   politicsFixedTurn: null, // turn number when Clean Politics first hit 45
-  larryEventFired: false,
   meters: Object.assign({}, STARTING_METERS),
   concentratedPower: 100,  // hidden — never shown to player
   deadMeter: null,         // first meter to hit 0; latches a loss permanently (see anyMeterDead)
@@ -328,6 +325,7 @@ var V2_MODE = isV2QueryMode();
  * @property {{tier:string, count:number, promise:string}|null} weekReaction
  * @property {string[]} pickTwoSelected
  * @property {string[]} pickTwoCommitted
+ * @property {Record<string, string[]>} weekCardOrder
  */
 /** @type {V2BridgeState} */
 var v2Bridge = {
@@ -348,7 +346,8 @@ var v2Bridge = {
   weekDecisions: [],   // the current round's policy decisions (for the weekly verdict + feed)
   weekReaction: null,  // set when the once-a-week full reaction is showing; cleared on advance
   pickTwoSelected: [],  // ids chosen on a 'pick-two' beat, pending confirm
-  pickTwoCommitted: []  // the beat's committed ids, for the light press reaction
+  pickTwoCommitted: [], // the beat's committed ids, for the light press reaction
+  weekCardOrder: {}     // per-week shuffled card order (choice ids), so decision 2/2 mirrors decision 1/2
 };
 
 /** @returns {boolean} */
@@ -433,6 +432,7 @@ function v2StartRun() {
   v2Bridge.pendingChoiceId = null;
   v2Bridge.pendingChoiceView = null;
   v2Bridge.pickTwoCommitted = [];
+  v2Bridge.weekCardOrder = {};
   v2Bridge.activeSurfaceNotice = null;
   v2Bridge.lastConsequenceNotices = [];
   state.turn = 1;
@@ -691,15 +691,42 @@ function v2ReactionFalloutHtml() {
    only affects the visual tilt, and availability is keyed by choice id, so
    reordering is purely cosmetic. Runs once per surface (in
    v2PrepareNextPlayableSurface, not renderDecide) so cards don't reshuffle on
-   every redraw. */
+   every redraw.
+
+   The order is fixed WITHIN a week: decision 1/2 rolls the shuffle and decision
+   2/2 replays it, so cards don't jump around between the week's two screens.
+   Cards shared by both decisions keep their slot; the one card that differs
+   (the week's second Larry option) inherits the slot its predecessor held.
+   Each new week rolls a fresh shuffle. */
 /** @param {RouterProductionSurfaceView|null} surfaceView @returns {void} */
 function v2ShufflePolicyCards(surfaceView) {
   if (!surfaceView || surfaceView.kind !== 'policy' || !Array.isArray(surfaceView.choices)) return;
   var c = surfaceView.choices;
-  for (var i = c.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var tmp = c[i]; c[i] = c[j]; c[j] = tmp;
+  var weekMatch = /^policy-(.+)-turn-\d+$/.exec(surfaceView.id || '');
+  var weekKey = weekMatch ? weekMatch[1] : null;
+  var stored = weekKey ? v2Bridge.weekCardOrder[weekKey] : null;
+  if (stored && stored.length === c.length) {
+    /** @type {Record<string, RouterProductionChoiceView>} */
+    var byId = {};
+    c.forEach(function(choice) { byId[choice.id] = choice; });
+    /** @type {Array<RouterProductionChoiceView|null>} */
+    var next = new Array(c.length).fill(null);
+    /** @type {number[]} */
+    var freeSlots = [];
+    stored.forEach(function(id, slot) {
+      if (byId[id]) { next[slot] = byId[id]; delete byId[id]; }
+      else freeSlots.push(slot);
+    });
+    var leftover = c.filter(function(choice) { return !!byId[choice.id]; });
+    leftover.forEach(function(choice, k) { next[freeSlots[k]] = choice; });
+    for (var s = 0; s < c.length; s++) c[s] = /** @type {RouterProductionChoiceView} */ (next[s]);
+  } else {
+    for (var i = c.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = c[i]; c[i] = c[j]; c[j] = tmp;
+    }
   }
+  if (weekKey) v2Bridge.weekCardOrder[weekKey] = c.map(function(choice) { return choice.id; });
 }
 
 /** @returns {'surface'|'passive'|'end'} */
@@ -1192,7 +1219,7 @@ var PICK_TWO_FIGURES = {
   'improve-public-transport': 'images/cabinet/mason_carrick.png',
   'fix-potholes': 'images/cabinet/chunk_slumberton.png',
   'enact-electoral-reform': 'images/cabinet/vera_suffrage.png',
-  'free-school-meals': 'images/cabinet/isla_mann.png',
+  'enact-wealth-tax': 'images/cabinet/isla_mann.png',
   'scrap-hospital-parking': 'images/cabinet/dr_ina_tentcare.png',
   'larry-national-statue': 'images/cabinet/watson_tabby.png',
   'larry-cat-civil-servants': 'images/cabinet/sir_pur_reginald.png'
@@ -1207,7 +1234,7 @@ var PICK_TWO_ROLES = {
   'improve-public-transport': 'HOUSING SECRETARY',
   'fix-potholes': 'CRAFT & COMMUNITIES CHAMPION',
   'enact-electoral-reform': 'CONSTITUTION MINISTER',
-  'free-school-meals': 'CHANCELLOR',
+  'enact-wealth-tax': 'CHANCELLOR',
   'scrap-hospital-parking': 'HEALTH SECRETARY',
   'larry-national-statue': 'LOCAL GOVERNMENT STANDARDS MINISTER',
   'larry-cat-civil-servants': "CHIEF MOUSER'S ADVISER"
@@ -1253,7 +1280,7 @@ function v2PickTwoIntroHtml(surface) {
       return wrap(
         '<p class="pick-two__line">We have time for two more policies this week</p>' +
         larryLine('Meow!') +
-        '<p class="pick-two__line pick-two__line--turn">Actually, only time for one.</p>');
+        '<p class="pick-two__line pick-two__line--turn">Actually, only time for one. (maybe you shouldn\'t have shooed him!)</p>');
     }
     return wrap('<p class="pick-two__line">We\'ve got time for two more policies this week, Prime Minister. Which will you choose?</p>');
   }
@@ -1319,7 +1346,7 @@ function renderV2PickTwoCard(surface, choice, idx, isSelected) {
     : '';
   var role = PICK_TWO_ROLES[choice.id] || '';
   var accent = v2AccentFor(surface, choice);
-  var ctaHtml = locked ? '' :
+  var ctaHtml = locked ? v2UnavailableStatusHtml(choice, availability) :
     '<div><span class="decision-card__cta" style="background:' + attrEsc(accent) + ';">' +
       (isSelected ? 'PICKED ✓' : 'PICK THIS →') +
     '</span></div>';
@@ -1430,6 +1457,23 @@ function renderV2LarryChoiceButton(choice) {
     (locked ? ' disabled' : '') + '>' + htmlEsc(choice.label) + '</button>';
 }
 
+/* Larry reacts to the click: hearts drift up from the cat on a pet, one grumpy
+   face on a shoo. Instant feedback so the toast pause doesn't read as a freeze. */
+/** @param {boolean} nice @param {Element|null} host the .start-larry block @returns {void} */
+function larryChoiceFloats(nice, host) {
+  if (!host) return;
+  var emoji = nice ? ['❤️', '❤️', '❤️'] : ['😾'];
+  var offsets = nice ? [-16, 4, 18] : [2];  // % from centre, spread across the cat
+  emoji.forEach(function(e, i) {
+    var span = document.createElement('span');
+    span.className = 'larry-float';
+    span.textContent = e;
+    span.style.left = 'calc(50% + ' + offsets[i] + '%)';
+    span.style.animationDelay = (i * 0.22) + 's';
+    host.appendChild(span);
+  });
+}
+
 /**
  * Preserve the old Larry toast pause for player clicks, while still committing
  * the choice through the v2 router data.
@@ -1458,6 +1502,7 @@ function pickV2LarryChoice(choiceId) {
   });
   v2CommitPendingChoice();
 
+  larryChoiceFloats(state.larryNice === true, document.querySelector('.v2-larry-surface__body'));
   var toast = document.getElementById('v2-larry-toast');
   if (toast) toast.hidden = false;
   setTimeout(function() {
@@ -2698,7 +2743,6 @@ function seeTheFallout() {
     scenarioUnlockTurn: state.scenarioUnlockTurn.slice(),
     pressFixedTurn: state.pressFixedTurn,
     politicsFixedTurn: state.politicsFixedTurn,
-    larryEventFired: state.larryEventFired,
     deadMeter: state.deadMeter
   };
   var p = getCard(state.lastPolicy);
@@ -2710,8 +2754,7 @@ function seeTheFallout() {
   m.politics = Math.min(100, Math.max(0, m.politics + d.politics));
   m.capital  = Math.min(100, Math.max(0, m.capital  + d.capital));
 
-  // Latch a kill from these deltas NOW, while the meter is still at 0 — before the
-  // Larry payoff in showReaction() can bump `living` back above 0 and hide the loss.
+  // Latch a kill from these deltas NOW, while the meter is still at 0.
   anyMeterDead();
 
   if (p.role === 'structural') {
@@ -3072,21 +3115,9 @@ function showReaction() {
     }
   });
 
-  // Larry payoff event (fires once, during the second-to-last scenario)
+  // The v2 reaction path repurposes the #larry-event banner; keep it hidden here.
   var larryEl = document.getElementById('larry-event');
-  if (!state.larryEventFired && state.scenarioIndex === SCENARIO_COUNT - 2) {
-    state.larryEventFired = true;
-    var isNice = state.larryNice;
-    state.meters.living = Math.min(100, Math.max(0, state.meters.living + (isNice ? 3 : -3)));
-    larryEl.hidden = false;
-    larryEl.style.background = isNice ? '#25C998' : '#FF335E';
-    larryEl.style.color = '#0c0c0c';
-    larryEl.innerHTML = isNice
-      ? '🐱 Larry\'s parody account goes viral. The public loves it. ' + meterImpactHtml(/** @type {MeterDef} */ (meterDefForKey('living')), 3)
-      : '😾 Someone leaked the Downing St CCTV. Twitter is Not Pleased. ' + meterImpactHtml(/** @type {MeterDef} */ (meterDefForKey('living')), -3);
-  } else {
-    larryEl.hidden = true;
-  }
+  larryEl.hidden = true;
 
   // Social feeds — two-state on the hostile axes (press front pages + X); Bluesky single.
   var r = p.reaction;
@@ -3218,49 +3249,52 @@ function maybeRecordUnlock() {
    Standards meter (the delivery scoreboard — only policy fixes move it) and whether
    you passed voter (electoral) reform. Living Standards starts at 36; each week is
    two decisions, so a reform-then-big-fix week banks +8, a quick-fix week +3, and a
-   cat week nothing. Bands: 58+ = every week reformed-then-delivered, 48–57 = one or
-   two good weeks, 40–47 = shallow fixes only, under 40 = the cats won. Electoral
-   reform only matters at 48 or above. (All copy below is first-pass — Becky to tune.) */
+   cat week nothing. The wealth tax (legacy pick, unlocked by passing all three weekly
+   reforms) banks +9 more. Bands: 68+ = the full reform run crowned by the wealth tax,
+   60–67 = at least two big-fix weeks, 40–59 = shallow fixes only, under 40 = the cats
+   won. Electoral reform only matters at 60 or above. The +9/60 pairing is deliberate:
+   it keeps a 1-big-fix run at 59 even with the wealth tax. (All copy below is
+   first-pass — Becky to tune.) */
 
 var LARRY_BONUS_LINE = 'You were removed as PM by the British public but appointed king of the cats by the British shorthairs.';
 
-/** @type {Record<string, {title:string, verdict:string, label:string, color:string, stamp:string, won:boolean}>} */
+/** @type {Record<string, {title:string, grade:string, verdict:string, label:string, color:string, stamp:string, won:boolean}>} */
 var V2_ENDINGS = {
   landslide: {
-    title: 'A Landslide',
-    verdict: 'Achieving your manifesto promises and improving lives meant you increased your popularity and increased your total votes — you win another term by a landslide.',
+    title: 'A Landslide', grade: 'A',
+    verdict: 'Every promise delivered, and with the press reformed, voters actually heard about it. Five more years.',
     label: '★ LANDSLIDE', color: '#FFC93C', stamp: 'LANDSLIDE', won: true
   },
   fullNoReform: {
-    title: 'Beaten by Tactical Voting',
-    verdict: 'Achieving your manifesto promises and improving lives meant you increased your popularity and increased your total votes — but the right voted tactically, and your party lost the next election.',
+    title: 'Beaten by Tactical Voting', grade: 'C',
+    verdict: 'More people voted for you than anyone else. It didn\'t matter — the right voted tactically and took the most seats.',
     label: '✗ VOTED OUT', color: '#FF335E', stamp: 'VOTED OUT', won: false
   },
   reelected: {
-    title: 'Re-Elected',
-    verdict: 'You did a good job — not the best ever, but you delivered a fair chunk of your manifesto and improved lives. With the voting system finally reformed, your party is re-elected.',
+    title: '★ Re-Elected', grade: 'B',
+    verdict: 'You delivered most of your promises, and under the new voting system every one of those votes counted. You\'ll lead the coalition into another term.',
     label: '★ SECOND TERM', color: '#25C998', stamp: 'RE-ELECTED', won: true
   },
   someNoReform: {
-    title: 'So Near, Yet Voted Out',
-    verdict: 'You managed to achieve most of your manifesto policies and generally improved things, but not as much as you could have. You did similarly well to the last election — but the right voted tactically, and this time your party lost.',
+    title: 'So Near, Yet Voted Out', grade: 'D',
+    verdict: 'You did enough to deserve a second look, but not enough to survive the voting system. The right chose tactically. You didn\'t.',
     label: '✗ VOTED OUT', color: '#FF335E', stamp: 'VOTED OUT', won: false
   },
   mixed: {
-    title: 'Not Enough',
-    verdict: 'You achieved some of your manifesto promises but not enough. Your party loses the next election.',
+    title: 'Not Enough', grade: 'E',
+    verdict: 'You didn\'t achieve enough of your manifesto promises and the public don\'t feel better off. You lose the election.',
     label: '✗ VOTED OUT', color: '#FF335E', stamp: 'VOTED OUT', won: false
   },
   none: {
-    title: 'Voted Out',
-    verdict: 'You didn\'t achieve your manifesto promises and were voted out. People have started using the word "lettuce" when referring to you.',
+    title: 'Voted Out', grade: 'F',
+    verdict: 'You didn\'t achieve any of your manifesto promises. People keep mentioning lettuce. You lose the election.',
     label: '✗ VOTED OUT', color: '#FF335E', stamp: 'VOTED OUT', won: false
   }
 };
 
 /* Ending band thresholds on the final Living Standards meter. */
-var V2_ENDING_LIVING_FULL = 58;   // all three weeks reformed-then-delivered
-var V2_ENDING_LIVING_SOME = 48;   // at least one reform-then-big-fix week
+var V2_ENDING_LIVING_FULL = 68;   // the full reform run, crowned by the wealth tax
+var V2_ENDING_LIVING_SOME = 60;   // at least two big-fix weeks (wealth tax can cover the third)
 var V2_ENDING_LIVING_MIXED = 40;  // quick fixes only
 
 /** @returns {boolean} player took every Larry policy offered (gates the king-of-cats line) */
@@ -3268,7 +3302,7 @@ function v2LarryBonusEarned() {
   return state.larryLoyal === true;
 }
 
-/** @returns {{title:string, verdict:string, label:string, color:string, stamp:string, won:boolean}} */
+/** @returns {{title:string, grade:string, verdict:string, label:string, color:string, stamp:string, won:boolean}} */
 function v2ReelectionOutcome() {
   var living = state.meters.living;
   var reform = v2EnactedElectoralReform();
@@ -3282,7 +3316,7 @@ function v2ReelectionOutcome() {
    Standards + voter reform) decides everything — no meter collapses the term. Taking every
    Larry policy earns the king-of-cats line on any losing ending: it replaces the lettuce
    text on the 0-policy ending, and is appended on the other losing endings. */
-/** @returns {{stamp:string, title:string, verdictHtml:string, label:string, color:string}} */
+/** @returns {{stamp:string, title:string, grade:string, verdictHtml:string, label:string, color:string}} */
 function v2EndInfo() {
   var ending = v2ReelectionOutcome();
   var larry = !ending.won && v2LarryBonusEarned();
@@ -3291,7 +3325,7 @@ function v2EndInfo() {
   if (larry && ending !== V2_ENDINGS.none) {
     verdictHtml += '<p class="end-larry-bonus">' + htmlEsc(LARRY_BONUS_LINE) + '</p>';
   }
-  return { stamp: ending.stamp, title: ending.title, verdictHtml: verdictHtml, label: ending.label, color: ending.color };
+  return { stamp: ending.stamp, title: ending.title, grade: ending.grade, verdictHtml: verdictHtml, label: ending.label, color: ending.color };
 }
 
 /* ---------- election-night hemicycle ----------
@@ -3367,18 +3401,22 @@ function paintEndChamber(playerSeats) {
   });
 }
 
-/* PLACEHOLDER election numbers per ending — NOT wired to anything yet. Becky
-   still has to decide where "% chose you" really comes from; these just make
-   each ending's chart look plausible until then. */
+/* Election numbers per ending (vote shares are Becky's spec, 2026-07-02).
+   Seats are hand-tuned to tell each ending's story: the two 40% outcomes are
+   the system lesson — the same vote share leads a coalition under the reformed
+   rules (C) but gets squeezed below it by tactical voting under the old ones
+   (D). Taking every Larry option overrides any losing run with 0% — the cats
+   don't get a vote. */
 /** @returns {{pct: number, seats: number}} */
 function v2EndVoteNumbers() {
   var ending = v2ReelectionOutcome();
-  if (ending === V2_ENDINGS.landslide)    return { pct: 45, seats: 470 };
-  if (ending === V2_ENDINGS.fullNoReform) return { pct: 38, seats: 301 };
-  if (ending === V2_ENDINGS.reelected)    return { pct: 39, seats: 344 };
-  if (ending === V2_ENDINGS.someNoReform) return { pct: 34, seats: 289 };
-  if (ending === V2_ENDINGS.mixed)        return { pct: 27, seats: 175 };
-  return { pct: 14, seats: 45 };
+  if (!ending.won && v2LarryBonusEarned()) return { pct: 0, seats: 0 };
+  if (ending === V2_ENDINGS.landslide)    return { pct: 52, seats: 338 };
+  if (ending === V2_ENDINGS.fullNoReform) return { pct: 45, seats: 312 };
+  if (ending === V2_ENDINGS.reelected)    return { pct: 40, seats: 260 };
+  if (ending === V2_ENDINGS.someNoReform) return { pct: 40, seats: 238 };
+  if (ending === V2_ENDINGS.mixed)        return { pct: 25, seats: 163 };
+  return { pct: 5, seats: 8 };
 }
 
 /* ---------- the morning-after front page + posts ----------
@@ -3493,12 +3531,14 @@ function renderEndPress() {
 function showEnd() {
   var info = v2EndInfo();
 
-  document.getElementById('stamp').textContent       = info.stamp;
-  document.getElementById('end-pm').textContent      = pmTitle();
   document.getElementById('end-title').textContent   = info.title;
+  var gradeTag = document.getElementById('end-grade-tag');
+  if (gradeTag) gradeTag.textContent = 'Grade: ' + info.grade;
   document.getElementById('end-verdict').innerHTML   = info.verdictHtml;
-  document.getElementById('end-grade').textContent   = info.label;
-  document.getElementById('end-grade').style.color   = info.color;
+
+  // The counting method behind the seat chart: reformed runs use PR.
+  var methodEl = document.getElementById('end-method');
+  if (methodEl) methodEl.textContent = 'Method: ' + (v2EnactedElectoralReform() ? 'PR' : 'FPTP');
 
   renderEndChamber();
   renderEndPress();
@@ -3530,11 +3570,6 @@ function showEnd() {
   }
 
   document.getElementById('share-confirm').hidden = true;
-  replayStamp();
-}
-
-function replayStamp() {
-  restartAnim(document.getElementById('stamp'), 'stampin .5s cubic-bezier(.2,1.4,.4,1) forwards');
 }
 
 /* ---------- share ---------- */
@@ -3551,15 +3586,12 @@ function shareResult() {
   });
   var text =
     'Larry\'s Landlord 🐱\n' +
-    pmTitle() + '\n' +
     shareLabel + '\n\n' +
     lines.join('\n') + '\n\n' +
-    'Play the BETTER! campaign game → fieldleveltech.org/larrys-landlord';
+    'Can you BETTER my score? compassonline.org.uk';
 
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(function() {
-      document.getElementById('share-confirm').hidden = false;
-    });
+    navigator.clipboard.writeText(text).then(showShareCopied);
   } else {
     // Fallback for browsers without clipboard API
     var ta = document.createElement('textarea');
@@ -3568,8 +3600,17 @@ function shareResult() {
     ta.select();
     document.execCommand('copy');
     document.body.removeChild(ta);
-    document.getElementById('share-confirm').hidden = false;
+    showShareCopied();
   }
+}
+
+/* Pop the little "Copied!" note above the share button and let it fade away.
+   Restarting the animation makes repeat clicks pop it again. */
+function showShareCopied() {
+  var el = document.getElementById('share-confirm');
+  if (!el) return;
+  el.hidden = false;
+  restartAnim(el, 'share-copied-pop 1.6s ease forwards');
 }
 
 /** @type {GameScreen[]} */
@@ -3660,6 +3701,7 @@ function choose(post, who) {
 /** @param {boolean} nice true = pet Larry, false = shoo */
 function chooseLarry(nice) {
   state.larryNice = nice;
+  larryChoiceFloats(nice, document.querySelector('#ov-start .start-larry'));
   var toast = document.getElementById('larry-toast');
   toast.hidden = false;
   setTimeout(function() { toast.hidden = true; go('decide'); }, 1600);
@@ -3708,7 +3750,6 @@ function resetGame() {
   state.passedHelpPolicy = false;
   state.pressFixedTurn   = null;
   state.politicsFixedTurn = null;
-  state.larryEventFired  = false;
   state.meters           = Object.assign({}, STARTING_METERS);
   state.concentratedPower = 100;
   state.deadMeter        = null;

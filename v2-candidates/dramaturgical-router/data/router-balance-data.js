@@ -1181,11 +1181,11 @@
                 "image": "images/minister-isla-mann.png",
                 "altText": "Head-and-shoulders editorial caricature portrait of a sharp, confident chancellor in a power suit holding a red budget box, steely smile, plain studio background.",
                 "dotColor": "#FFC93C",
-                "quote": "\"The UK loses £70bn a year to tax avoidance. I've written the report on every trick they use. Let me fix it.\""
+                "quote": "\"£71bn in profits shifted offshore every year. That's £15bn in lost corporation tax! Let me fix it.\""
               }
             },
             "nextSurfaceId": "policy-taxLoopholes-turn-1",
-            "note": "\"The UK loses £70bn a year to tax avoidance. I've written the report on every trick they use. Let me fix it.\"",
+            "note": "\"£71bn in profits shifted offshore every year. That's £15bn in lost corporation tax! Let me fix it.\"",
             "impacts": {
               "visible": [],
               "hidden": [
@@ -2228,7 +2228,12 @@
             "cardRole": "structural",
             "note": "\"Proportional representation. Votes that actually count.\"",
             "impacts": {
-              "visible": [],
+              "visible": [
+                {
+                  "meter": "capital",
+                  "delta": 10
+                }
+              ],
               "hidden": [
                 {
                   "axis": "smooth",
@@ -2396,15 +2401,20 @@
             }
           },
           {
-            "id": "free-school-meals",
-            "label": "Free School Meals for All",
+            "id": "enact-wealth-tax",
+            "label": "Wealth Tax on the Super-Rich",
             "cardRole": "direct",
-            "note": "\"Feed every child, every day. Hard to argue with.\"",
+            "note": "\"A 2% tax on wealth over £10 million. 22,000 people. £24 billion a year. We fixed the system — now use it.\"",
+            "requiresTags": [
+              "reform-press-regulator",
+              "reform-donations-cap",
+              "reform-media-barons"
+            ],
             "impacts": {
               "visible": [
                 {
-                  "meter": "politics",
-                  "delta": 6
+                  "meter": "living",
+                  "delta": 9
                 }
               ],
               "hidden": []
@@ -2412,51 +2422,53 @@
             "liabilities": [],
             "addTags": [
               "week3-legacy-pick-complete",
+              "wealth-tax",
               "recentPublicPolicy"
             ],
             "legacyPresentation": {
+              "lockText": "You don't have the power to force this through!",
               "reaction": {
                 "newspaper": {
                   "negative": {
                     "masthead": "THE DAILY RAGE",
-                    "headline": "NANNY STATE LUNCHES: WHO PAYS FOR PM'S FEAST?",
-                    "standfirst": "Universal free school meals branded 'gesture economics' by business groups",
+                    "headline": "WEALTH RAID! PM'S 2% GRAB ON SUCCESS",
+                    "standfirst": "Billionaires vow to leave as No.10 taxes fortunes over £10m — 'the politics of envy wins'",
                     "image": "images/news-hostile-2.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY CHRONICLE",
-                    "headline": "FREE SCHOOL MEALS FOR EVERY PRIMARY PUPIL",
-                    "standfirst": "Heads say attendance and attention will lift; rollout starts with the new term",
+                    "headline": "WEALTH TAX LAW: 2% ON FORTUNES OVER £10M",
+                    "standfirst": "Treasury expects £24bn a year from 22,000 of the wealthiest households — 0.03% of the country",
                     "image": "images/news-neutral-2.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
                     {
                       "masthead": "THE DAILY RAGE",
-                      "headline": "NANNY STATE LUNCHES: WHO PAYS FOR PM'S FEAST?",
-                      "standfirst": "Universal free school meals branded 'gesture economics' by business groups",
+                      "headline": "WEALTH RAID! PM'S 2% GRAB ON SUCCESS",
+                      "standfirst": "Billionaires vow to leave as No.10 taxes fortunes over £10m — 'the politics of envy wins'",
                       "image": "images/news-hostile-2.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
-                      "headline": "NANNY STATE LUNCHES: WHO PAYS FOR PM'S FEAST?",
-                      "standfirst": "Universal free school meals branded 'gesture economics' by business groups",
+                      "headline": "WEALTH RAID! PM'S 2% GRAB ON SUCCESS",
+                      "standfirst": "Billionaires vow to leave as No.10 taxes fortunes over £10m — 'the politics of envy wins'",
                       "image": "images/news-hostile-2.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
-                      "headline": "FREE SCHOOL MEALS FOR EVERY PRIMARY PUPIL",
-                      "standfirst": "Heads say attendance and attention will lift; rollout starts with the new term",
+                      "headline": "WEALTH TAX LAW: 2% ON FORTUNES OVER £10M",
+                      "standfirst": "Treasury expects £24bn a year from 22,000 of the wealthiest households — 0.03% of the country",
                       "image": "images/news-neutral-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
-                      "headline": "FREE SCHOOL MEALS FOR EVERY PRIMARY PUPIL",
-                      "standfirst": "Heads say attendance and attention will lift; rollout starts with the new term",
+                      "headline": "WEALTH TAX LAW: 2% ON FORTUNES OVER £10M",
+                      "standfirst": "Treasury expects £24bn a year from 22,000 of the wealthiest households — 0.03% of the country",
                       "image": "images/news-neutral-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
@@ -2467,13 +2479,13 @@
                     {
                       "name": "Nigel Pinstripe",
                       "handle": "@nigelp",
-                      "text": "Free lunches. Literally the thing economists warn about.",
+                      "text": "A 2% wealth tax. The politics of envy, with a calculator. The yachts are warming up as we speak.",
                       "stats": "↻ 1.3K   ♥ 5.1K"
                     },
                     {
                       "name": "TaxpayerWatch",
                       "handle": "@taxpayerwatch",
-                      "text": "Universal school meals: generous, popular, and someone still has to pay for the pudding.",
+                      "text": "£24bn a year, they promise. Believe it when the first billionaire actually writes the cheque.",
                       "stats": "↻ 900   ♥ 3.8K"
                     }
                   ],
@@ -2481,13 +2493,13 @@
                     {
                       "name": "TaxpayerWatch",
                       "handle": "@taxpayerwatch",
-                      "text": "Per-pound, feeding kids is one of the better returns in the budget. There, I said it.",
+                      "text": "22,000 people. 0.03% of the population. £24bn a year. As sums go, this one is hard to argue with.",
                       "stats": "↻ 1.2K   ♥ 6.3K"
                     },
                     {
                       "name": "Westminster Whisper",
                       "handle": "@wmwhisper",
-                      "text": "Teachers have wanted this for years. The staff-room verdict is in and it's warm.",
+                      "text": "The barons broken, the donors capped — and a wealth tax passes with barely a headline against it. Systems beat speeches.",
                       "stats": "↻ 840   ♥ 4.5K"
                     }
                   ],
@@ -2496,13 +2508,13 @@
                       {
                         "name": "Nigel Pinstripe",
                         "handle": "@nigelp",
-                        "text": "Free lunches. Literally the thing economists warn about.",
+                        "text": "A 2% wealth tax. The politics of envy, with a calculator. The yachts are warming up as we speak.",
                         "stats": "↻ 1.3K   ♥ 5.1K"
                       },
                       {
                         "name": "TaxpayerWatch",
                         "handle": "@taxpayerwatch",
-                        "text": "Universal school meals: generous, popular, and someone still has to pay for the pudding.",
+                        "text": "£24bn a year, they promise. Believe it when the first billionaire actually writes the cheque.",
                         "stats": "↻ 900   ♥ 3.8K"
                       }
                     ],
@@ -2510,13 +2522,13 @@
                       {
                         "name": "Nigel Pinstripe",
                         "handle": "@nigelp",
-                        "text": "Free lunches. Literally the thing economists warn about.",
+                        "text": "A 2% wealth tax. The politics of envy, with a calculator. The yachts are warming up as we speak.",
                         "stats": "↻ 1.3K   ♥ 5.1K"
                       },
                       {
                         "name": "TaxpayerWatch",
                         "handle": "@taxpayerwatch",
-                        "text": "Universal school meals: generous, popular, and someone still has to pay for the pudding.",
+                        "text": "£24bn a year, they promise. Believe it when the first billionaire actually writes the cheque.",
                         "stats": "↻ 900   ♥ 3.8K"
                       }
                     ],
@@ -2524,13 +2536,13 @@
                       {
                         "name": "TaxpayerWatch",
                         "handle": "@taxpayerwatch",
-                        "text": "Per-pound, feeding kids is one of the better returns in the budget. There, I said it.",
+                        "text": "22,000 people. 0.03% of the population. £24bn a year. As sums go, this one is hard to argue with.",
                         "stats": "↻ 1.2K   ♥ 6.3K"
                       },
                       {
                         "name": "Westminster Whisper",
                         "handle": "@wmwhisper",
-                        "text": "Teachers have wanted this for years. The staff-room verdict is in and it's warm.",
+                        "text": "The barons broken, the donors capped — and a wealth tax passes with barely a headline against it. Systems beat speeches.",
                         "stats": "↻ 840   ♥ 4.5K"
                       }
                     ],
@@ -2538,13 +2550,13 @@
                       {
                         "name": "TaxpayerWatch",
                         "handle": "@taxpayerwatch",
-                        "text": "Per-pound, feeding kids is one of the better returns in the budget. There, I said it.",
+                        "text": "22,000 people. 0.03% of the population. £24bn a year. As sums go, this one is hard to argue with.",
                         "stats": "↻ 1.2K   ♥ 6.3K"
                       },
                       {
                         "name": "Westminster Whisper",
                         "handle": "@wmwhisper",
-                        "text": "Teachers have wanted this for years. The staff-room verdict is in and it's warm.",
+                        "text": "The barons broken, the donors capped — and a wealth tax passes with barely a headline against it. Systems beat speeches.",
                         "stats": "↻ 840   ♥ 4.5K"
                       }
                     ]
@@ -2554,13 +2566,13 @@
                   {
                     "name": "rosa",
                     "handle": "@rosa.msky.social",
-                    "text": "no kid doing long division hungry. that's it. that's the politics i want.",
+                    "text": "2% on wealth over £10 million. 22,000 people. £24 billion. we could literally always have done this",
                     "stats": "↻ 5.2K   ♥ 33K"
                   },
                   {
                     "name": "Politics Bites",
                     "handle": "@polbites.msky.social",
-                    "text": "free school meals polls at like 70%+ across every group. the rare no-catch policy.",
+                    "text": "three in four voters wanted wealth taxed like work. turns out the maths only lost while the megaphone was rented.",
                     "stats": "↻ 1.8K   ♥ 9.6K"
                   }
                 ]
@@ -2575,8 +2587,8 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "politics",
-                  "delta": 5
+                  "meter": "press",
+                  "delta": 10
                 }
               ],
               "hidden": []
@@ -3223,6 +3235,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-press-regulator",
               "policy-nhs-turn-1-complete",
               "policy-nhs-turn-2-ready",
               "press-reform"
@@ -4427,6 +4440,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-press-regulator",
               "policy-nhs-turn-2-complete",
               "press-reform",
               "pair-pair1-complete",
@@ -5315,7 +5329,7 @@
         "presentation": "policy-hand",
         "weight": 1,
         "title": "Closing Tax Loopholes - Decision 1/2",
-        "scene": "The Chancellor walks in with a brief. £70bn a year lost to avoidance. Isla Mann has the receipts — she wants a green light.",
+        "scene": "The Chancellor walks in with a brief. £15bn a year lost to avoidance. Isla Mann has the receipts — she wants a green light.",
         "scenarioIds": [
           "full-drama-run"
         ],
@@ -5624,6 +5638,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-press-regulator",
               "policy-taxLoopholes-turn-1-complete",
               "policy-taxLoopholes-turn-2-ready",
               "press-reform"
@@ -5865,7 +5880,7 @@
                   {
                     "name": "TaxJusticeUK",
                     "handle": "@taxjustice.msky.social",
-                    "text": "The UK loses an estimated £70bn a year to tax avoidance. This is not a niche issue.",
+                    "text": "The UK loses an estimated £15bn a year to tax avoidance. This is not a niche issue.",
                     "stats": "↻ 4.9K   ♥ 23K",
                     "image": "images/avatar-bsky-social-org.png",
                     "altText": "Friendly solidarity campaign-group logo with a raised-hands motif on warm coral."
@@ -6828,6 +6843,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-press-regulator",
               "policy-taxLoopholes-turn-2-complete",
               "press-reform",
               "pair-pair1-complete",
@@ -7070,7 +7086,7 @@
                   {
                     "name": "TaxJusticeUK",
                     "handle": "@taxjustice.msky.social",
-                    "text": "The UK loses an estimated £70bn a year to tax avoidance. This is not a niche issue.",
+                    "text": "The UK loses an estimated £15bn a year to tax avoidance. This is not a niche issue.",
                     "stats": "↻ 4.9K   ♥ 23K",
                     "image": "images/avatar-bsky-social-org.png",
                     "altText": "Friendly solidarity campaign-group logo with a raised-hands motif on warm coral."
@@ -8025,6 +8041,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-donations-cap",
               "policy-housing-turn-1-complete",
               "policy-housing-turn-2-ready"
             ],
@@ -9230,6 +9247,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-donations-cap",
               "policy-housing-turn-2-complete",
               "pair-pair2-complete",
               "scenario-housing-complete"
@@ -10428,6 +10446,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-donations-cap",
               "policy-carbon-turn-1-complete",
               "policy-carbon-turn-2-ready"
             ],
@@ -11631,6 +11650,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-donations-cap",
               "policy-carbon-turn-2-complete",
               "pair-pair2-complete",
               "scenario-carbon-complete"
@@ -12831,6 +12851,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-media-barons",
               "policy-costOfLiving-turn-1-complete",
               "policy-costOfLiving-turn-2-ready",
               "press-reform"
@@ -14041,6 +14062,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-media-barons",
               "policy-costOfLiving-turn-2-complete",
               "press-reform",
               "pair-pair3-complete",
@@ -15244,6 +15266,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-media-barons",
               "policy-water-turn-1-complete",
               "policy-water-turn-2-ready",
               "press-reform"
@@ -16454,6 +16477,7 @@
             "addTags": [
               "recentPublicPolicy",
               "policyRole-structural",
+              "reform-media-barons",
               "policy-water-turn-2-complete",
               "press-reform",
               "pair-pair3-complete",
