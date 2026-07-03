@@ -3341,7 +3341,8 @@
     .start-intro__badge {
       font-size: 10px;
       letter-spacing: .4px;
-      margin-bottom: 18px;
+      /* Negative margin pulls the title tighter than the column's 26px gap */
+      margin-bottom: -10px;
       max-width: 100%;
       line-height: 1.25;
       white-space: normal;
@@ -3355,7 +3356,8 @@
     .start-intro__lede {
       font-size: 16px;
       line-height: 1.45;
-      margin-bottom: 22px;
+      /* Negative margin pulls the door photo tighter than the 26px gap */
+      margin-bottom: -8px;
     }
 
     .start-intro__larry-row {
