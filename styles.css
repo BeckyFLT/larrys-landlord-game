@@ -3319,6 +3319,10 @@
     .start-intro {
       margin: 0;
       min-height: 100%;
+      /* Don't let the overlay squash this to viewport height: when the column
+         is taller than the screen it must keep its full height so the content
+         scrolls properly and the overlay's bottom padding survives. */
+      flex-shrink: 0;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
