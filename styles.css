@@ -230,7 +230,7 @@
 	  .chip--locked {
 	    background: #262420;
 	    border-color: #4a4844;
-	    color: #8d8a84;
+	    color: #fff; /* white so the +N stays readable on the greyed card */
 	  }
 	  .chip__dot {
 	    width: 8px;
@@ -795,7 +795,7 @@
     font-family: var(--font-mono);
     font-size: 10px;
     font-weight: 700;
-    color: #6b6b6b;
+    color: #fff; /* readable on the greyed already-chosen card */
   }
   .decision-card--locked .decision-card__head {
     display: flex;
@@ -1409,6 +1409,13 @@
     gap: 14px;
     margin-top: 24px;
     padding: 16px 0 4px;
+  }
+
+  /* The ending fills tall windows, so it never scrolls inside a short frame
+     while empty page shows below (the canvas otherwise keeps its fixed
+     min-height). End screen only — other screens keep the classic frame. */
+  #canvas[data-screen="end"] {
+    min-height: max(var(--shell-min-height), calc(100vh - var(--app-padding-top) - var(--app-padding-bottom)));
   }
 
   .end-overlay {
@@ -3338,7 +3345,7 @@
 
     .start-intro__title {
       font-size: 50px;
-      margin-bottom: 16px;
+      margin-bottom: 4px;
     }
 
     .start-intro__lede {
@@ -3364,8 +3371,11 @@
 
     .start-name {
       width: 100%;
-      margin-bottom: 20px;
+      margin-bottom: 0;
     }
+
+    /* Pull the button tighter to the name box than the column's standard gap */
+    .start-intro .btn { margin-top: -12px; }
 
     .start-name__label {
       font-size: 13px;
@@ -3563,3 +3573,77 @@
   @keyframes flashout { 0% { opacity: 0; } 12% { opacity: .55; } 100% { opacity: 0; } }
   @keyframes stampin  { 0% { transform: rotate(-9deg) scale(2.4); opacity: 0; } 70% { opacity: 1; } 100% { transform: rotate(-9deg) scale(1); opacity: 1; } }
   @keyframes larrybob { 0%,100% { transform: rotate(3deg) translateY(0); } 50% { transform: rotate(3deg) translateY(-4px); } }
+
+  /* Compact ending for desktop windows too short for the full-size layout
+     (content is ~960px tall + page chrome). Everything shrinks a little;
+     nothing is removed. Tuned to fit ~900px-tall screens — adjust the
+     max-height gate and sizes together if the target changes. */
+  @media (min-width: 901px) and (max-height: 1040px) {
+    #canvas[data-screen="end"] {
+      --end-padding-y: 28px;
+    }
+    .end-title {
+      font-size: clamp(36px, 4.6vw, 50px);
+      margin-bottom: 12px;
+    }
+    .end-stage {
+      gap: 12px 24px;
+    }
+    .end-col {
+      gap: 12px;
+    }
+    .end-chamber__panel {
+      padding: 12px 12px 10px;
+    }
+    /* the SVG letterboxes inside the shorter box, keeping its aspect ratio */
+    .end-chamber__svg {
+      height: 230px;
+    }
+    .end-meters .meter-donut__ring {
+      width: 60px;
+      height: 60px;
+    }
+    .end-meters .meter-donut__value {
+      font-size: 22px;
+    }
+    .end-verdict-card {
+      padding: 14px 18px;
+    }
+    .end-verdict {
+      font-size: 17px;
+    }
+    .end-actions {
+      gap: 8px;
+    }
+    .btn--end {
+      min-height: 42px;
+      padding: 10px 20px;
+    }
+    .end-frontpage-slot {
+      min-height: 215px;
+    }
+    .frontpage--end {
+      padding: 12px;
+    }
+    .frontpage--end .frontpage__headline {
+      font-size: 24px;
+    }
+    #end-press-posts .post {
+      padding: 9px 10px;
+      margin-bottom: 8px;
+    }
+    #end-press-posts .post__text {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .end-larry__img {
+      width: 72px;
+    }
+    .end-larry__bubble {
+      font-size: 13px;
+      padding: 8px 12px;
+    }
+    .end-larry {
+      gap: 10px;
+    }
+  }

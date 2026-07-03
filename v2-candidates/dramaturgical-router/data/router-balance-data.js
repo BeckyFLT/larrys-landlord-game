@@ -2587,7 +2587,7 @@
             "impacts": {
               "visible": [
                 {
-                  "meter": "press",
+                  "meter": "politics",
                   "delta": 10
                 }
               ],
