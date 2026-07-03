@@ -330,42 +330,6 @@
     box-shadow: none;
   }
 
-  .larry-corner {
-    position: static;
-    min-width: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .larry-corner__img {
-    width: 100%;
-    height: 100%;
-    max-height: 90px;
-    object-fit: contain;
-    object-position: center bottom;
-    display: block;
-  }
-  .larry-corner__placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: 62px;
-    background: var(--surface);
-    border: 2px dashed #4a4844;
-    border-radius: var(--r-md);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-  }
-  .larry-corner__icon { font-size: 22px; }
-  .larry-corner__caption {
-    font-family: var(--font-mono);
-    font-size: 8px;
-    color: var(--text-mute);
-    text-align: center;
-  }
-
   /* Desktop: progress bar on the left, meter dials filling the rest of the row.
      On mobile this becomes a plain block so the bar stacks on top (see the
      max-width: 900px block). */
@@ -2702,10 +2666,6 @@
       display: none;
     }
 
-    .larry-corner {
-      display: none;
-    }
-
     /* Phones: stack the progress bar above the dials and let the whole bar
        scroll away with the page, like any other section (no pinned HUD). */
     .decide-topbar {
@@ -3341,8 +3301,8 @@
     .start-intro__badge {
       font-size: 10px;
       letter-spacing: .4px;
-      /* Negative margin pulls the title tighter than the column's 26px gap */
-      margin-bottom: -10px;
+      /* Negative margin pulls the title almost flush against the column's 26px gap */
+      margin-bottom: -22px;
       max-width: 100%;
       line-height: 1.25;
       white-space: normal;
