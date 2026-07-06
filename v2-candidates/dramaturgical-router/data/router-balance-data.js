@@ -291,7 +291,7 @@
         "presentation": "single-choice",
         "weight": 1,
         "title": "One Visit, One Camera",
-        "scene": "The grid has room for a single public visit this week. Three invitations sit on the desk.",
+        "scene": "The diary has room for a single public visit this week. Three invitations sit on the desk.",
         "scenarioIds": [
           "full-drama-run"
         ],
