@@ -370,14 +370,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "STORYTIME! PM HIDES BEHIND FIVE-YEAR-OLDS",
                     "standfirst": "In-tray overflowing, and PM spends the morning doing the voices in a picture book",
-                    "image": "images/news-hostile-1.png",
+                    "image": "images/news-education-calm-p1-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY CHRONICLE",
                     "headline": "PM OPENS SCHOOLS TOUR WITH RECEPTION CLASS VISIT",
                     "standfirst": "No.10 says the Prime Minister wanted to hear from teachers before the next spending round",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-education-calm-p1-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -385,28 +385,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "STORYTIME! PM HIDES BEHIND FIVE-YEAR-OLDS",
                       "standfirst": "In-tray overflowing, and PM spends the morning doing the voices in a picture book",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-education-calm-p1-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "STORYTIME! PM HIDES BEHIND FIVE-YEAR-OLDS",
                       "standfirst": "In-tray overflowing, and PM spends the morning doing the voices in a picture book",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-education-calm-p1-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "PM OPENS SCHOOLS TOUR WITH RECEPTION CLASS VISIT",
                       "standfirst": "No.10 says the Prime Minister wanted to hear from teachers before the next spending round",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-education-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "PM OPENS SCHOOLS TOUR WITH RECEPTION CLASS VISIT",
                       "standfirst": "No.10 says the Prime Minister wanted to hear from teachers before the next spending round",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-education-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -559,14 +559,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "WARD WALKABOUT BACKFIRES: STAFF LET RIP AT PM",
                     "standfirst": "Unscripted hospital visit turns into a corridor confrontation as nurses list everything that's broken",
-                    "image": "images/news-hostile-2.png",
+                    "image": "images/news-nhs-angry-s1-4.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY CHRONICLE",
                     "headline": "PM WALKS THE WARDS, NO SCRIPT, NO MINDERS",
                     "standfirst": "Staff say the Prime Minister stayed past the cameras and took notes",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-nhs-calm-s1-3.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -574,28 +574,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "WARD WALKABOUT BACKFIRES: STAFF LET RIP AT PM",
                       "standfirst": "Unscripted hospital visit turns into a corridor confrontation as nurses list everything that's broken",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-nhs-angry-s1-4.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "WARD WALKABOUT BACKFIRES: STAFF LET RIP AT PM",
                       "standfirst": "Unscripted hospital visit turns into a corridor confrontation as nurses list everything that's broken",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-nhs-angry-s1-4.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "PM WALKS THE WARDS, NO SCRIPT, NO MINDERS",
                       "standfirst": "Staff say the Prime Minister stayed past the cameras and took notes",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-nhs-calm-s1-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "PM WALKS THE WARDS, NO SCRIPT, NO MINDERS",
                       "standfirst": "Staff say the Prime Minister stayed past the cameras and took notes",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-nhs-calm-s1-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -748,14 +748,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "KHAKI COSPLAY! PM DRAPES SELF IN THE FLAG",
                     "standfirst": "Critics ask what a barracks walkabout does for waiting lists, bills or buses",
-                    "image": "images/news-hostile-3.png",
+                    "image": "images/news-military-calm-p3-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY CHRONICLE",
                     "headline": "PM VISITS TROOPS ON FIRST-WEEK TOUR",
                     "standfirst": "A salute, a mess-hall lunch and a promise to review forces housing",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-military-calm-p1-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -763,28 +763,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "KHAKI COSPLAY! PM DRAPES SELF IN THE FLAG",
                       "standfirst": "Critics ask what a barracks walkabout does for waiting lists, bills or buses",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-military-calm-p3-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "KHAKI COSPLAY! PM DRAPES SELF IN THE FLAG",
                       "standfirst": "Critics ask what a barracks walkabout does for waiting lists, bills or buses",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-military-calm-p3-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "PM VISITS TROOPS ON FIRST-WEEK TOUR",
                       "standfirst": "A salute, a mess-hall lunch and a promise to review forces housing",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-military-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "PM VISITS TROOPS ON FIRST-WEEK TOUR",
                       "standfirst": "A salute, a mess-hall lunch and a promise to review forces housing",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-military-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -1505,7 +1505,6 @@
             "id": "online-media-reform",
             "label": "Online Media Reform",
             "cardRole": "structural",
-            "pitch": "Rein in the algorithms, the bots and the disinfo machine. The papers feel the shift.",
             "note": "\"Clean up the feeds and the front pages follow.\"",
             "impacts": {
               "visible": [
@@ -1530,14 +1529,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "WHO DECIDES WHAT'S TRUE? PM'S ONLINE CRACKDOWN",
                     "standfirst": "New rules for online outlets branded 'a censor's charter' by furious publishers",
-                    "image": "images/news-hostile-1.png",
+                    "image": "images/news-hostile-3.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY CHRONICLE",
                     "headline": "ONLINE MEDIA RULES SIGNED INTO LAW",
                     "standfirst": "Disinformation networks face the same standards as print; small outlets exempt",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-press-calm-p1-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -1545,28 +1544,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "WHO DECIDES WHAT'S TRUE? PM'S ONLINE CRACKDOWN",
                       "standfirst": "New rules for online outlets branded 'a censor's charter' by furious publishers",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-hostile-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "WHO DECIDES WHAT'S TRUE? PM'S ONLINE CRACKDOWN",
                       "standfirst": "New rules for online outlets branded 'a censor's charter' by furious publishers",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-hostile-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "ONLINE MEDIA RULES SIGNED INTO LAW",
                       "standfirst": "Disinformation networks face the same standards as print; small outlets exempt",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "ONLINE MEDIA RULES SIGNED INTO LAW",
                       "standfirst": "Disinformation networks face the same standards as print; small outlets exempt",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -1680,7 +1679,6 @@
             "id": "improve-public-transport",
             "label": "Improve Public Transport",
             "cardRole": "direct",
-            "pitch": "Cheaper buses, more trains, fewer cancellations. People notice the difference.",
             "note": "\"Get the country moving again.\"",
             "impacts": {
               "visible": [
@@ -1704,14 +1702,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "BUS FARE FANTASY: PM'S TRANSPORT SPLURGE",
                     "standfirst": "Billions for buses and branch lines while the deficit idles at the stop",
-                    "image": "images/news-hostile-2.png",
+                    "image": "images/news-transport-calm-p3-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY CHRONICLE",
                     "headline": "TRANSPORT FUNDING BOOST: MORE ROUTES, LONGER HOURS",
                     "standfirst": "First new money for regional buses in a decade; operators told to deliver by spring",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-transport-calm-p3-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -1719,28 +1717,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "BUS FARE FANTASY: PM'S TRANSPORT SPLURGE",
                       "standfirst": "Billions for buses and branch lines while the deficit idles at the stop",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-transport-calm-p3-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "BUS FARE FANTASY: PM'S TRANSPORT SPLURGE",
                       "standfirst": "Billions for buses and branch lines while the deficit idles at the stop",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-transport-calm-p3-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "TRANSPORT FUNDING BOOST: MORE ROUTES, LONGER HOURS",
                       "standfirst": "First new money for regional buses in a decade; operators told to deliver by spring",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-transport-calm-p3-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "TRANSPORT FUNDING BOOST: MORE ROUTES, LONGER HOURS",
                       "standfirst": "First new money for regional buses in a decade; operators told to deliver by spring",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-transport-calm-p3-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -1854,7 +1852,6 @@
             "id": "fix-potholes",
             "label": "Fix the Potholes",
             "cardRole": "direct",
-            "pitch": "Unglamorous, unsexy, and wildly popular on every doorstep in the country.",
             "note": "\"Nobody ever lost a by-election over a smooth road.\"",
             "impacts": {
               "visible": [
@@ -1878,14 +1875,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "POTHOLE PANTO: PM POSES IN HI-VIS",
                     "standfirst": "A national pothole fund, a shiny shovel, and a road still closed by Tuesday",
-                    "image": "images/news-hostile-3.png",
+                    "image": "images/news-housing-calm-social-housing.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY CHRONICLE",
                     "headline": "POTHOLE FUND ROLLS OUT NATIONWIDE",
                     "standfirst": "Councils get direct repair money with a publish-your-progress condition attached",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-generic-angry-road-repair.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -1893,28 +1890,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "POTHOLE PANTO: PM POSES IN HI-VIS",
                       "standfirst": "A national pothole fund, a shiny shovel, and a road still closed by Tuesday",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-housing-calm-social-housing.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "POTHOLE PANTO: PM POSES IN HI-VIS",
                       "standfirst": "A national pothole fund, a shiny shovel, and a road still closed by Tuesday",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-housing-calm-social-housing.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "POTHOLE FUND ROLLS OUT NATIONWIDE",
                       "standfirst": "Councils get direct repair money with a publish-your-progress condition attached",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-generic-angry-road-repair.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "POTHOLE FUND ROLLS OUT NATIONWIDE",
                       "standfirst": "Councils get direct repair money with a publish-your-progress condition attached",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-generic-angry-road-repair.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -2254,14 +2251,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "STITCH-UP! PM RIGS THE RULES",
                     "standfirst": "Voting overhaul rammed through as critics cry 'a fix to keep the left in forever'",
-                    "image": "images/news-hostile-1.png",
+                    "image": "images/news-electoral-angry-p3-2.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY CHRONICLE",
                     "headline": "VOTING REFORM PASSES: EVERY VOTE TO COUNT",
                     "standfirst": "Proportional system signed into law; next election to be fought under the new rules",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-electoral-calm-p2-2.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -2269,28 +2266,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "STITCH-UP! PM RIGS THE RULES",
                       "standfirst": "Voting overhaul rammed through as critics cry 'a fix to keep the left in forever'",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-electoral-angry-p3-2.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "STITCH-UP! PM RIGS THE RULES",
                       "standfirst": "Voting overhaul rammed through as critics cry 'a fix to keep the left in forever'",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-electoral-angry-p3-2.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "VOTING REFORM PASSES: EVERY VOTE TO COUNT",
                       "standfirst": "Proportional system signed into law; next election to be fought under the new rules",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-electoral-calm-p2-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "VOTING REFORM PASSES: EVERY VOTE TO COUNT",
                       "standfirst": "Proportional system signed into law; next election to be fought under the new rules",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-electoral-calm-p2-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -2605,14 +2602,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "CAR PARK GIVEAWAY: NHS TO LOSE MILLIONS",
                     "standfirst": "Hospital parking made free as trusts warn the repair budget just drove off",
-                    "image": "images/news-hostile-3.png",
+                    "image": "images/news-nhs-angry-p2-3.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY CHRONICLE",
                     "headline": "HOSPITAL PARKING CHARGES SCRAPPED",
                     "standfirst": "No more paying by the hour to visit your mum; trusts compensated centrally",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-nhs-calm-carers.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -2620,28 +2617,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "CAR PARK GIVEAWAY: NHS TO LOSE MILLIONS",
                       "standfirst": "Hospital parking made free as trusts warn the repair budget just drove off",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-nhs-angry-p2-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "CAR PARK GIVEAWAY: NHS TO LOSE MILLIONS",
                       "standfirst": "Hospital parking made free as trusts warn the repair budget just drove off",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-nhs-angry-p2-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "HOSPITAL PARKING CHARGES SCRAPPED",
                       "standfirst": "No more paying by the hour to visit your mum; trusts compensated centrally",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-nhs-calm-carers.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "HOSPITAL PARKING CHARGES SCRAPPED",
                       "standfirst": "No more paying by the hour to visit your mum; trusts compensated centrally",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-nhs-calm-carers.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -2997,7 +2994,7 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
                     "standfirst": "New super-regulator to 'police' Britain's press, ministers confirm",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -3005,7 +3002,7 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
                       "standfirst": "Tyrant in No.10 moves to muzzle the free press, fume editors, as 'democracy dies in darkness'.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
@@ -3019,14 +3016,14 @@
                       "masthead": "THE GLOBE",
                       "headline": "NEW PRESS WATCHDOG: STANDARDS GUARDIAN OR STATE OVERREACH?",
                       "standfirst": "The new press regulator clears the Commons, with an independent complaints watchdog set to open within the year.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "INDEPENDENT PRESS REGULATOR BECOMES LAW",
                       "standfirst": "A watchdog with cross-party backing takes shape after months of wrangling.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -3285,7 +3282,7 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "NHS SLUSH FUND! YOUR CASH, THEIR VOTES",
                     "standfirst": "PM's multi-billion giveaway slammed as 'cynical vote-buying'",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-nhs-calm-s2-2.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -3300,21 +3297,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "NHS CASH SPLASH: AND GUESS WHO'S PAYING?",
                       "standfirst": "Critics demand to know where the billions for new doctors will come from.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-nhs-angry-s3-5.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "NHS GETS THOUSANDS OF NEW DOCTORS — CAN IT DELIVER?",
                       "standfirst": "The funding pledge passes, with thousands more doctors promised for the NHS frontline.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-nhs-calm-s1-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "RECORD NHS RECRUITMENT DRIVE BEGINS",
                       "standfirst": "Thousands of new doctors and nurses to be funded as waiting lists start to ease.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-nhs-calm-s1-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -3568,14 +3565,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "DATA SNATCH! YOUR NHS SECRETS — SOLD TO BIG TECH?",
                     "standfirst": "PM's £multi-billion health data sell-off raises privacy fears, say critics",
-                    "image": "images/news-hostile-3.png",
+                    "image": "images/news-hostile-5.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "DATA SNATCH! YOUR NHS SECRETS — SOLD TO BIG TECH?",
                     "standfirst": "PM's £multi-billion health data sell-off raises privacy fears, say critics",
-                    "image": "images/news-neutral-4.png",
+                    "image": "images/news-hostile-5.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -3583,21 +3580,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "DATA SNATCH! YOUR NHS SECRETS — SOLD TO BIG TECH?",
                       "standfirst": "Fury as PM 'hands your medical records to Silicon Valley', critics claim.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-hostile-5.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "DATA GRAB: YOUR NHS RECORDS, BIG TECH'S GOLDMINE",
                       "standfirst": "Privacy campaigners warn the digitisation drive opens the door to data-mining.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-hostile-5.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "NHS GOES DIGITAL: OVERDUE FIX OR COSTLY GAMBLE?",
                       "standfirst": "The upgrade wins cautious backing, though memories of past IT failures linger.",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-neutral-4.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -4202,7 +4199,7 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
                     "standfirst": "New super-regulator to 'police' Britain's press, ministers confirm",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -4210,7 +4207,7 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
                       "standfirst": "Tyrant in No.10 moves to muzzle the free press, fume editors, as 'democracy dies in darkness'.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
@@ -4224,14 +4221,14 @@
                       "masthead": "THE GLOBE",
                       "headline": "NEW PRESS WATCHDOG: STANDARDS GUARDIAN OR STATE OVERREACH?",
                       "standfirst": "The new press regulator clears the Commons, with an independent complaints watchdog set to open within the year.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "INDEPENDENT PRESS REGULATOR BECOMES LAW",
                       "standfirst": "A watchdog with cross-party backing takes shape after months of wrangling.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -4491,7 +4488,7 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "NHS SLUSH FUND! YOUR CASH, THEIR VOTES",
                     "standfirst": "PM's multi-billion giveaway slammed as 'cynical vote-buying'",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-nhs-calm-s2-2.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -4506,21 +4503,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "NHS CASH SPLASH: AND GUESS WHO'S PAYING?",
                       "standfirst": "Critics demand to know where the billions for new doctors will come from.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-nhs-angry-s3-5.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "NHS GETS THOUSANDS OF NEW DOCTORS — CAN IT DELIVER?",
                       "standfirst": "The funding pledge passes, with thousands more doctors promised for the NHS frontline.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-nhs-calm-s1-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "RECORD NHS RECRUITMENT DRIVE BEGINS",
                       "standfirst": "Thousands of new doctors and nurses to be funded as waiting lists start to ease.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-nhs-calm-s1-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -4775,14 +4772,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "DATA SNATCH! YOUR NHS SECRETS — SOLD TO BIG TECH?",
                     "standfirst": "PM's £multi-billion health data sell-off raises privacy fears, say critics",
-                    "image": "images/news-hostile-3.png",
+                    "image": "images/news-hostile-5.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "DATA SNATCH! YOUR NHS SECRETS — SOLD TO BIG TECH?",
                     "standfirst": "PM's £multi-billion health data sell-off raises privacy fears, say critics",
-                    "image": "images/news-neutral-4.png",
+                    "image": "images/news-hostile-5.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -4790,21 +4787,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "DATA SNATCH! YOUR NHS SECRETS — SOLD TO BIG TECH?",
                       "standfirst": "Fury as PM 'hands your medical records to Silicon Valley', critics claim.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-hostile-5.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "DATA GRAB: YOUR NHS RECORDS, BIG TECH'S GOLDMINE",
                       "standfirst": "Privacy campaigners warn the digitisation drive opens the door to data-mining.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-hostile-5.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "NHS GOES DIGITAL: OVERDUE FIX OR COSTLY GAMBLE?",
                       "standfirst": "The upgrade wins cautious backing, though memories of past IT failures linger.",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-neutral-4.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -5400,7 +5397,7 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
                     "standfirst": "New super-regulator to 'police' Britain's press, ministers confirm",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -5408,7 +5405,7 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
                       "standfirst": "Tyrant in No.10 moves to muzzle the free press, fume editors, as 'democracy dies in darkness'.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
@@ -5422,14 +5419,14 @@
                       "masthead": "THE GLOBE",
                       "headline": "NEW PRESS WATCHDOG: STANDARDS GUARDIAN OR STATE OVERREACH?",
                       "standfirst": "The new press regulator clears the Commons, with an independent complaints watchdog set to open within the year.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "INDEPENDENT PRESS REGULATOR BECOMES LAW",
                       "standfirst": "A watchdog with cross-party backing takes shape after months of wrangling.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -5681,14 +5678,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "Tax Crackdown: Attack on Aspiration?",
                     "standfirst": "PM targets offshore wealth as Treasury promises 'no hiding place'",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-tax-angry-offshore.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "Tax Crackdown: Attack on Aspiration?",
                     "standfirst": "PM targets offshore wealth as Treasury promises 'no hiding place'",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-hostile-4.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -5703,21 +5700,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "TAX CRACKDOWN: 'ATTACK ON ASPIRATION', SAY CRITICS",
                       "standfirst": "Closing offshore loopholes will scare off wealth creators, business groups warn.",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-generic-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "OFFSHORE LOOPHOLES: OVERDUE FIX OR RAID ON THE RICH?",
                       "standfirst": "The crackdown passes, with billions in dodged tax set to be brought back onshore.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-tax-calm-p3-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "OFFSHORE TAX LOOPHOLES CLOSED AT LAST",
                       "standfirst": "Long-trailed reform passes, bringing billions in dodged tax back onshore.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-tax-calm-p3-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -5971,14 +5968,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "STATE SURVEILLANCE? PM'S HMRC POWER GRAB",
                     "standfirst": "Real-time bank-data access for tax inspectors raises civil liberties alarm, critics say",
-                    "image": "images/news-hostile-2.png",
+                    "image": "images/news-hostile-3.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "STATE SURVEILLANCE? PM'S HMRC POWER GRAB",
                     "standfirst": "Real-time bank-data access for tax inspectors raises civil liberties alarm, critics say",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-hostile-5.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -5986,21 +5983,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "DATA SNATCH! YOUR BANK ACCOUNT, THEIR DATABASE",
                       "standfirst": "Big Brother fury as PM hands the taxman real-time access to your every transaction.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-tax-angry-s1-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "BIG BROTHER HMRC: PM'S TAX-SNOOPING MACHINE",
                       "standfirst": "Civil liberties groups warn the new AI enforcement system is ripe for abuse.",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-tax-angry-s1-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "HMRC GOES DIGITAL: SMART ENFORCEMENT OR OVERREACH?",
                       "standfirst": "Real-time tax tools pass, giving HMRC live sight of the books to chase down evasion.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-neutral-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -6605,7 +6602,7 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
                     "standfirst": "New super-regulator to 'police' Britain's press, ministers confirm",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -6613,7 +6610,7 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "GAGGED! PM'S ORWELLIAN CLAMPDOWN ON YOUR PAPER",
                       "standfirst": "Tyrant in No.10 moves to muzzle the free press, fume editors, as 'democracy dies in darkness'.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
@@ -6627,14 +6624,14 @@
                       "masthead": "THE GLOBE",
                       "headline": "NEW PRESS WATCHDOG: STANDARDS GUARDIAN OR STATE OVERREACH?",
                       "standfirst": "The new press regulator clears the Commons, with an independent complaints watchdog set to open within the year.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "INDEPENDENT PRESS REGULATOR BECOMES LAW",
                       "standfirst": "A watchdog with cross-party backing takes shape after months of wrangling.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-press-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -6887,14 +6884,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "Tax Crackdown: Attack on Aspiration?",
                     "standfirst": "PM targets offshore wealth as Treasury promises 'no hiding place'",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-tax-angry-offshore.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "Tax Crackdown: Attack on Aspiration?",
                     "standfirst": "PM targets offshore wealth as Treasury promises 'no hiding place'",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-hostile-4.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -6909,21 +6906,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "TAX CRACKDOWN: 'ATTACK ON ASPIRATION', SAY CRITICS",
                       "standfirst": "Closing offshore loopholes will scare off wealth creators, business groups warn.",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-generic-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "OFFSHORE LOOPHOLES: OVERDUE FIX OR RAID ON THE RICH?",
                       "standfirst": "The crackdown passes, with billions in dodged tax set to be brought back onshore.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-tax-calm-p3-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "OFFSHORE TAX LOOPHOLES CLOSED AT LAST",
                       "standfirst": "Long-trailed reform passes, bringing billions in dodged tax back onshore.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-tax-calm-p3-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -7178,14 +7175,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "STATE SURVEILLANCE? PM'S HMRC POWER GRAB",
                     "standfirst": "Real-time bank-data access for tax inspectors raises civil liberties alarm, critics say",
-                    "image": "images/news-hostile-2.png",
+                    "image": "images/news-hostile-3.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "STATE SURVEILLANCE? PM'S HMRC POWER GRAB",
                     "standfirst": "Real-time bank-data access for tax inspectors raises civil liberties alarm, critics say",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-hostile-5.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -7193,21 +7190,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "DATA SNATCH! YOUR BANK ACCOUNT, THEIR DATABASE",
                       "standfirst": "Big Brother fury as PM hands the taxman real-time access to your every transaction.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-tax-angry-s1-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "BIG BROTHER HMRC: PM'S TAX-SNOOPING MACHINE",
                       "standfirst": "Civil liberties groups warn the new AI enforcement system is ripe for abuse.",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-tax-angry-s1-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "HMRC GOES DIGITAL: SMART ENFORCEMENT OR OVERREACH?",
                       "standfirst": "Real-time tax tools pass, giving HMRC live sight of the books to chase down evasion.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-neutral-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -7796,14 +7793,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "Cash Grab? PM Bans Donor Millions",
                     "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-tax-angry-p1-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "Cash Grab? PM Bans Donor Millions",
                     "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-tax-angry-p1-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -7818,14 +7815,14 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "DONOR CRACKDOWN: 'WITCH-HUNT', RAGE PM'S RIVALS",
                       "standfirst": "Capping big-money donations is a cynical attack on political freedom, critics claim.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-generic-angry-p1-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "BIG-MONEY DONATIONS: CLEAN-UP OR STITCH-UP?",
                       "standfirst": "The donations cap clears the Commons, with big-money cheques to political parties limited for the first time.",
-                      "image": "images/news-neutral-4.png",
+                      "image": "images/news-tax-angry-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -8083,14 +8080,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "COUNCIL-HOUSE BONANZA: PM BLOWS BILLIONS ON SUBSIDISED RENTS",
                     "standfirst": "Critics warn taxpayer-funded build programme will 'crowd out' private developers",
-                    "image": "images/news-hostile-1.png",
+                    "image": "images/news-housing-calm-social-housing.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "COUNCIL-HOUSE BONANZA: PM BLOWS BILLIONS ON SUBSIDISED RENTS",
                     "standfirst": "Critics warn taxpayer-funded build programme will 'crowd out' private developers",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-housing-calm-s1-2.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -8098,28 +8095,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "COUNCIL-HOUSE BONANZA: PM BLOWS BILLIONS ON RENTS",
                       "standfirst": "Back-to-the-70s fury as No.10 promises millions of subsidised homes on your tab.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-housing-calm-p1-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "BACK TO THE 70s: PM'S COUNCIL-HOUSE SPENDING SPREE",
                       "standfirst": "Critics warn the mass build programme will crowd out private developers.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-housing-calm-social-housing.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "COUNCIL HOMES: BOLD FIX OR BUDGET BLACK HOLE?",
                       "standfirst": "The social-housing programme is funded, with the first new council homes due to break ground next year.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-housing-calm-social-housing.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "BIGGEST COUNCIL-HOUSE BUILD IN A GENERATION",
                       "standfirst": "Hundreds of thousands of social homes to be built as the waiting list starts to fall.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-housing-calm-social-housing.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -8373,14 +8370,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "LANDLORD EXODUS: PM'S RENT RULES TO SHRINK SUPPLY",
                     "standfirst": "Buy-to-let firms warn of mass sell-off as no-fault eviction ban and rent caps clear Commons",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-housing-calm-p1-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "LANDLORD EXODUS: PM'S RENT RULES TO SHRINK SUPPLY",
                     "standfirst": "Buy-to-let firms warn of mass sell-off as no-fault eviction ban and rent caps clear Commons",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-housing-angry-p3-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -8388,28 +8385,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "LANDLORD EXODUS: PM'S RENT RULES TO WRECK SUPPLY",
                       "standfirst": "Property-rights fury as No.10 bans no-fault evictions and caps your rent overnight.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-housing-angry-p1-6.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "RENT CRACKDOWN: 'LANDLORDS WILL FLEE', SECTOR WARNS",
                       "standfirst": "Buy-to-let firms threaten a mass sell-off as the Renters' Rights Bill clears the Commons.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-housing-angry-s1-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "RENTERS' RIGHTS: FAIR DEAL OR MARKET MELTDOWN?",
                       "standfirst": "The ban on no-fault evictions passes, giving England's renters real security for the first time.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-housing-calm-s1-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "RENTERS' RIGHTS BILL PASSES: NO-FAULT EVICTIONS GONE",
                       "standfirst": "Millions of renters gain new security as the long-promised reform becomes law.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-housing-calm-s1-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -9002,14 +8999,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "Cash Grab? PM Bans Donor Millions",
                     "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-tax-angry-p1-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "Cash Grab? PM Bans Donor Millions",
                     "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-tax-angry-p1-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -9024,14 +9021,14 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "DONOR CRACKDOWN: 'WITCH-HUNT', RAGE PM'S RIVALS",
                       "standfirst": "Capping big-money donations is a cynical attack on political freedom, critics claim.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-generic-angry-p1-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "BIG-MONEY DONATIONS: CLEAN-UP OR STITCH-UP?",
                       "standfirst": "The donations cap clears the Commons, with big-money cheques to political parties limited for the first time.",
-                      "image": "images/news-neutral-4.png",
+                      "image": "images/news-tax-angry-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -9290,14 +9287,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "COUNCIL-HOUSE BONANZA: PM BLOWS BILLIONS ON SUBSIDISED RENTS",
                     "standfirst": "Critics warn taxpayer-funded build programme will 'crowd out' private developers",
-                    "image": "images/news-hostile-1.png",
+                    "image": "images/news-housing-calm-social-housing.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "COUNCIL-HOUSE BONANZA: PM BLOWS BILLIONS ON SUBSIDISED RENTS",
                     "standfirst": "Critics warn taxpayer-funded build programme will 'crowd out' private developers",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-housing-calm-s1-2.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -9305,28 +9302,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "COUNCIL-HOUSE BONANZA: PM BLOWS BILLIONS ON RENTS",
                       "standfirst": "Back-to-the-70s fury as No.10 promises millions of subsidised homes on your tab.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-housing-calm-p1-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "BACK TO THE 70s: PM'S COUNCIL-HOUSE SPENDING SPREE",
                       "standfirst": "Critics warn the mass build programme will crowd out private developers.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-housing-calm-social-housing.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "COUNCIL HOMES: BOLD FIX OR BUDGET BLACK HOLE?",
                       "standfirst": "The social-housing programme is funded, with the first new council homes due to break ground next year.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-housing-calm-social-housing.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "BIGGEST COUNCIL-HOUSE BUILD IN A GENERATION",
                       "standfirst": "Hundreds of thousands of social homes to be built as the waiting list starts to fall.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-housing-calm-social-housing.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -9581,14 +9578,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "LANDLORD EXODUS: PM'S RENT RULES TO SHRINK SUPPLY",
                     "standfirst": "Buy-to-let firms warn of mass sell-off as no-fault eviction ban and rent caps clear Commons",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-housing-calm-p1-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "LANDLORD EXODUS: PM'S RENT RULES TO SHRINK SUPPLY",
                     "standfirst": "Buy-to-let firms warn of mass sell-off as no-fault eviction ban and rent caps clear Commons",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-housing-angry-p3-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -9596,28 +9593,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "LANDLORD EXODUS: PM'S RENT RULES TO WRECK SUPPLY",
                       "standfirst": "Property-rights fury as No.10 bans no-fault evictions and caps your rent overnight.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-housing-angry-p1-6.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "RENT CRACKDOWN: 'LANDLORDS WILL FLEE', SECTOR WARNS",
                       "standfirst": "Buy-to-let firms threaten a mass sell-off as the Renters' Rights Bill clears the Commons.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-housing-angry-s1-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "RENTERS' RIGHTS: FAIR DEAL OR MARKET MELTDOWN?",
                       "standfirst": "The ban on no-fault evictions passes, giving England's renters real security for the first time.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-housing-calm-s1-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "RENTERS' RIGHTS BILL PASSES: NO-FAULT EVICTIONS GONE",
                       "standfirst": "Millions of renters gain new security as the long-promised reform becomes law.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-housing-calm-s1-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -10201,14 +10198,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "Cash Grab? PM Bans Donor Millions",
                     "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-tax-angry-p1-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "Cash Grab? PM Bans Donor Millions",
                     "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-tax-angry-p1-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -10223,14 +10220,14 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "DONOR CRACKDOWN: 'WITCH-HUNT', RAGE PM'S RIVALS",
                       "standfirst": "Capping big-money donations is a cynical attack on political freedom, critics claim.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-generic-angry-p1-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "BIG-MONEY DONATIONS: CLEAN-UP OR STITCH-UP?",
                       "standfirst": "The donations cap clears the Commons, with big-money cheques to political parties limited for the first time.",
-                      "image": "images/news-neutral-4.png",
+                      "image": "images/news-tax-angry-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -10488,14 +10485,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "GREEN-CRAZED PM: BILLIONS WASTED ON WIND TURBINES",
                     "standfirst": "Energy bills to subsidise net-zero virtue-signalling, taxpayer groups warn",
-                    "image": "images/news-hostile-2.png",
+                    "image": "images/news-carbon-calm-s3-7.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "GREEN-CRAZED PM: BILLIONS WASTED ON WIND TURBINES",
                     "standfirst": "Energy bills to subsidise net-zero virtue-signalling, taxpayer groups warn",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-carbon-calm-s1-3.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -10503,28 +10500,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "GREEN-CRAZED PM: BILLIONS BLOWN ON WIND TURBINES",
                       "standfirst": "Eco-zealotry fury as No.10 ploughs your cash into the PM's pet windmills.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-carbon-calm-s3-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "WIND-OBSESSED: PM PLOUGHS YOUR CASH INTO TURBINES",
                       "standfirst": "Critics question whether the green subsidy splurge will ever pay for itself.",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-carbon-calm-s1-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "GREEN SUBSIDIES: SMART BET OR COSTLY GAMBLE?",
                       "standfirst": "The renewables programme is funded, promising cheaper power and thousands of new green jobs.",
-                      "image": "images/news-neutral-4.png",
+                      "image": "images/news-carbon-calm-s1-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "BRITAIN POWERS UP: RENEWABLES INVESTMENT SOARS",
                       "standfirst": "New wind and solar to cut bills and emissions, with industry broadly on board.",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-carbon-calm-p3-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -10777,14 +10774,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "CARBON BORDER TAX: BRITISH STEEL CHEERS, IMPORTERS WARN OF PRICE HIKES",
                     "standfirst": "Cross-border carbon levy aims to level the field as PM doubles down on industrial decarbonisation",
-                    "image": "images/news-hostile-1.png",
+                    "image": "images/news-costofliving-angry-s3-9.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "CARBON BORDER TAX: BRITISH STEEL CHEERS, IMPORTERS WARN OF PRICE HIKES",
                     "standfirst": "Cross-border carbon levy aims to level the field as PM doubles down on industrial decarbonisation",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-carbon-calm-s1-3.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -10792,28 +10789,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "NEW TAX ON EVERYTHING YOU IMPORT, COURTESY OF PM",
                       "standfirst": "Price-hike fury as No.10's carbon levy threatens to make the weekly shop dearer.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-costofliving-angry-s1-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "CARBON BORDER TAX: 'IMPORTS WILL COST YOU MORE'",
                       "standfirst": "Importers warn of price rises as British steel cheers the new climate levy.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-costofliving-angry-s3-9.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "CARBON BORDER TAX: PRINCIPLED OR PROTECTIONIST?",
                       "standfirst": "The carbon border levy passes, with high-polluting imports facing a charge at the border.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-carbon-calm-s3-7.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "CARBON BORDER TAX PASSES: A LEVEL FIELD FOR BRITISH INDUSTRY",
                       "standfirst": "Heavy industry welcomes a levy that rewards clean production, ministers say.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-carbon-calm-s3-7.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -11405,14 +11402,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "Cash Grab? PM Bans Donor Millions",
                     "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-tax-angry-p1-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "Cash Grab? PM Bans Donor Millions",
                     "standfirst": "'Who will fund democracy now?' howl billionaire backers of both parties",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-tax-angry-p1-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -11427,14 +11424,14 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "DONOR CRACKDOWN: 'WITCH-HUNT', RAGE PM'S RIVALS",
                       "standfirst": "Capping big-money donations is a cynical attack on political freedom, critics claim.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-generic-angry-p1-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "BIG-MONEY DONATIONS: CLEAN-UP OR STITCH-UP?",
                       "standfirst": "The donations cap clears the Commons, with big-money cheques to political parties limited for the first time.",
-                      "image": "images/news-neutral-4.png",
+                      "image": "images/news-tax-angry-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -11693,14 +11690,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "GREEN-CRAZED PM: BILLIONS WASTED ON WIND TURBINES",
                     "standfirst": "Energy bills to subsidise net-zero virtue-signalling, taxpayer groups warn",
-                    "image": "images/news-hostile-2.png",
+                    "image": "images/news-carbon-calm-s3-7.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "GREEN-CRAZED PM: BILLIONS WASTED ON WIND TURBINES",
                     "standfirst": "Energy bills to subsidise net-zero virtue-signalling, taxpayer groups warn",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-carbon-calm-s1-3.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -11708,28 +11705,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "GREEN-CRAZED PM: BILLIONS BLOWN ON WIND TURBINES",
                       "standfirst": "Eco-zealotry fury as No.10 ploughs your cash into the PM's pet windmills.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-carbon-calm-s3-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "WIND-OBSESSED: PM PLOUGHS YOUR CASH INTO TURBINES",
                       "standfirst": "Critics question whether the green subsidy splurge will ever pay for itself.",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-carbon-calm-s1-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "GREEN SUBSIDIES: SMART BET OR COSTLY GAMBLE?",
                       "standfirst": "The renewables programme is funded, promising cheaper power and thousands of new green jobs.",
-                      "image": "images/news-neutral-4.png",
+                      "image": "images/news-carbon-calm-s1-3.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "BRITAIN POWERS UP: RENEWABLES INVESTMENT SOARS",
                       "standfirst": "New wind and solar to cut bills and emissions, with industry broadly on board.",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-carbon-calm-p3-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -11983,14 +11980,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "CARBON BORDER TAX: BRITISH STEEL CHEERS, IMPORTERS WARN OF PRICE HIKES",
                     "standfirst": "Cross-border carbon levy aims to level the field as PM doubles down on industrial decarbonisation",
-                    "image": "images/news-hostile-1.png",
+                    "image": "images/news-costofliving-angry-s3-9.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "CARBON BORDER TAX: BRITISH STEEL CHEERS, IMPORTERS WARN OF PRICE HIKES",
                     "standfirst": "Cross-border carbon levy aims to level the field as PM doubles down on industrial decarbonisation",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-carbon-calm-s1-3.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -11998,28 +11995,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "NEW TAX ON EVERYTHING YOU IMPORT, COURTESY OF PM",
                       "standfirst": "Price-hike fury as No.10's carbon levy threatens to make the weekly shop dearer.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-costofliving-angry-s1-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "CARBON BORDER TAX: 'IMPORTS WILL COST YOU MORE'",
                       "standfirst": "Importers warn of price rises as British steel cheers the new climate levy.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-costofliving-angry-s3-9.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "CARBON BORDER TAX: PRINCIPLED OR PROTECTIONIST?",
                       "standfirst": "The carbon border levy passes, with high-polluting imports facing a charge at the border.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-carbon-calm-s3-7.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "CARBON BORDER TAX PASSES: A LEVEL FIELD FOR BRITISH INDUSTRY",
                       "standfirst": "Heavy industry welcomes a levy that rewards clean production, ministers say.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-carbon-calm-s3-7.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -12599,17 +12596,17 @@
               "reaction": {
                 "newspaper": {
                   "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-hostile-3.png",
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
+                    "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-neutral-3.png",
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
+                    "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -12617,28 +12614,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
                       "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "BARON-BASHING: PM'S WAR ON THE MEN WHO OWN THE NEWS",
                       "standfirst": "Ministers say no single mogul should own the morning. Proprietors call it a vendetta.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-generic-angry-s2-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "MEDIA OWNERSHIP CAPS: TRUST-BUSTING OR SOUR GRAPES?",
                       "standfirst": "Ownership caps clear the Commons: no single proprietor may control more than a fifth of the market.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
                       "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -12894,14 +12891,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "BILLS BAILOUT: PM'S £18BN HANDOUT BONANZA",
                     "standfirst": "Energy support payments will 'soak the middle class', critics warn, as PM dodges price-cap reform",
-                    "image": "images/news-hostile-3.png",
+                    "image": "images/news-costofliving-angry-p2-4.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "BILLS BAILOUT: PM'S £18BN HANDOUT BONANZA",
                     "standfirst": "Energy support payments will 'soak the middle class', critics warn, as PM dodges price-cap reform",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-costofliving-angry-s2-5.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -12909,21 +12906,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "BILLS BAILOUT: PM'S £18BN HANDOUT FRENZY",
                       "standfirst": "Your-tax-their-heating fury as No.10 sprays billions at energy bills with no plan to pay.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-generic-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "£18BN ENERGY HANDOUT: 'WHERE'S THE MONEY FROM?'",
                       "standfirst": "Critics say the bill-support splurge soaks the middle class and dodges real reform.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-generic-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "ENERGY SUPPORT: LIFELINE OR UNFUNDED GIVEAWAY?",
                       "standfirst": "The £18bn support scheme passes, with payments reaching struggling households within weeks.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-costofliving-calm-s1-4.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -13184,14 +13181,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "PRICE CONTROLS: PM TAKES ON SUPERMARKETS, ENERGY GIANTS",
                     "standfirst": "Margins to be capped on essentials as Chief Secretary takes the fight directly to FTSE 100 retailers",
-                    "image": "images/news-hostile-5.png",
+                    "image": "images/news-hostile-3.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "PRICE CONTROLS: PM TAKES ON SUPERMARKETS, ENERGY GIANTS",
                     "standfirst": "Margins to be capped on essentials as Chief Secretary takes the fight directly to FTSE 100 retailers",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-hostile-3.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -13199,28 +13196,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "SOVIET BRITAIN: PM SETS THE PRICE OF YOUR BREAD",
                       "standfirst": "Empty-shelves fury as No.10 declares war on supermarkets and the laws of economics.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-costofliving-angry-s1-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "PRICE CONTROLS: 'EMPTY SHELVES INCOMING', WARN FIRMS",
                       "standfirst": "Retailers say capping margins on essentials will cause shortages and closures.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-costofliving-angry-p1-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "PRICE CONTROLS: BOLD RELIEF OR ECONOMIC GAMBLE?",
                       "standfirst": "Price caps on everyday essentials pass, holding down the cost of the weekly shop.",
-                      "image": "images/news-neutral-4.png",
+                      "image": "images/news-costofliving-calm-s1-4.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "PRICE CAPS ON ESSENTIALS: SHOPPERS SEE BILLS EASE",
                       "standfirst": "Margins on staples capped as the predicted shortages fail to materialise.",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-costofliving-calm-s1-4.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -13810,17 +13807,17 @@
               "reaction": {
                 "newspaper": {
                   "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-hostile-3.png",
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
+                    "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-neutral-3.png",
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
+                    "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -13828,28 +13825,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
                       "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "BARON-BASHING: PM'S WAR ON THE MEN WHO OWN THE NEWS",
                       "standfirst": "Ministers say no single mogul should own the morning. Proprietors call it a vendetta.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-generic-angry-s2-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "MEDIA OWNERSHIP CAPS: TRUST-BUSTING OR SOUR GRAPES?",
                       "standfirst": "Ownership caps clear the Commons: no single proprietor may control more than a fifth of the market.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
                       "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -14106,14 +14103,14 @@
                     "masthead": "THE DAILY RAGE",
                     "headline": "BILLS BAILOUT: PM'S £18BN HANDOUT BONANZA",
                     "standfirst": "Energy support payments will 'soak the middle class', critics warn, as PM dodges price-cap reform",
-                    "image": "images/news-hostile-3.png",
+                    "image": "images/news-costofliving-angry-p2-4.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE DAILY RAGE",
                     "headline": "BILLS BAILOUT: PM'S £18BN HANDOUT BONANZA",
                     "standfirst": "Energy support payments will 'soak the middle class', critics warn, as PM dodges price-cap reform",
-                    "image": "images/news-neutral-3.png",
+                    "image": "images/news-costofliving-angry-s2-5.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -14121,21 +14118,21 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "BILLS BAILOUT: PM'S £18BN HANDOUT FRENZY",
                       "standfirst": "Your-tax-their-heating fury as No.10 sprays billions at energy bills with no plan to pay.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-generic-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "£18BN ENERGY HANDOUT: 'WHERE'S THE MONEY FROM?'",
                       "standfirst": "Critics say the bill-support splurge soaks the middle class and dodges real reform.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-generic-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "ENERGY SUPPORT: LIFELINE OR UNFUNDED GIVEAWAY?",
                       "standfirst": "The £18bn support scheme passes, with payments reaching struggling households within weeks.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-costofliving-calm-s1-4.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
@@ -14397,14 +14394,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "PRICE CONTROLS: PM TAKES ON SUPERMARKETS, ENERGY GIANTS",
                     "standfirst": "Margins to be capped on essentials as Chief Secretary takes the fight directly to FTSE 100 retailers",
-                    "image": "images/news-hostile-5.png",
+                    "image": "images/news-hostile-3.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "PRICE CONTROLS: PM TAKES ON SUPERMARKETS, ENERGY GIANTS",
                     "standfirst": "Margins to be capped on essentials as Chief Secretary takes the fight directly to FTSE 100 retailers",
-                    "image": "images/news-neutral-1.png",
+                    "image": "images/news-hostile-3.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -14412,28 +14409,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "SOVIET BRITAIN: PM SETS THE PRICE OF YOUR BREAD",
                       "standfirst": "Empty-shelves fury as No.10 declares war on supermarkets and the laws of economics.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-costofliving-angry-s1-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "PRICE CONTROLS: 'EMPTY SHELVES INCOMING', WARN FIRMS",
                       "standfirst": "Retailers say capping margins on essentials will cause shortages and closures.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-costofliving-angry-p1-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "PRICE CONTROLS: BOLD RELIEF OR ECONOMIC GAMBLE?",
                       "standfirst": "Price caps on everyday essentials pass, holding down the cost of the weekly shop.",
-                      "image": "images/news-neutral-4.png",
+                      "image": "images/news-costofliving-calm-s1-4.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "PRICE CAPS ON ESSENTIALS: SHOPPERS SEE BILLS EASE",
                       "standfirst": "Margins on staples capped as the predicted shortages fail to materialise.",
-                      "image": "images/news-neutral-1.png",
+                      "image": "images/news-costofliving-calm-s1-4.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -15014,17 +15011,17 @@
               "reaction": {
                 "newspaper": {
                   "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-hostile-3.png",
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
+                    "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-neutral-3.png",
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
+                    "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -15032,28 +15029,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
                       "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "BARON-BASHING: PM'S WAR ON THE MEN WHO OWN THE NEWS",
                       "standfirst": "Ministers say no single mogul should own the morning. Proprietors call it a vendetta.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-generic-angry-s2-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "MEDIA OWNERSHIP CAPS: TRUST-BUSTING OR SOUR GRAPES?",
                       "standfirst": "Ownership caps clear the Commons: no single proprietor may control more than a fifth of the market.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
                       "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -15309,14 +15306,14 @@
                     "masthead": "FINANCIAL HERALD",
                     "headline": "WINDFALL TAX HITS WATER GIANTS: SHAREHOLDERS DUMP STOCK",
                     "standfirst": "PM levies £4bn one-off charge as Environment Secretary moves on dividend-stripping operators",
-                    "image": "images/news-hostile-3.png",
+                    "image": "images/news-hostile-2.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "FINANCIAL HERALD",
                     "headline": "WINDFALL TAX HITS WATER GIANTS: SHAREHOLDERS DUMP STOCK",
                     "standfirst": "PM levies £4bn one-off charge as Environment Secretary moves on dividend-stripping operators",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-hostile-2.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -15324,28 +15321,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "WATER TAX RAID: PM TORCHES YOUR PENSION FUND",
                       "standfirst": "Market-panic fury as No.10's windfall raid on water firms hammers savers and shareholders.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-costofliving-angry-s2-5.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "WINDFALL TAX HITS WATER GIANTS: SHARES DUMPED",
                       "standfirst": "Investors flee as the PM's levy on water profits rattles the bond markets.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-hostile-2.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "WATER WINDFALL TAX: JUSTICE OR INVESTOR FLIGHT?",
                       "standfirst": "The windfall tax passes, clawing back billions from record water-company profits.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-water-calm-water-nationalisation.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "WATER WINDFALL TAX PASSES: PROFITS REDIRECTED TO REPAIRS",
                       "standfirst": "Billions from water profits to fund clean-ups, as the market steadies.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-water-calm-water-nationalisation.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -15599,14 +15596,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "WATER NATIONALISED: PM TAKES THE TAPS BACK",
                     "standfirst": "Full public ownership announced as Environment Secretary moves to end three decades of dividend-led decay",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-water-angry-s1-2.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "WATER NATIONALISED: PM TAKES THE TAPS BACK",
                     "standfirst": "Full public ownership announced as Environment Secretary moves to end three decades of dividend-led decay",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-water-calm-p1-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -15614,28 +15611,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "STATE GRAB: PM SEIZES THE NATION'S WATER FIRMS",
                       "standfirst": "Confiscation fury as No.10 moves to snatch the water companies — and the bill is yours.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-costofliving-angry-s1-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "WATER NATIONALISED: 'COMPENSATION FIGHT BEGINS'",
                       "standfirst": "Critics warn the takeover will cost a fortune and saddle taxpayers with old debts.",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-water-angry-s1-2.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "WATER NATIONALISATION: PUBLIC GOOD OR PUBLIC COST?",
                       "standfirst": "Water returns to public hands, with bills capped and the pipes back under public control.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-water-angry-s1-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "WATER RETURNS TO PUBLIC HANDS",
                       "standfirst": "Taps brought back into public ownership, with regulators promising cleaner rivers.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-water-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -16225,17 +16222,17 @@
               "reaction": {
                 "newspaper": {
                   "negative": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-hostile-3.png",
+                    "masthead": "THE DAILY RAGE",
+                    "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
+                    "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
-                    "masthead": "THE MORNING POST",
-                    "headline": "ELECTORAL REFORM: PR, VOTING AGE 16, AUTO REGISTRATION",
-                    "standfirst": "Constitution Minister moves to rebuild trust in elections as opponents call the reform 'a gerrymander in plain sight'",
-                    "image": "images/news-neutral-3.png",
+                    "masthead": "THE DAILY CHRONICLE",
+                    "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
+                    "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
+                    "image": "images/news-donations-angry-p2-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -16243,28 +16240,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "MEDIA STITCH-UP! PM SEIZES CONTROL OF WHAT YOU READ",
                       "standfirst": "Power-grab fury as No.10 moves to break up the great press dynasties.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "BARON-BASHING: PM'S WAR ON THE MEN WHO OWN THE NEWS",
                       "standfirst": "Ministers say no single mogul should own the morning. Proprietors call it a vendetta.",
-                      "image": "images/news-hostile-5.png",
+                      "image": "images/news-generic-angry-s2-3.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "MEDIA OWNERSHIP CAPS: TRUST-BUSTING OR SOUR GRAPES?",
                       "standfirst": "Ownership caps clear the Commons: no single proprietor may control more than a fifth of the market.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "MEDIA OWNERSHIP REFORM PASSES: NO MORE PRESS BARONS",
                       "standfirst": "Cross-party backing for limits that stop any one voice owning the front pages.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-donations-angry-p2-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -16521,14 +16518,14 @@
                     "masthead": "FINANCIAL HERALD",
                     "headline": "WINDFALL TAX HITS WATER GIANTS: SHAREHOLDERS DUMP STOCK",
                     "standfirst": "PM levies £4bn one-off charge as Environment Secretary moves on dividend-stripping operators",
-                    "image": "images/news-hostile-3.png",
+                    "image": "images/news-hostile-2.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "FINANCIAL HERALD",
                     "headline": "WINDFALL TAX HITS WATER GIANTS: SHAREHOLDERS DUMP STOCK",
                     "standfirst": "PM levies £4bn one-off charge as Environment Secretary moves on dividend-stripping operators",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-hostile-2.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -16536,28 +16533,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "WATER TAX RAID: PM TORCHES YOUR PENSION FUND",
                       "standfirst": "Market-panic fury as No.10's windfall raid on water firms hammers savers and shareholders.",
-                      "image": "images/news-hostile-4.png",
+                      "image": "images/news-costofliving-angry-s2-5.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "WINDFALL TAX HITS WATER GIANTS: SHARES DUMPED",
                       "standfirst": "Investors flee as the PM's levy on water profits rattles the bond markets.",
-                      "image": "images/news-hostile-3.png",
+                      "image": "images/news-hostile-2.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "WATER WINDFALL TAX: JUSTICE OR INVESTOR FLIGHT?",
                       "standfirst": "The windfall tax passes, clawing back billions from record water-company profits.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-water-calm-water-nationalisation.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "WATER WINDFALL TAX PASSES: PROFITS REDIRECTED TO REPAIRS",
                       "standfirst": "Billions from water profits to fund clean-ups, as the market steadies.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-water-calm-water-nationalisation.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]
@@ -16812,14 +16809,14 @@
                     "masthead": "THE MORNING POST",
                     "headline": "WATER NATIONALISED: PM TAKES THE TAPS BACK",
                     "standfirst": "Full public ownership announced as Environment Secretary moves to end three decades of dividend-led decay",
-                    "image": "images/news-hostile-4.png",
+                    "image": "images/news-water-angry-s1-2.png",
                     "altText": "A hostile tabloid front page attacking the Prime Minister."
                   },
                   "neutral": {
                     "masthead": "THE MORNING POST",
                     "headline": "WATER NATIONALISED: PM TAKES THE TAPS BACK",
                     "standfirst": "Full public ownership announced as Environment Secretary moves to end three decades of dividend-led decay",
-                    "image": "images/news-neutral-2.png",
+                    "image": "images/news-water-calm-p1-1.png",
                     "altText": "A measured newspaper front page reporting the story plainly."
                   },
                   "tiers": [
@@ -16827,28 +16824,28 @@
                       "masthead": "THE DAILY RAGE",
                       "headline": "STATE GRAB: PM SEIZES THE NATION'S WATER FIRMS",
                       "standfirst": "Confiscation fury as No.10 moves to snatch the water companies — and the bill is yours.",
-                      "image": "images/news-hostile-2.png",
+                      "image": "images/news-costofliving-angry-s1-7.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE DAILY RAGE",
                       "headline": "WATER NATIONALISED: 'COMPENSATION FIGHT BEGINS'",
                       "standfirst": "Critics warn the takeover will cost a fortune and saddle taxpayers with old debts.",
-                      "image": "images/news-hostile-1.png",
+                      "image": "images/news-water-angry-s1-2.png",
                       "altText": "A hostile tabloid front page attacking the Prime Minister."
                     },
                     {
                       "masthead": "THE GLOBE",
                       "headline": "WATER NATIONALISATION: PUBLIC GOOD OR PUBLIC COST?",
                       "standfirst": "Water returns to public hands, with bills capped and the pipes back under public control.",
-                      "image": "images/news-neutral-3.png",
+                      "image": "images/news-water-angry-s1-2.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     },
                     {
                       "masthead": "THE DAILY CHRONICLE",
                       "headline": "WATER RETURNS TO PUBLIC HANDS",
                       "standfirst": "Taps brought back into public ownership, with regulators promising cleaner rivers.",
-                      "image": "images/news-neutral-2.png",
+                      "image": "images/news-water-calm-p1-1.png",
                       "altText": "A measured newspaper front page reporting the story plainly."
                     }
                   ]

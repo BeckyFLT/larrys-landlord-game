@@ -1235,14 +1235,43 @@
     padding-bottom: 5px;
     margin-bottom: 7px;
   }
-  .frontpage__image {
-    display: block;
-    width: 100%;
-    height: 84px;
-    object-fit: cover;
-    border: 2px solid var(--bg);
+  /* Photo sits beside filler text bars, mirroring the spinning newspaper's
+     body row so the shared press photo keeps its 4:3 crop instead of being
+     stretched full-width. */
+  .frontpage__body {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
     margin-bottom: 8px;
   }
+  .frontpage__image {
+    display: block;
+    flex: none;
+    width: 45%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 2px solid var(--bg);
+  }
+  .frontpage__skeleton {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    min-width: 0;
+  }
+  .frontpage__bar {
+    height: 8px;
+    background: var(--bg);
+    opacity: .5;
+    display: block;
+  }
+  .frontpage__bar--1 { width: 100%; }
+  .frontpage__bar--2 { width: 88%; }
+  .frontpage__bar--3 { width: 96%; }
+  .frontpage__bar--4 { width: 78%; }
+  .frontpage__bar--5 { width: 92%; }
+  .frontpage__bar--6 { width: 60%; opacity: .3; }
   .frontpage__headline {
     font-family: var(--font-display);
     font-size: 21px;
@@ -3232,11 +3261,8 @@
       box-shadow: 4px 4px 0 var(--ink);
     }
 
-    .frontpage__image {
-      height: auto;
-      aspect-ratio: 16 / 9;
-      max-height: 170px;
-    }
+    /* .frontpage__image now inherits the 4:3 ratio from the base rule so the
+       reaction photo matches the spinning newspaper on mobile too. */
 
     .frontpage__headline {
       font-size: clamp(24px, 8vw, 31px);

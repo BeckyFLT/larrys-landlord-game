@@ -3,7 +3,6 @@
    Chunk 1: scaffold + state machine + Start screen
    ============================================================= */
 /// <reference path="./v2-candidates/dramaturgical-router/harness/router-types.d.ts" />
-/// <reference path="./v2-candidates/dramaturgical-router/harness/result-types.d.ts" />
 
 /**
  * Legacy v1 runtime aliases. The v2 router is now the production data source;
@@ -380,42 +379,6 @@ function v2ResolveGlobals() {
   if (!v2Bridge.config || !v2Bridge.router || !v2Bridge.adapter) {
     throw new Error('V2 router globals did not load. Check index.html script order.');
   }
-}
-
-/** @returns {string} */
-function v2ResultHref() {
-  if (!isV2Mode() || !v2Bridge.routerState) return '';
-  v2ResolveGlobals();
-  var w = /** @type {any} */ (window);
-  /** @type {RouterStateResultAdapterApi|undefined} */
-  var resultAdapter = w.RouterStateResultAdapter;
-  /** @type {ResultCodecApi|undefined} */
-  var resultCodec = w.ResultCodec;
-  if (!resultAdapter || !resultCodec) return '';
-  try {
-    var input = resultAdapter.adaptRouterStateToResultInput(
-      /** @type {RouterConfig} */ (v2Bridge.config),
-      v2Bridge.routerState
-    );
-    return 'result.html' + resultCodec.encodeResultSearch(input);
-  } catch (error) {
-    console.warn('[v2 result] could not build result URL', error);
-    return '';
-  }
-}
-
-/** @returns {boolean} */
-function v2ShouldOpenResultPage() {
-  return isV2Mode() && !(/** @type {any} */ (window).__BETTER_GAME_SUPPRESS_RESULT_REDIRECT);
-}
-
-/** @returns {boolean} */
-function openV2ResultPage() {
-  if (!v2ShouldOpenResultPage()) return false;
-  var href = v2ResultHref();
-  if (!href) return false;
-  window.location.assign(href);
-  return true;
 }
 
 /** @returns {boolean} true when the first surface is ready */
@@ -2322,6 +2285,38 @@ function injectName(text, nameToken) {
   return text.replace(/\bPM(['’]S)?\b/g, function(_m, poss) { return nameToken + (poss || ''); });
 }
 
+/** Build one reaction-screen front-page card: masthead, then a body row of the
+   press photo (a small 4:3 box) beside fake text bars filling the space, then
+   the headline. Mirrors the spinning newspaper's photo+skeleton layout so the
+   shared image keeps the same 4:3 crop. `mastheadHtml`/`headlineHtml` are
+   already escaped by the caller; `image`/`altText` are raw. When there is no
+   image the body row (and its filler bars) is omitted.
+   @param {string} mastheadHtml
+   @param {string|undefined} image
+   @param {string|undefined} altText
+   @param {string} headlineHtml
+   @returns {string} */
+function frontPageHtml(mastheadHtml, image, altText, headlineHtml) {
+  var body = image
+    ? '<div class="frontpage__body">' +
+        '<img class="frontpage__image" src="' + attrEsc(image) + '" alt="' + attrEsc(altText || '') + '">' +
+        '<div class="frontpage__skeleton" aria-hidden="true">' +
+          '<span class="frontpage__bar frontpage__bar--1"></span>' +
+          '<span class="frontpage__bar frontpage__bar--2"></span>' +
+          '<span class="frontpage__bar frontpage__bar--3"></span>' +
+          '<span class="frontpage__bar frontpage__bar--4"></span>' +
+          '<span class="frontpage__bar frontpage__bar--5"></span>' +
+          '<span class="frontpage__bar frontpage__bar--6"></span>' +
+        '</div>' +
+      '</div>'
+    : '';
+  return '<div class="frontpage">' +
+    '<div class="frontpage__masthead">' + mastheadHtml + '</div>' +
+    body +
+    '<div class="frontpage__headline">' + headlineHtml + '</div>' +
+  '</div>';
+}
+
 function showV2Press() {
   var choice = v2Bridge.pendingChoiceView || v2Bridge.lastChoiceView;
   var surface = v2Bridge.activeSurfaceView || v2Bridge.lastSurfaceView;
@@ -2812,9 +2807,7 @@ function showV2MediaReaction() {
     ? 'A hostile tabloid front page attacking the Prime Minister.'
     : 'A measured newspaper front page reporting the story plainly.';
   document.getElementById('feed-frontpages').innerHTML =
-    '<div class="frontpage"><div class="frontpage__masthead">' + htmlEsc(tone.masthead) + '</div>' +
-    '<img class="frontpage__image" src="' + attrEsc(mediaImg) + '" alt="' + attrEsc(mediaAlt) + '">' +
-    '<div class="frontpage__headline">' + htmlEsc(headlines[lv]) + '</div></div>';
+    frontPageHtml(htmlEsc(tone.masthead), mediaImg, mediaAlt, htmlEsc(headlines[lv]));
   document.getElementById('feed-bluesky').innerHTML = tone.msky.map(function(f) {
     return '<div class="post post--bluesky"><div class="post__header">' + avatarHTML(f, MSKY_AVATAR) +
       '<div class="post__byline"><div class="post__name">' + htmlEsc(f.name) + '</div><div class="post__handle post__handle--bluesky">' + htmlEsc(f.handle) + '</div></div></div>' +
@@ -2902,9 +2895,7 @@ function showV2WeekReaction() {
   var feeds = v2WeekFeeds();
   var pm = state.playerName.toUpperCase();
   document.getElementById('feed-frontpages').innerHTML = feeds.fronts.map(function(f) {
-    var thumb = f.image ? '<img class="frontpage__image" src="' + attrEsc(f.image) + '" alt="' + attrEsc(f.altText || '') + '">' : '';
-    return '<div class="frontpage"><div class="frontpage__masthead">' + htmlEsc(f.masthead) + '</div>' + thumb +
-      '<div class="frontpage__headline">' + htmlEsc(injectName(f.headline, pm)) + '</div></div>';
+    return frontPageHtml(htmlEsc(f.masthead), f.image, f.altText, htmlEsc(injectName(f.headline, pm)));
   }).join('');
   document.getElementById('feed-bluesky').innerHTML = feeds.msky.map(function(f) {
     return '<div class="post post--bluesky"><div class="post__header">' + avatarHTML(f, MSKY_AVATAR) +
@@ -2989,14 +2980,7 @@ function showV2Reaction() {
       };
     }
     document.getElementById('feed-frontpages').innerHTML = frontPages.map(function(f) {
-      var thumb = f.image
-        ? '<img class="frontpage__image" src="' + attrEsc(f.image) + '" alt="' + attrEsc(f.altText || '') + '">'
-        : '';
-      return '<div class="frontpage">' +
-        '<div class="frontpage__masthead">' + htmlEsc(f.masthead) + '</div>' +
-        thumb +
-        '<div class="frontpage__headline">' + htmlEsc(injectName(f.headline, state.playerName.toUpperCase())) + '</div>' +
-      '</div>';
+      return frontPageHtml(htmlEsc(f.masthead), f.image, f.altText, htmlEsc(injectName(f.headline, state.playerName.toUpperCase())));
     }).join('');
 
     document.getElementById('feed-bluesky').innerHTML = r.bluesky.map(function(f) {
@@ -3032,11 +3016,7 @@ function showV2Reaction() {
       ? 'A hostile tabloid front page attacking the Prime Minister.'
       : 'A measured newspaper front page reporting the story plainly.';
     document.getElementById('feed-frontpages').innerHTML =
-      '<div class="frontpage">' +
-        '<div class="frontpage__masthead">' + htmlEsc(fallback.masthead) + '</div>' +
-        '<img class="frontpage__image" src="' + attrEsc(fbImg) + '" alt="' + attrEsc(fbAlt) + '">' +
-        '<div class="frontpage__headline">' + htmlEsc(choice.label) + '</div>' +
-      '</div>';
+      frontPageHtml(htmlEsc(fallback.masthead), fbImg, fbAlt, htmlEsc(choice.label));
     document.getElementById('feed-bluesky').innerHTML =
       '<div class="post post--bluesky">' +
         '<div class="post__header"><img class="avatar" src="' + attrEsc(MSKY_AVATAR) + '" alt=""><div class="post__byline"><div class="post__name">' + htmlEsc(fallback.bskyName) + '</div><div class="post__handle post__handle--bluesky">' + htmlEsc(fallback.bskyHandle) + '</div></div></div>' +
@@ -3123,14 +3103,7 @@ function showReaction() {
   var r = p.reaction;
   var frontPages = r.frontPages[fixed ? 'neutral' : 'negative'];
   document.getElementById('feed-frontpages').innerHTML = frontPages.map(function(/** @type {FrontPage} */ f) {
-    var thumb = f.image
-      ? '<img class="frontpage__image" src="' + attrEsc(f.image) + '" alt="' + attrEsc(f.altText || '') + '">'
-      : '';
-    return '<div class="frontpage">' +
-      '<div class="frontpage__masthead">' + f.masthead + '</div>' +
-      thumb +
-      '<div class="frontpage__headline">' + injectName(f.headline, attrEsc(state.playerName.toUpperCase())) + '</div>' +
-    '</div>';
+    return frontPageHtml(f.masthead, f.image, f.altText, injectName(f.headline, attrEsc(state.playerName.toUpperCase())));
   }).join('');
 
   document.getElementById('feed-bluesky').innerHTML = r.bluesky.map(function(/** @type {Post} */ f) {
@@ -3573,22 +3546,36 @@ function showEnd() {
 }
 
 /* ---------- share ---------- */
+/* Where the "Can you do BETTER?" link points. Placeholder until the game's
+   real home is decided — swap this one string at hosting time. */
+var SHARE_URL = 'compassonline.org.uk';
+
+/* One emoji per grade. */
+/** @type {Record<string, string>} */
+var GRADE_EMOJI = { A: '🏆', B: '🥈', C: '🥉', D: '😴', E: '🥄', F: '🥬' };
+
 function shareResult() {
-  var shareLabel = v2EndInfo().label;
+  var ending = v2ReelectionOutcome();
+  // The cat-king run (lost the election but took every Larry card, ending on
+  // Give Cats the Vote) replaces the grade + election lines entirely — same
+  // condition the end screen uses for the CAT KING press pack and 0-seat chart.
+  var catKing = !ending.won && v2LarryBonusEarned();
+  var resultLines = catKing
+    ? 'MEOW!\n' +
+      'Crowned cat king 👑'
+    : 'Grade ' + ending.grade + ' ' + GRADE_EMOJI[ending.grade] + '\n' +
+      (ending.won ? 'Re-elected 🗳️' : 'Not re-elected 🗳️');
   // Pad the label column to the longest share label + 2 (preserves the original
   // fixed-width alignment: 'Living Standards' is 16 chars, so the column is 18).
   var labelWidth = METERS.reduce(function(w, d) { return Math.max(w, d.share.length); }, 0) + 2;
   var lines = METERS.map(function(d) {
-    var v = Math.round(state.meters[d.key]);
-    var filled = Math.round(v / 10);
-    var bar = '█'.repeat(filled) + '░'.repeat(10 - filled) + ' ' + v;
-    return d.share.padEnd(labelWidth) + bar;
+    return d.share.padEnd(labelWidth) + Math.round(state.meters[d.key]);
   });
   var text =
     'Larry\'s Landlord 🐱\n' +
-    shareLabel + '\n\n' +
+    resultLines + '\n\n' +
     lines.join('\n') + '\n\n' +
-    'Can you BETTER my score? compassonline.org.uk';
+    'Can you do BETTER? → ' + SHARE_URL;
 
   if (navigator.clipboard) {
     navigator.clipboard.writeText(text).then(showShareCopied);
@@ -3675,12 +3662,6 @@ function toFirstPick() {
   state.startStep = 1;
   showStep();
 }
-
-/** Display title for the player — their name if given, else the generic title. */
-function pmTitle() {
-  return state.playerName ? ('Prime Minister ' + state.playerName) : 'Prime Minister';
-}
-
 
 /**
  * @param {string} post pair id ('pair1'|'pair2'|'pair3')
