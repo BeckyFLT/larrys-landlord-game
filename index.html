@@ -9,6 +9,37 @@
 </head>
 
 <body class="app dot-grid--paper">
+<!-- Private-preview password gate (client-side only; keeps casual visitors out). -->
+<div id="preview-gate" style="position:fixed;inset:0;z-index:99999;background:#141414;display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;">
+  <form id="preview-gate-form" style="text-align:center;color:#fff;padding:24px;max-width:320px;">
+    <div style="font-size:44px;line-height:1;">🐱</div>
+    <h1 style="font-size:22px;letter-spacing:2px;margin:14px 0 6px;">PRIVATE PREVIEW</h1>
+    <p style="font-size:13px;color:#bbb;margin:0 0 18px;">Enter the password to play.</p>
+    <input id="preview-gate-pass" type="password" autocomplete="off" autofocus
+      style="width:100%;box-sizing:border-box;padding:12px 14px;font-family:inherit;font-size:16px;background:#fff;color:#141414;border:3px solid #141414;outline:3px solid #FFC93C;">
+    <button type="submit"
+      style="width:100%;margin-top:12px;padding:12px 14px;font-family:inherit;font-weight:700;font-size:15px;letter-spacing:1px;background:#FFC93C;color:#141414;border:3px solid #141414;cursor:pointer;">ENTER →</button>
+    <p id="preview-gate-err" hidden style="color:#FF335E;font-size:13px;margin:12px 0 0;">That's not it. Larry shakes his head.</p>
+  </form>
+</div>
+<script>
+(function () {
+  var KEY = 'better-preview-unlocked';
+  var gate = document.getElementById('preview-gate');
+  function open() {
+    gate.parentNode.removeChild(gate);
+    document.documentElement.style.overflow = '';
+  }
+  if (sessionStorage.getItem(KEY) === '1') { open(); return; }
+  document.documentElement.style.overflow = 'hidden';
+  document.getElementById('preview-gate-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = document.getElementById('preview-gate-pass').value.trim().toLowerCase();
+    if (v === atob('dGFiYnk=')) { sessionStorage.setItem(KEY, '1'); open(); }
+    else { document.getElementById('preview-gate-err').hidden = false; }
+  });
+})();
+</script>
 
 <div id="canvas" class="canvas dot-grid" data-screen="start" data-start-step="0">
 
